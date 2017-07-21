@@ -32,13 +32,13 @@ angular.module('copayApp.controllers').controller('customAmountController', func
         data.stateParams.amount, 
         data.stateParams.currency);
 
-      // Amount in USD or BTC
+      // Amount in USD or PART
       var amount = parsedAmount.amount;
       var currency = parsedAmount.currency;
       $scope.amountUnitStr = parsedAmount.amountUnitStr;
 
-      if (currency != 'BTC') {
-        // Convert to BTC
+      if (currency != 'PART') {
+        // Convert to PART
         var config = configService.getSync().wallet.settings;
         var amountUnit = txFormatService.satToUnit(parsedAmount.amountSat);
         var btcParsedAmount = txFormatService.parseAmount(amountUnit, config.unitName);
@@ -46,7 +46,7 @@ angular.module('copayApp.controllers').controller('customAmountController', func
         $scope.amountBtc = btcParsedAmount.amount;
         $scope.altAmountStr = btcParsedAmount.amountUnitStr;
       } else {
-        $scope.amountBtc = amount; // BTC
+        $scope.amountBtc = amount; // PART
         $scope.altAmountStr = txFormatService.formatAlternativeStr(parsedAmount.amountSat);
       }
     });
