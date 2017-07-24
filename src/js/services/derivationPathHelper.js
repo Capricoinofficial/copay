@@ -3,7 +3,7 @@
 angular.module('copayApp.services').factory('derivationPathHelper', function(lodash) {
   var root = {};
 
-  root.default = "m/44'/0'/0'";
+  root.default = "m/44'/44'/0'";
   root.defaultTestnet = "m/44'/1'/0'";
 
   root.parse = function(str) {
@@ -34,10 +34,13 @@ angular.module('copayApp.services').factory('derivationPathHelper', function(lod
 
     switch (arr[2]) {
       case "0'":
-        ret.networkName = 'livenet';
+        ret.networkName = 'bitcoin';
         break;
       case "1'":
         ret.networkName = 'testnet';
+        break;
+      case "44'":
+        ret.networkName = 'livenet';
         break;
       default:
         return false;
