@@ -168,7 +168,7 @@ angular.module('copayApp.controllers').controller('txDetailsController', functio
 
   $scope.viewOnBlockchain = function() {
     var btx = $scope.btx;
-    var url = 'https://' + ($scope.getShortNetworkName() == 'test' ? 'testnet-' : '') + 'explorer.particl.io/tx/' + btx.txid;
+    var url = 'https://explorer' + ($scope.getShortNetworkName() == 'test' ? '-testnet' : '') + '.particl.io/tx/' + btx.txid;
     var optIn = true;
     var title = null;
     var message = gettextCatalog.getString('View Transaction on Insight');
