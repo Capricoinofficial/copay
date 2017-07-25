@@ -14,7 +14,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 
     // Bitcore wallet service URL
     bws: {
-      url: 'https://explorer-testnet.particl.io/bws/api',
+      url: 'https://explorer.particl.io/bws/api',
     },
 
     download: {
