@@ -14,7 +14,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 
     // Bitcore wallet service URL
     bws: {
-      url: 'https://bws.particl.io.com',
+      url: 'https://explorer-testnet.particl.io/bws/api',
     },
 
     download: {
@@ -49,7 +49,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
         unitName: 'PART',
         unitToSatoshi: 100000000,
         unitDecimals: 8,
-        unitCode: 'part',
+        unitCode: 'btc',
         alternativeName: 'US Dollar',
         alternativeIsoCode: 'USD',
       }

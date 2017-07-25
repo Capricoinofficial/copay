@@ -25,7 +25,7 @@ angular.module('copayApp.controllers').controller('preferencesBwsUrlController',
       switch ($scope.bwsurl.value) {
         case 'prod':
         case 'production':
-          bws = 'https://bws.bitpay.com/bws/api'
+          bws = 'https://explorer-testnet.particl.io/bws/api'
           break;
         case 'sta':
         case 'staging':
