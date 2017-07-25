@@ -67,7 +67,7 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     },
 
     hideNextSteps: {
-      enabled: isWindowsPhoneApp ? true : false,
+      enabled: isWindowsPhoneApp ? true : true,
     },
 
     rates: {
