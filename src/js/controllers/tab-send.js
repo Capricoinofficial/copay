@@ -19,7 +19,7 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
   // does not has any other function.
 
   var updateHasFunds = function() {
-
+a
     if ($rootScope.everHasFunds) {
       $scope.hasFunds = true;
       return;
@@ -149,9 +149,45 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
     if ($scope.formData.search == null || $scope.formData.search.length == 0) {
       $scope.searchFocus = false;
     }
+   
   };
 
   $scope.findContact = function(search) {
+
+    if (search.indexOf('{"wallet"') !== -1) {
+      var parsed = JSON.parse(search),
+          outputs = [],
+          wallet, note;
+      parsed.forEach(function(value) {
+        if (value.toAddress) {
+          value.amount = value.amount * 10 ** 8;
+          outputs.unshift(value);
+        }
+        if (!!value.wallet) {
+          wallet = profileService.getWallet(value.wallet);
+        }
+        if (!!value.note) {
+          note = value.note;
+        }
+
+      });
+
+      console.log(outputs);
+      if (!wallet || !note) {
+        alert('Make sure you have a wallet and note');
+        return;
+      }
+      wallet.createTxProposal({
+        outputs: outputs,
+        message: note,
+        feePerKb: 100000,
+      }, function(err, txp) {
+        console.log('txp', txp)
+        wallet.publishTxProposal({
+          txp: txp
+        })
+      });
+    }
 
     if (incomingData.redir(search)) {
       return;
