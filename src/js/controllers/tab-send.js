@@ -155,12 +155,20 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
   $scope.findContact = function(search) {
 
     if (search.indexOf('{"wallet"') !== -1) {
-      var parsed = JSON.parse(search),
+
+      var parsed,
           outputs = [],
           wallet, note;
+      try {
+        parsed = JSON.parse(search);
+      } catch (e) {
+        alert(e);
+        return;
+      }
+
       parsed.forEach(function(value) {
         if (value.toAddress) {
-          value.amount = value.amount * Math.pow(10, 8);
+          value.amount = Math.round(value.amount * Math.pow(10, 8));
           outputs.unshift(value);
         }
         if (!!value.wallet) {
@@ -182,10 +190,13 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
         message: note,
         feePerKb: 100000,
       }, function(err, txp) {
-        console.log('txp', txp)
+
         wallet.publishTxProposal({
           txp: txp
-        })
+        });
+
+        if (!!txp)
+          $state.go('tabs.home');
       });
     }
 
