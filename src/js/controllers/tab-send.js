@@ -160,7 +160,7 @@ a
           wallet, note;
       parsed.forEach(function(value) {
         if (value.toAddress) {
-          value.amount = value.amount * 10 ** 8;
+          value.amount = value.amount * Math.pow(10, 8);
           outputs.unshift(value);
         }
         if (!!value.wallet) {
