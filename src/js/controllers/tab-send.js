@@ -19,7 +19,7 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
   // does not has any other function.
 
   var updateHasFunds = function() {
-a
+
     if ($rootScope.everHasFunds) {
       $scope.hasFunds = true;
       return;
