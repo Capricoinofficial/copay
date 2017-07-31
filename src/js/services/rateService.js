@@ -45,31 +45,37 @@ RateService.prototype._fetchCurrencies = function() {
   var backoffSeconds = 5;
   var updateFrequencySeconds = 5 * 60;
   var rateServiceUrl = 'https://bitpay.com/api/rates';
+  var rateServicePartUrl = 'https://api.coinmarketcap.com/v1/ticker/particl/';
 
   var retrieve = function() {
     //log.info('Fetching exchange rates');
-    self.httprequest.get(rateServiceUrl).success(function(res) {
-      self.lodash.each(res, function(currency) {
-        self._rates[currency.code] = currency.rate;
-        self._alternatives.push({
-          name: currency.name,
-          isoCode: currency.code,
-          rate: currency.rate
+
+    self.httprequest.get(rateServicePartUrl).success(function(res) {
+      var rate_btc = res[0].price_btc;
+      self.httprequest.get(rateServiceUrl).success(function(res) {
+        self.lodash.each(res, function(currency) {
+          self._rates[currency.code] = currency.rate * rate_btc;
+          self._alternatives.push({
+            name: currency.name,
+            isoCode: currency.code,
+            rate: currency.rate * rate_btc
+          });
         });
+        self._isAvailable = true;
+        self.lodash.each(self._queued, function(callback) {
+          setTimeout(callback, 1);
+        });
+        setTimeout(retrieve, updateFrequencySeconds * 1000);
+      }).error(function(err) {
+        //log.debug('Error fetching exchange rates', err);
+        setTimeout(function() {
+          backoffSeconds *= 1.5;
+          retrieve();
+        }, backoffSeconds * 1000);
+        return;
       });
-      self._isAvailable = true;
-      self.lodash.each(self._queued, function(callback) {
-        setTimeout(callback, 1);
-      });
-      setTimeout(retrieve, updateFrequencySeconds * 1000);
-    }).error(function(err) {
-      //log.debug('Error fetching exchange rates', err);
-      setTimeout(function() {
-        backoffSeconds *= 1.5;
-        retrieve();
-      }, backoffSeconds * 1000);
-      return;
     });
+
 
   };
 
