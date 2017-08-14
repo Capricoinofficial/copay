@@ -896,7 +896,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        *
        * Buy or Sell Bitcoin
        *
-       */
 
       .state('tabs.buyandsell', {
         url: '/buyandsell',
@@ -913,7 +912,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        * Glidera
        *
        *
-       */
 
       .state('tabs.buyandsell.glidera', {
         url: '/glidera/:code',
@@ -966,7 +964,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        *
        * Coinbase
        *
-       */
 
       .state('tabs.buyandsell.coinbase', {
         url: '/coinbase/:code',
@@ -1019,7 +1016,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        *
        * Gift Cards
        *
-       */
 
       .state('tabs.giftcards', {
         url: '/giftcards',
@@ -1030,7 +1026,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        *
        * Mercado Libre Gift Card
        *
-       */
 
       .state('tabs.giftcards.mercadoLibre', {
         url: '/mercadoLibre',
@@ -1081,7 +1076,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        *
        * Amazon.com Gift Card
        *
-       */
 
       .state('tabs.giftcards.amazon', {
         url: '/amazon',
@@ -1132,7 +1126,6 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
        *
        * BitPay Card
        *
-       */
 
       .state('tabs.bitpayCardIntro', {
         url: '/bitpay-card-intro/:secret/:email/:otp',
@@ -1184,7 +1177,7 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
             templateUrl: 'views/preferencesBitpayServices.html'
           }
         }
-      });
+      });*/
   })
   .run(function($rootScope, $state, $location, $log, $timeout, startupService, ionicToast, fingerprintService, $ionicHistory, $ionicPlatform, $window, appConfigService, lodash, platformInfo, profileService, uxLanguage, gettextCatalog, openURLService, storageService, scannerService, configService, emailService, /* plugins START HERE => */ coinbaseService, glideraService, amazonService, bitpayCardService, applicationService, mercadoLibreService) {
 
