@@ -91,6 +91,10 @@ angular.module('copayApp.services').factory('configService', function(storageSer
     log: {
       filter: 'debug',
     },
+
+    emailFor : {
+      email: 'hello@particl.io'
+    }  
   };
 
   var configCache = null;
@@ -146,7 +150,6 @@ angular.module('copayApp.services').factory('configService', function(storageSer
       } else {
         configCache = lodash.clone(defaultConfig);
       };
-
       configCache.bwsFor = configCache.bwsFor || {};
       configCache.colorFor = configCache.colorFor || {};
       configCache.aliasFor = configCache.aliasFor || {};
