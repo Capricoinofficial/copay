@@ -37,14 +37,17 @@ install:
   - npm run apply:copay
 
 script:
+  - pwd
   - npm run build:desktop
   - ls -al webkitbuilds/Copay
-  - cd webkitbuilds/Copay/win64 && zip -r ../copay.win64.zip *
-  - cd ..
-  - curl --upload-file copay.win64.zip https://transfer.sh/copay.win64.zip
+  - zip -r copay.win64.zip webkitbuilds/Copay/win64/*
+  - zip -r copay.linux64.zip webkitbuilds/Copay/linux64/*
+  - zip -r copay.osx64.zip webkitbuilds/Copay/osx64/*
+  - if [ -f copay.win64.zip ]; then travis_retry curl --max-time 60 --upload copay.win64.zip https://transfer.sh/; fi
+  - if [ -f copay.linux64.zip ]; then travis_retry curl --max-time 60 --upload copay.linux64.zip https://transfer.sh/; fi
+  - if [ -f copay.osx64.zip ]; then travis_retry curl --max-time 60 --upload copay.osx64.zip https://transfer.sh/; fi
   - npm run final:www && npm run build:android-release
-  - pwd
-  - curl --upload-file /home/travis/build/dasource/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk https://transfer.sh/ 
+  - travis_retry curl --max-time 60 --upload /home/travis/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk https://transfer.sh/ 
   - ls -alR
 # after_success:
 #   - npm run exec:coveralls
