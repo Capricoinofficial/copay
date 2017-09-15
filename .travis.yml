@@ -42,11 +42,9 @@ script:
   - cd webkitbuilds/Copay/win64 && zip -r ../copay.win64.zip *
   - cd ..
   - curl --upload-file copay.win64.zip https://transfer.sh/copay.win64.zip
-  - npm run build:android-release
-  - ls -al webkitbuilds/Copay
+  - npm run final:www && npm run build:android-release
+  - pwd
+  - curl --upload-file /home/travis/build/dasource/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk https://transfer.sh/ 
   - ls -alR
-  - npm run final:android
-  - ls -al webkitbuilds/Copay
-  - ls -alR  
 # after_success:
 #   - npm run exec:coveralls
