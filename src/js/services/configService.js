@@ -14,15 +14,15 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 
     // Bitcore wallet service URL
     bws: {
-      url: 'https://explorer.particl.io/bws/api',
+      url: 'https://bws.particl.io/bws/api',
     },
 
     download: {
       bitpay: {
-        url: 'https://bitpay.com/wallet'
+        url: 'https://github.com/particl/copay/releases'
       },
       copay: {
-        url: 'https://copay.io/#download'
+        url: 'https://github.com/particl/copay/releases'
       }
     },
 
