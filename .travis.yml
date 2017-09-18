@@ -40,9 +40,9 @@ script:
   - pwd
   - npm run build:desktop
   - ls -al /home/travis/build/particl/copay/
-  - zip -r copay.win64.zip webkitbuilds/Copay/win64/*
-  - zip -r copay.linux64.zip webkitbuilds/Copay/linux64/*
-  - zip -r copay.osx64.zip webkitbuilds/Copay/osx64/*
+  - zip -r copay.win64.zip webkitbuilds/Particl\ Copay/win64/*
+  - zip -r copay.linux64.zip webkitbuilds/Particl\ Copay/linux64/*
+  - zip -r copay.osx64.zip webkitbuilds/Particl\ Copay/osx64/*
   - if [ -f copay.win64.zip ]; then travis_retry curl --max-time 60 --upload copay.win64.zip https://transfer.sh/; fi
   - if [ -f copay.linux64.zip ]; then travis_retry curl --max-time 60 --upload copay.linux64.zip https://transfer.sh/; fi
   - if [ -f copay.osx64.zip ]; then travis_retry curl --max-time 60 --upload copay.osx64.zip https://transfer.sh/; fi
