@@ -391,7 +391,7 @@ angular.module('copayApp.services')
           walletClient.createWallet(name, myName, opts.m, opts.n, {
             network: opts.networkName,
             singleAddress: opts.singleAddress,
-            walletPrivKey: opts.walletPrivKey,
+            walletPrivKey: opts.walletPrivKey
           }, function(err, secret) {
             if (err) return bwcError.cb(err, gettextCatalog.getString('Error creating wallet'), cb);
             return cb(null, walletClient, secret);
@@ -404,7 +404,6 @@ angular.module('copayApp.services')
     root.createWallet = function(opts, cb) {
       doCreateWallet(opts, function(err, walletClient, secret) {
         if (err) return cb(err);
-
         addAndBindWalletClient(walletClient, {
           bwsurl: opts.bwsurl
         }, cb);

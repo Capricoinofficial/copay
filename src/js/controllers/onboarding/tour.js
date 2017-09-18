@@ -67,9 +67,10 @@ angular.module('copayApp.controllers').controller('tourController',
             walletId: walletId
           });
 
+          /*
           $state.go('onboarding.backupRequest', {
             walletId: walletId
-          });
+          });*/
         });
       }, 300);
     };
