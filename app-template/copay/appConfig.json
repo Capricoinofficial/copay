@@ -23,8 +23,8 @@
   "windowsAppId": "",
   "pushSenderId": "",
   "description": "A Secure Particl Wallet",
-  "version": "3.7.1",
-  "androidVersion": "371000",
+  "version": "3.7.1.1",
+  "androidVersion": "371001",
   "_extraCSS": null,
   "_enabledExtensions": {
     "coinbase": false,
