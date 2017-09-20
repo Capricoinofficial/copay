@@ -32,6 +32,7 @@ before_install:
 install:
 - npm run apply:copay
 - export OUTDIR=$HOME/outputs
+- mkdir $OUTDIR
 script:
 - pwd
 - npm run build:desktop
