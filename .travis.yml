@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - '6'
+- '6'
 addons:
   apt:
     sources:
@@ -12,42 +12,63 @@ addons:
     - openjdk-7-jdk
     - lib32stdc++6
     - lib32z1
-env:
-  CXX=g++-4.8
-
-
+env: CXX=g++-4.8
 before_script:
-  - wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
-  - tar -xvf android-sdk_r24.4-linux.tgz
-  - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter platform-tools
-  - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter build-tools-23.0.2
-  - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter android-23
-  - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-support
-  - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-m2repository
-  - echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-google-m2repository
-  - export ANDROID_HOME=$PWD/android-sdk-linux
-  - export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2
-  - mkdir "$ANDROID_HOME/licenses"
-  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
-
+- wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
+- tar -xvf android-sdk_r24.4-linux.tgz
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter platform-tools
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter build-tools-23.0.2
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter android-23
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-support
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-android-m2repository
+- echo y | ./android-sdk-linux/tools/android update sdk --no-ui --all --filter extra-google-m2repository
+- export ANDROID_HOME=$PWD/android-sdk-linux
+- export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/23.0.2
+- mkdir "$ANDROID_HOME/licenses"
+- echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 install:
-  - npm run apply:copay
-
+- npm run apply:copay
+- export OUTDIR=$HOME/outputs
 script:
-  - pwd
-  - npm run build:desktop
-  - ls -al /home/travis/build/particl/copay/
-  - zip -r copay.win64.zip webkitbuilds/Particl\ Copay/win64/*
-  - zip -r copay.linux64.zip webkitbuilds/Particl\ Copay/linux64/*
-  - zip -r copay.osx64.zip webkitbuilds/Particl\ Copay/osx64/*
-  - if [ -f copay.win64.zip ]; then travis_retry curl --max-time 60 --upload copay.win64.zip https://transfer.sh/; fi
-  - if [ -f copay.linux64.zip ]; then travis_retry curl --max-time 60 --upload copay.linux64.zip https://transfer.sh/; fi
-  - if [ -f copay.osx64.zip ]; then travis_retry curl --max-time 60 --upload copay.osx64.zip https://transfer.sh/; fi
-  - npm run final:www && npm run build:android-release
-  - cp ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk .
-  - if [ -f android-release-unsigned.apk ]; then travis_retry curl --max-time 20 --upload android-release-unsigned.apk https://transfer.sh/; fi
-# after_success:
-#   - npm run exec:coveralls
+- pwd
+- npm run build:desktop
+- ls -al $TRAVIS_BUILD_DIR
+- cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/
+- zip -r $OUTDIR/particl-copay.win64.zip win64/*
+- mv Particl\ Copay-linux.zip $OUTDIR/particl-copay.linux64.zip
+- cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/osx64
+- zip -r $OUTDIR/copay.osx64.zip Particl\ Copay.app
+- cd $TRAVIS_BUILD_DIR
+- touch $OUTDIR/sha256sums.txt
+- if [ -f $OUTDIR/copay.win64.zip ];   then sha256sum $OUTDIR/copay.win64.zip   >>
+  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
+  $OUTDIR/copay.win64.zip   https://transfer.sh/; fi
+- if [ -f $OUTDIR/copay.linux64.zip ]; then sha256sum $OUTDIR/copay.linux64.zip >>
+  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
+  $OUTDIR/copay.linux64.zip https://transfer.sh/; fi
+- if [ -f $OUTDIR/copay.osx64.zip ];   then sha256sum $OUTDIR/copay.osx64.zip   >>
+  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
+  $OUTDIR/copay.osx64.zip   https://transfer.sh/; fi
+- cat $OUTDIR/sha256sums.txt
+- npm run final:www && npm run build:android-release
+- cp ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk
+  $OUTDIR/
+- if [ -f $OUTDIR/android-release-unsigned.apk  && [ "$TRAVIS_TAG" = "" ] ]; then
+  travis_retry curl --max-time 20 --upload $OUTDIR/android-release-unsigned.apk https://transfer.sh/;
+  fi
+deploy:
+  provider: releases
+  api_key:
+    secure: SKFkIeqJEgcQGCyvvw72VXM6sIKoCRjz/0B0rInZHMy5qQAXsyVEZVvjkSN25eh4MqJThuA+bM+NPtMZWOML3vxNz/5eEEn0c3QeQan6tx3ab5RYJEYq7ESnZe36ihysPjYvPNBZiSzNlpz70oCbZ5xEGQSAQQ2h6sc9Ql6yp7f3Al5gsdoVExvN7ziLWe2elZw0v/LREZjTOXeUP9QdW65uGSy20Gigpv7LRGZy80F9IqiOKlsGX30gaupkw28hQck6A978LkTr/zp9BMIREl9vFZItw0rraMQnYRtpA5caxRSJM/9DZVolJFAAGN9BeyGblwHHeb7CJJ7Yon126fVMmiAP+HdpAdWJIGtUEYCbqQ0ai5B14pzv9WF5fx83zfsPZ07N+YzUpvPJOiMLZtuwrn9y+Lqq+HCnshaqJ+6Fd2GBWbFwDpqeOophN4CvgXfA33Mp91HGmGi/oD/qvstWFPgCEBvZghSYnoEnYUJVpMR3UOYHPqCtRnuA6+zwT89n0oQol6hRqDtYGi5JGShEDligE1+rBytOAHvY7OZVOZv/zy7vB5t2oFvyGnjBL1jsXqaF3WxzrSbvCSc7hJ3ITfM5QKaKxxavGAARpZVArPZxTN4HWK4j4Y4h15GI8yaFz2MVcWY1SFfQnphzkPWWtG6M8qk0nlWGfHm2mGE=
+  file: # Linter thinks this is broken?
+    - $OUTDIR/copay.win64.zip
+    - $OUTDIR/copay.linux64.zip
+    - $OUTDIR/copay.osx64.zip
+    - $OUTDIR/android-release-unsigned.apk
+    - $OUTDIR/sha256sums.txt
+  overwrite: true
+  on:
+    tags: true
