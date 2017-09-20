@@ -46,14 +46,14 @@ script:
 - cd $TRAVIS_BUILD_DIR
 - touch $OUTDIR/sha256sums.txt
 - if [ -f $OUTDIR/particl-copay.win64.zip ]; then sha256sum $OUTDIR/particl-copay.win64.zip >>
-  $OUTDIR/sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  $OUTDIR/particl-copay.win64.zip   https://transfer.sh/; fi
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ];then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay.win64.zip   https://transfer.sh/; fi;fi
 - if [ -f $OUTDIR/particl-copay.linux64.zip ]; then sha256sum $OUTDIR/particl-copay.linux64.zip >>
-  $OUTDIR/sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  $OUTDIR/particl-copay.linux64.zip https://transfer.sh/; fi
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ];then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay.linux64.zip https://transfer.sh/; fi;fi
 - if [ -f $OUTDIR/particl-copay.osx64.zip ]; then sha256sum $OUTDIR/particl-copay.osx64.zip >>
-  $OUTDIR/sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  $OUTDIR/particl-copay.osx64.zip   https://transfer.sh/; fi
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ];then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay.osx64.zip   https://transfer.sh/; fi;fi
 - cat $OUTDIR/sha256sums.txt
 - npm run final:www && npm run build:android-release
 - cp ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk
