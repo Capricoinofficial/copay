@@ -9,7 +9,7 @@
 #define AppId "*WINDOWSAPPID*"
 
 [Setup]
-AppId={#AppId}
+;AppId={#AppId} Currently not supported
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
