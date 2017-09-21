@@ -37,6 +37,7 @@ script:
 - pwd
 - npm run build:desktop
 - ls -al $TRAVIS_BUILD_DIR
+- cp $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe $OUTDIR/particl-copay-win64-setup.exe
 - cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/
 - zip -r $OUTDIR/particl-copay.win64.zip win64/*
 - cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/
@@ -45,23 +46,27 @@ script:
 - zip -r $OUTDIR/copay.osx64.zip Particl\ Copay.app
 - cd $TRAVIS_BUILD_DIR
 - touch $OUTDIR/sha256sums.txt
-- if [ -f $OUTDIR/particl-copay.win64.zip ]; then sha256sum $OUTDIR/particl-copay.win64.zip >>
+- cd $OUTDIR
+- if [ -f particl-copay.win64.zip ]; then sha256sum particl-copay.win64.zip >>
   sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  $OUTDIR/particl-copay.win64.zip   https://transfer.sh/; fi
-- if [ -f $OUTDIR/particl-copay.linux64.zip ]; then sha256sum $OUTDIR/particl-copay.linux64.zip >>
+  particl-copay.win64.zip   https://transfer.sh/; fi
+- if [ -f particl-copay-win64-setup.exe ]; then sha256sum particl-copay-win64-setup.exe >>
   sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  $OUTDIR/particl-copay.linux64.zip https://transfer.sh/; fi
-- if [ -f $OUTDIR/particl-copay.osx64.zip ]; then sha256sum $OUTDIR/particl-copay.osx64.zip >>
+  particl-copay-win64-setup.exe   https://transfer.sh/; fi
+- if [ -f particl-copay.linux64.zip ]; then sha256sum particl-copay.linux64.zip >>
   sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  $OUTDIR/particl-copay.osx64.zip   https://transfer.sh/; fi
-- cat $OUTDIR/sha256sums.txt
+  particl-copay.linux64.zip https://transfer.sh/; fi
+- if [ -f particl-copay.osx64.zip ]; then sha256sum particl-copay.osx64.zip >>
+  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
+  particl-copay.osx64.zip   https://transfer.sh/; fi
 - npm run final:www && npm run build:android-release
 - cp ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk
   $OUTDIR/
-- if [ -f $OUTDIR/android-release-unsigned.apk ] && [ "$TRAVIS_TAG" = "" ]; then
-  travis_retry curl --max-time 20 --upload
+- if [ -f android-release-unsigned.apk ] && [ "$TRAVIS_TAG" = "" ]; then
+  sha256sum android-release-unsigned.apk >> sha256sums.txt;travis_retry curl --max-time 20 --upload
   $OUTDIR/android-release-unsigned.apk https://transfer.sh/;
   fi
+- cat $OUTDIR/sha256sums.txt
 deploy:
   provider: releases
   api_key:

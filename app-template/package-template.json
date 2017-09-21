@@ -94,8 +94,8 @@
     "build:ios-release":      "cordova prepare ios && cordova build ios --release",
     "build:android-release":  "cordova prepare android && cordova build android --release",
     "build:windows-release":  "cordova prepare windows && cordova build windows --release --arch=\"ARM\"",
-    "build:desktop":          "grunt desktop",
-    "build:osx":            "grunt osx",
+    "build:desktop":          "grunt desktop && innosetup-compiler webkitbuilds/setup-win.iss --O=webkitbuilds",
+    "build:osx":              "grunt osx",
     "open:ios":               "open platforms/ios/*.xcodeproj",
     "open:android":           "open -a open -a /Applications/Android\\ Studio.app platforms/android",
     "final:www":              "npm run build:www-release",
@@ -117,6 +117,7 @@
   "devDependencies": {
     "cordova": "^6.3.1",
     "grunt": "^1.0.1",
+    "innosetup-compiler": "^5.5.9",
     "ionic": "^3.6.0",
     "trash-cli": "^1.4.0",
     "lodash": "^4.17.4",
