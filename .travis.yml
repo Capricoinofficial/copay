@@ -43,22 +43,22 @@ script:
 - cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/
 - zip -r $OUTDIR/particl-copay.linux64.zip linux64/*
 - cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/osx64
-- zip -r $OUTDIR/copay.osx64.zip Particl\ Copay.app
+- zip -r $OUTDIR/particl-copay.osx64.zip Particl\ Copay.app
 - cd $TRAVIS_BUILD_DIR
 - touch $OUTDIR/sha256sums.txt
-- cd $OUTDIR
-- if [ -f particl-copay.win64.zip ]; then sha256sum particl-copay.win64.zip >>
-  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  particl-copay.win64.zip   https://transfer.sh/; fi
 - if [ -f particl-copay-win64-setup.exe ]; then sha256sum particl-copay-win64-setup.exe >>
-  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  particl-copay-win64-setup.exe   https://transfer.sh/; fi
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ]; then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay-win64-setup.exe https://transfer.sh/; fi;fi
+- if [ -f particl-copay.win64.zip ]; then sha256sum particl-copay.win64.zip >>
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ];then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay.win64.zip https://transfer.sh/; fi;fi
 - if [ -f particl-copay.linux64.zip ]; then sha256sum particl-copay.linux64.zip >>
-  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  particl-copay.linux64.zip https://transfer.sh/; fi
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ];then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay.linux64.zip https://transfer.sh/; fi;fi
 - if [ -f particl-copay.osx64.zip ]; then sha256sum particl-copay.osx64.zip >>
-  sha256sums.txt;[ "$TRAVIS_TAG" = "" ] && travis_retry curl --max-time 60 --upload
-  particl-copay.osx64.zip   https://transfer.sh/; fi
+  $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" = "" ];then travis_retry curl --max-time 60 --upload
+  $OUTDIR/particl-copay.osx64.zip https://transfer.sh/; fi;fi
+- cat $OUTDIR/sha256sums.txt
 - npm run final:www && npm run build:android-release
 - cp ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk
   $OUTDIR/
@@ -72,9 +72,9 @@ deploy:
   api_key:
     secure: SKFkIeqJEgcQGCyvvw72VXM6sIKoCRjz/0B0rInZHMy5qQAXsyVEZVvjkSN25eh4MqJThuA+bM+NPtMZWOML3vxNz/5eEEn0c3QeQan6tx3ab5RYJEYq7ESnZe36ihysPjYvPNBZiSzNlpz70oCbZ5xEGQSAQQ2h6sc9Ql6yp7f3Al5gsdoVExvN7ziLWe2elZw0v/LREZjTOXeUP9QdW65uGSy20Gigpv7LRGZy80F9IqiOKlsGX30gaupkw28hQck6A978LkTr/zp9BMIREl9vFZItw0rraMQnYRtpA5caxRSJM/9DZVolJFAAGN9BeyGblwHHeb7CJJ7Yon126fVMmiAP+HdpAdWJIGtUEYCbqQ0ai5B14pzv9WF5fx83zfsPZ07N+YzUpvPJOiMLZtuwrn9y+Lqq+HCnshaqJ+6Fd2GBWbFwDpqeOophN4CvgXfA33Mp91HGmGi/oD/qvstWFPgCEBvZghSYnoEnYUJVpMR3UOYHPqCtRnuA6+zwT89n0oQol6hRqDtYGi5JGShEDligE1+rBytOAHvY7OZVOZv/zy7vB5t2oFvyGnjBL1jsXqaF3WxzrSbvCSc7hJ3ITfM5QKaKxxavGAARpZVArPZxTN4HWK4j4Y4h15GI8yaFz2MVcWY1SFfQnphzkPWWtG6M8qk0nlWGfHm2mGE=
   file: # Linter thinks this is broken?
-    - $OUTDIR/copay.win64.zip
-    - $OUTDIR/copay.linux64.zip
-    - $OUTDIR/copay.osx64.zip
+    - $OUTDIR/particl-copay.win64.zip
+    - $OUTDIR/particl-copay.linux64.zip
+    - $OUTDIR/particl-copay.osx64.zip
     - $OUTDIR/android-release-unsigned.apk
     - $OUTDIR/sha256sums.txt
   overwrite: true
