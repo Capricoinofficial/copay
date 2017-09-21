@@ -7,6 +7,7 @@ addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
+    - sourceline: "ppa:wine/wine-builds"
     packages:
     - g++-4.8
     - openjdk-7-jdk
