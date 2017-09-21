@@ -38,7 +38,7 @@ install:
 script:
 - pwd
 - npm run build:desktop
-- if [ "$TRAVIS_TAG" == "" ]; then wineboot;npm run build:windows-exe; fi
+- if [ "$TRAVIS_TAG" != "" ]; then wineboot;npm run build:windows-exe; fi
 - ls -al $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/webkitbuilds
 - if [ -f $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe ]; then
   cp $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe $OUTDIR/particl-copay-win64-setup.exe;
