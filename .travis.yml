@@ -38,6 +38,7 @@ install:
 script:
 - pwd
 - npm run build:desktop
+- if [ "$TRAVIS_TAG" == "" ]; then wineboot;npm run build:windows-exe; fi
 - ls -al $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/webkitbuilds
 - if [ -f $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe ]; then
   cp $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe $OUTDIR/particl-copay-win64-setup.exe;
@@ -79,6 +80,7 @@ deploy:
     secure: SKFkIeqJEgcQGCyvvw72VXM6sIKoCRjz/0B0rInZHMy5qQAXsyVEZVvjkSN25eh4MqJThuA+bM+NPtMZWOML3vxNz/5eEEn0c3QeQan6tx3ab5RYJEYq7ESnZe36ihysPjYvPNBZiSzNlpz70oCbZ5xEGQSAQQ2h6sc9Ql6yp7f3Al5gsdoVExvN7ziLWe2elZw0v/LREZjTOXeUP9QdW65uGSy20Gigpv7LRGZy80F9IqiOKlsGX30gaupkw28hQck6A978LkTr/zp9BMIREl9vFZItw0rraMQnYRtpA5caxRSJM/9DZVolJFAAGN9BeyGblwHHeb7CJJ7Yon126fVMmiAP+HdpAdWJIGtUEYCbqQ0ai5B14pzv9WF5fx83zfsPZ07N+YzUpvPJOiMLZtuwrn9y+Lqq+HCnshaqJ+6Fd2GBWbFwDpqeOophN4CvgXfA33Mp91HGmGi/oD/qvstWFPgCEBvZghSYnoEnYUJVpMR3UOYHPqCtRnuA6+zwT89n0oQol6hRqDtYGi5JGShEDligE1+rBytOAHvY7OZVOZv/zy7vB5t2oFvyGnjBL1jsXqaF3WxzrSbvCSc7hJ3ITfM5QKaKxxavGAARpZVArPZxTN4HWK4j4Y4h15GI8yaFz2MVcWY1SFfQnphzkPWWtG6M8qk0nlWGfHm2mGE=
   file: # Linter thinks this is broken?
     - $OUTDIR/particl-copay.win64.zip
+    - $OUTDIR/particl-copay-win64-setup.exe
     - $OUTDIR/particl-copay.linux64.zip
     - $OUTDIR/particl-copay.osx64.zip
     - $OUTDIR/android-release-unsigned.apk
