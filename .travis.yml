@@ -36,6 +36,7 @@ install:
 - mkdir $OUTDIR
 script:
 - pwd
+- wineboot
 - npm run build:desktop
 - ls -al $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/webkitbuilds
 - if [ -f $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe ]; then
