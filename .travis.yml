@@ -37,7 +37,6 @@ install:
 - mkdir $OUTDIR
 script:
 - pwd
-- wineboot &
 - npm run build:desktop
 - ls -al $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/webkitbuilds
 - if [ -f $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe ]; then
@@ -64,9 +63,11 @@ script:
   $OUTDIR/sha256sums.txt;if [ "$TRAVIS_TAG" == "" ];then travis_retry curl --max-time 60 --upload
   $OUTDIR/particl-copay.osx64.zip https://transfer.sh/; fi;fi
 - cat $OUTDIR/sha256sums.txt
+- cd $TRAVIS_BUILD_DIR
 - npm run final:www && npm run build:android-release
 - cp ~/build/particl/copay/platforms/android/build/outputs/apk/android-release-unsigned.apk
   $OUTDIR/
+- cd $OUTDIR
 - if [ -f android-release-unsigned.apk ]; then
   sha256sum android-release-unsigned.apk >>
   sha256sums.txt;if [ "$TRAVIS_TAG" == "" ];then travis_retry curl --max-time 20 --upload
