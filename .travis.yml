@@ -12,6 +12,7 @@ addons:
     - openjdk-7-jdk
     - lib32stdc++6
     - lib32z1
+    - wine
 env: CXX=g++-4.8
 before_script:
 - wget http://dl.google.com/android/android-sdk_r24.4-linux.tgz
@@ -36,8 +37,10 @@ install:
 script:
 - pwd
 - npm run build:desktop
-- ls -al $TRAVIS_BUILD_DIR
-- cp $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe $OUTDIR/particl-copay-win64-setup.exe
+- ls -al $TRAVIS_BUILD_DIR $TRAVIS_BUILD_DIR/webkitbuilds
+- if [ -f $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe ]; then
+  cp $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay.exe $OUTDIR/particl-copay-win64-setup.exe;
+  fi
 - cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/
 - zip -r $OUTDIR/particl-copay.win64.zip win64/*
 - cd $TRAVIS_BUILD_DIR/webkitbuilds/Particl\ Copay/
