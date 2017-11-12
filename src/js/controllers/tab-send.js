@@ -180,7 +180,6 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
 
       });
 
-      console.log(outputs);
       if (!wallet || !note) {
         alert('Make sure you have a wallet and note');
         return;
