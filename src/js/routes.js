@@ -570,6 +570,15 @@ angular.module('copayApp').config(function(historicLogProvider, $provide, $logPr
           }
         }
       })
+      .state('tabs.preferences.preferencesColdStaking', {
+        url: '/preferencesColdStaking',
+        views: {
+          'tab-settings@tabs': {
+            controller: 'preferencesColdStakingController',
+            templateUrl: 'views/preferencesColdStaking.html'
+          }
+        }
+      })
       .state('tabs.preferences.preferencesExternal', {
         url: '/preferencesExternal',
         views: {
