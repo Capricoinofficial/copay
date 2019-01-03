@@ -8,6 +8,7 @@ For a list of frequently asked questions please visit the [Copay FAQ](https://gi
 
 ## Main Features
 
+- Bitcoin and Bitcoin Cash coin support
 - Multiple wallet creation and management in-app
 - Intuitive, multisignature security for personal or shared wallets
 - Easy spending proposal flow for shared wallets and group payments
@@ -19,7 +20,6 @@ For a list of frequently asked questions please visit the [Copay FAQ](https://gi
 - Support for over 150 currency pricing options and unit denomination in BTC or bits
 - Mnemonic (BIP39) support for wallet backups
 - Paper wallet sweep support (BIP38)
-- Hardware wallet support (Trezor and Ledger) (only in Chrome App version)
 - Email notifications for payments and transfers
 - Push notifications (only available for ios and android versions)
 - Customizable wallet naming and background colors
@@ -39,16 +39,19 @@ cd copay
 Ensure you have [Node](https://nodejs.org/) installed, then install and start Copay:
 
 ```sh
+npm install
 npm run apply:copay
-npm start
+npm run start
 ```
 
 Visit [`localhost:8100`](http://localhost:8100/) to view the app.
 
-A watch task is also available to rebuild components of the app as changes are made. This task can be run in a separate process – while the server started by `npm start` is running – to quickly test changes.
+## Unit & E2E Tests (Karma & Protractor)
+
+To run the tests, run:
 
 ```
-npm run watch
+ npm run test
 ```
 
 ## Testing on Real Devices
@@ -59,10 +62,11 @@ It's recommended that all final testing be done on a real device – both to ass
 
 Follow the [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to set up your development environment.
 
-When your developement enviroment is ready, run the `start:android` npm package script.
+When your developement enviroment is ready, run the `start:android` package script.
 
 ```sh
 npm run apply:copay
+npm run prepare:copay
 npm run start:android
 ```
 
@@ -70,10 +74,11 @@ npm run start:android
 
 Follow the [Cordova iOS Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/) to set up your development environment.
 
-When your developement enviroment is ready, run the `start:ios` npm package script.
+When your developement enviroment is ready, run the `start:ios` package script.
 
 ```sh
 npm run apply:copay
+npm run prepare:copay
 npm run start:ios
 ```
 
@@ -101,9 +106,9 @@ npm run start:windows
 
 ### Desktop (Linux, macOS, and Windows)
 
-The desktop version of Copay currently uses NW.js, an app runtime based on Chromium. To get started, first install NW.js on your system from [the NW.js website](https://nwjs.io/).
+The desktop version of Copay currently uses Electron. To get started, first install Electron on your system from [the Electron website](https://electronjs.org/).
 
-When NW.js is installed, run the `start:desktop` npm package script.
+When Electron is installed, run the `start:desktop` package script.
 
 ```sh
 npm run apply:copay
@@ -120,7 +125,9 @@ The `final` commands build the production version of the app, and bundle it with
 
 ```sh
 npm run clean-all
+npm install
 npm run apply:copay
+npm run prepare:copay
 npm run final:android
 ```
 
@@ -128,11 +135,13 @@ npm run final:android
 
 ```sh
 npm run clean-all
+npm install
 npm run apply:copay
+npm run prepare:copay
 npm run final:ios
 ```
 
-### Windows Phone
+### Push Notifications
 
 - Install Visual Studio 2015 (or newer)
 - Go to app-template folder, search for config-template.xml and then remove this line:
@@ -151,25 +160,28 @@ npm run final:windows
 ```
 - Then open the project file with VS inside cordova/platform/windows/
 
+A current workaround is to comment out the line to prevent the removal of the file during the debug build (line 56 in platforms/ios/cordova/lib/copy-www-build-step.js).
+
+[Source](https://github.com/phonegap/phonegap-plugin-push/issues/2518)
+
 ### Desktop (Linux, macOS, and Windows)
 
 ```sh
 npm run clean-all
+npm install
 npm run apply:copay
 npm run final:desktop
 ```
 
-### Google Chrome App
+## Desktop Data Path
 
-> cd chrome-app/
+Per-user application data directory for Copay or BitPay distribution.
 
 ```sh
-npm run apply:copay
-grunt
-make
+"~/Library/Containers/com.bitpay.copay.desktop2/Data/.copay"
+# or
+"~/Library/Containers/com.bitpay.wallet.desktop/Data/.bitpay"
 ```
-
-On success, the Chrome extension will be located at: `browser-extensions/chrome/copay-chrome-extension`.  To install it go to `chrome://extensions/` in your browser and ensure you have the 'developer mode' option enabled in the settings.  Then click on "Load unpacked chrome extension" and choose the directory mentioned above.
 
 ## Configuration
 
@@ -187,39 +199,38 @@ BITPAY_EXTERNAL_SERVICES_CONFIG_LOCATION="~/.bitpay/externalServices.json" npm r
 
 ### General
 
-Copay implements a multisig wallet using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses.  It supports multiple wallets, each with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3.  To create a multisig wallet shared between multiple participants, Copay requires the extended public keys of all the wallet participants.  Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet.  Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
+Copay implements a multisig wallet using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses. It supports multiple wallets, each with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3. To create a multisig wallet shared between multiple participants, Copay requires the extended public keys of all the wallet participants. Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet. Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
 
 To unlock a payment and spend the wallet's funds, a quorum of participant signatures must be collected and assembled in the transaction.  The funds cannot be spent without at least the minimum number of signatures required by the wallet configuration (2-of-3, 3-of-5, 6-of-6, etc.).  Once a transaction proposal is created, the proposal is distributed among the wallet participants for each to sign the transaction locally.  Finally, when the transaction is signed, the last signing participant will broadcast the transaction to the Particl network.
 
-Copay also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers.  The public key that each participant contributes to the wallet is a BIP32 extended public key.  As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys.  Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
+Copay also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers. The public key that each participant contributes to the wallet is a BIP32 extended public key. As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys. Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
 
 For more information regarding how addresses are generated using this procedure, see: [Structure for Deterministic P2SH Multisignature Wallets](https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki).
 
 ## Copay Backups and Recovery
 
-Since v1.2 Copay uses BIP39 mnemonics for backing up wallets.  The BIP44 standard is used for wallet address derivation. Multisig wallets use P2SH addresses, while non-multisig wallets use P2PKH.
+Since v1.2 Copay uses BIP39 mnemonics for backing up wallets. The BIP44 standard is used for wallet address derivation. Multisig wallets use P2SH addresses, while non-multisig wallets use P2PKH.
 
 Information about backup and recovery procedures is available at: https://github.com/particl/copay/blob/master/backupRecovery.md
 
 Previous versions of Copay used files as backups. See the following section.
 
-It is possible to recover funds from a Copay Wallet without using Copay or the Wallet Service, check the [Copay Recovery Tool](https://github.com/bitpay/copay-recovery).
-
+It is possible to recover funds from a Copay Wallet without using Copay or the Wallet Service, check the [Copay Recovery Tool](https://github.com/bitpay/copay-recovery/tree/master).
 
 ## Wallet Export Format
 
-Copay encrypts the backup with the [Stanford JS Crypto Library](http://bitwiseshiftleft.github.io/sjcl/).  To extract the private key of your wallet you can use https://bitwiseshiftleft.github.io/sjcl/demo/, copy the backup to 'ciphertext' and enter your password.  The resulting JSON will have a key named: `xPrivKey`, that is the extended private key of your wallet.  That information is enough to sign any transaction from your wallet, so be careful when handling it!
+Copay encrypts the backup with the [Stanford JS Crypto Library](http://bitwiseshiftleft.github.io/sjcl/). To extract the private key of your wallet you can go to settings, choose your wallet, click in "more options", then "wallet information", scroll to the bottom and click in "Extended Private Key". That information is enough to sign any transaction from your wallet, so be careful when handling it!
 
 The backup also contains the key `publicKeyRing` that holds the extended public keys of the Copayers.
 Depending on the key `derivationStrategy`, addresses are derived using
 [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) or [BIP45](https://github.com/bitcoin/bips/blob/master/bip-0045.mediawiki). Wallets created in Copay v1.2 and forward always use BIP44, all previous wallets use BIP45. Also note that since Copay version v1.2, non-multisig wallets use address types Pay-to-PublicKeyHash (P2PKH) while multisig wallets still use Pay-to-ScriptHash (P2SH) (key `addressType` at the backup):
 
-| Copay Version  | Wallet Type   | Derivation Strategy   | Address Type  |
-|---|---|---|---|---|
-|  <1.2  | All  |  BIP45 | P2SH   |
-|  >=1.2 | Non-multisig  | BIP44  | P2PKH   |
-| >=1.2  | Multisig  |  BIP44 |  P2SH   |
-| >=1.5  | Multisig Hardware wallets  |  BIP44 (root m/48') |  P2SH   |
+| Copay Version | Wallet Type               | Derivation Strategy | Address Type |
+| ------------- | ------------------------- | ------------------- | ------------ |
+| <1.2          | All                       | BIP45               | P2SH         |
+| ≥1.2          | Non-multisig              | BIP44               | P2PKH        |
+| ≥1.2          | Multisig                  | BIP44               | P2SH         |
+| ≥1.5          | Multisig Hardware wallets | BIP44 (root m/48’)  | P2SH         |
 
 Using a tool like [Bitcore PlayGround](http://bitcore.io/playground) all wallet addresses can be generated. (TIP: Use the `Address` section for P2PKH address type wallets and `Multisig Address` for P2SH address type wallets). For multisig addresses, the required number of signatures (key `m` on the export) is also needed to recreate the addresses.
 
@@ -227,17 +238,15 @@ BIP45 note: All addresses generated at BWS with BIP45 use the 'shared cosigner i
 
 Since version 1.5, Copay uses the root `m/48'` for hardware multisignature wallets. This was coordinated with Ledger and Trezor teams. While the derivation path format is still similar to BIP44, the root was in order to indicate that these wallets are not discoverable by scanning addresses for funds. Address generation for multisignature wallets requires the other copayers extended public keys.
 
-
 ## Bitcore Wallet Service
 
 Copay depends on [Bitcore Wallet Service](https://github.com/particl/bitcore-wallet-service) (BWS) for blockchain information, networking and Copayer synchronization.  A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.particl.io`.  Switching between BWS instances is very simple and can be done with a click from within Copay.  BWS also allows Copay to interoperate with other wallets like [Bitcore Wallet CLI] (https://github.com/particl/bitcore-wallet).
 
-## Hardware Wallet Support
+Please note that Copay v5.3.0 and above use CSP to restrict network access. To use a custom BWS see [CSP announcement](https://github.com/bitpay/copay/blob/master/CSP.md).
 
-Copay supports Ledger and Trezor hardware wallets. Hardware wallet support is only available through the Chrome App. Ledger support is only available on multisig wallets.
+## Translations
 
-To use Ledger, you need to have the Ledger Chrome App installed, available at:
-https://chrome.google.com/webstore/detail/ledger-wallet/kkdpmhnladdopljabkgpacgpliggeeaf
+Copay uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/copay) as the front-end tool for translators. To join our team of translators, please create an account at [Crowdin](https://crowdin.com) and translate the Copay documentation and application text into your native language.
 
 To use Trezor, you need to have the Trezor Chrome Extension installed, available at:
 https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj
@@ -273,6 +282,7 @@ node crowdin_download.js
 This will download all partial and complete language translations while also cleaning out any untranslated ones.
 
 **Translation Credits:**
+
 - Japanese: @dabura667
 - French: @kirvx
 - Portuguese: @pmichelazzo
@@ -280,16 +290,18 @@ This will download all partial and complete language translations while also cle
 - German: @saschad
 - Russian: @vadim0
 
-*Gracias totales!*
+_Gracias totales!_
 
 ## Release Schedules
-Copay uses the `MAJOR.MINOR.BATCH` convention for versioning.  Any release that adds features should modify the MINOR or MAJOR number.
+
+Copay uses the `MAJOR.MINOR.BATCH` convention for versioning. Any release that adds features should modify the MINOR or MAJOR number.
 
 ### Bug Fixing Releases
 
-We release bug fixes as soon as possible for all platforms.  Usually around a week after patches, a new release is made with language translation updates (like 1.1.4 and then 1.1.5).  There is no coordination so all platforms are updated at the same time.
+We release bug fixes as soon as possible for all platforms. Usually around a week after patches, a new release is made with language translation updates (like 1.1.4 and then 1.1.5). There is no coordination so all platforms are updated at the same time.
 
 ### Minor and Major Releases
+
 - t+0: tag the release 1.2 and "text lock" (meaning only non-text related bug fixes. Though this rule is sometimes broken, it's good to make a rule.)
 - t+7: testing for 1.2 is finished, translation is also finished, and 1.2.1 is tagged with all translations along with bug fixes made in the last week.
 - t+7: iOS is submitted for 1.2.1. All other platforms are submitted with auto-release off.
@@ -300,14 +312,27 @@ We release bug fixes as soon as possible for all platforms.  Usually around a we
 Anyone and everyone is welcome to contribute. Please take a moment to
 review the [guidelines for contributing](CONTRIBUTING.md).
 
-* [Bug reports](CONTRIBUTING.md#bugs)
-* [Feature requests](CONTRIBUTING.md#features)
-* [Pull requests](CONTRIBUTING.md#pull-requests)
+- [Bug reports](CONTRIBUTING.md#bugs)
+- [Feature requests](CONTRIBUTING.md#features)
+- [Pull requests](CONTRIBUTING.md#pull-requests)
+
+## Current Active Developers GPG keys ID
+
+- 15EDAD8D9F2EB1AF @cmgustavo
+
+- FC283098DA862864 @gabrielbazan7
+
+- DD6D7EAADE12280D @Gamboster
+
+- D87947CC8A32D91C @msalcala11
+
+- 612C9C4DDAC47B61 @rastajpa
+
+- F8FC1D9B1B46486D @matiu
 
 ## Support
 
- Please see [Support requests](CONTRIBUTING.md#support)
-
+Please see [Support requests](CONTRIBUTING.md#support)
 
 ## License
 
