@@ -29,7 +29,7 @@ import {
   templateUrl: 'import-wallet.html'
 })
 export class ImportWalletPage {
-  private derivationPathByDefault: string;
+  private derivationPathByDefault: object;
   private derivationPathForTestnet: string;
   private importForm: FormGroup;
   private reader: FileReader;
@@ -93,7 +93,10 @@ export class ImportWalletPage {
       passphrase: [null],
       file: [null],
       filePassword: [null],
-      derivationPath: [this.derivationPathByDefault, Validators.required],
+      derivationPath: [
+        this.derivationPathByDefault['part'],
+        Validators.required
+      ],
       testnetEnabled: [false],
       bwsURL: [this.defaults.bws.url],
       coin: [null, Validators.required]
@@ -195,7 +198,7 @@ export class ImportWalletPage {
   public setDerivationPath(): void {
     let path = this.importForm.value.testnetEnabled
       ? this.derivationPathForTestnet
-      : this.derivationPathByDefault;
+      : this.derivationPathByDefault[this.importForm.controls['coin'].value];
     this.importForm.controls['derivationPath'].setValue(path);
   }
 

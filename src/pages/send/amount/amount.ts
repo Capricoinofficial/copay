@@ -225,6 +225,14 @@ export class AmountPage extends WalletTabsChild {
       });
     }
 
+    if (parentWalletCoin === 'part' || !parentWalletCoin) {
+      this.availableUnits.push({
+        name: 'Particl',
+        id: 'part',
+        shortName: 'PART'
+      });
+    }
+
     this.unitIndex = 0;
 
     if (this.navParams.data.coin) {

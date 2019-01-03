@@ -90,7 +90,7 @@ export class AddressbookAddPage {
   }
 
   private parseAddress(address: string): string {
-    return address.replace(/^(bitcoincash:|bchtest:|bitcoin:)/i, '');
+    return address.replace(/^(bitcoincash:|bchtest:|bitcoin:|particl:)/i, '');
   }
 
   public openScanner(): void {

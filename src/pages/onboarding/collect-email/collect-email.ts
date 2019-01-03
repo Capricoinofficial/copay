@@ -73,7 +73,7 @@ export class CollectEmailPage {
     // Confirm for notifications
     this.emailProvider.updateEmail(opts);
 
-    // Confirm to get news and updates from BitPay
+    // Confirm to Get news and updates from Particl
     if (this.emailForm.value.accept) this.collectEmail();
 
     this.goToBackupRequestPage();

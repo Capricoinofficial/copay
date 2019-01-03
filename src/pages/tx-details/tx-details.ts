@@ -68,9 +68,7 @@ export class TxDetailsPage {
 
     let defaults = this.configProvider.getDefaults();
     this.blockexplorerUrl =
-      this.wallet.coin === 'bch'
-        ? defaults.blockExplorerUrl.bch
-        : defaults.blockExplorerUrl.btc;
+      defaults.blockExplorerUrl[this.wallet.coin][this.getShortNetworkName()];
 
     this.txConfirmNotificationProvider.checkIfEnabled(this.txId).then(res => {
       this.txNotification = {
@@ -251,12 +249,7 @@ export class TxDetailsPage {
 
   public viewOnBlockchain(): void {
     let btx = this.btx;
-    let url =
-      'https://' +
-      (this.getShortNetworkName() == 'test' ? 'test-' : '') +
-      this.blockexplorerUrl +
-      '/tx/' +
-      btx.txid;
+    let url = 'https://' + this.blockexplorerUrl + '/tx/' + btx.txid;
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Transaction on Insight');

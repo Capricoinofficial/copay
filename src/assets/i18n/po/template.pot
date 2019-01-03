@@ -191,7 +191,7 @@ msgid ""
 "latest version."
 msgstr ""
 
-msgid "Anyone with your recovery phrase can access or spend your bitcoin."
+msgid "Anyone with your recovery phrase can access or spend your funds."
 msgstr ""
 
 msgid "Apply changes"
@@ -287,7 +287,13 @@ msgstr ""
 msgid "BitPay Card URI"
 msgstr ""
 
-msgid "Bitcoin Address"
+msgid "Particl Address"
+msgstr ""
+
+msgid "Particl URI"
+msgstr ""
+
+msgid "Address"
 msgstr ""
 
 msgid "Bitcoin Cash Address"
@@ -299,7 +305,7 @@ msgstr ""
 msgid "Bitcoin Cash Wallets"
 msgstr ""
 
-msgid "Bitcoin Network Fee Policy"
+msgid "Particl network fee policy"
 msgstr ""
 
 msgid "Bitcoin URI"
@@ -308,22 +314,22 @@ msgstr ""
 msgid "Bitcoin Wallets"
 msgstr ""
 
-msgid "Bitcoin is a currency."
+msgid "Particl is a currency."
 msgstr ""
 
-msgid "Bitcoin is different - it cannot be safely held with a bank or web service."
+msgid "Particl is different - it cannot be safely held with a bank or web service."
 msgstr ""
 
-msgid "Bitcoin is secure, digital money."
+msgid "Particl is secure, digital money."
 msgstr ""
 
-msgid "Bitcoin miner fee:"
+msgid "Fee:"
 msgstr ""
 
-msgid "Bitcoin network fee policy"
+msgid "Particl network fee policy"
 msgstr ""
 
-msgid "Bitcoin transactions include a fee collected by miners on the network."
+msgid "Particl transactions include a fee collected by miners on the network."
 msgstr ""
 
 msgid "Brands"
@@ -619,7 +625,7 @@ msgstr ""
 msgid "Create a new wallet to start using this app."
 msgstr ""
 
-msgid "Create bitcoin wallet"
+msgid "Create particl wallet"
 msgstr ""
 
 msgid "Create personal wallet"
@@ -789,7 +795,7 @@ msgstr ""
 msgid "Enter a transaction memo"
 msgstr ""
 
-msgid "Enter bitcoin address"
+msgid "Enter wallet address"
 msgstr ""
 
 msgid "Enter custom fee in sat/byte"
@@ -985,7 +991,7 @@ msgid ""
 "fees may apply."
 msgstr ""
 
-msgid "Get news and updates from BitPay"
+msgid "Get news and updates from Particl"
 msgstr ""
 
 msgid "Get started"
@@ -1388,7 +1394,7 @@ msgstr ""
 msgid "No Private Key"
 msgstr ""
 
-msgid "No backup, no bitcoin."
+msgid "No backup, no funds."
 msgstr ""
 
 msgid "No contacts yet"
@@ -1439,7 +1445,7 @@ msgstr ""
 msgid "Not enough funds for fee"
 msgstr ""
 
-msgid "Not even BitPay can access it."
+msgid "Not even Particl can access it."
 msgstr ""
 
 msgid ""
@@ -1455,7 +1461,7 @@ msgstr ""
 msgid "Not set"
 msgstr ""
 
-msgid "Not valid bitcoin address"
+msgid "Not valid address"
 msgstr ""
 
 msgid "Note"
@@ -1882,7 +1888,7 @@ msgstr ""
 msgid "Search a contact"
 msgstr ""
 
-msgid "Search or enter bitcoin address"
+msgid "Search or enter wallet address"
 msgstr ""
 
 msgid "Search your currency"
@@ -2064,7 +2070,7 @@ msgstr ""
 msgid "Spendable balance"
 msgstr ""
 
-msgid "Spending this balance will need significant Bitcoin network fees"
+msgid "Spending this balance will need significant network fees"
 msgstr ""
 
 msgid "Status"
@@ -2091,7 +2097,7 @@ msgstr ""
 msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr ""
 
-msgid "Take control of your money, get started with bitcoin."
+msgid "Take control of your money, get started with particl."
 msgstr ""
 
 msgid "Tap and hold to show"
@@ -2129,7 +2135,7 @@ msgstr ""
 msgid "The Wallet Service URL"
 msgstr ""
 
-msgid "The amount of bitcoin immediately spendable from this wallet."
+msgid "The amount of funds immediately spendable from this wallet."
 msgstr ""
 
 msgid ""
@@ -2213,7 +2219,7 @@ msgid ""
 "experiment, without having to use real bitcoins."
 msgstr ""
 
-msgid "The total amount of bitcoin stored in this wallet."
+msgid "The total amount of funds stored in this wallet."
 msgstr ""
 
 msgid ""
@@ -2245,10 +2251,10 @@ msgstr ""
 msgid "This app is not available for your device."
 msgstr ""
 
-msgid "This app stores your bitcoin with cutting-edge security."
+msgid "This app stores your particl with cutting-edge security."
 msgstr ""
 
-msgid "This bitcoin payment request has expired."
+msgid "This payment request has expired."
 msgstr ""
 
 msgid ""
@@ -2297,7 +2303,7 @@ msgstr ""
 msgid "To"
 msgstr ""
 
-msgid "To get started, you'll need to create a bitcoin wallet and get some bitcoin."
+msgid "To get started, you'll need to create a particl wallet and get some particl."
 msgstr ""
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
@@ -2698,7 +2704,7 @@ msgid ""
 "translation website. We’re looking forward to hearing from you!"
 msgstr ""
 
-msgid "You can scan bitcoin addresses, payment requests, paper wallets, and more."
+msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
 msgstr ""
 
 msgid ""
@@ -2706,7 +2712,7 @@ msgid ""
 "by visiting our project on GitHub."
 msgstr ""
 
-msgid "You can spend bitcoin at millions of websites and stores worldwide."
+msgid "You can spend particl at millions of websites and stores worldwide."
 msgstr ""
 
 msgid "You can still export it from \"Export Wallet\" option."
@@ -2720,7 +2726,7 @@ msgid ""
 "everyday expenses like utilities and metro rides."
 msgstr ""
 
-msgid "You control your bitcoin."
+msgid "You control your particl."
 msgstr ""
 
 msgid "You could sign the transaction later in your wallet details"
@@ -2734,7 +2740,7 @@ msgid ""
 "stores and ATMs worldwide."
 msgstr ""
 
-msgid "Your bitcoin wallet is ready!"
+msgid "Your particl wallet is ready!"
 msgstr ""
 
 msgid ""

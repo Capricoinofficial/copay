@@ -65,7 +65,7 @@ export class AboutPage {
   }
 
   public openTermsOfUse() {
-    const url = 'https://bitpay.com/about/terms#wallet';
+    const url = 'https://particl.io/policy/copay/privacy.html';
     const optIn = true;
     const title = null;
     const message = this.translate.instant('View Wallet Terms of Use');

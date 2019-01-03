@@ -27,16 +27,20 @@ export class SendPage extends WalletTabsChild {
   public search: string = '';
   public walletsBtc;
   public walletsBch;
+  public walletsPart;
   public hasBtcWallets: boolean;
   public hasBchWallets: boolean;
+  public hasPartWallets: boolean;
   public invalidAddress: boolean;
 
   private scannerOpened: boolean;
   private validDataTypeMap: string[] = [
     'BitcoinAddress',
     'BitcoinCashAddress',
+    'ParticlAddress',
     'BitcoinUri',
-    'BitcoinCashUri'
+    'BitcoinCashUri',
+    'ParticlUri'
   ];
 
   constructor(
@@ -71,8 +75,10 @@ export class SendPage extends WalletTabsChild {
 
     this.walletsBtc = this.profileProvider.getWallets({ coin: 'btc' });
     this.walletsBch = this.profileProvider.getWallets({ coin: 'bch' });
+    this.walletsPart = this.profileProvider.getWallets({ coin: 'part' });
     this.hasBtcWallets = !_.isEmpty(this.walletsBtc);
     this.hasBchWallets = !_.isEmpty(this.walletsBch);
+    this.hasPartWallets = !_.isEmpty(this.walletsPart);
   }
 
   ionViewWillLeave() {
@@ -87,7 +93,18 @@ export class SendPage extends WalletTabsChild {
 
   public async goToReceive() {
     await this.walletTabsProvider.goToTabIndex(0);
-    const coinName = this.wallet.coin === Coin.BTC ? 'bitcoin' : 'bitcoin cash';
+    let coinName;
+    switch (this.wallet.coin) {
+      case Coin.BTC:
+        coinName = 'bitcoin';
+        break;
+      case Coin.BCH:
+        coinName = 'bitcoin cash';
+        break;
+      case Coin.PART:
+        coinName = 'particl';
+        break;
+    }
     const infoSheet = this.actionSheetProvider.createInfoSheet(
       'receiving-bitcoin',
       { coinName }
@@ -199,8 +216,17 @@ export class SendPage extends WalletTabsChild {
     if (!hasContacts) {
       const parsedData = this.incomingDataProvider.parseData(this.search);
       if (parsedData && parsedData.type == 'PayPro') {
-        const coin: string =
-          this.search.indexOf('bitcoincash') === 0 ? Coin.BCH : Coin.BTC;
+        let coin: string;
+        switch (this.search.split(':')[0]) {
+          case 'bitcoincash':
+            coin = Coin.BCH;
+            break;
+          case 'particl':
+            coin = Coin.PART;
+            break;
+          default:
+            coin = Coin.BTC;
+        }
         this.incomingDataProvider
           .getPayProDetails(this.search)
           .then(payProDetails => {

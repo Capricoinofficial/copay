@@ -42,9 +42,7 @@ export class SharePage {
     );
     let defaults = this.configProvider.getDefaults();
     this.downloadUrl =
-      this.appProvider.info.name == 'copay'
-        ? defaults.download.copay.url
-        : defaults.download.bitpay.url;
+      defaults.download[this.appProvider.info.appUri.split('-')[0]].url; // Caters for -dev
   }
 
   ionViewWillEnter() {

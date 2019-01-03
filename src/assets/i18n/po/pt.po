@@ -137,7 +137,7 @@ msgstr ""
 msgid "All addresses"
 msgstr "Todos os endereços"
 
-msgid "All of your bitcoin wallet balance may not be available for immediate spending."
+msgid "All of your wallet balance may not be available for immediate spending."
 msgstr "Todos os seus bitcoins na carteira poderão não estar disponíveis de imediato para gastar."
 
 msgid "Allow camera access"
@@ -173,13 +173,13 @@ msgstr ""
 msgid "An update to this app is available. For your security, please update to the latest version."
 msgstr "Está disponível uma actualização para esta aplicação. Para sua segurança, por favor atualize para a versão mais recente."
 
-msgid "Anyone with your recovery phrase can access or spend your bitcoin."
+msgid "Anyone with your recovery phrase can access or spend your funds."
 msgstr ""
 
 msgid "Apply changes"
 msgstr "Aplicar as alterações"
 
-msgid "Approximate Bitcoin network fee to transfer wallet's balance (with normal priority)"
+msgid "Approximate network fee to transfer wallet's balance (with normal priority)"
 msgstr "Taxa de rede Bitcoin aproximada para transferir o saldo da carteira (com prioridade normal)"
 
 msgid "Archive All {brand} Gift Cards?"
@@ -260,7 +260,13 @@ msgstr ""
 msgid "BitPay Card URI"
 msgstr ""
 
-msgid "Bitcoin Address"
+msgid "Particl Address"
+msgstr "Endereço Particl"
+
+msgid "Particl URI"
+msgstr ""
+
+msgid "Address"
 msgstr "Endereço Bitcoin"
 
 msgid "Bitcoin Cash Address"
@@ -272,7 +278,7 @@ msgstr ""
 msgid "Bitcoin Cash Wallets"
 msgstr "Carteiras Bitcoin Cash"
 
-msgid "Bitcoin Network Fee Policy"
+msgid "Particl network fee policy"
 msgstr "Política de taxa de rede Bitcoin"
 
 msgid "Bitcoin URI"
@@ -281,22 +287,22 @@ msgstr ""
 msgid "Bitcoin Wallets"
 msgstr "Carteiras Bitcoin"
 
-msgid "Bitcoin is a currency."
+msgid "Particl is a currency."
 msgstr "Bitcoin é uma moeda."
 
-msgid "Bitcoin is different - it cannot be safely held with a bank or web service."
+msgid "Particl is different - it cannot be safely held with a bank or web service."
 msgstr "Bitcoin é diferente &ndash; ela não pode ser retida com segurança por um serviço web ou banco."
 
-msgid "Bitcoin is secure, digital money."
+msgid "Particl is secure, digital money."
 msgstr "Bitcoin é seguro, dinheiro digital."
 
-msgid "Bitcoin miner fee:"
+msgid "Fee:"
 msgstr "Taxa de mineração de Bitcoin:"
 
-msgid "Bitcoin network fee policy"
+msgid "Particl network fee policy"
 msgstr "Política de taxa de rede Bitcoin"
 
-msgid "Bitcoin transactions include a fee collected by miners on the network."
+msgid "Particl transactions include a fee collected by miners on the network."
 msgstr "As transações Bitcoin incluem uma taxa cobrada pelos mineiros na rede."
 
 msgid "Brands"
@@ -323,7 +329,7 @@ msgstr "A comprar Bitcoin..."
 msgid "Buying Gift Card..."
 msgstr "Comprando Cartão-Presente..."
 
-msgid "By providing your email address, you give explicit consent to BitPay to use your email address to send you email notifications about payments."
+msgid "By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments."
 msgstr "Ao fornecer seu endereço de e-mail, você dá consentimento explícito para BitPay usar seu endereço de e-mail para enviar que e-mail notificações sobre pagamentos."
 
 msgid "Calculating fee..."
@@ -587,7 +593,7 @@ msgstr "Criar uma nova carteira"
 msgid "Create a new wallet to start using this app."
 msgstr ""
 
-msgid "Create bitcoin wallet"
+msgid "Create particl wallet"
 msgstr "Criar carteira bitcoin"
 
 msgid "Create personal wallet"
@@ -695,7 +701,7 @@ msgstr ""
 msgid "Duplicating wallet..."
 msgstr "Duplicando carteira..."
 
-msgid "Each bitcoin wallet can generate billions of addresses from your 12-word recovery phrase. A new address is automatically generated and shown each time you receive a payment."
+msgid "Each wallet can generate billions of addresses from your 12-word recovery phrase. A new address is automatically generated and shown each time you receive a payment."
 msgstr ""
 
 msgid "Economy"
@@ -746,7 +752,7 @@ msgstr "Digite a senha para criptografar sua carteira"
 msgid "Enter a transaction memo"
 msgstr ""
 
-msgid "Enter bitcoin address"
+msgid "Enter wallet address"
 msgstr ""
 
 msgid "Enter custom fee in sat/byte"
@@ -935,7 +941,7 @@ msgstr ""
 msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank fees may apply."
 msgstr ""
 
-msgid "Get news and updates from BitPay"
+msgid "Get news and updates from Particl"
 msgstr "Receba notícias e atualizações da BitPay"
 
 msgid "Get started"
@@ -1001,7 +1007,7 @@ msgstr ""
 msgid "I agree to the Terms and certify that I am the beneficial owner of the input assets and the destination address."
 msgstr "Eu concordo com os termos e certifico que sou o beneficiário efetivo dos ativos e do endereço de destino."
 
-msgid "I give explicit consent to BitPay to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
+msgid "I give explicit consent to Particl to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr "Dou consentimento explícito para BitPay usar meu endereço de e-mail para enviar-me e-mail notificações sobre pagamentos (e, se selecionado, email atualizações e novidades sobre a carteira)."
 
 msgid "I have read, understood, and agree to the Terms of Use"
@@ -1013,7 +1019,7 @@ msgstr "Eu anotei em outro local"
 msgid "I understand"
 msgstr "Eu compreendi"
 
-msgid "I understand that if this app is moved to another device or deleted, my bitcoin can only be recovered with the recovery phrase"
+msgid "I understand that if this app is moved to another device or deleted, my funds can only be recovered with the recovery phrase"
 msgstr ""
 
 msgid "I understand that my funds are held securely on this device, not by a company"
@@ -1043,7 +1049,7 @@ msgstr "Se habilitado, o Cartão de Transações - Lista todas as transações q
 msgid "If enabled, wallets will also try to spend unconfirmed funds."
 msgstr "Se habilitado, as carteiras também tentará gastar fundos não confirmados."
 
-msgid "If this device is replaced or this app is deleted, neither you nor BitPay can recover your funds without a backup."
+msgid "If this device is replaced or this app is deleted, neither you nor Particl can recover your funds without a backup."
 msgstr "Se este dispositivo é substituído ou este app é excluído, nem você, nem BitPay pode recuperar seus fundos sem um backup."
 
 msgid "If you have funds stored on a website then you should move them into a secure wallet... like this one!"
@@ -1124,7 +1130,7 @@ msgstr ""
 msgid "It's a ghost town in here"
 msgstr ""
 
-msgid "It's a good idea to avoid reusing addresses - this both protects your privacy and keeps your bitcoins secure against hypothetical attacks by quantum computers."
+msgid "It's a good idea to avoid reusing addresses - this both protects your privacy and keeps your funds secure against hypothetical attacks by quantum computers."
 msgstr "É uma boa idéia evitar o reuso de endereços - isso protege sua privacidade e mantém seus bitcoins seguros contra ataques hipotéticos de computadores quânticos."
 
 msgid "It's important that you write your recovery phrase down correctly. If something happens to your wallet, you'll need it to recover your money. Please review and try again."
@@ -1301,7 +1307,7 @@ msgstr "Não"
 msgid "No Private Key"
 msgstr ""
 
-msgid "No backup, no bitcoin."
+msgid "No backup, no funds."
 msgstr "Sem backup, sem bitcoin."
 
 msgid "No contacts yet"
@@ -1352,7 +1358,7 @@ msgstr ""
 msgid "Not enough funds for fee"
 msgstr "Não há fundos para taxa"
 
-msgid "Not even BitPay can access it."
+msgid "Not even Particl can access it."
 msgstr "Nem mesmo Bitpay pode acessar isso."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
@@ -1364,7 +1370,7 @@ msgstr ""
 msgid "Not set"
 msgstr ""
 
-msgid "Not valid bitcoin address"
+msgid "Not valid address"
 msgstr "O endereço Bitcoin não é válido"
 
 msgid "Note"
@@ -1781,7 +1787,7 @@ msgstr ""
 msgid "Search a contact"
 msgstr "Buscar contato"
 
-msgid "Search or enter bitcoin address"
+msgid "Search or enter wallet address"
 msgstr "Procure ou digite o endereço bitcoin"
 
 msgid "Search your currency"
@@ -1961,7 +1967,7 @@ msgstr "Proposta de pagamento não encontrada"
 msgid "Spendable balance"
 msgstr "Saldo disponível"
 
-msgid "Spending this balance will need significant Bitcoin network fees"
+msgid "Spending this balance will need significant network fees"
 msgstr "Gastar este balanço necessitará uma taxa de rede Bitcoin significativa"
 
 msgid "Status"
@@ -1988,7 +1994,7 @@ msgstr "Carteira de varredura..."
 msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr "ESTA AÇÃO NÃO PODE SER REVERTIDA"
 
-msgid "Take control of your money, get started with bitcoin."
+msgid "Take control of your money, get started with particl."
 msgstr "Assuma o controle de seu dinheiro, comece com bitcoin."
 
 msgid "Tap and hold to show"
@@ -2024,13 +2030,13 @@ msgstr "A mais segura e rápida exchange do planeta"
 msgid "The Wallet Service URL"
 msgstr "A URL de Serviço da Carteira"
 
-msgid "The amount of bitcoin immediately spendable from this wallet."
+msgid "The amount of funds immediately spendable from this wallet."
 msgstr "A quantidade de bitcoin imediatamente spendable desta carteira."
 
-msgid "The amount of bitcoin stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
+msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
 msgstr "A quantidade de bitcoin armazenada nesta carteira que é alocada como entradas para suas propostas de transação pendentes. O valor é determinado usando saídas de transação não utilizadas associadas a essa carteira e podem ser maiores do que os valores reais associados às suas propostas de transações pendentes."
 
-msgid "The amount of bitcoin stored in this wallet with less than 1 blockchain confirmation."
+msgid "The amount of funds stored in this wallet with less than 1 blockchain confirmation."
 msgstr "A quantidade de bitcoin armazenada nesta carteira com menos de 1 confirmação blockchain."
 
 msgid "The derivation path"
@@ -2075,10 +2081,10 @@ msgstr ""
 msgid "The spend proposal is not pending"
 msgstr "A proposta de gasto não está pendente"
 
-msgid "The testnet is an alternative Bitcoin block chain, to be used for testing. Testnet coins are separate and distinct from actual bitcoins, and do not have any value. This allows application developers or bitcoin testers to experiment, without having to use real bitcoins."
+msgid "The testnet is an alternative block chain, to be used for testing. Testnet coins are separate and distinct from actual bitcoins, and do not have any value. This allows application developers or testers to experiment, without having to use real coins."
 msgstr ""
 
-msgid "The total amount of bitcoin stored in this wallet."
+msgid "The total amount of funds stored in this wallet."
 msgstr "A quantidade total de bitcoin armazenado nesta carteira."
 
 msgid "The transaction from {{walletName}} that you were waiting for has been confirmed."
@@ -2102,10 +2108,10 @@ msgstr "Obviamente há algo estamos fazendo errado. Como poderíamos melhorar su
 msgid "This app is not available for your device."
 msgstr ""
 
-msgid "This app stores your bitcoin with cutting-edge security."
+msgid "This app stores your particl with cutting-edge security."
 msgstr "Este aplicativo armazena seu bitcoin com segurança de ponta."
 
-msgid "This bitcoin payment request has expired."
+msgid "This payment request has expired."
 msgstr "Este bitcoin pagamento pedido expirou."
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
@@ -2123,7 +2129,7 @@ msgstr "Esta senha é apenas para este dispositivo e não pode ser recuperada. P
 msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr "Esta frase de recuperação foi criada com uma senha. Para recuperar esta carteira, tanto a frase de recuperação como a senha são necessárias."
 
-msgid "This transaction amount is too small compared to current Bitcoin network fees. Spending these funds will need a Bitcoin network fee cost comparable to the funds itself."
+msgid "This transaction amount is too small compared to current network fees. Spending these funds will need a network fee cost comparable to the funds itself."
 msgstr ""
 
 msgid "This transaction could take a long time to confirm or could be dropped due to the low fees set by the sender."
@@ -2138,7 +2144,7 @@ msgstr "Cronograma"
 msgid "To"
 msgstr "Para"
 
-msgid "To get started, you'll need to create a bitcoin wallet and get some bitcoin."
+msgid "To get started, you'll need to create a particl wallet and get some particl."
 msgstr "Para começar, você precisa criar uma carteira de bitcoins e obter alguns bitcoins."
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
@@ -2513,13 +2519,13 @@ msgstr ""
 msgid "You can make contributions by signing up on our Crowdin community translation website. We’re looking forward to hearing from you!"
 msgstr "Você pode fazer contribuições inscrevendo-se no nosso site da comunidade de tradução Crowdin. Estamos ansiosos para ouvir de você!"
 
-msgid "You can scan bitcoin addresses, payment requests, paper wallets, and more."
+msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
 msgstr "Você pode escanear endereços bitcoins, pedidos de pagamento carteiras de papel e muito mais."
 
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr "Você pode ver os mais recentes desenvolvimentos e contribuir para este aplicativo de código aberto, visitando nosso projeto no GitHub."
 
-msgid "You can spend bitcoin at millions of websites and stores worldwide."
+msgid "You can spend particl at millions of websites and stores worldwide."
 msgstr "Você pode gastar bitcoins em milhões de sites e lojas em todo o mundo."
 
 msgid "You can still export it from \"Export Wallet\" option."
@@ -2531,7 +2537,7 @@ msgstr "Você pode trocá-lo por outras moedas como dólares americanos, Euros o
 msgid "You can use your Mercado Livre gift cards on your Mercado Pago account for everyday expenses like utilities and metro rides."
 msgstr ""
 
-msgid "You control your bitcoin."
+msgid "You control your particl."
 msgstr "Você controla o seu bitcoin."
 
 msgid "You could sign the transaction later in your wallet details"
@@ -2543,10 +2549,10 @@ msgstr "Você não deve definir uma taxa maior do que {{maxFeeRecommended}} sato
 msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
 msgstr "Seu BitPay Card está pronto. Adicione fundos ao seu cartão para começar a usá-lo em lojas e caixas eletrônicos em todo o mundo."
 
-msgid "Your bitcoin wallet is ready!"
+msgid "Your particl wallet is ready!"
 msgstr "Sua carteira de bitcoins está pronta!"
 
-msgid "Your extended private keys are all that is needed to access your bitcoin funds. Be sure to protect your private keys and store them only on secure devices. BitPay does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
+msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
 msgstr "Suas chaves privadas estendidas é tudo o que precisa para acessar seus fundos bitcoin. Certifique-se de proteger suas chaves privadas e armazená-las somente em dispositivos seguros. A BitPay não tem acesso as suas chaves privadas, então você é responsável pelas suas chaves. Se você compartilhar a chave de acesso com serviços externos, responsabilize-se pelo risco de roubo ou violação. Apenas usuários avançados devem lidar com chaves privadas estendidas diretamente."
 
 msgid "Your fee is lower than recommended."

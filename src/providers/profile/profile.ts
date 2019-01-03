@@ -379,12 +379,18 @@ export class ProfileProvider {
     const walletId = wallet.credentials.walletId;
 
     this.logger.debug(
-      'ValidatingWallet: ' + walletId + ' skip Device:' + skipDeviceValidation
+      'ValidatingWallet: ' +
+        walletId +
+        ' skip Device:' +
+        skipDeviceValidation +
+        ' coin:' +
+        wallet.credentials.coin
     );
     setTimeout(() => {
       wallet.validateKeyDerivation(
         {
-          skipDeviceValidation
+          skipDeviceValidation,
+          coin: wallet.credentials.coin
         },
         (_, isOK) => {
           this.validationLock = false;
@@ -1218,7 +1224,7 @@ export class ProfileProvider {
       opts.m = 1;
       opts.n = 1;
       opts.networkName = 'livenet';
-      opts.coin = Coin.BTC;
+      opts.coin = Coin.PART;
       this.createWallet(opts)
         .then(wallet => {
           return resolve(wallet);

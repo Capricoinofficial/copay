@@ -42,7 +42,7 @@ export class CreateWalletPage implements OnInit {
 
   private defaults;
   private tc: number;
-  private derivationPathByDefault: string;
+  private derivationPathByDefault: object;
   private derivationPathForTestnet: string;
 
   public copayers: number[];
@@ -93,7 +93,7 @@ export class CreateWalletPage implements OnInit {
       bwsURL: [this.defaults.bws.url],
       selectedSeed: ['new'],
       recoveryPhrase: [null],
-      derivationPath: [this.derivationPathByDefault],
+      derivationPath: [this.derivationPathByDefault['part']],
       testnetEnabled: [false],
       singleAddress: [false],
       coin: [null, Validators.required]
@@ -152,7 +152,7 @@ export class CreateWalletPage implements OnInit {
     if (this.createForm.controls['testnet'])
       this.createForm.controls['testnet'].setValue(false);
     this.createForm.controls['derivationPath'].setValue(
-      this.derivationPathByDefault
+      this.derivationPathByDefault[this.createForm.controls['coin'].value]
     );
     this.createForm.controls['recoveryPhrase'].setValue(null);
   }
@@ -160,7 +160,7 @@ export class CreateWalletPage implements OnInit {
   public setDerivationPath(): void {
     const path: string = this.createForm.value.testnet
       ? this.derivationPathForTestnet
-      : this.derivationPathByDefault;
+      : this.derivationPathByDefault[this.createForm.controls['coin'].value];
     this.createForm.controls['derivationPath'].setValue(path);
   }
 

@@ -2,11 +2,19 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class DerivationPathHelperProvider {
-  public default: string;
+  public default: {
+    btc: string;
+    bch: string;
+    part: string;
+  };
   public defaultTestnet: string;
 
   public constructor() {
-    this.default = "m/44'/0'/0'";
+    this.default = {
+      btc: "m/44'/0'/0'",
+      bch: "m/44'/0'/0'",
+      part: "m/44'/44'/0'"
+    };
     this.defaultTestnet = "m/44'/1'/0'";
   }
 
@@ -39,13 +47,11 @@ export class DerivationPathHelperProvider {
 
     switch (arr[2]) {
       case "0'":
-        ret.networkName = 'bitcoin';
+      case "44'":
+        ret.networkName = 'livenet';
         break;
       case "1'":
         ret.networkName = 'testnet';
-        break;
-      case "44'":
-        ret.networkName = 'livenet';
         break;
       default:
         return false;

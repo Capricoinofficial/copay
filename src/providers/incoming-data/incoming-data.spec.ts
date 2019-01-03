@@ -250,9 +250,9 @@ describe('Provider: Incoming Data Provider', () => {
     });
     it('Should handle Bitcoin URI', () => {
       let data = [
-        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa', // Genesis Bitcoin Address
-        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?message=test%20message', // Bitcoin Address with message and not amount
-        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?amount=1.0000', // Bitcoin Address with amount
+        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa', // Genesis Address
+        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?message=test%20message', // Address with message and not amount
+        'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?amount=1.0000', // Address with amount
         'bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa?amount=1.0000&label=Genesis%20Bitcoin%20Address&message=test%20message' // Basic Payment Protocol
       ];
       data.forEach(element => {
@@ -365,8 +365,8 @@ describe('Provider: Incoming Data Provider', () => {
     }));
     it('Should handle Bitcoin Livenet and Testnet Plain Address', () => {
       let data = [
-        '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa', // Genesis Bitcoin Address
-        'mpXwg4jMtRhuSpVq4xS3HFHmCmWp9NyGKt' // Genesis Testnet3 Bitcoin Address
+        '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa', // Genesis Address
+        'mpXwg4jMtRhuSpVq4xS3HFHmCmWp9NyGKt' // Genesis Testnet3 Address
       ];
       data.forEach(element => {
         expect(

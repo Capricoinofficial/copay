@@ -34,13 +34,16 @@ export class TransferToPage {
   public search: string = '';
   public walletsBtc;
   public walletsBch;
+  public walletsPart;
   public walletBchList: FlatWallet[];
   public walletBtcList: FlatWallet[];
+  public walletPartList: FlatWallet[];
   public contactsList = [];
   public filteredContactsList = [];
   public filteredWallets = [];
   public hasBtcWallets: boolean;
   public hasBchWallets: boolean;
+  public hasPartWallets: boolean;
   public hasContacts: boolean;
   public contactsShowMore: boolean;
   public amount: string;
@@ -66,8 +69,10 @@ export class TransferToPage {
   ) {
     this.walletsBtc = this.profileProvider.getWallets({ coin: 'btc' });
     this.walletsBch = this.profileProvider.getWallets({ coin: 'bch' });
+    this.walletsPart = this.profileProvider.getWallets({ coin: 'part' });
     this.hasBtcWallets = !_.isEmpty(this.walletsBtc);
     this.hasBchWallets = !_.isEmpty(this.walletsBch);
+    this.hasPartWallets = !_.isEmpty(this.walletsPart);
   }
 
   @Input()
@@ -78,6 +83,7 @@ export class TransferToPage {
 
     this.walletBchList = this.getBchWalletsList();
     this.walletBtcList = this.getBtcWalletsList();
+    this.walletPartList = this.getPartWalletsList();
     this.updateContactsList();
   }
 
@@ -110,6 +116,10 @@ export class TransferToPage {
 
   private getBtcWalletsList(): FlatWallet[] {
     return this.hasBtcWallets ? this.getRelevantWallets(this.walletsBtc) : [];
+  }
+
+  private getPartWalletsList(): FlatWallet[] {
+    return this.hasPartWallets ? this.getRelevantWallets(this.walletsPart) : [];
   }
 
   private getRelevantWallets(rawWallets): FlatWallet[] {
@@ -204,6 +214,11 @@ export class TransferToPage {
     }
     if (this.hasBtcWallets && this._wallet.coin === 'btc') {
       this.filteredWallets = this.walletBtcList.filter(wallet => {
+        return _.includes(wallet.name.toLowerCase(), this.search.toLowerCase());
+      });
+    }
+    if (this.hasPartWallets && this._wallet.coin === 'part') {
+      this.filteredWallets = this.walletPartList.filter(wallet => {
         return _.includes(wallet.name.toLowerCase(), this.search.toLowerCase());
       });
     }

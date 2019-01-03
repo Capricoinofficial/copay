@@ -22,7 +22,8 @@ import { TxFormatProvider } from '../tx-format/tx-format';
 
 export enum Coin {
   BTC = 'btc',
-  BCH = 'bch'
+  BCH = 'bch',
+  PART = 'part'
 }
 
 export interface WalletOptions {
@@ -1660,10 +1661,13 @@ export class WalletProvider {
   }
 
   public getProtocolHandler(coin: string, network?: string): string {
-    if (coin == 'bch') {
-      return network == 'testnet' ? 'bchtest' : 'bitcoincash';
-    } else {
-      return 'bitcoin';
+    switch (coin) {
+      case 'bch':
+        return network == 'testnet' ? 'bchtest' : 'bitcoincash';
+      case 'part':
+        return 'particl';
+      default:
+        return 'bitcoin';
     }
   }
 

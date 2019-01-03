@@ -40,6 +40,9 @@ export interface Config {
     copay: {
       url: string;
     };
+    particl: {
+      url: string;
+    };
   };
 
   rateApp: {
@@ -49,6 +52,11 @@ export interface Config {
       wp: string;
     };
     copay: {
+      ios: string;
+      android: string;
+      wp: string;
+    };
+    particl: {
       ios: string;
       android: string;
       wp: string;
@@ -101,8 +109,18 @@ export interface Config {
   };
 
   blockExplorerUrl: {
-    btc: string;
-    bch: string;
+    btc: {
+      live: string;
+      test: string;
+    };
+    bch: {
+      live: string;
+      test: string;
+    };
+    part: {
+      live: string;
+      test: string;
+    };
   };
 }
 
@@ -122,10 +140,10 @@ const configDefault: Config = {
     reconnectDelay: 5000,
     idleDurationMin: 4,
     settings: {
-      unitName: 'BTC',
+      unitName: 'PART',
       unitToSatoshi: 100000000,
       unitDecimals: 8,
-      unitCode: 'btc',
+      unitCode: 'part',
       alternativeName: 'US Dollar',
       alternativeIsoCode: 'USD',
       defaultLanguage: '',
@@ -135,7 +153,7 @@ const configDefault: Config = {
 
   // Bitcore wallet service URL
   bws: {
-    url: 'https://bws.bitpay.com/bws/api'
+    url: 'https://bws.particl.io/bws/api'
   },
 
   download: {
@@ -144,6 +162,9 @@ const configDefault: Config = {
     },
     copay: {
       url: 'https://copay.io/#download'
+    },
+    particl: {
+      url: 'https://github.com/particl/copay/releases'
     }
   },
 
@@ -158,6 +179,11 @@ const configDefault: Config = {
     copay: {
       ios: 'https://itunes.apple.com/app/copay-bitcoin-wallet/id951330296',
       android: 'https://play.google.com/store/apps/details?id=com.bitpay.copay',
+      wp: ''
+    },
+    particl: {
+      ios: '',
+      android: 'https://play.google.com/store/apps/details?id=io.particl.copay',
       wp: ''
     }
   },
@@ -203,8 +229,18 @@ const configDefault: Config = {
   },
 
   blockExplorerUrl: {
-    btc: 'insight.bitpay.com',
-    bch: 'bch-insight.bitpay.com/#'
+    btc: {
+      live: 'insight.bitpay.com',
+      test: 'test-insight.bitpay.com'
+    },
+    bch: {
+      live: 'bch-insight.bitpay.com/#',
+      test: 'test-bch-insight.bitpay.com/#'
+    },
+    part: {
+      live: 'explorer.particl.io',
+      test: 'explorer-testnet.particl.io'
+    }
   }
 };
 

@@ -39,7 +39,7 @@
     <div *ngIf="wallet" class="receive-content">
       <div class="address-container">
         <div class="text-address ellipsis">
-          <img src="assets/img/icon-bitcoin-small.svg" alt="" width="12" />
+          <img src="assets/img/icon-{{ wallet.coin }}-small.svg" alt="" width="12" />
           <span class="address-divider"></span>
           <div class="address-text ellipsis">
             <span>{{ address }}</span>

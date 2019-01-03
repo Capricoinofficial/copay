@@ -6,7 +6,7 @@ import { Logger } from '../../../providers/logger/logger';
 import { ConfigProvider } from '../../../providers/config/config';
 import { FeeProvider } from '../../../providers/fee/fee';
 
-const COIN = 'btc';
+const COIN = 'part';
 const NETWORK = 'livenet';
 
 @Component({

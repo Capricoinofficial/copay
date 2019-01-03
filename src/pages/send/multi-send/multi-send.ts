@@ -49,8 +49,10 @@ export class MultiSendPage extends WalletTabsChild {
   private validDataTypeMap: string[] = [
     'BitcoinAddress',
     'BitcoinCashAddress',
+    'ParticlAddress',
     'BitcoinUri',
-    'BitcoinCashUri'
+    'BitcoinCashUri',
+    'ParticlUri'
   ];
 
   constructor(
@@ -149,7 +151,6 @@ export class MultiSendPage extends WalletTabsChild {
   }
 
   public addRecipient(recipient?): void {
-    let parsed;
     let toAddress;
     let amount;
     let recipientType;
@@ -160,10 +161,17 @@ export class MultiSendPage extends WalletTabsChild {
       recipientType = recipient.recipientType; // Type: wallet, contact, address
     } else {
       try {
-        parsed =
-          this.wallet.coin == 'btc'
-            ? this.bwcProvider.getBitcore().URI(this.search)
-            : this.bwcProvider.getBitcoreCash().URI(this.search);
+        let parsed;
+        switch (this.wallet.coin) {
+          case 'bch':
+            parsed = this.bwcProvider.getBitcoreCash().URI(this.search);
+            break;
+          case 'part':
+            parsed = this.bwcProvider.getBitcoreParticl().URI(this.search);
+            break;
+          default:
+            parsed = this.bwcProvider.getBitcore().URI(this.search);
+        }
         toAddress = parsed.address
           ? parsed.address.toString()
           : _.clone(this.search);
@@ -234,7 +242,6 @@ export class MultiSendPage extends WalletTabsChild {
       this.wallet.network,
       data
     );
-
     if (isValid) {
       this.invalidAddress = false;
       return true;

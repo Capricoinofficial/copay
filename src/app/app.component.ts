@@ -191,7 +191,6 @@ export class CopayApp {
       if (this.platform.is('ios')) this.statusBar.overlaysWebView(true);
 
       this.statusBar.styleLightContent();
-      this.splashScreen.hide();
 
       // Subscribe Resume
       this.onResumeSubscription = this.platform.resume.subscribe(() => {
@@ -243,6 +242,7 @@ export class CopayApp {
       this.profile.createProfile();
       this.rootPage = OnboardingPage;
     }
+    if (this.platform.is('cordova')) this.splashScreen.hide();
   }
 
   private openLockModal(): void {
@@ -410,7 +410,10 @@ export class CopayApp {
   }
 
   private processUrl(pathData): void {
-    if (pathData.indexOf('bitcoincash:/') != -1) {
+    if (pathData.indexOf('particl:/') != -1) {
+      this.logger.debug('Particl URL found');
+      this.handleOpenUrl(pathData.substring(pathData.indexOf('particl:/')));
+    } else if (pathData.indexOf('bitcoincash:/') != -1) {
       this.logger.debug('Bitcoin Cash URL found');
       this.handleOpenUrl(pathData.substring(pathData.indexOf('bitcoincash:/')));
     } else if (pathData.indexOf('bitcoin:/') != -1) {

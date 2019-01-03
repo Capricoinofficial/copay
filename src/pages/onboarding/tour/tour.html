@@ -11,8 +11,8 @@
 <ion-content no-bounce>
   <ion-slides pager="true" (ionSlideDidChange)="slideChanged()">
     <ion-slide>
-      <h3 class="title" translate>Bitcoin is secure, digital money.</h3>
-      <p translate class="top-description">You can spend bitcoin at millions of websites and stores worldwide.</p>
+      <h3 class="title" translate>Particl is secure, digital money.</h3>
+      <p translate class="top-description">You can spend particl at millions of websites and stores worldwide.</p>
       <img src='assets/img/app/onboarding/tour-phone.svg' />
       <div class="bottom-absolute">
         <p translate class="bottom-description">Just scan the code to pay.</p>
@@ -23,10 +23,10 @@
     </ion-slide>
 
     <ion-slide>
-      <h3 class="title" translate>Bitcoin is a currency.</h3>
+      <h3 class="title" translate>Particl is a currency.</h3>
       <p translate class="top-description">You can trade it for other currencies like US Dollars, Euros, or Pounds.</p>
       <div class="ticker-container">
-        <div class="ticker">1 BTC = {{localCurrencySymbol}}{{localCurrencyPerBtc}}</div>
+        <div class="ticker">1 PART = {{localCurrencySymbol}}{{localCurrencyPerPart}}</div>
       </div>
       <img class="ticker-img" src='assets/img/app/onboarding/tour-currency.svg' />
       <div class="bottom-absolute">
@@ -38,13 +38,13 @@
     </ion-slide>
 
     <ion-slide>
-      <h3 class="title" translate>You control your bitcoin.</h3>
-      <p translate class="top-description">This app stores your bitcoin with cutting-edge security.</p>
+      <h3 class="title" translate>You control your particl.</h3>
+      <p translate class="top-description">This app stores your particl with cutting-edge security.</p>
       <img src='assets/img/app/onboarding/tour-control.svg' />
       <div class="bottom-absolute">
-        <p translate class="bottom-description">Not even BitPay can access it.</p>
+        <p translate class="bottom-description">Not even Particl can access it.</p>
         <button ion-button class="button-standard e2e-create-wallet" (click)="createDefaultWallet()">
-          {{'Create bitcoin wallet' | translate}}
+          {{'Create particl wallet' | translate}}
         </button>
       </div>
     </ion-slide>

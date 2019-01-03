@@ -82,28 +82,6 @@ npm run prepare:copay
 npm run start:ios
 ```
 
-### Windows Phone
-
-Follow the [Cordova Windows Phone Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/win8/index.html) to set up your development environment.
-
-When your developement enviroment is ready, follow this instructions:
-
-- Go to app-template folder, search for config-template.xml and then remove this line:
-```sh
-<plugin name="cordova-plugin-qrscanner" spec="~2.5.0" />
-```
-and then enable this one:
-```sh
-<plugin name="phonegap-plugin-barcodescanner" spec="https://github.com/phonegap/phonegap-plugin-barcodescanner.git" />
-```
-- Run:
-```sh
-npm run clean-all
-npm run apply:copay
-npm run start:windows
-```
-- Then open the project file with VS inside cordova/platform/windows/
-
 ### Desktop (Linux, macOS, and Windows)
 
 The desktop version of Copay currently uses Electron. To get started, first install Electron on your system from [the Electron website](https://electronjs.org/).
@@ -143,22 +121,7 @@ npm run final:ios
 
 ### Push Notifications
 
-- Install Visual Studio 2015 (or newer)
-- Go to app-template folder, search for config-template.xml and then remove this line:
-```sh
-<plugin name="cordova-plugin-qrscanner" spec="~2.5.0" />
-```
-and then enable this one:
-```sh
-<plugin name="phonegap-plugin-barcodescanner" spec="https://github.com/phonegap/phonegap-plugin-barcodescanner.git" />
-```
-- Run:
-```sh
-npm run clean-all
-npm run apply:copay
-npm run final:windows
-```
-- Then open the project file with VS inside cordova/platform/windows/
+Push notification doesn't work on iOS 12 due to an update of Xcode and plugin `cordova-plugin-fcm`.
 
 A current workaround is to comment out the line to prevent the removal of the file during the debug build (line 56 in platforms/ios/cordova/lib/copy-www-build-step.js).
 
@@ -247,30 +210,6 @@ Please note that Copay v5.3.0 and above use CSP to restrict network access. To u
 ## Translations
 
 Copay uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/copay) as the front-end tool for translators. To join our team of translators, please create an account at [Crowdin](https://crowdin.com) and translate the Copay documentation and application text into your native language.
-
-To use Trezor, you need to have the Trezor Chrome Extension installed, available at:
-https://chrome.google.com/webstore/detail/trezor-chrome-extension/jcjjhjgimijdkoamemaghajlhegmoclj
-
-To create or join a wallet using Ledger or Trezor go to:
-
-  Add Wallet -> Create or Join -> Advanced options -> Wallet Seed -> select Trezor or Ledger
-
-Both devices support multiple accounts, so you can use them for multiple wallets. Select the account and then click on create or join.
-
-It is also possible to import a wallet from a device using:
-  Add Wallet -> Import -> Hardware wallet
-
-Here it is also necesary to select the account number.
-
-When creating or joining a wallet, Copay will ask for two public keys for the device. One public keys is used for the wallet itself and the other is used as an entropy source to create a private / public key pair for signing requests to the Wallet Service.
-
-Every time you need to sign a transaction, the device will be needed to perform the signature. Follow the on screen instructions after clicking the `send` or `accept` buttons.
-
-Finally, in case you lose the device and you have the 24 word seed for the device, you can recover access to your funds using Copay, see: https://github.com/particl/copay/blob/master/backupRecovery.md#hardware-wallets
-
-
-## Translations
-Copay uses standard gettext PO files for translations and [Crowdin](https://crowdin.com/project/copay) as the front-end tool for translators.  To join our team of translators, please create an account at [Crowdin](https://crowdin.com) and translate the Copay documentation and application text into your native language.
 
 To download and build using the latest translations from Crowdin, please use the following commands:
 

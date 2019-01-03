@@ -31,7 +31,7 @@ export class TourPage {
   navBar: Navbar;
 
   public localCurrencySymbol: string;
-  public localCurrencyPerBtc: string;
+  public localCurrencyPerPart: string;
   public currentIndex: number;
 
   private retryCount: number = 0;
@@ -50,11 +50,11 @@ export class TourPage {
   ) {
     this.currentIndex = 0;
     this.rateProvider.whenRatesAvailable('btc').then(() => {
-      let btcAmount = 1;
+      let partAmount = 1;
       this.localCurrencySymbol = '$';
-      this.localCurrencyPerBtc = this.txFormatProvider.formatAlternativeStr(
-        'btc',
-        btcAmount * 1e8
+      this.localCurrencyPerPart = this.txFormatProvider.formatAlternativeStr(
+        'part',
+        partAmount * 1e8
       );
     });
   }

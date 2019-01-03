@@ -56,6 +56,7 @@ export class HomePage {
   public wallets;
   public walletsBtc;
   public walletsBch;
+  public walletsPart;
   public cachedBalanceUpdateOn: string;
   public recentTransactionsEnabled: boolean;
   public txps;
@@ -78,6 +79,7 @@ export class HomePage {
   public homeTip: boolean;
   public showReorderBtc: boolean;
   public showReorderBch: boolean;
+  public showReorderPart: boolean;
   public showIntegration;
   public hideHomeIntegrations: boolean;
   public showGiftCards: boolean;
@@ -121,6 +123,7 @@ export class HomePage {
     this.isElectron = this.platformProvider.isElectron;
     this.showReorderBtc = false;
     this.showReorderBch = false;
+    this.showReorderPart = false;
     this.zone = new NgZone({ enableLongStackTrace: false });
     this.events.subscribe('Home/reloadStatus', () => {
       this._willEnter();
@@ -309,7 +312,7 @@ export class HomePage {
 
   private openEmailDisclaimer() {
     let message = this.translate.instant(
-      'By providing your email address, you give explicit consent to BitPay to use your email address to send you email notifications about payments.'
+      'By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments.'
     );
     let title = this.translate.instant('Privacy Policy update');
     let okText = this.translate.instant('Accept');
@@ -355,10 +358,33 @@ export class HomePage {
     () => {
       this.wallets = this.profileProvider.getWallets();
       this.walletsBtc = _.filter(this.wallets, (x: any) => {
+        if (
+          x.credentials.coin == 'btc' &&
+          x.credentials.xPrivKey.toLowerCase().startsWith('par', 1)
+        ) {
+          this.logger.info('Old Particl Copay wallet detected, updating...');
+          x.coin = 'part';
+          x.credentials.coin = 'part';
+          this.walletProvider
+            .recreate(x)
+            .then(() => {
+              this.logger.info(
+                'Old Particl Copay wallet detected, updated successfuly'
+              );
+            })
+            .catch(err => {
+              this.logger.error('Error updating old particl wallet', err);
+            });
+          return false;
+        }
+
         return x.credentials.coin == 'btc';
       });
       this.walletsBch = _.filter(this.wallets, (x: any) => {
         return x.credentials.coin == 'bch';
+      });
+      this.walletsPart = _.filter(this.wallets, (x: any) => {
+        return x.credentials.coin == 'part';
       });
       this.updateAllWallets();
     },
@@ -415,6 +441,7 @@ export class HomePage {
         const dataToIgnore = [
           'BitcoinAddress',
           'BitcoinCashAddress',
+          'ParticlAddress',
           'PlainUrl'
         ];
         if (dataToIgnore.indexOf(this.validDataFromClipboard.type) > -1) {
@@ -657,7 +684,8 @@ export class HomePage {
   }
 
   public goToWalletDetails(wallet): void {
-    if (this.showReorderBtc || this.showReorderBch) return;
+    if (this.showReorderBtc || this.showReorderBch || this.showReorderPart)
+      return;
     this.events.unsubscribe('finishIncomingDataMenuEvent');
     this.events.unsubscribe('bwsEvent');
     this.events.publish('OpenWallet', wallet);
@@ -702,6 +730,10 @@ export class HomePage {
     this.showReorderBch = !this.showReorderBch;
   }
 
+  public reorderPart(): void {
+    this.showReorderPart = !this.showReorderPart;
+  }
+
   public reorderWalletsBtc(indexes): void {
     let element = this.walletsBtc[indexes.from];
     this.walletsBtc.splice(indexes.from, 1);
@@ -716,6 +748,15 @@ export class HomePage {
     this.walletsBch.splice(indexes.from, 1);
     this.walletsBch.splice(indexes.to, 0, element);
     _.each(this.walletsBch, (wallet, index: number) => {
+      this.profileProvider.setWalletOrder(wallet.id, index);
+    });
+  }
+
+  public reorderWalletsPart(indexes): void {
+    let element = this.walletsPart[indexes.from];
+    this.walletsPart.splice(indexes.from, 1);
+    this.walletsPart.splice(indexes.to, 0, element);
+    _.each(this.walletsPart, (wallet, index: number) => {
       this.profileProvider.setWalletOrder(wallet.id, index);
     });
   }

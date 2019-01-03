@@ -24,7 +24,7 @@
           </ion-icon>
         </div>
         <ion-item class="search-wrapper" [ngClass]="{'invalid': invalidAddress && search != ''}">
-          <ion-input placeholder="{{'Enter bitcoin address' | translate}}" [(ngModel)]="search" (ngModelChange)="processInput()"></ion-input>
+          <ion-input placeholder="{{'Enter wallet address' | translate}}" [(ngModel)]="search" (ngModelChange)="processInput()"></ion-input>
           <ion-icon *ngIf="invalidAddress && search != ''" item-end class="backspace-icon" name="backspace" (click)="search = ''"></ion-icon>
           <ion-icon item-end class="scan-icon" (click)="openScanner()">
             <img src="assets/img/scan-ico.svg">
@@ -64,7 +64,7 @@
 
             <div class="wallet" *ngIf="item.recipientType == 'address'">
               <ion-icon item-left class="coin-icon">
-                <img src="assets/img/icon-bitcoin-small.svg" alt="BTC" width="12" />
+                <img src="assets/img/icon-{{ wallet.coin }}-small.svg" alt="{{ wallet.coin }}" width="12" />
               </ion-icon>
               <span class="address-divider"></span>
               <span class="ellipsis">{{item.toAddress}}</span>

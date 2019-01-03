@@ -73,7 +73,7 @@ export class AddressBookProvider {
     return new Promise((resolve, reject) => {
       var network = this.addressProvider.getNetwork(entry.address);
       if (_.isEmpty(network)) {
-        let msg = this.translate.instant('Not valid bitcoin address');
+        let msg = this.translate.instant('Not valid address');
         return reject(msg);
       }
       this.persistenceProvider
@@ -113,7 +113,7 @@ export class AddressBookProvider {
     return new Promise((resolve, reject) => {
       var network = this.addressProvider.getNetwork(addr);
       if (_.isEmpty(network)) {
-        let msg = this.translate.instant('Not valid bitcoin address');
+        let msg = this.translate.instant('Not valid address');
         return reject(msg);
       }
       this.persistenceProvider

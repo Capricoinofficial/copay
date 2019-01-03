@@ -199,7 +199,7 @@ export class SendFeedbackPage {
       if (!option) {
         this.openExternalLink(externalLink);
       } else {
-        this.openExternalLink('https://help.bitpay.com/requestHelp/create');
+        this.openExternalLink('https://github.com/particl/copay/issues');
       }
     });
   }

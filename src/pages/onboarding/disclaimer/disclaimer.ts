@@ -46,7 +46,7 @@ export class DisclaimerPage {
   }
 
   openDisclaimer() {
-    let url = 'https://bitpay.com/about/terms#wallet';
+    let url = 'https://particl.io/policy/copay/privacy.html';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Wallet Terms of Use');

@@ -31,7 +31,7 @@
     </ion-item>
     <button ion-item class="item-fee" [attr.detail-none]="usingMerchantFee ? '' : null" (click)="chooseFeeLevel()" [ngClass]="{'warn': wallet && tx.txp[wallet.id] && tx.txp[wallet.id].feeTooHigh, 'btn-opacity': usingMerchantFee}" [disabled]="usingMerchantFee">
       <div class="fee-title">
-        <span translate>Bitcoin miner fee:</span>
+        <span translate>Fee:</span>
         <br>
         <b>{{tx.feeLevelName}}</b>
       </div>
@@ -66,7 +66,7 @@
 
       <div class="payment-proposal-to address-coppied" *ngIf="!tx.recipientType">
         <div class="text-address ellipsis">
-          <img src="assets/img/icon-bitcoin-small.svg" alt="BTC" width="12" />
+          <img src="assets/img/icon-{{ tx.coin }}-small.svg" alt="{{ tx.coin }}" width="12" />
           <span class="address-divider"></span>
         </div>
         <div class="ellipsis" *ngIf="!tx.paypro" copy-to-clipboard="{{ tx.origToAddress }}">
@@ -111,7 +111,7 @@
       <div class="wallet" (click)="showMultiplesOutputs = !showMultiplesOutputs">
         <div class="address-coppied" *ngIf="fromMultiSend" [ngClass]="{'address-width': fromMultiSend}">
           <div class="text-address ellipsis">
-            <img src="assets/img/icon-bitcoin-small.svg" width="12">
+            <img src="assets/img/icon-{{ tx.coin }}-small.svg" width="12">
             <span class="address-divider"></span>
           </div>
           <div class="ellipsis">

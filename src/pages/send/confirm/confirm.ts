@@ -26,7 +26,6 @@ import { ReplaceParametersProvider } from '../../../providers/replace-parameters
 import { TxConfirmNotificationProvider } from '../../../providers/tx-confirm-notification/tx-confirm-notification';
 import { TxFormatProvider } from '../../../providers/tx-format/tx-format';
 import {
-  Coin,
   TransactionProposal,
   WalletProvider
 } from '../../../providers/wallet/wallet';
@@ -43,6 +42,7 @@ export class ConfirmPage extends WalletTabsChild {
 
   private bitcore;
   protected bitcoreCash;
+  protected bitcoreParticl;
 
   public countDown = null;
   public CONFIRM_LIMIT_USD: number;
@@ -106,6 +106,7 @@ export class ConfirmPage extends WalletTabsChild {
     super(navCtrl, profileProvider, walletTabsProvider);
     this.bitcore = this.bwcProvider.getBitcore();
     this.bitcoreCash = this.bwcProvider.getBitcoreCash();
+    this.bitcoreParticl = this.bwcProvider.getBitcoreParticl();
     this.CONFIRM_LIMIT_USD = 20;
     this.FEE_TOO_HIGH_LIMIT_PER = 15;
     this.config = this.configProvider.get();
@@ -130,7 +131,17 @@ export class ConfirmPage extends WalletTabsChild {
   ionViewWillEnter() {
     this.navCtrl.swipeBackEnabled = false;
     this.isOpenSelector = false;
-    let B = this.navParams.data.coin == 'bch' ? this.bitcoreCash : this.bitcore;
+    let B;
+    switch (this.navParams.data.coin) {
+      case 'bch':
+        B = this.bitcoreCash;
+        break;
+      case 'part':
+        B = this.bitcoreParticl;
+        break;
+      default:
+        B = this.bitcore;
+    }
     let networkName;
     let amount;
     if (this.fromMultiSend) {
@@ -536,7 +547,17 @@ export class ConfirmPage extends WalletTabsChild {
   }
 
   protected showHighFeeSheet() {
-    const coinName = this.wallet.coin === 'btc' ? 'Bitcoin' : 'Bitcoin Cash';
+    let coinName;
+    switch (this.wallet.coin) {
+      case 'bch':
+        coinName = 'Bitcoin Cash';
+        break;
+      case 'part':
+        coinName = 'Particl';
+        break;
+      default:
+        coinName = 'Bitcoin';
+    }
     const minerFeeInfoSheet = this.actionSheetProvider.createInfoSheet(
       'miner-fee',
       { coinName }
@@ -602,8 +623,17 @@ export class ConfirmPage extends WalletTabsChild {
 
     let warningMsg = this.verifyExcludedUtxos(wallet, sendMaxInfo);
 
-    const coinName =
-      this.wallet.coin === Coin.BTC ? 'Bitcoin (BTC)' : 'Bitcoin Cash (BCH)';
+    let coinName;
+    switch (this.wallet.coin) {
+      case 'bch':
+        coinName = 'Bitcoin Cash (BCH)';
+        break;
+      case 'part':
+        coinName = 'Particl (PART)';
+        break;
+      default:
+        coinName = 'Bitcoin (BTC)';
+    }
 
     const minerFeeNoticeInfoSheet = this.actionSheetProvider.createInfoSheet(
       'miner-fee-notice',
@@ -803,7 +833,7 @@ export class ConfirmPage extends WalletTabsChild {
     this.hideSlideButton = true;
     if (this.paymentExpired) {
       this.showErrorInfoSheet(
-        this.translate.instant('This bitcoin payment request has expired.')
+        this.translate.instant('This payment request has expired.')
       );
       return undefined;
     }

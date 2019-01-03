@@ -15,7 +15,8 @@ const env: EnvironmentSchema = {
   enableAnimations: false,
   ratesAPI: {
     btc: `${host}/bitpay.com/api/rates`,
-    bch: `${host}/bitpay.com/api/rates/bch`
+    bch: `${host}/bitpay.com/api/rates/bch`,
+    part: `${host}/api.coinmarketcap.com/v1/ticker/particl`
   },
   activateScanner: false
 };

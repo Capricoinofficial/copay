@@ -95,7 +95,7 @@ describe('AboutPage', () => {
         instance.openTermsOfUse();
 
         expect(instance.externalLinkProvider.open).toHaveBeenCalledWith(
-          'https://bitpay.com/about/terms#wallet',
+          'https://particl.io/policy/copay/privacy.html',
           true,
           null,
           'View Wallet Terms of Use',

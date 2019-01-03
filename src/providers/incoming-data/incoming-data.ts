@@ -71,6 +71,11 @@ export class IncomingDataProvider {
     return !!this.bwcProvider.getBitcoreCash().URI.isValid(data);
   }
 
+  private isValidParticlUri(data: string): boolean {
+    data = this.sanitizeUri(data);
+    return !!this.bwcProvider.getBitcoreParticl().URI.isValid(data);
+  }
+
   public isValidBitcoinCashUriWithLegacyAddress(data: string): boolean {
     data = this.sanitizeUri(data);
     return !!this.bwcProvider
@@ -101,6 +106,13 @@ export class IncomingDataProvider {
     return !!(
       this.bwcProvider.getBitcoreCash().Address.isValid(data, 'livenet') ||
       this.bwcProvider.getBitcoreCash().Address.isValid(data, 'testnet')
+    );
+  }
+
+  private isValidParticlAddress(data: string): boolean {
+    return !!(
+      this.bwcProvider.getBitcoreParticl().Address.isValid(data, 'livenet') ||
+      this.bwcProvider.getBitcoreParticl().Address.isValid(data, 'testnet')
     );
   }
 
@@ -230,7 +242,20 @@ export class IncomingDataProvider {
     let amount = parsed.amount ? parsed.amount : '';
 
     // Translate address
-    this.logger.warn('Legacy Bitcoin Address transalated to: ' + address);
+    this.logger.warn('Legacy Address transalated to: ' + address);
+    if (parsed.r) this.goToPayPro(data, coin);
+    else this.goSend(address, amount, message, coin);
+  }
+
+  private handleParticlUri(data: string, redirParams?: RedirParams): void {
+    this.logger.debug('Incoming-data: Particl URI');
+    let amountFromRedirParams =
+      redirParams && redirParams.amount ? redirParams.amount : '';
+    const coin = Coin.PART;
+    let parsed = this.bwcProvider.getBitcoreParticl().URI(data);
+    let address = parsed.address ? parsed.address.toString() : '';
+    let message = parsed.message;
+    let amount = parsed.amount || amountFromRedirParams;
     if (parsed.r) this.goToPayPro(data, coin);
     else this.goSend(address, amount, message, coin);
   }
@@ -273,6 +298,25 @@ export class IncomingDataProvider {
       this.showMenu({
         data,
         type: 'bitcoinAddress',
+        coin
+      });
+    } else if (redirParams && redirParams.amount) {
+      this.goSend(data, redirParams.amount, '', coin);
+    } else {
+      this.goToAmountPage(data, coin);
+    }
+  }
+
+  private handlePlainParticlAddress(
+    data: string,
+    redirParams?: RedirParams
+  ): void {
+    this.logger.debug('Incoming-data: Particl plain address');
+    const coin = Coin.PART;
+    if (redirParams && redirParams.activePage === 'ScanPage') {
+      this.showMenu({
+        data,
+        type: 'particlAddress',
         coin
       });
     } else if (redirParams && redirParams.amount) {
@@ -398,6 +442,11 @@ export class IncomingDataProvider {
       this.handleBitcoinCashUriLegacyAddress(data);
       return true;
 
+      // Particl  URI
+    } else if (this.isValidParticlUri(data)) {
+      this.handleParticlUri(data, redirParams);
+      return true;
+
       // Plain URL
     } else if (this.isValidPlainUrl(data)) {
       this.handlePlainUrl(data);
@@ -411,6 +460,11 @@ export class IncomingDataProvider {
       // Plain Address (Bitcoin Cash)
     } else if (this.isValidBitcoinCashAddress(data)) {
       this.handlePlainBitcoinCashAddress(data, redirParams);
+      return true;
+
+      // Plain Address (Particl)
+    } else if (this.isValidParticlAddress(data)) {
+      this.handlePlainParticlAddress(data, redirParams);
       return true;
 
       // Glidera
@@ -497,6 +551,14 @@ export class IncomingDataProvider {
         title: this.translate.instant('Bitcoin Cash URI')
       };
 
+      // Particl  URI
+    } else if (this.isValidParticlUri(data)) {
+      return {
+        data,
+        type: 'ParticlUri',
+        title: this.translate.instant('Particl URI')
+      };
+
       // Plain URL
     } else if (this.isValidPlainUrl(data)) {
       return {
@@ -510,7 +572,7 @@ export class IncomingDataProvider {
       return {
         data,
         type: 'BitcoinAddress',
-        title: this.translate.instant('Bitcoin Address')
+        title: this.translate.instant('Address')
       };
 
       // Plain Address (Bitcoin Cash)
@@ -519,6 +581,14 @@ export class IncomingDataProvider {
         data,
         type: 'BitcoinCashAddress',
         title: this.translate.instant('Bitcoin Cash Address')
+      };
+
+      // Plain Address (Particl)
+    } else if (this.isValidParticlAddress(data)) {
+      return {
+        data,
+        type: 'ParticlAddress',
+        title: this.translate.instant('Particl Address')
       };
 
       // Glidera
