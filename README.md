@@ -40,7 +40,7 @@ Ensure you have [Node](https://nodejs.org/) installed, then install and start Co
 
 ```sh
 npm install
-npm run apply:copay
+npm run apply:particl
 npm run start
 ```
 
@@ -65,8 +65,8 @@ Follow the [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/l
 When your developement enviroment is ready, run the `start:android` package script.
 
 ```sh
-npm run apply:copay
-npm run prepare:copay
+npm run apply:particl
+npm run prepare:particl
 npm run start:android
 ```
 
@@ -77,8 +77,8 @@ Follow the [Cordova iOS Platform Guide](https://cordova.apache.org/docs/en/lates
 When your developement enviroment is ready, run the `start:ios` package script.
 
 ```sh
-npm run apply:copay
-npm run prepare:copay
+npm run apply:particl
+npm run prepare:particl
 npm run start:ios
 ```
 
@@ -89,7 +89,7 @@ The desktop version of Copay currently uses Electron. To get started, first inst
 When Electron is installed, run the `start:desktop` package script.
 
 ```sh
-npm run apply:copay
+npm run apply:particl
 npm run start:desktop
 ```
 
@@ -104,8 +104,8 @@ The `final` commands build the production version of the app, and bundle it with
 ```sh
 npm run clean-all
 npm install
-npm run apply:copay
-npm run prepare:copay
+npm run apply:particl
+npm run prepare:particl
 npm run final:android
 ```
 
@@ -114,8 +114,8 @@ npm run final:android
 ```sh
 npm run clean-all
 npm install
-npm run apply:copay
-npm run prepare:copay
+npm run apply:particl
+npm run prepare:particl
 npm run final:ios
 ```
 
@@ -132,7 +132,7 @@ A current workaround is to comment out the line to prevent the removal of the fi
 ```sh
 npm run clean-all
 npm install
-npm run apply:copay
+npm run apply:particl
 npm run final:desktop
 ```
 
