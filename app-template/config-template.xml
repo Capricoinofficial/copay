@@ -19,7 +19,7 @@
     <access origin="https://shapeshift.io" />
     <access origin="https://api.coinbase.com" />
     <access origin="https://coinbase.com" />
-    <access origin="https://bws.particl.io" />
+    <access origin="https://api.coinmarketcap.com" />
     <allow-navigation href="gap://ready" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
     <preference name="iosPersistentFileLocation" value="Library" />
