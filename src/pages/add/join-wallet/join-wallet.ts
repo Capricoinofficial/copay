@@ -34,7 +34,7 @@ export class JoinWalletPage {
   public okText: string;
   public cancelText: string;
 
-  private derivationPathByDefault: string;
+  private derivationPathByDefault: object;
   private derivationPathForTestnet: string;
   private joinForm: FormGroup;
   private regex: RegExp;
@@ -76,7 +76,7 @@ export class JoinWalletPage {
       bwsURL: [this.defaults.bws.url],
       selectedSeed: ['new'],
       recoveryPhrase: [null],
-      derivationPath: [this.derivationPathByDefault],
+      derivationPath: [this.derivationPathByDefault['part']],
       coin: [null, Validators.required]
     });
 
@@ -144,7 +144,7 @@ export class JoinWalletPage {
     const path: string =
       network == 'testnet'
         ? this.derivationPathForTestnet
-        : this.derivationPathByDefault;
+        : this.derivationPathByDefault[this.joinForm.controls['coin'].value];
     this.joinForm.controls['derivationPath'].setValue(path);
   }
 

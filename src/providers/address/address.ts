@@ -140,8 +140,8 @@ export class AddressProvider {
     if (Address.isValid(str, 'testnet')) return true;
     if (AddressCash.isValid(str, 'livenet')) return true;
     if (AddressCash.isValid(str, 'testnet')) return true;
-    if (AddressParticl.isValid(address, 'livenet')) return true;
-    if (AddressParticl.isValid(address, 'testnet')) return true;
+    if (AddressParticl.isValid(str, 'livenet')) return true;
+    if (AddressParticl.isValid(str, 'testnet')) return true;
 
     return false;
   }

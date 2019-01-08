@@ -43,7 +43,7 @@ export class DerivationPathHelperProvider {
     switch (coinType) {
       case "0'":
       case "44'":
-        ret.networkName = 'livenet';
+        networkName = 'livenet';
         break;
       case "1'":
         networkName = 'testnet';
