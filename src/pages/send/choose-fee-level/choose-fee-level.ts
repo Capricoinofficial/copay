@@ -51,6 +51,7 @@ export class ChooseFeeLevelPage {
     // From parent controller
     this.network = this.viewCtrl.data.network;
     this.feeLevel = this.viewCtrl.data.feeLevel;
+    this.coin = this.viewCtrl.data.coin;
 
     // IF usingCustomFee
     this.customFeePerKB = this.viewCtrl.data.customFeePerKB
@@ -107,7 +108,8 @@ export class ChooseFeeLevelPage {
     if (value) {
       this.customFeePerKB = null;
       this.feePerSatByte = (value.feePerKb / 1000).toFixed();
-      this.avgConfirmationTime = value.nbBlocks * 10;
+      this.avgConfirmationTime =
+        value.nbBlocks * (this.coin === 'part' ? 2 : 10);
     } else {
       this.avgConfirmationTime = null;
       this.customSatPerByte = Number(this.feePerSatByte);

@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/particl/copay/master/resources/copay/android/icon/drawable-xxxhdpi-icon.png" alt="Copay" width="79">
+<img src="https://raw.githubusercontent.com/bitpay/copay/master/resources/copay/windows/icon/Wide310x150Logo.scale-100.png" alt="Copay">
 
 [![Build Status](https://secure.travis-ci.org/particl/copay.svg)](http://travis-ci.org/particl/copay)
 

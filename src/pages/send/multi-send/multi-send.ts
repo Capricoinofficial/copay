@@ -196,7 +196,7 @@ export class MultiSendPage extends WalletTabsChild {
           this.wallet.coin,
           +amount
         );
-      } catch {
+      } catch (_err) {
         // If pasted address isn't a valid uri
         toAddress = _.clone(this.search);
         recipientType = 'address';
@@ -247,13 +247,7 @@ export class MultiSendPage extends WalletTabsChild {
       return true;
     } else {
       this.invalidAddress = true;
-      let network;
-
-      const extractedAddress = this.addressProvider.extractAddress(data);
-      const addressData = this.addressProvider.validateAddress(
-        extractedAddress
-      );
-      network = addressData.network;
+      const network = this.addressProvider.getNetwork(data);
 
       if (this.wallet.coin === 'bch' && this.wallet.network === network) {
         const isLegacy = this.checkIfLegacy();

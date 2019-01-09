@@ -18,7 +18,7 @@
   <div *ngIf="!payProDetailsData" class='loader loader-subtitle gradient'></div>
 </button>
 <button ion-item detail-none class="clipboard" *ngIf="validDataFromClipboard.type !== 'PayPro'">
-  <img *ngIf="validDataFromClipboard.type === 'BitcoinUri' || validDataFromClipboard.type === 'BitcoinCashUri' || validDataFromClipboard.type === 'BitcoinAddress' || validDataFromClipboard.type === 'BitcoinCashAddress'"
+  <img *ngIf="validDataFromClipboard.type === 'BitcoinUri' || validDataFromClipboard.type === 'BitcoinCashUri' || validDataFromClipboard.type === 'ParticlUri' || validDataFromClipboard.type === 'BitcoinAddress' || validDataFromClipboard.type === 'ParticlAddress'"
     src="assets/img/icon-bitcoin-small.svg" />
   <div class="ellipsis">{{validDataFromClipboard.data}}</div>
 </button>
