@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "232519596896",
+    "firebase_url": "https://particl-copay.firebaseio.com",
+    "project_id": "particl-copay",
+    "storage_bucket": "particl-copay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232519596896:android:aa5d5b9701248680",
+        "android_client_info": {
+          "package_name": "io.particl.copay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232519596896-2k4uirb9deo8out97fok6tebccv6vc2f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.particl.copay",
+            "certificate_hash": "d58839816df6fa35c570428f32565a5a4c939d55"
+          }
+        },
+        {
+          "client_id": "232519596896-ujnevlf686hc083rshkbnu7f2f1ukojs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB5nNhEdEN8mTBuN1ti10YnAyOlcP8Qvs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232519596896-ujnevlf686hc083rshkbnu7f2f1ukojs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "232519596896-cj27r5st2fqktc66c0o524h8kfsrp8fq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.particl.copay"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

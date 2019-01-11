@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1020645376",
+    "firebase_url": "https://particl-copay-dev.firebaseio.com",
+    "project_id": "particl-copay-dev",
+    "storage_bucket": "particl-copay-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020645376:android:169451875f1b82c9",
+        "android_client_info": {
+          "package_name": "io.particl.copay.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020645376-q1mq147ukm661dg6e6doejec48m3vumd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKbsZJaMnVFvtzjsNfNk-6oMpY81bZAz0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
