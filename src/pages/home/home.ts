@@ -360,6 +360,7 @@ export class HomePage {
       this.walletsBtc = _.filter(this.wallets, (x: any) => {
         if (
           x.credentials.coin == 'btc' &&
+          x.credentials.xPrivKey &&
           x.credentials.xPrivKey.toLowerCase().startsWith('par', 1)
         ) {
           this.logger.info('Old Particl Copay wallet detected, updating...');
