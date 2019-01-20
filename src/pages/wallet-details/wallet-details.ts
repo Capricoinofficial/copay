@@ -84,8 +84,8 @@ export class WalletDetailsPage extends WalletTabsChild {
   }
 
   ionViewDidLoad() {
-    this.events.subscribe('Wallet/updateAll', () => {
-      this.updateAll();
+    this.events.subscribe('Wallet/updateAll', (opts?) => {
+      this.updateAll(opts);
     });
 
     // Getting info from cache
@@ -111,8 +111,8 @@ export class WalletDetailsPage extends WalletTabsChild {
   ionViewWillEnter() {
     this.onResumeSubscription = this.platform.resume.subscribe(() => {
       this.updateAll();
-      this.events.subscribe('Wallet/updateAll', () => {
-        this.updateAll();
+      this.events.subscribe('Wallet/updateAll', (opts?) => {
+        this.updateAll(opts);
       });
     });
   }
@@ -188,11 +188,13 @@ export class WalletDetailsPage extends WalletTabsChild {
     this.txps = !txps ? [] : _.sortBy(txps, 'createdOn').reverse();
   }
 
-  private updateTxHistory() {
+  private updateTxHistory(retry?: boolean) {
     this.updatingTxHistory = true;
 
-    this.updateTxHistoryError = false;
-    this.updatingTxHistoryProgress = 0;
+    if (!retry) {
+      this.updateTxHistoryError = false;
+      this.updatingTxHistoryProgress = 0;
+    }
 
     const progressFn = ((_, newTxs) => {
       if (newTxs > 5) this.history = null;
@@ -205,6 +207,7 @@ export class WalletDetailsPage extends WalletTabsChild {
       })
       .then(txHistory => {
         this.updatingTxHistory = false;
+        this.updatingTxHistoryProgress = 0;
 
         const hasTx = txHistory[0];
         this.showNoTransactionsYetMsg = hasTx ? false : true;
@@ -214,17 +217,23 @@ export class WalletDetailsPage extends WalletTabsChild {
 
         this.wallet.completeHistory = txHistory;
         this.showHistory();
+        if (!retry) {
+          this.events.publish('Wallet/updateAll', { retry: true }); // Workaround to refresh the view when the promise result is from a destroyed one
+        }
       })
-      .catch(() => {
-        this.updatingTxHistory = false;
-        this.updateTxHistoryError = true;
+      .catch(err => {
+        if (err != 'HISTORY_IN_PROGRESS') {
+          this.updatingTxHistory = false;
+          this.updateTxHistoryError = true;
+        }
       });
   }
 
   private updateAll = _.debounce(
-    (force?) => {
-      this.updateStatus(force);
-      this.updateTxHistory();
+    (opts?) => {
+      opts = opts || {};
+      this.updateStatus(opts.force);
+      this.updateTxHistory(opts.retry);
     },
     2000,
     {
@@ -239,7 +248,11 @@ export class WalletDetailsPage extends WalletTabsChild {
   }
 
   public loadHistory(loading) {
-    if (this.history.length === this.wallet.completeHistory.length) {
+    if (
+      this.history &&
+      this.wallet.completeHistory &&
+      this.history.length === this.wallet.completeHistory.length
+    ) {
       loading.complete();
       return;
     }
@@ -267,9 +280,6 @@ export class WalletDetailsPage extends WalletTabsChild {
 
   private updateStatus(force?: boolean) {
     this.updatingStatus = true;
-    this.updateStatusError = null;
-    this.walletNotRegistered = false;
-    this.showBalanceButton = false;
 
     this.walletProvider
       .getStatus(this.wallet, { force: !!force })
@@ -281,9 +291,12 @@ export class WalletDetailsPage extends WalletTabsChild {
           this.wallet.status.totalBalanceSat !=
           this.wallet.status.spendableAmount;
         this.analyzeUtxos();
+        this.updateStatusError = null;
+        this.walletNotRegistered = false;
       })
       .catch(err => {
         this.updatingStatus = false;
+        this.showBalanceButton = false;
         if (err === 'WALLET_NOT_REGISTERED') {
           this.walletNotRegistered = true;
         } else {
@@ -304,7 +317,7 @@ export class WalletDetailsPage extends WalletTabsChild {
         this.onGoingProcessProvider.clear();
         setTimeout(() => {
           this.walletProvider.startScan(this.wallet).then(() => {
-            this.updateAll(true);
+            this.updateAll({ force: true });
           });
         });
       })
@@ -431,7 +444,7 @@ export class WalletDetailsPage extends WalletTabsChild {
   }
 
   public doRefresh(refresher) {
-    this.updateAll(true);
+    this.updateAll({ force: true });
     setTimeout(() => {
       refresher.complete();
     }, 2000);

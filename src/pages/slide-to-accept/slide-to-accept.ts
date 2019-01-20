@@ -22,6 +22,14 @@ export class SlideToAcceptPage implements AfterViewInit {
   buttonText: string;
 
   @Input()
+  set coin(coin: string) {
+    this._coin = coin;
+  }
+  get coin() {
+    return this._coin ? this._coin : 'btc';
+  }
+
+  @Input()
   set disabled(disabled: boolean) {
     this.isDisabled = disabled !== undefined ? disabled : false;
   }
@@ -51,6 +59,7 @@ export class SlideToAcceptPage implements AfterViewInit {
   private origin;
   private done: boolean = false;
   private isDisabled: boolean = false;
+  private _coin: string;
 
   public isConfirm: boolean = false;
   public animation: boolean;

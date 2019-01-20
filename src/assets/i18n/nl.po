@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: cmgustavo83\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
-"PO-Revision-Date: 2018-12-18 20:49\n"
+"PO-Revision-Date: 2019-01-09 14:55\n"
 
 msgid "(Trusted)"
 msgstr "(Vertrouwd)"
@@ -111,6 +111,9 @@ msgid "Address book"
 msgstr ""
 
 msgid "Addressbook is empty"
+msgstr ""
+
+msgid "Addresses"
 msgstr ""
 
 msgid "Addresses with balance"
@@ -815,8 +818,8 @@ msgstr "Verlopen"
 msgid "Expires"
 msgstr "Verloopt"
 
-msgid "Export Wallet"
-msgstr "Portemonnee exporteren"
+msgid "Export"
+msgstr ""
 
 msgid "Export to file"
 msgstr "Exporteren naar bestand"
@@ -1076,6 +1079,9 @@ msgstr "Onjuiste PIN, probeer het opnieuw."
 msgid "Incorrect network address"
 msgstr "Onjuist netwerk adres"
 
+msgid "Information"
+msgstr ""
+
 msgid "Insufficient funds"
 msgstr "Onvoldoende saldo"
 
@@ -1306,6 +1312,9 @@ msgstr ""
 
 msgid "No signing proposal: No private key"
 msgstr "Geen voorstel voor ondertekenen: Geen privé sleutel"
+
+msgid "No transactions"
+msgstr ""
 
 msgid "No wallet found"
 msgstr "Geen portemonnee gevonden"
@@ -1841,6 +1850,9 @@ msgstr "Verzonden"
 msgid "Sent Funds"
 msgstr "Verzonden Bedrag"
 
+msgid "Sent to {walletName}"
+msgstr ""
+
 msgid "Server response could not be verified"
 msgstr "Server reactie kon niet geverifieerd worden"
 
@@ -2330,11 +2342,11 @@ msgstr "Ontvangsten Portemonnee"
 msgid "Wallet Name"
 msgstr "Naam Portemonnee"
 
+msgid "Wallet Preferences"
+msgstr ""
+
 msgid "Wallet Recovery Phrase is invalid"
 msgstr "Portemonnee Herstel Zin is ongeldig"
-
-msgid "Wallet Service URL"
-msgstr "Portemonnee Service URL"
 
 msgid "Wallet already exists"
 msgstr "Portemonnee bestaat al"
