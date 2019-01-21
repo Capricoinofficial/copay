@@ -240,7 +240,8 @@ export class BackupGamePage {
           walletClient.seedFromMnemonic(customSentence, {
             network: this.wallet.credentials.network,
             passphrase: password,
-            account: this.wallet.credentials.account
+            account: this.wallet.credentials.account,
+            coin: this.wallet.coin
           });
         } catch (err) {
           walletClient.credentials.xPrivKey = _.repeat('x', 64);

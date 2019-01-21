@@ -121,6 +121,9 @@ msgstr ""
 msgid "Addressbook is empty"
 msgstr ""
 
+msgid "Addresses"
+msgstr ""
+
 msgid "Addresses with balance"
 msgstr ""
 
@@ -854,7 +857,7 @@ msgstr ""
 msgid "Expires"
 msgstr ""
 
-msgid "Export Wallet"
+msgid "Export"
 msgstr ""
 
 msgid "Export to file"
@@ -1153,6 +1156,9 @@ msgstr ""
 msgid "Incorrect network address"
 msgstr ""
 
+msgid "Information"
+msgstr ""
+
 msgid "Insufficient funds"
 msgstr ""
 
@@ -1390,6 +1396,9 @@ msgid "No private key"
 msgstr ""
 
 msgid "No signing proposal: No private key"
+msgstr ""
+
+msgid "No transactions"
 msgstr ""
 
 msgid "No wallet found"
@@ -1938,6 +1947,9 @@ msgid "Sent"
 msgstr ""
 
 msgid "Sent Funds"
+msgstr ""
+
+msgid "Sent to {walletName}"
 msgstr ""
 
 msgid "Server response could not be verified"
@@ -2489,10 +2501,10 @@ msgstr ""
 msgid "Wallet Name"
 msgstr ""
 
-msgid "Wallet Recovery Phrase is invalid"
+msgid "Wallet Preferences"
 msgstr ""
 
-msgid "Wallet Service URL"
+msgid "Wallet Recovery Phrase is invalid"
 msgstr ""
 
 msgid "Wallet already exists"
