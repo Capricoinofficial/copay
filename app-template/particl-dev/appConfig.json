@@ -24,8 +24,8 @@
   "WindowsApplicationId": "ParticlCopayWalletDev",
   "pushSenderId": "1020645376",
   "description": "A Secure Particl Wallet",
-  "version": "5.4.0",
-  "androidVersion": "54000000",
+  "version": "5.4.2",
+  "androidVersion": "54000002",
   "_extraCSS": null,
   "_enabledExtensions": {
     "coinbase": false,
