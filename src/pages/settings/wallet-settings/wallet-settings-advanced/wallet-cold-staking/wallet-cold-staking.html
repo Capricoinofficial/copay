@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar [navbar-bg]="wallet?.color">
+    <ion-title>Wallet Cold Staking Setup</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item-divider></ion-item-divider>
+    <form [formGroup]="walletStakingForm">
+      <ion-item>
+        <ion-label stacked>Cold Staking Public Key</ion-label>
+        <ion-input type="text" formControlName="staking_key" [value]="walletStakingForm.value.staking_key" required></ion-input>
+      </ion-item>
+      <ion-item-divider>
+        <span>To activate, generate a cold staking public key on your staking node and enter it above. To read more about <a href="https://particl.wiki/faq_part_coin_staking" target="_blank" matTooltip="Particl.wiki > Staking" tabindex="-1">(Cold) Staking</a> and check out the <a href="https://particl.wiki/tutorials#staking" target="_blank" matTooltip="Particl.wiki > Staking Tutorials" tabindex="-1">Cold staking tutorials</a> on Particl Wiki</span>
+      </ion-item-divider>
+      <button ion-button class="button-standard" (click)="activate()" [disabled]="!walletStakingForm.valid">
+        {{'Activate' | translate}}
+      </button>
+    </form>
+  </ion-list>
+</ion-content>

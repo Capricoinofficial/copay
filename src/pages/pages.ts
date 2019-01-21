@@ -94,6 +94,7 @@ import { WalletSettingsPage } from '../pages/settings/wallet-settings/wallet-set
 /* Wallet Advanced Settings */
 import { AllAddressesPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-addresses/all-addresses/all-addresses';
 import { WalletAddressesPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-addresses/wallet-addresses';
+import { WalletColdStakingPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-cold-staking/wallet-cold-staking';
 import { WalletDeletePage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-delete/wallet-delete';
 import { WalletExportPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-export/wallet-export';
 import { WalletExtendedPrivateKeyPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-information/wallet-extended-private-key/wallet-extended-private-key';
@@ -197,6 +198,7 @@ export const PAGES = [
   WalletColorPage,
   WalletInformationPage,
   WalletAddressesPage,
+  WalletColdStakingPage,
   WalletExportPage,
   WalletServiceUrlPage,
   WalletTransactionHistoryPage,

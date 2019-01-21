@@ -163,7 +163,7 @@ export class ConfigProvider {
 
       // Bitcore wallet service URL
       bws: {
-        url: 'https://bws.particl.io/bws/api'
+        url: 'http://localhost:3232/bws/api'
       },
 
       download: {
