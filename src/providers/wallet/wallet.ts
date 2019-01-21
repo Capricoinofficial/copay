@@ -1684,4 +1684,24 @@ export class WalletProvider {
       });
     });
   }
+
+  public setupColdStaking(wallet, opts): Promise<string> {
+    return new Promise((resolve, reject) => {
+      this.logger.info(
+        'Activating cold staking for wallet:',
+        wallet.id,
+        opts.coldStakingAddress
+      );
+
+      wallet.setupColdStaking(opts, err => {
+        if (err) {
+          return reject(err);
+        } else {
+          // Invalidate the cache
+          if (wallet.cachedStatus) wallet.cachedStatus.isValid = false;
+          return resolve();
+        }
+      });
+    });
+  }
 }

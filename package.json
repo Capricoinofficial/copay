@@ -190,7 +190,7 @@
     "asn1.js-rfc5280": "^3.0.0",
     "base64-js": "^1.3.0",
     "bitauth": "git+https://github.com/bitpay/bitauth.git#copay",
-    "bitcore-wallet-client": "git://github.com/particl/bitcore-wallet-client.git",
+    "bitcore-wallet-client": "git+https://github.com/spazzymoto/bitcore-wallet-client.git#cold_staking",
     "buffer-compare": "1.1.1",
     "cordova": "8.1.2",
     "cordova-android": "7.1.2",

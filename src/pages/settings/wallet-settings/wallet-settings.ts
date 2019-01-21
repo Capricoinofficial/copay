@@ -194,7 +194,6 @@ export class WalletSettingsPage {
     });
   }
   public openWalletColdStaking(): void {
-    console.log('######', this.wallet);
     this.navCtrl.push(WalletColdStakingPage, {
       walletId: this.wallet.credentials.walletId
     });
