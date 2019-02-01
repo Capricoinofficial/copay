@@ -1,47 +1,43 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Events, NavController, NavParams } from 'ionic-angular';
+import { Events, NavParams } from 'ionic-angular';
 import { Logger } from '../../../../../providers/logger/logger';
 
 // providers
 import { BwcProvider } from '../../../../../providers/bwc/bwc';
+import { ConfigProvider } from '../../../../../providers/config/config';
 import { ProfileProvider } from '../../../../../providers/profile/profile';
-import { WalletProvider } from '../../../../../providers/wallet/wallet';
 
-import * as _ from 'lodash';
+import * as bech32 from 'bech32-buffer';
 
 @Component({
   selector: 'page-wallet-cold-staking',
   templateUrl: 'wallet-cold-staking.html'
 })
 export class WalletColdStakingPage {
-  public success: boolean = false;
   public wallet;
-  public walletStakingForm: FormGroup;
-  // private bitcore;
-  // private _script;
+  public isActivated: boolean;
+  public activationPercent = 0;
+  private OP_ISCOINSTAKE = 'b8';
+  private bitcoreParticl;
+
+  public search: string = '';
+  public invalidColdStakingKey: boolean;
+  public stakingKeyError: string = '';
 
   constructor(
     private profileProvider: ProfileProvider,
-    private navCtrl: NavController,
     private navParams: NavParams,
     private logger: Logger,
-    private formBuilder: FormBuilder,
     private events: Events,
-    private bwcProvider: BwcProvider,
-    private walletProvider: WalletProvider
+    private configProvider: ConfigProvider,
+    private bwcProvider: BwcProvider
   ) {
-    // this.bitcore = this.bwcProvider.getBitcoreParticl();
-    this.walletStakingForm = this.formBuilder.group({
-      staking_key: [
-        '',
-        Validators.compose([Validators.minLength(1), Validators.required])
-      ]
-    });
+    this.bitcoreParticl = this.bwcProvider.getBitcoreParticl();
 
-    // this._script =
-    //   'OP_NOP9 OP_IF OP_DUP OP_HASH160 {hash} OP_EQUALVERIFY OP_CHECKSIG ' +
-    //   'OP_ELSE OP_DUP OP_SHA256 {sha256} OP_EQUALVERIFY OP_CHECKSIG OP_ENDIF';
+    this.events.subscribe('update:coldStakingKey', data => {
+      this.search = data.value;
+      this.processInput();
+    });
   }
 
   ionViewDidLoad() {
@@ -50,142 +46,130 @@ export class WalletColdStakingPage {
 
   ionViewWillEnter() {
     this.wallet = this.profileProvider.getWallet(this.navParams.data.walletId);
-    this.walletStakingForm.value.staking_key = this.wallet.cachedStatus.wallet
-      .coldStakingAddress
-      ? this.wallet.cachedStatus.wallet.coldStakingAddress
-      : '';
+
+    this.isActive();
+
+    this.coldStakingStats();
+  }
+
+  ngOnDestroy() {
+    this.events.unsubscribe('update:coldStakingKey');
   }
 
   public activate(): void {
-    this.walletProvider
-      .setupColdStaking(this.wallet, {
-        coldStakingAddress: this.walletStakingForm.value.staking_key
-      })
-      .then(resp => {
-        this.logger.info('Success', resp);
-      })
-      .catch(err => {
-        this.logger.error('Error', err);
-      });
+    this.toggleColdStaking(this.search);
+  }
 
-    // let opts = {
-    //   coldStakingKeyFor: {}
-    // };
-    // opts.coldStakingKeyFor[
-    //   this.wallet.credentials.walletId
-    // ] = this.walletStakingForm.value.staking_key;
+  public deactivate(): void {
+    this.toggleColdStaking(null);
+  }
 
-    // this.configProvider.set(opts);
+  public openScanner(): void {
+    this.events.publish('ScanFromWallet', { fromColdStaking: true });
+  }
 
-    // let coldXpub, hotXPub;
-    // try {
-    //   coldXpub = new this.bitcore.HDPublicKey(
-    //     this.walletStakingForm.value.staking_key
-    //   );
-    //   hotXPub = new this.bitcore.HDPublicKey(
-    //     this.wallet.credentials.publicKeyRing[0].xPubKey
-    //   );
-    // } catch (e) {
-    //   this.logger.error(e);
-    // }
+  public processInput(): void {
+    this.search = this.search.trim();
 
-    // this.walletProvider
-    //   .getMainAddresses(this.wallet, {
-    //     reverse: true,
-    //     limit: 1
-    //   })
-    //   .then(addresses => {
-    //     this.logger.info('Address', addresses);
+    if (this.search !== '') {
+      this.validateColdStakingKey();
+    }
+  }
 
-    //     let unusedAddress = addresses[0],
-    //       unusedIndex = parseInt(
-    //         unusedAddress.path.replace(/m\/[0-9]\//, ''),
-    //         10
-    //       );
+  private isActive(): void {
+    const config = this.configProvider.get();
+    this.search =
+      (config.coldStakingKeyFor &&
+        config.coldStakingKeyFor[this.wallet.credentials.walletId]) ||
+      '';
+    this.isActivated =
+      config.coldStakingKeyFor &&
+      config.coldStakingKeyFor[this.wallet.credentials.walletId] &&
+      config.coldStakingKeyFor[this.wallet.credentials.walletId] !== null;
+  }
 
-    //     this.logger.info(unusedIndex);
-
-    //     this.walletProvider
-    //       .getBalance(this.wallet, {})
-    //       .then(resp => {
-    //         let withBalance = resp.byAddress;
-
-    //         this.logger.info('withBalance', withBalance);
-
-    //         _.each(withBalance, (n, i) => {
-    //           this.logger.info('ddress index', i);
-    //           let address = this.bitcore.Address.fromPublicKey(
-    //               hotXPub.derive(unusedIndex++).publicKey,
-    //               unusedAddress.network,
-    //               true
-    //             ),
-    //             script = this._script
-    //               .replace(
-    //                 '{hash}',
-    //                 coldXpub
-    //                   .derive(i)
-    //                   .publicKey.toAddress()
-    //                   .hashBuffer.toString('hex')
-    //               )
-    //               .replace('{sha256}', address.hashBuffer.toString('hex'));
-
-    //           this.wallet.getUtxos(
-    //             {
-    //               addresses: n.address
-    //             },
-    //             (err, utxos) => {
-    //               if (err) {
-    //                 this.logger.error(err);
-    //               }
-
-    //               let sum = 0;
-    //               utxos.forEach(utxo => {
-    //                 sum += utxo.satoshis;
-    //                 utxo.path = n.path;
-    //               });
-
-    //               let output = {
-    //                 toAddress: address.toString(),
-    //                 script: new this.bitcore.Script.fromASM(script).toString(),
-    //                 amount: sum - 30000,
-    //                 message: 'Coldstake outputs'
-    //               };
-
-    //               this.logger.info('inputs', utxos);
-    //               this.logger.info('outputs', output);
-
-    //               this.walletProvider
-    //                 .createTx(this.wallet, {
-    //                   inputs: utxos,
-    //                   outputs: [output],
-    //                   message: 'Coldstake outputs',
-    //                   fee: 30000
-    //                 })
-    //                 .then(txp => {
-    //                   this.walletProvider
-    //                     .publishAndSign(this.wallet, txp)
-    //                     .catch(err => {
-    //                       this.logger.error(err);
-    //                     });
-    //                 })
-    //                 .catch(err => {
-    //                   this.logger.error(err);
-    //                 });
-    //             }
-    //           );
-    //         });
-    //       })
-    //       .catch(err => {
-    //         this.logger.error(err);
-    //       });
-    //   })
-    //   .catch(err => {
-    //     this.logger.error(err);
-    //   });
-
-    // this.logger.info(coldXpub, hotXPub);
+  private toggleColdStaking(staking_key?): void {
+    let opts = {
+      coldStakingKeyFor: {}
+    };
+    opts.coldStakingKeyFor[this.wallet.credentials.walletId] = staking_key;
+    this.configProvider.set(opts);
 
     this.events.publish('wallet:updated', this.wallet.credentials.walletId);
-    this.navCtrl.popToRoot();
+
+    this.isActive();
+  }
+
+  private validateColdStakingKey() {
+    this.stakingKeyError = '';
+    this.invalidColdStakingKey = false;
+
+    if (!this.bitcoreParticl.HDPublicKey.isValidSerialized(this.search)) {
+      try {
+        let address = bech32.decode(this.search);
+        const prefixes = {
+          livenet: 'pcs',
+          testnet: 'tpcs'
+        };
+
+        if (
+          address.prefix !== prefixes.livenet &&
+          address.prefix !== prefixes.testnet
+        ) {
+          this.invalidColdStakingKey = true;
+          this.stakingKeyError = 'The address provided has the wrong prefix.';
+        }
+
+        if (prefixes[this.wallet.network] !== address.prefix) {
+          this.invalidColdStakingKey = true;
+          this.stakingKeyError = 'The address provided has the wrong network.';
+        }
+      } catch (e) {
+        this.invalidColdStakingKey = true;
+        this.stakingKeyError = 'Invalid cold staking xpub or bech32 address.';
+      }
+    } else {
+      const prefixes = {
+        livenet: 'PPAR',
+        testnet: 'ppar'
+      };
+      if (
+        !this.search.startsWith(prefixes.livenet) &&
+        !this.search.startsWith(prefixes.testnet)
+      ) {
+        this.invalidColdStakingKey = true;
+        this.stakingKeyError = 'The xpub provided has the wrong prefix.';
+      }
+
+      if (!this.search.startsWith(prefixes[this.wallet.network])) {
+        this.invalidColdStakingKey = true;
+        this.stakingKeyError = 'The xpub provided has the wrong network.';
+      }
+    }
+  }
+
+  private coldStakingStats() {
+    if (!this.isActivated) return;
+
+    this.wallet.getUtxos({}, (err, utxos) => {
+      if (err) {
+        this.logger.error(err);
+      }
+
+      let total = 0,
+        staked = 0;
+      utxos.forEach(utxo => {
+        total += utxo.satoshis;
+
+        if (
+          utxo.scriptPubKey &&
+          utxo.scriptPubKey.startsWith(this.OP_ISCOINSTAKE)
+        ) {
+          staked += utxo.satoshis;
+        }
+      });
+
+      this.activationPercent = total ? Math.floor((staked / total) * 100) : 0;
+    });
   }
 }

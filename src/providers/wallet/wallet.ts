@@ -68,6 +68,7 @@ export interface TransactionProposal {
   feePerKb: number;
   feeLevel: string;
   dryRun: boolean;
+  coldStakingAddress?: string;
 }
 
 @Injectable()
@@ -1222,7 +1223,15 @@ export class WalletProvider {
       wallet.recreateWallet(err => {
         wallet.notAuthorized = false;
         if (err) return reject(err);
-        return resolve();
+
+        this.persistenceProvider
+        .clearLastAddress(wallet.id)
+        .then(() => {
+          return resolve();
+        })
+        .catch(err => {
+          return reject(err);
+        });
       });
     });
   }
@@ -1681,26 +1690,6 @@ export class WalletProvider {
               return resolve();
           }
         );
-      });
-    });
-  }
-
-  public setupColdStaking(wallet, opts): Promise<string> {
-    return new Promise((resolve, reject) => {
-      this.logger.info(
-        'Activating cold staking for wallet:',
-        wallet.id,
-        opts.coldStakingAddress
-      );
-
-      wallet.setupColdStaking(opts, err => {
-        if (err) {
-          return reject(err);
-        } else {
-          // Invalidate the cache
-          if (wallet.cachedStatus) wallet.cachedStatus.isValid = false;
-          return resolve();
-        }
       });
     });
   }
