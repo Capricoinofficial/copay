@@ -176,44 +176,46 @@ export class ColdStakingPage extends WalletTabsChild {
             }
           });
 
-          const txp: Partial<TransactionProposal> = {};
+          if (inputs.length > 0) {
+            const txp: Partial<TransactionProposal> = {};
 
-          txp.inputs = inputs;
-          txp.fee = 30000;
+            txp.inputs = inputs;
+            txp.fee = 30000;
 
-          txp.outputs = [
-            {
-              toAddress: addr.address,
-              amount: total - 30000,
-              message: ''
+            txp.outputs = [
+              {
+                toAddress: addr.address,
+                amount: total - 30000,
+                message: ''
+              }
+            ];
+
+            if (isZap) {
+              txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
+                addr.address,
+                this.getStakingConfig.staking_key
+              ).toString();
             }
-          ];
 
-          if (isZap) {
-            txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
-              addr.address,
-              this.getStakingConfig.staking_key
-            ).toString();
+            txp.message = 'Balance Transfer';
+            txp.excludeUnconfirmedUtxos = true;
+
+            this.walletProvider
+              .createTx(this.wallet, txp)
+              .then(ctxp => {
+                this.walletProvider
+                  .publishAndSign(this.wallet, ctxp)
+                  .then(() => {
+                    this.onGoingProcessProvider.clear();
+                  })
+                  .catch(err => {
+                    this.logger.error(err);
+                  });
+              })
+              .catch(err => {
+                this.logger.error(err);
+              });
           }
-
-          txp.message = 'Balance Transfer';
-          txp.excludeUnconfirmedUtxos = true;
-
-          this.walletProvider
-            .createTx(this.wallet, txp)
-            .then(ctxp => {
-              this.walletProvider
-                .publishAndSign(this.wallet, ctxp)
-                .then(() => {
-                  this.onGoingProcessProvider.clear();
-                })
-                .catch(err => {
-                  this.logger.error(err);
-                });
-            })
-            .catch(err => {
-              this.logger.error(err);
-            });
         });
       }
     );

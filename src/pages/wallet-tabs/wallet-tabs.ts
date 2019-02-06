@@ -13,6 +13,8 @@ import { PlatformProvider } from '../../providers/platform/platform';
 import { ProfileProvider } from '../../providers/profile/profile';
 import { WalletTabsProvider } from './wallet-tabs.provider';
 
+import * as _ from 'lodash';
+
 @Component({
   template: `
     <ion-tabs selectedIndex="1" #tabs>
@@ -55,6 +57,7 @@ export class WalletTabsPage {
   private isElectron: boolean;
   private onPauseSubscription: Subscription;
   private onResumeSubscription: Subscription;
+
   constructor(
     private navParams: NavParams,
     private walletTabsProvider: WalletTabsProvider,
@@ -80,9 +83,7 @@ export class WalletTabsPage {
       if (this.walletId == walletId) this.events.publish('Wallet/updateAll');
     });
 
-    const wallet = this.profileProvider.getWallet(this.walletId);
-    this.canColdStake =
-      wallet.coin === 'part' && wallet.m === 1 && wallet.n === 1;
+    this.checkColdStake();
   }
 
   ionViewWillEnter() {
@@ -112,6 +113,7 @@ export class WalletTabsPage {
     this.events.unsubscribe('bwsEvent');
     this.events.unsubscribe('Wallet/setAddress');
     this.events.unsubscribe('Wallet/disableHardwareKeyboard');
+    this.events.unsubscribe('status:updated');
   }
 
   private updateDesktopOnFocus() {
@@ -134,5 +136,26 @@ export class WalletTabsPage {
     this.events.unsubscribe('Local/TxAction');
     this.events.unsubscribe('Wallet/updateAll');
     this.events.publish('Home/reloadStatus');
+  }
+
+  private checkColdStake() {
+    const wallet = this.profileProvider.getWallet(this.walletId);
+    const isSingleAddress =
+      wallet.status &&
+      wallet.status.wallet &&
+      wallet.status.wallet.singleAddress;
+    if (isSingleAddress !== undefined) {
+      this.canColdStake =
+        wallet.coin === 'part' &&
+        wallet.m === 1 &&
+        wallet.n === 1 &&
+        !isSingleAddress;
+    } else {
+      this.canColdStake = false;
+
+      _.delay(() => {
+        this.checkColdStake();
+      }, 250);
+    }
   }
 }
