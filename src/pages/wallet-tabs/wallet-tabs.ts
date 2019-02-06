@@ -3,12 +3,14 @@ import { Events, NavParams, Platform } from 'ionic-angular';
 import { Subscription } from 'rxjs';
 
 // Pages
+import { ColdStakingPage } from '../cold-staking/cold-staking';
 import { ReceivePage } from '../receive/receive';
 import { SendPage } from '../send/send';
 import { WalletDetailsPage } from '../wallet-details/wallet-details';
 
 // Providers
 import { PlatformProvider } from '../../providers/platform/platform';
+import { ProfileProvider } from '../../providers/profile/profile';
 import { WalletTabsProvider } from './wallet-tabs.provider';
 
 @Component({
@@ -29,6 +31,12 @@ import { WalletTabsProvider } from './wallet-tabs.provider';
         tabTitle="{{'Send'|translate}}"
         tabIcon="tab-send"
       ></ion-tab>
+      <ion-tab
+        *ngIf="canColdStake"
+        [root]="stakingRoot"
+        tabTitle="{{'Staking'|translate}}"
+        tabIcon="snow"
+      ></ion-tab>
     </ion-tabs>
   `
 })
@@ -39,8 +47,10 @@ export class WalletTabsPage {
   receiveRoot = ReceivePage;
   activityRoot = WalletDetailsPage;
   sendRoot = SendPage;
+  stakingRoot = ColdStakingPage;
 
   walletId: string;
+  canColdStake: boolean = false;
 
   private isElectron: boolean;
   private onPauseSubscription: Subscription;
@@ -50,7 +60,8 @@ export class WalletTabsPage {
     private walletTabsProvider: WalletTabsProvider,
     private events: Events,
     private platformProvider: PlatformProvider,
-    private platform: Platform
+    private platform: Platform,
+    public profileProvider: ProfileProvider
   ) {
     this.isElectron = this.platformProvider.isElectron;
   }
@@ -68,6 +79,10 @@ export class WalletTabsPage {
     this.events.subscribe('Local/TxAction', walletId => {
       if (this.walletId == walletId) this.events.publish('Wallet/updateAll');
     });
+
+    const wallet = this.profileProvider.getWallet(this.walletId);
+    this.canColdStake =
+      wallet.coin === 'part' && wallet.m === 1 && wallet.n === 1;
   }
 
   ionViewWillEnter() {

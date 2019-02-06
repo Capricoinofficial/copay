@@ -193,6 +193,16 @@ page-wallet-details {
       width: 1.6rem;
       margin-top: 5px;
     }
+    .staking {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-top: 7px;
+    }
+    .staking-text {
+      color: color($colors, light);
+      height: 3rem;
+      width: 4rem;
+    }
     .wallet-type {
       display: block;
       float: left;

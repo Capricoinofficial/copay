@@ -1225,13 +1225,13 @@ export class WalletProvider {
         if (err) return reject(err);
 
         this.persistenceProvider
-        .clearLastAddress(wallet.id)
-        .then(() => {
-          return resolve();
-        })
-        .catch(err => {
-          return reject(err);
-        });
+          .clearLastAddress(wallet.id)
+          .then(() => {
+            return resolve();
+          })
+          .catch(err => {
+            return reject(err);
+          });
       });
     });
   }
@@ -1692,5 +1692,16 @@ export class WalletProvider {
         );
       });
     });
+  }
+
+  public getStakingConfig(wallet): object {
+    const config = this.configProvider.get();
+    return config.coldStakingKeyFor && config.coldStakingKeyFor[wallet.id]
+      ? config.coldStakingKeyFor[wallet.id]
+      : null;
+  }
+
+  public isStaking(wallet): boolean {
+    return this.getStakingConfig(wallet) !== null;
   }
 }

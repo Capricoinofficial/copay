@@ -16,7 +16,6 @@ import { BackupWarningPage } from '../../backup/backup-warning/backup-warning';
 import { WalletColorPage } from './wallet-color/wallet-color';
 import { WalletNamePage } from './wallet-name/wallet-name';
 import { WalletAddressesPage } from './wallet-settings-advanced/wallet-addresses/wallet-addresses';
-import { WalletColdStakingPage } from './wallet-settings-advanced/wallet-cold-staking/wallet-cold-staking';
 import { WalletDeletePage } from './wallet-settings-advanced/wallet-delete/wallet-delete';
 import { WalletExportPage } from './wallet-settings-advanced/wallet-export/wallet-export';
 import { WalletInformationPage } from './wallet-settings-advanced/wallet-information/wallet-information';
@@ -37,7 +36,6 @@ export class WalletSettingsPage {
   public touchIdPrevValue: boolean;
   public touchIdAvailable: boolean;
   public deleted: boolean = false;
-  public canColdStake: boolean = false;
   private config;
 
   constructor(
@@ -75,7 +73,6 @@ export class WalletSettingsPage {
     ) {
       this.deleted = true;
     }
-    this.canColdStake = this.wallet.m === 1 && this.wallet.n === 1;
   }
 
   public hiddenBalanceChange(): void {
@@ -190,11 +187,6 @@ export class WalletSettingsPage {
   }
   public openWalletAddresses(): void {
     this.navCtrl.push(WalletAddressesPage, {
-      walletId: this.wallet.credentials.walletId
-    });
-  }
-  public openWalletColdStaking(): void {
-    this.navCtrl.push(WalletColdStakingPage, {
       walletId: this.wallet.credentials.walletId
     });
   }

@@ -92,9 +92,10 @@ import { WalletNamePage } from '../pages/settings/wallet-settings/wallet-name/wa
 import { WalletSettingsPage } from '../pages/settings/wallet-settings/wallet-settings';
 
 /* Wallet Advanced Settings */
+import { ColdStakingPage } from '../pages/cold-staking/cold-staking';
+import { ColdStakingEnablePage } from '../pages/cold-staking/enable/enable';
 import { AllAddressesPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-addresses/all-addresses/all-addresses';
 import { WalletAddressesPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-addresses/wallet-addresses';
-import { WalletColdStakingPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-cold-staking/wallet-cold-staking';
 import { WalletDeletePage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-delete/wallet-delete';
 import { WalletExportPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-export/wallet-export';
 import { WalletExtendedPrivateKeyPage } from '../pages/settings/wallet-settings/wallet-settings-advanced/wallet-information/wallet-extended-private-key/wallet-extended-private-key';
@@ -141,6 +142,8 @@ export const PAGES = [
   CreateWalletPage,
   CoinbasePage,
   CoinbaseTxDetailsPage,
+  ColdStakingPage,
+  ColdStakingEnablePage,
   CopayersPage,
   FeedbackCardPage,
   SharePage,
@@ -198,7 +201,6 @@ export const PAGES = [
   WalletColorPage,
   WalletInformationPage,
   WalletAddressesPage,
-  WalletColdStakingPage,
   WalletExportPage,
   WalletServiceUrlPage,
   WalletTransactionHistoryPage,

@@ -755,7 +755,7 @@ export class ConfirmPage extends WalletTabsChild {
       ) {
         txp.coldStakingAddress = this.config.coldStakingKeyFor[
           this.wallet.credentials.walletId
-        ];
+        ].staking_key;
       }
 
       this.walletProvider
