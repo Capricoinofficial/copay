@@ -2561,14 +2561,14 @@ msgstr "preparazione..."
 msgid "{appName} BCH wallets use the CashAddr format by default"
 msgstr "I wallet BCH di {appName} utilizzano il formato CashAddr per impostazione predefinita"
 
-msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. BitPay does not receive and does not control {coinName} miner fees."
-msgstr "Le commissioni sui minatori di {coinName} sono elevate a causa della richiesta di spazio limitato sulla rete {coinName}. BitPay non riceve e non controlla le commissioni sui minatori {coinName}."
+msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Particl does not receive and does not control {coinName} miner fees."
+msgstr "Le commissioni sui minatori di {coinName} sono elevate a causa della richiesta di spazio limitato sulla rete {coinName}. Particl non riceve e non controlla le commissioni sui minatori {coinName}."
 
 msgid "{coinName} miner fees unusually high"
 msgstr "{coinName} tasse dei minatori insolitamente alti"
 
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
-msgstr "{{appName}} dipende dal servizio portafoglio di Bitcore (BWS) per informazioni blockchain, networking e sincronizzazione di Copayer. La configurazione predefinita fa riferimento a https://bws.bitpay.com (istanza di BitPay BWS pubblica)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
+msgstr "{{appName}} dipende dal servizio portafoglio di Bitcore (BWS) per informazioni blockchain, networking e sincronizzazione di Copayer. La configurazione predefinita fa riferimento a https://bws.particl.io (istanza di Particl BWS pubblica)."
 
 msgid "{{fee}} {{coin}} will be deducted for bitcoin networking fees."
 msgstr "{{fee}} {{coin}} verrà detratto per le spese di rete bitcoin."

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Events, NavController } from 'ionic-angular';
+import { Events, NavController, Platform } from 'ionic-angular';
 import { Logger } from '../../providers/logger/logger';
 
 // providers
+import { ActionSheetProvider } from '../../providers/action-sheet/action-sheet';
+import { BwcErrorProvider } from '../../providers/bwc-error/bwc-error';
 import { BwcProvider } from '../../providers/bwc/bwc';
 import { ConfigProvider } from '../../providers/config/config';
 import { ExternalLinkProvider } from '../../providers/external-link/external-link';
@@ -20,6 +22,8 @@ import { WalletTabsProvider } from '../wallet-tabs/wallet-tabs.provider';
 import { WalletTabsChild } from '../wallet-tabs/wallet-tabs-child';
 import { ColdStakingEnablePage } from './enable/enable';
 
+import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'page-cold-staking',
   templateUrl: 'cold-staking.html'
@@ -31,6 +35,7 @@ export class ColdStakingPage extends WalletTabsChild {
   public canZap;
   private OP_ISCOINSTAKE = 'b8';
   private particlBitcore;
+  private onResumeSubscription: Subscription;
 
   constructor(
     navCtrl: NavController,
@@ -44,7 +49,10 @@ export class ColdStakingPage extends WalletTabsChild {
     private configProvider: ConfigProvider,
     private bwcProvider: BwcProvider,
     private onGoingProcessProvider: OnGoingProcessProvider,
-    private events: Events
+    private actionSheetProvider: ActionSheetProvider,
+    private bwcErrorProvider: BwcErrorProvider,
+    private events: Events,
+    private platform: Platform
   ) {
     super(navCtrl, profileProvider, walletTabsProvider);
 
@@ -53,11 +61,30 @@ export class ColdStakingPage extends WalletTabsChild {
 
   ionViewDidLoad() {
     this.logger.info('Loaded:  WalletColdStakingPage');
+    this.events.subscribe('Wallet/updateAll', () => {
+      this.isColdStakingActive();
+      this.coldStakingStats();
+    });
   }
 
   ionViewWillEnter() {
+    this.onResumeSubscription = this.platform.resume.subscribe(() => {
+      this.isColdStakingActive();
+      this.coldStakingStats();
+      this.events.subscribe('Wallet/updateAll', () => {
+        this.isColdStakingActive();
+        this.coldStakingStats();
+      });
+    });
+  }
+
+  ionViewDidEnter() {
     this.isColdStakingActive();
     this.coldStakingStats();
+  }
+
+  ionViewWillLeave() {
+    this.onResumeSubscription.unsubscribe();
   }
 
   public learnMore(): void {
@@ -88,28 +115,54 @@ export class ColdStakingPage extends WalletTabsChild {
   public disableColdStaking(): void {
     this.popupProvider
       .ionicConfirm(
-        'Disable staking?',
-        'This means you will stop receiving interest on your PART coins.',
-        'Disable',
-        'Cancel'
+        this.translate.instant('Disable Staking'),
+        this.translate.instant(
+          'This means you will stop receiving interest on your PART coins.'
+        ),
+        this.translate.instant('Disable'),
+        this.translate.instant('Cancel')
       )
       .then((res: boolean) => {
         if (res) {
-          let opts = {
-            coldStakingKeyFor: {}
-          };
-          opts.coldStakingKeyFor[this.wallet.id] = null;
-          this.configProvider.set(opts);
+          this.balanceTransfer(false)
+            .then(() => {
+              let opts = {
+                coldStakingKeyFor: {}
+              };
+              opts.coldStakingKeyFor[this.wallet.id] = null;
+              this.configProvider.set(opts);
 
-          this.events.publish('wallet:updated', this.wallet.id);
-          this.isColdStakingActive();
-          this.balanceTransfer(false);
+              this.events.publish('wallet:updated', this.wallet.id);
+              this.isColdStakingActive();
+            })
+            .catch(err => {
+              this.showErrorInfoSheet(err);
+            });
         }
       });
   }
 
   public zap(): void {
-    this.balanceTransfer(true);
+    this.popupProvider
+      .ionicConfirm(
+        this.translate.instant('Cold Stake Zap'),
+        this.translate.instant(
+          'Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed.'
+        ),
+        this.translate.instant('Zap'),
+        this.translate.instant('Cancel')
+      )
+      .then((res: boolean) => {
+        if (res) {
+          this.balanceTransfer(true)
+            .then(() => {
+              this.coldStakingStats();
+            })
+            .catch(err => {
+              this.showErrorInfoSheet(err);
+            });
+        }
+      });
   }
 
   private isColdStakingActive(): void {
@@ -124,7 +177,8 @@ export class ColdStakingPage extends WalletTabsChild {
       }
 
       let total = 0,
-        staked = 0;
+        staked = 0,
+        hasUnconfirmed = false;
       utxos.forEach(utxo => {
         if (utxo.confirmations > 0) {
           total += utxo.satoshis;
@@ -134,90 +188,118 @@ export class ColdStakingPage extends WalletTabsChild {
           ) {
             staked += utxo.satoshis;
           }
+        } else {
+          hasUnconfirmed = true;
         }
       });
-      this.activationPercent = total
-        ? ((staked / total) * 100).toFixed(2)
-        : '0';
-      this.canZap = total > 0 && this.activationPercent < 100;
+
+      if (hasUnconfirmed) {
+        this.activationPercent = this.translate.instant(
+          'Waiting on unconfirmed transactions...'
+        );
+        this.canZap = false;
+      } else {
+        const percentDone = total ? (staked / total) * 100 : 0;
+        this.activationPercent = percentDone.toFixed(2) + '%';
+        this.canZap = !hasUnconfirmed && total > 0 && percentDone < 100;
+      }
     });
   }
 
-  private balanceTransfer(isZap) {
-    this.wallet.createAddress(
-      { isChange: true, sha256: !!isZap },
-      (err, addr) => {
-        if (err) {
-          this.logger.error(err);
-          return;
-        }
-
-        this.wallet.getUtxos({}, (err, utxos) => {
+  private balanceTransfer(isZap): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.wallet.createAddress(
+        { isChange: true, sha256: !!isZap },
+        (err, addr) => {
           if (err) {
             this.logger.error(err);
+            reject(err);
           }
-          let inputs = [],
-            total = 0;
-          utxos.forEach(utxo => {
-            if (utxo.confirmations > 0) {
-              const utxoStaking =
-                utxo.scriptPubKey &&
-                utxo.scriptPubKey.startsWith(this.OP_ISCOINSTAKE);
 
-              if (isZap && !utxoStaking) {
-                inputs.push(utxo);
+          this.wallet.getUtxos({}, (err, utxos) => {
+            if (err) {
+              this.logger.error(err);
+              reject(err);
+            }
+            let inputs = [],
+              total = 0;
+            utxos.forEach(utxo => {
+              if (utxo.confirmations > 0) {
+                const utxoStaking =
+                  utxo.scriptPubKey &&
+                  utxo.scriptPubKey.startsWith(this.OP_ISCOINSTAKE);
+
+                if (isZap && !utxoStaking) {
+                  inputs.push(utxo);
+                }
+
+                if (!isZap && utxoStaking) {
+                  inputs.push(utxo);
+                }
+
+                total += utxo.satoshis;
+              }
+            });
+
+            if (inputs.length > 0) {
+              const txp: Partial<TransactionProposal> = {};
+
+              txp.inputs = inputs;
+              txp.fee = 30000;
+
+              txp.outputs = [
+                {
+                  toAddress: addr.address,
+                  amount: total - 30000,
+                  message: ''
+                }
+              ];
+
+              if (isZap) {
+                txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
+                  addr.address,
+                  this.getStakingConfig.staking_key
+                ).toString();
               }
 
-              if (!isZap && utxoStaking) {
-                inputs.push(utxo);
-              }
+              txp.message = 'Balance Transfer';
+              txp.excludeUnconfirmedUtxos = true;
 
-              total += utxo.satoshis;
+              this.walletProvider
+                .createTx(this.wallet, txp)
+                .then(ctxp => {
+                  this.walletProvider
+                    .publishAndSign(this.wallet, ctxp)
+                    .then(() => {
+                      this.onGoingProcessProvider.clear();
+                      resolve();
+                    })
+                    .catch(err => {
+                      this.logger.error(err);
+                      reject(err);
+                    });
+                })
+                .catch(err => {
+                  this.logger.error(err);
+                  reject(err);
+                });
+            } else {
+              resolve();
             }
           });
+        }
+      );
+    });
+  }
 
-          if (inputs.length > 0) {
-            const txp: Partial<TransactionProposal> = {};
+  public showErrorInfoSheet(error: Error | string, title?: string): void {
+    if (!error) return;
+    const infoSheetTitle = title ? title : this.translate.instant('Error');
 
-            txp.inputs = inputs;
-            txp.fee = 30000;
-
-            txp.outputs = [
-              {
-                toAddress: addr.address,
-                amount: total - 30000,
-                message: ''
-              }
-            ];
-
-            if (isZap) {
-              txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
-                addr.address,
-                this.getStakingConfig.staking_key
-              ).toString();
-            }
-
-            txp.message = 'Balance Transfer';
-            txp.excludeUnconfirmedUtxos = true;
-
-            this.walletProvider
-              .createTx(this.wallet, txp)
-              .then(ctxp => {
-                this.walletProvider
-                  .publishAndSign(this.wallet, ctxp)
-                  .then(() => {
-                    this.onGoingProcessProvider.clear();
-                  })
-                  .catch(err => {
-                    this.logger.error(err);
-                  });
-              })
-              .catch(err => {
-                this.logger.error(err);
-              });
-          }
-        });
-      }
+    const errorInfoSheet = this.actionSheetProvider.createInfoSheet(
+      'default-error',
+      { msg: this.bwcErrorProvider.msg(error), title: infoSheetTitle }
     );
+    errorInfoSheet.present();
   }
 }

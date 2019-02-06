@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var https = require('https');
 
-var crowdin_identifier = 'copay';
+var crowdin_identifier = 'particl-copay';
 
 var local_file_name1 = path.join(__dirname, 'template.pot');
 
@@ -15,20 +15,6 @@ var local_file1_text = fs.readFileSync(local_file_name1, 'utf8');
 local_file1_text = local_file1_text.replace(/\r\n/g, '\n');
 local_file1_text = local_file1_text.replace(/\n/g, '\r\n');
 fs.writeFileSync(local_file_name1, local_file1_text);
-
-var local_file_name2 = path.join(__dirname, 'docs/appstore_en.txt');
-
-var local_file2_text = fs.readFileSync(local_file_name2, 'utf8');
-local_file2_text = local_file2_text.replace(/\r\n/g, '\n');
-local_file2_text = local_file2_text.replace(/\n/g, '\r\n');
-fs.writeFileSync(local_file_name2, local_file2_text);
-
-var local_file_name3 = path.join(__dirname, 'docs/updateinfo_en.txt');
-
-var local_file3_text = fs.readFileSync(local_file_name3, 'utf8');
-local_file3_text = local_file3_text.replace(/\r\n/g, '\n');
-local_file3_text = local_file3_text.replace(/\n/g, '\r\n');
-fs.writeFileSync(local_file_name3, local_file3_text);
 
 // obtain the crowdin api key
 var crowdin_api_key = fs.readFileSync(
@@ -42,10 +28,6 @@ if (crowdin_api_key != '') {
   var payload =
     '------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name="files[template.pot]"; filename="template.pot"\r\nContent-Type: application/vnd.ms-powerpoint\r\n\r\n' +
     local_file1_text +
-    '\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name="files[appstore/appstore_en.txt]"; filename="appstore_en.txt"\r\nContent-Type: text/plain\r\n\r\n' +
-    local_file2_text +
-    '\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name="files[appstore/updateinfo_en.txt]"; filename="updateinfo_en.txt"\r\nContent-Type: text/plain\r\n\r\n' +
-    local_file3_text +
     '\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--';
 
   var options = {

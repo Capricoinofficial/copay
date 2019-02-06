@@ -2762,7 +2762,7 @@ msgstr ""
 
 msgid ""
 "{coinName} miner fees are high due to record demand for limited space on "
-"the {coinName} network. BitPay does not receive and does not control "
+"the {coinName} network. Particl does not receive and does not control "
 "{coinName} miner fees."
 msgstr ""
 
@@ -2772,7 +2772,7 @@ msgstr ""
 msgid ""
 "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain "
 "information, networking and Copayer synchronization. The default "
-"configuration points to https://bws.bitpay.com (BitPay's public BWS "
+"configuration points to https://bws.particl.io (Particl's public BWS "
 "instance)."
 msgstr ""
 
@@ -2786,4 +2786,46 @@ msgid "{{wallet.credentials.m}}-of-{{wallet.credentials.n}}"
 msgstr ""
 
 msgid "{{wallet.m}}-of-{{wallet.n}}"
+msgstr ""
+
+msgid "Learn more about cold staking on the Particl wiki."
+msgstr ""
+
+msgid "Open Particl Wiki"
+msgstr ""
+
+msgid "Disable Staking"
+msgstr ""
+
+msgid "This means you will stop receiving interest on your PART coins."
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Cold Stake Zap"
+msgstr ""
+
+msgid "Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed."
+msgstr ""
+
+msgid "Zap"
+msgstr ""
+
+msgid "Waiting on unconfirmed transactions..."
+msgstr ""
+
+msgid "Cold Staking Setup"
+msgstr ""
+
+msgid "Optional label (e.g. Staking pool, my Raspberry Pi etc.)"
+msgstr ""
+
+msgid "Staking key (Pool address or Node public key)"
+msgstr ""
+
+msgid "Enable Cold Staking"
+msgstr ""
+
+msgid "Cold Staking"
 msgstr ""

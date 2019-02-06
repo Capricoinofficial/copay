@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 // Pages
 import { AmountPage } from '../../../../pages/send/amount/amount';
+import { AddressbookAddPage } from '../add/add';
 
 // Providers
 import { AddressBookProvider } from '../../../../providers/address-book/address-book';
@@ -62,6 +63,19 @@ export class AddressbookViewPage {
           this.popupProvider.ionicAlert(this.translate.instant('Error'), err);
           return;
         });
+    });
+  }
+
+  public edit(): void {
+    const contact = this.navParams.data.contact;
+    new Promise(resolve => {
+      this.navCtrl.push(AddressbookAddPage, { contact, resolve });
+    }).then(editedAddress => {
+      if (editedAddress) {
+        this.address = editedAddress['address'];
+        this.name = editedAddress['name'];
+        this.email = editedAddress['email'];
+      }
     });
   }
 }
