@@ -5,14 +5,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: copay\n"
+"X-Crowdin-Project: particl-copay\n"
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: template.pot\n"
-"Project-Id-Version: copay\n"
-"Last-Translator: cmgustavo83\n"
+"Project-Id-Version: particl-copay\n"
+"Last-Translator: particl\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
-"PO-Revision-Date: 2019-01-09 14:55\n"
+"PO-Revision-Date: 2019-02-06 13:36\n"
 
 msgid "(Trusted)"
 msgstr "(신뢰할 수 있음)"
@@ -24,37 +24,37 @@ msgid "* A payment proposal can be deleted if 1) you are the creator, and no oth
 msgstr ""
 
 msgid "1. Tap \"Add Payment Method\" and select \"Gift Card\""
-msgstr "1. Tap \"Add Payment Method\" and select \"Gift Card\""
+msgstr ""
 
 msgid "2. Enter Gift Code"
-msgstr "2. Enter Gift Code"
+msgstr ""
 
-msgid "5-star ratings help us get BitPay Wallet into more hands, and more users means more resources can be committed to the app!"
-msgstr "5-star ratings help us get BitPay Wallet into more hands, and more users means more resources can be committed to the app!"
+msgid "5-star ratings help us get the Particl Wallet into more hands, and more users means more resources can be committed to the app!"
+msgstr ""
 
 msgid "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
-msgstr "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
+msgstr ""
 
 msgid "A total of {{amountBelowFeeStr}} {{coin}} were excluded. These funds come from UTXOs smaller than the network fee provided."
-msgstr "A total of {{amountBelowFeeStr}} {{coin}} were excluded. These funds come from UTXOs smaller than the network fee provided."
+msgstr ""
 
 msgid "A total of {{amountStr}} ({{fiatAmount | number:'1.2-2'}} {{currencyIsoCode}}) will be exchanged for {{withdrawalStr}} ({{fiatWithdrawal | number:'1.2-2'}} {{currencyIsoCode}})."
 msgstr "총 {{amountStr}} ({{fiatAmount | number:'1.2-2'}} {{currencyIsoCode}}) 이 {{withdrawalStr}} ({{fiatWithdrawal | number:'1.2-2'}} {{currencyIsoCode}}) 으로 교환 됩니다."
 
 msgid "A total of {{fee}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
-msgstr "A total of {{fee}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
+msgstr ""
 
 msgid "A total of {{fee}} {{coin}} were excluded. These funds come from UTXOs smaller than the network fee provided."
-msgstr "A total of {{fee}} {{coin}} were excluded. These funds come from UTXOs smaller than the network fee provided."
+msgstr ""
 
 msgid "About"
 msgstr "소개"
 
 msgid "About {{appName}}"
-msgstr "About {{appName}}"
+msgstr ""
 
 msgid "Accept"
-msgstr "Accept"
+msgstr ""
 
 msgid "Accepted"
 msgstr "수락함"
@@ -69,7 +69,7 @@ msgid "Add"
 msgstr "추가"
 
 msgid "Add BitPay Account?"
-msgstr "Add BitPay Account?"
+msgstr ""
 
 msgid "Add Contact"
 msgstr "연락처 추가"
@@ -78,13 +78,13 @@ msgid "Add Memo"
 msgstr "메모 추가"
 
 msgid "Add Recipient"
-msgstr "Add Recipient"
+msgstr ""
 
 msgid "Add account"
-msgstr "Add account"
+msgstr ""
 
 msgid "Add amount"
-msgstr "Add amount"
+msgstr ""
 
 msgid "Add as a contact"
 msgstr "연락처로 추가"
@@ -93,13 +93,13 @@ msgid "Add funds"
 msgstr "자금 추가"
 
 msgid "Add gift cards to your {appName} wallet from brands like Amazon, Delta, Google Play, and Uber."
-msgstr "Add gift cards to your {appName} wallet from brands like Amazon, Delta, Google Play, and Uber."
+msgstr ""
 
 msgid "Add this BitPay account ({{email}})?"
-msgstr "Add this BitPay account ({{email}})?"
+msgstr ""
 
 msgid "Address"
-msgstr "주소"
+msgstr "비트코인 주소"
 
 msgid "Address Book"
 msgstr "주소록"
@@ -108,7 +108,7 @@ msgid "Address Type"
 msgstr "주소 타입"
 
 msgid "Address book"
-msgstr "Address book"
+msgstr ""
 
 msgid "Addressbook is empty"
 msgstr "주소록이 비여 있습니다."
@@ -117,22 +117,22 @@ msgid "Addresses"
 msgstr ""
 
 msgid "Addresses with balance"
-msgstr "Addresses with balance"
+msgstr ""
 
 msgid "Advanced"
 msgstr "고급"
 
 msgid "All"
-msgstr "All"
+msgstr ""
 
 msgid "All addresses"
-msgstr "All addresses"
+msgstr ""
 
 msgid "All of your wallet balance may not be available for immediate spending."
-msgstr "모든 비트코인 지갑 잔액은 즉각적으로 지출할 수 없습니다."
+msgstr ""
 
 msgid "Allow camera access"
-msgstr "Allow camera access"
+msgstr ""
 
 msgid "Almost done! Let's review."
 msgstr "거의 다 됐습니다! 검토해주세요."
@@ -159,16 +159,16 @@ msgid "Amount too big"
 msgstr "금액이 너무 큽니다"
 
 msgid "Amount:"
-msgstr "Amount:"
+msgstr ""
 
 msgid "Anyone with your recovery phrase can access or spend your funds."
-msgstr "귀하의 복구 문구를 가진 사람은 누구나 귀하의 비트코인에 액세스하고 사용할 수 있습니다."
+msgstr ""
 
 msgid "Apply changes"
 msgstr "변경사항 적용"
 
 msgid "Approximate network fee to transfer wallet's balance (with normal priority)"
-msgstr "지갑 잔액을 이체하기 위한 대략적인 비트코인 네트워크 수수료 (보통 우선 순위)"
+msgstr ""
 
 msgid "Archive All {brand} Gift Cards?"
 msgstr ""
@@ -245,17 +245,8 @@ msgstr ""
 msgid "Below Minimum Amount"
 msgstr ""
 
-msgid "Particl Address"
-msgstr ""
-
-msgid "Particl URI"
-msgstr ""
-
 msgid "BitPay Card URI"
 msgstr ""
-
-msgid "Address"
-msgstr "비트코인 주소"
 
 msgid "Bitcoin Cash Address"
 msgstr ""
@@ -266,32 +257,11 @@ msgstr ""
 msgid "Bitcoin Cash Wallets"
 msgstr "비트코인 캐시 지갑"
 
-msgid "Particl network fee policy"
-msgstr "비트코인 네트워크 수수료 정책"
-
 msgid "Bitcoin URI"
 msgstr ""
 
 msgid "Bitcoin Wallets"
 msgstr "비트코인 지갑"
-
-msgid "Particl is a currency."
-msgstr "비트코인은 통화입니다."
-
-msgid "Particl is different - it cannot be safely held with a bank or web service."
-msgstr ""
-
-msgid "Particl is secure, digital money."
-msgstr ""
-
-msgid "Fee:"
-msgstr ""
-
-msgid "Particl network fee policy"
-msgstr ""
-
-msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "비트코인 거래에는 마이너가 네트워크에서 수집한 수수료가 포함됩니다."
 
 msgid "Brands"
 msgstr ""
@@ -388,6 +358,21 @@ msgstr "닫기"
 
 msgid "Coin"
 msgstr "코인"
+
+msgid "Coins staking"
+msgstr ""
+
+msgid "Cold Stake Zap"
+msgstr ""
+
+msgid "Cold Staking"
+msgstr ""
+
+msgid "Cold Staking Setup"
+msgstr ""
+
+msgid "Cold staking allows you to get interest on your PART coins."
+msgstr ""
 
 msgid "Color"
 msgstr "색상"
@@ -659,6 +644,15 @@ msgstr ""
 msgid "Details"
 msgstr "세부 정보"
 
+msgid "Disable"
+msgstr ""
+
+msgid "Disable Cold Staking"
+msgstr ""
+
+msgid "Disable Staking"
+msgstr ""
+
 msgid "Disable notifications"
 msgstr ""
 
@@ -704,6 +698,9 @@ msgstr "이메일"
 msgid "Empty addresses limit reached. New addresses cannot be generated."
 msgstr "빈 주소 제한에 도달했습니다. 새 주소를 생성할 수 없습니다."
 
+msgid "Enable Cold Staking"
+msgstr ""
+
 msgid "Enable camera access in your device settings to get started."
 msgstr "시작하시려면 기기 설정에서 카메라 액세스를 활성화해주세요."
 
@@ -740,9 +737,6 @@ msgstr ""
 msgid "Enter a transaction memo"
 msgstr ""
 
-msgid "Enter wallet address"
-msgstr ""
-
 msgid "Enter custom fee in sat/byte"
 msgstr ""
 
@@ -750,6 +744,9 @@ msgid "Enter email address"
 msgstr ""
 
 msgid "Enter encrypt password"
+msgstr ""
+
+msgid "Enter wallet address"
 msgstr ""
 
 msgid "Enter wallet invitation"
@@ -855,6 +852,9 @@ msgid "Fee level is not defined"
 msgstr "수수료 레벨이 정의되지 않았습니다"
 
 msgid "Fee rate"
+msgstr ""
+
+msgid "Fee:"
 msgstr ""
 
 msgid "Feedback"
@@ -1145,6 +1145,9 @@ msgstr "지불하시려면 코드를 스캔해주세요."
 msgid "Key already associated with an existing wallet"
 msgstr "이미 기존 지갑과 연결된 키입니다"
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr "언어"
 
@@ -1156,6 +1159,12 @@ msgstr ""
 
 msgid "Learn more"
 msgstr "더 보기"
+
+msgid "Learn more about Cold Staking"
+msgstr ""
+
+msgid "Learn more about cold staking on the Particl wiki."
+msgstr ""
 
 msgid "Learn more about testnet blockchain"
 msgstr ""
@@ -1380,13 +1389,13 @@ msgid "Now is a perfect time to assess your surroundings. Nearby windows? Hidden
 msgstr "주변 환경을 평가하기에 완벽한 시기입니다. 창문가이신가요? 숨겨진 카메라가 있지는 않나요? 스파이는 없나요?"
 
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgid "Off"
 msgstr ""
 
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 msgid "On"
 msgstr ""
@@ -1418,6 +1427,9 @@ msgstr "GitHub 프로젝트 열기"
 msgid "Open Insight"
 msgstr "Insight 열기"
 
+msgid "Open Particl Wiki"
+msgstr ""
+
 msgid "Open Translation Community"
 msgstr "번역 커뮤니티 열기"
 
@@ -1427,6 +1439,9 @@ msgstr ""
 msgid "Open website"
 msgstr "웹사이트 열기"
 
+msgid "Optional label (e.g. Staking pool, my Raspberry Pi etc.)"
+msgstr ""
+
 msgid "Order the BitPay Card"
 msgstr ""
 
@@ -1435,6 +1450,30 @@ msgstr ""
 
 msgid "PIN"
 msgstr ""
+
+msgid "Particl Address"
+msgstr ""
+
+msgid "Particl URI"
+msgstr ""
+
+msgid "Particl Wallets"
+msgstr ""
+
+msgid "Particl is a currency."
+msgstr "비트코인은 통화입니다."
+
+msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgstr ""
+
+msgid "Particl is secure, digital money."
+msgstr ""
+
+msgid "Particl network fee policy"
+msgstr "비트코인 네트워크 수수료 정책"
+
+msgid "Particl transactions include a fee collected by miners on the network."
+msgstr "비트코인 거래에는 마이너가 네트워크에서 수집한 수수료가 포함됩니다."
 
 msgid "Password"
 msgstr "비밀번호"
@@ -1871,6 +1910,9 @@ msgstr "비밀번호 설정"
 msgid "Settings"
 msgstr ""
 
+msgid "Setup Cold Staking"
+msgstr ""
+
 msgid "ShapeShift is not available at this moment. Please, try again later."
 msgstr ""
 
@@ -1955,6 +1997,15 @@ msgstr ""
 msgid "Spending this balance will need significant network fees"
 msgstr "이 잔액을 사용하려면 유효한 비트코인 네트워크 수수료가 필요합니다"
 
+msgid "Staking"
+msgstr ""
+
+msgid "Staking key"
+msgstr ""
+
+msgid "Staking key (Pool address or Node public key)"
+msgstr ""
+
 msgid "Status"
 msgstr ""
 
@@ -2019,10 +2070,10 @@ msgid "The amount of funds immediately spendable from this wallet."
 msgstr "이 지갑에서 즉시 사용 가능한 비트코인 양."
 
 msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
-msgstr "귀하의 보류 중인 거래 제안에 입금된 이 지갑에 저장된 비트코인 양. 이 양은 이 지갑과 관련된 미사용 거래 출금을 사용하여 결정되며 보류 중인 거래 제안과 관련된 실제 양보다 많을 수 있습니다."
+msgstr ""
 
 msgid "The amount of funds stored in this wallet with less than 1 blockchain confirmation."
-msgstr "1 블록체인 확인 미만의 이 지갑에 저장된 비트코인 양."
+msgstr ""
 
 msgid "The derivation path"
 msgstr "유도 경로"
@@ -2090,13 +2141,13 @@ msgstr ""
 msgid "This app stores your particl with cutting-edge security."
 msgstr "이 앱은 최첨단 보안 기능으로 귀하의 비트코인을 저장합니다."
 
-msgid "This payment request has expired."
-msgstr "이 비트코인 지불 요청은 만료되었습니다."
-
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr ""
 
 msgid "This information is available at the website."
+msgstr ""
+
+msgid "This means you will stop receiving interest on your PART coins."
 msgstr ""
 
 msgid "This password cannot be recovered. If this password is lost, funds can only be recovered by reimporting your 12-word recovery phrase."
@@ -2104,6 +2155,9 @@ msgstr ""
 
 msgid "This password is only for this device, and it cannot be recovered. To avoid losing funds, write your password down."
 msgstr ""
+
+msgid "This payment request has expired."
+msgstr "이 비트코인 지불 요청은 만료되었습니다."
 
 msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr "이 복원 문구는 비밀번호와 함께 생성되었습니다. 이 지갑을 복원하시려면 복원 문구와 비밀번호 모두가 필요합니다."
@@ -2196,6 +2250,9 @@ msgid "Transfer to Contact"
 msgstr ""
 
 msgid "Transfer to Multiple Recipients"
+msgstr ""
+
+msgid "Transfer to Particl Wallet"
 msgstr ""
 
 msgid "Translate address"
@@ -2324,6 +2381,9 @@ msgstr "경고: 신뢰할 수 없는 인증서"
 msgid "Waiting for copayers"
 msgstr "코페이어 기다리는 중"
 
+msgid "Waiting on unconfirmed transactions..."
+msgstr ""
+
 msgid "Waiting..."
 msgstr "기다리는 중..."
 
@@ -2372,6 +2432,9 @@ msgstr "지갑이 잠겨있습니다"
 msgid "Wallet is not complete"
 msgstr "지갑이 완료되지 않았습니다"
 
+msgid "Wallet is staking"
+msgstr ""
+
 msgid "Wallet key"
 msgstr ""
 
@@ -2386,6 +2449,9 @@ msgstr "지갑을 찾을 수 없습니다"
 
 msgid "Wallet not registered at the wallet service. Recreate it from \"Create Wallet\" using \"Advanced Options\" to set your recovery phrase"
 msgstr "지갑 서비스에 등록되지 않은 지갑입니다. 복원 문구를 설정하시려면 \"고급 옵션\"을 사용하여 \"지갑 생성\"에서 지갑을 재생성하세요"
+
+msgid "Wallet not staking yet"
+msgstr ""
 
 msgid "Wallet recovery phrase"
 msgstr ""
@@ -2513,11 +2579,11 @@ msgstr ""
 msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr "수수료를 {{maxFeeRecommended}} satoshis/byte보다 높게 설정하시면 안됩니다."
 
+msgid "You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!"
+msgstr ""
+
 msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
 msgstr "귀하의 BitPay 카드가 준비되었습니다. 전 세계 상점 및 ATM에서 이용하시려면 카드에 자금을 추가해주세요."
-
-msgid "Your particl wallet is ready!"
-msgstr "귀하의 비트코인 지갑이 준비되었습니다!"
 
 msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
 msgstr ""
@@ -2527,6 +2593,9 @@ msgstr "귀하의 수수료는 권장액보다 낮습니다."
 
 msgid "Your name"
 msgstr "귀하의 이름"
+
+msgid "Your particl wallet is ready!"
+msgstr "귀하의 비트코인 지갑이 준비되었습니다!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
 msgstr ""
@@ -2538,6 +2607,12 @@ msgid "Your wallet key will be encrypted. The encrypt password cannot be recover
 msgstr ""
 
 msgid "Your {walletType} wallet is backed up!"
+msgstr ""
+
+msgid "Zap"
+msgstr ""
+
+msgid "Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed."
 msgstr ""
 
 msgid "[Balance Hidden]"

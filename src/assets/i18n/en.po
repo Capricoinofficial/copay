@@ -3,3026 +3,2657 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.2\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: particl-copay\n"
+"X-Crowdin-Language: en\n"
+"X-Crowdin-File: template.pot\n"
+"Project-Id-Version: particl-copay\n"
+"Last-Translator: particl\n"
+"Language-Team: English\n"
 "Language: en\n"
+"PO-Revision-Date: 2019-02-06 13:36\n"
 
 msgid "(Trusted)"
-msgstr "(Trusted)"
+msgstr ""
 
 msgid "(possible double spend)"
-msgstr "(possible double spend)"
-
-msgid ""
-"* A payment proposal can be deleted if 1) you are the creator, and no other "
-"copayer has signed, or 2) 10 minutes have passed since the proposal was "
-"created."
 msgstr ""
-"* A payment proposal can be deleted if 1) you are the creator, and no other "
-"copayer has signed, or 2) 10 minutes have passed since the proposal was "
-"created."
+
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 10 minutes have passed since the proposal was created."
+msgstr ""
 
 msgid "1. Tap \"Add Payment Method\" and select \"Gift Card\""
-msgstr "1. Tap \"Add Payment Method\" and select \"Gift Card\""
+msgstr ""
 
 msgid "2. Enter Gift Code"
-msgstr "2. Enter Gift Code"
-
-msgid ""
-"5-star ratings help us get BitPay Wallet into more hands, and more users "
-"means more resources can be committed to the app!"
 msgstr ""
-"5-star ratings help us get BitPay Wallet into more hands, and more users "
-"means more resources can be committed to the app!"
 
-msgid ""
-"A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum "
-"size allowed for a transaction was exceeded."
+msgid "5-star ratings help us get the Particl Wallet into more hands, and more users means more resources can be committed to the app!"
 msgstr ""
-"A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum "
-"size allowed for a transaction was exceeded."
 
-msgid ""
-"A total of {{amountBelowFeeStr}} {{coin}} were excluded. These funds come "
-"from UTXOs smaller than the network fee provided."
+msgid "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
 msgstr ""
-"A total of {{amountBelowFeeStr}} {{coin}} were excluded. These funds come "
-"from UTXOs smaller than the network fee provided."
 
-msgid ""
-"A total of {{amountStr}} ({{fiatAmount | number:'1.2-2'}} "
-"{{currencyIsoCode}}) will be exchanged for {{withdrawalStr}} "
-"({{fiatWithdrawal | number:'1.2-2'}} {{currencyIsoCode}})."
+msgid "A total of {{amountBelowFeeStr}} {{coin}} were excluded. These funds come from UTXOs smaller than the network fee provided."
 msgstr ""
-"A total of {{amountStr}} ({{fiatAmount | number:'1.2-2'}} "
-"{{currencyIsoCode}}) will be exchanged for {{withdrawalStr}} "
-"({{fiatWithdrawal | number:'1.2-2'}} {{currencyIsoCode}})."
 
-msgid ""
-"A total of {{fee}} {{coin}} were excluded. The maximum size allowed for a "
-"transaction was exceeded."
+msgid "A total of {{amountStr}} ({{fiatAmount | number:'1.2-2'}} {{currencyIsoCode}}) will be exchanged for {{withdrawalStr}} ({{fiatWithdrawal | number:'1.2-2'}} {{currencyIsoCode}})."
 msgstr ""
-"A total of {{fee}} {{coin}} were excluded. The maximum size allowed for a "
-"transaction was exceeded."
 
-msgid ""
-"A total of {{fee}} {{coin}} were excluded. These funds come from UTXOs "
-"smaller than the network fee provided."
+msgid "A total of {{fee}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
 msgstr ""
-"A total of {{fee}} {{coin}} were excluded. These funds come from UTXOs "
-"smaller than the network fee provided."
+
+msgid "A total of {{fee}} {{coin}} were excluded. These funds come from UTXOs smaller than the network fee provided."
+msgstr ""
 
 msgid "About"
-msgstr "About"
+msgstr ""
 
 msgid "About {{appName}}"
-msgstr "About {{appName}}"
+msgstr ""
 
 msgid "Accept"
-msgstr "Accept"
+msgstr ""
 
 msgid "Accepted"
-msgstr "Accepted"
+msgstr ""
 
 msgid "Account"
-msgstr "Account"
+msgstr ""
 
 msgid "Activity"
-msgstr "Activity"
+msgstr ""
 
 msgid "Add"
-msgstr "Add"
+msgstr ""
 
 msgid "Add BitPay Account?"
-msgstr "Add BitPay Account?"
+msgstr ""
 
 msgid "Add Contact"
-msgstr "Add Contact"
+msgstr ""
 
 msgid "Add Memo"
-msgstr "Add Memo"
+msgstr ""
 
 msgid "Add Recipient"
-msgstr "Add Recipient"
+msgstr ""
 
 msgid "Add account"
-msgstr "Add account"
+msgstr ""
 
 msgid "Add amount"
-msgstr "Add amount"
+msgstr ""
 
 msgid "Add as a contact"
-msgstr "Add as a contact"
+msgstr ""
 
 msgid "Add funds"
-msgstr "Add funds"
-
-msgid ""
-"Add gift cards to your {appName} wallet from brands like Amazon, Delta, "
-"Google Play, and Uber."
 msgstr ""
-"Add gift cards to your {appName} wallet from brands like Amazon, Delta, "
-"Google Play, and Uber."
+
+msgid "Add gift cards to your {appName} wallet from brands like Amazon, Delta, Google Play, and Uber."
+msgstr ""
 
 msgid "Add this BitPay account ({{email}})?"
-msgstr "Add this BitPay account ({{email}})?"
+msgstr ""
 
 msgid "Address"
-msgstr "Address"
+msgstr ""
 
 msgid "Address Book"
-msgstr "Address Book"
+msgstr ""
 
 msgid "Address Type"
-msgstr "Address Type"
+msgstr ""
 
 msgid "Address book"
-msgstr "Address book"
+msgstr ""
 
 msgid "Addressbook is empty"
-msgstr "Addressbook is empty"
+msgstr ""
+
+msgid "Addresses"
+msgstr ""
 
 msgid "Addresses with balance"
-msgstr "Addresses with balance"
+msgstr ""
 
 msgid "Advanced"
-msgstr "Advanced"
+msgstr ""
 
 msgid "All"
-msgstr "All"
+msgstr ""
 
 msgid "All addresses"
-msgstr "All addresses"
-
-msgid ""
-"All of your bitcoin wallet balance may not be available for immediate "
-"spending."
 msgstr ""
-"All of your bitcoin wallet balance may not be available for immediate "
-"spending."
+
+msgid "All of your wallet balance may not be available for immediate spending."
+msgstr ""
 
 msgid "Allow camera access"
-msgstr "Allow camera access"
+msgstr ""
 
 msgid "Almost done! Let's review."
-msgstr "Almost done! Let's review."
+msgstr ""
 
 msgid "Alternative currency"
-msgstr "Alternative currency"
-
-msgid ""
-"Amazon.co.jp Gift Cards never expire and can be redeemed towards millions of "
-"items at www.amazon.co.jp."
 msgstr ""
-"Amazon.co.jp Gift Cards never expire and can be redeemed towards millions of "
-"items at www.amazon.co.jp."
 
-msgid ""
-"Amazon.com Gift Cards never expire and can be redeemed towards millions of "
-"items at www.amazon.com."
+msgid "Amazon.co.jp Gift Cards never expire and can be redeemed towards millions of items at www.amazon.co.jp."
 msgstr ""
-"Amazon.com Gift Cards never expire and can be redeemed towards millions of "
-"items at www.amazon.com."
+
+msgid "Amazon.com Gift Cards never expire and can be redeemed towards millions of items at www.amazon.com."
+msgstr ""
 
 msgid "Amount"
-msgstr "Amount"
+msgstr ""
 
 msgid "Amount Too Low To Spend"
-msgstr "Amount Too Low To Spend"
+msgstr ""
 
 msgid "Amount below minimum allowed"
-msgstr "Amount below minimum allowed"
+msgstr ""
 
 msgid "Amount too big"
-msgstr "Amount too big"
+msgstr ""
 
 msgid "Amount:"
-msgstr "Amount:"
+msgstr ""
 
-msgid "Anyone with your recovery phrase can access or spend your bitcoin."
-msgstr "Anyone with your recovery phrase can access or spend your bitcoin."
+msgid "Anyone with your recovery phrase can access or spend your funds."
+msgstr ""
 
 msgid "Apply changes"
-msgstr "Apply changes"
-
-msgid ""
-"Approximate Bitcoin network fee to transfer wallet's balance (with normal "
-"priority)"
 msgstr ""
-"Approximate Bitcoin network fee to transfer wallet's balance (with normal "
-"priority)"
+
+msgid "Approximate network fee to transfer wallet's balance (with normal priority)"
+msgstr ""
 
 msgid "Archive All {brand} Gift Cards?"
-msgstr "Archive All {brand} Gift Cards?"
+msgstr ""
 
 msgid "Archive Card"
-msgstr "Archive Card"
+msgstr ""
 
 msgid "Archive this Card?"
-msgstr "Archive this Card?"
+msgstr ""
 
 msgid "Archived Cards"
-msgstr "Archived Cards"
+msgstr ""
 
 msgid "Are you being watched?"
-msgstr "Are you being watched?"
+msgstr ""
 
 msgid "Are you sure you want to cancel and delete this wallet?"
-msgstr "Are you sure you want to cancel and delete this wallet?"
+msgstr ""
 
 msgid "Are you sure you want to delete this contact?"
-msgstr "Are you sure you want to delete this contact?"
+msgstr ""
 
 msgid "Are you sure you want to delete this wallet?"
-msgstr "Are you sure you want to delete this wallet?"
+msgstr ""
 
 msgid "Are you sure you want to reject this transaction?"
-msgstr "Are you sure you want to reject this transaction?"
+msgstr ""
 
 msgid "Are you sure you want to remove this transaction?"
-msgstr "Are you sure you want to remove this transaction?"
+msgstr ""
 
 msgid "Are you sure you want to skip it?"
-msgstr "Are you sure you want to skip it?"
+msgstr ""
 
 msgid "Are you sure?"
-msgstr "Are you sure?"
+msgstr ""
 
 msgid "Available"
-msgstr "Available"
+msgstr ""
 
 msgid "Average confirmation time"
-msgstr "Average confirmation time"
+msgstr ""
 
 msgid "Awaiting payment to confirm"
-msgstr "Awaiting payment to confirm"
+msgstr ""
 
 msgid "Back up all your wallets before using this function"
-msgstr "Back up all your wallets before using this function"
+msgstr ""
 
 msgid "Back up your wallet before using this function"
-msgstr "Back up your wallet before using this function"
+msgstr ""
 
 msgid "Backup"
-msgstr "Backup"
+msgstr ""
 
 msgid "Backup wallet"
-msgstr "Backup wallet"
+msgstr ""
 
 msgid "Bad wallet invitation"
-msgstr "Bad wallet invitation"
+msgstr ""
 
 msgid "Balance Hidden"
-msgstr "Balance Hidden"
-
-msgid ""
-"Be sure to store your recovery phrase in a secure place. If this app is "
-"deleted, your money cannot be recovered without it."
 msgstr ""
-"Be sure to store your recovery phrase in a secure place. If this app is "
-"deleted, your money cannot be recovered without it."
 
-msgid ""
-"Because you are sending the maximum amount contained in this wallet, the "
-"{coinName} miner fee ({fee} {coin}) will be deducted from the total. {msg}"
+msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
 msgstr ""
-"Because you are sending the maximum amount contained in this wallet, the "
-"{coinName} miner fee ({fee} {coin}) will be deducted from the total. {msg}"
 
-msgid ""
-"Before retrieving your wallet address, it's recommended that you first write "
-"down your recovery phrase and store it securely so that your wallet can be "
-"recovered in the case your device was lost or stolen."
+msgid "Because you are sending the maximum amount contained in this wallet, the {coinName} miner fee ({fee} {coin}) will be deducted from the total. {msg}"
 msgstr ""
-"Before retrieving your wallet address, it's recommended that you first write "
-"down your recovery phrase and store it securely so that your wallet can be "
-"recovered in the case your device was lost or stolen."
+
+msgid "Before retrieving your wallet address, it's recommended that you first write down your recovery phrase and store it securely so that your wallet can be recovered in the case your device was lost or stolen."
+msgstr ""
 
 msgid "Below Minimum Amount"
-msgstr "Below Minimum Amount"
+msgstr ""
 
 msgid "BitPay Card URI"
-msgstr "BitPay Card URI"
-
-msgid "Particl Address"
-msgstr "Particl Address"
-
-msgid "Particl URI"
-msgstr "Particl URI"
-
-msgid "Address"
-msgstr "Address"
+msgstr ""
 
 msgid "Bitcoin Cash Address"
-msgstr "Bitcoin Cash Address"
+msgstr ""
 
 msgid "Bitcoin Cash URI"
-msgstr "Bitcoin Cash URI"
+msgstr ""
 
 msgid "Bitcoin Cash Wallets"
-msgstr "Bitcoin Cash Wallets"
-
-msgid "Particl network fee policy"
-msgstr "Particl network fee policy"
+msgstr ""
 
 msgid "Bitcoin URI"
-msgstr "Bitcoin URI"
+msgstr ""
 
 msgid "Bitcoin Wallets"
-msgstr "Bitcoin Wallets"
-
-msgid "Particl is a currency."
-msgstr "Particl is a currency."
-
-msgid ""
-"Particl is different - it cannot be safely held with a bank or web service."
 msgstr ""
-"Particl is different - it cannot be safely held with a bank or web service."
-
-msgid "Particl is secure, digital money."
-msgstr "Particl is secure, digital money."
-
-msgid "Fee:"
-msgstr "Fee:"
-
-msgid "Particl network fee policy"
-msgstr "Particl network fee policy"
-
-msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "Particl transactions include a fee collected by miners on the network."
 
 msgid "Brands"
-msgstr "Brands"
+msgstr ""
 
 msgid "Broadcast Payment"
-msgstr "Broadcast Payment"
+msgstr ""
 
 msgid "Broadcasted"
-msgstr "Broadcasted"
+msgstr ""
 
 msgid "Broadcasting transaction..."
-msgstr "Broadcasting transaction..."
+msgstr ""
 
 msgid "Buy Gift Card"
-msgstr "Buy Gift Card"
+msgstr ""
 
 msgid "Buy Gift Cards"
-msgstr "Buy Gift Cards"
+msgstr ""
 
 msgid "Buying Bitcoin..."
-msgstr "Buying Bitcoin..."
+msgstr ""
 
 msgid "Buying Gift Card..."
-msgstr "Buying Gift Card..."
-
-msgid ""
-"By providing your email address, you give explicit consent to BitPay to use "
-"your email address to send you email notifications about payments."
 msgstr ""
-"By providing your email address, you give explicit consent to BitPay to use "
-"your email address to send you email notifications about payments."
+
+msgid "By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments."
+msgstr ""
 
 msgid "Calculating fee..."
-msgstr "Calculating fee..."
+msgstr ""
 
 msgid "Calculating send max..."
-msgstr "Calculating send max..."
+msgstr ""
 
 msgid "Cancel"
-msgstr "Cancel"
+msgstr ""
 
 msgid "Cancel invitation"
-msgstr "Cancel invitation"
+msgstr ""
 
 msgid "Canceling Gift Card..."
-msgstr "Canceling Gift Card..."
+msgstr ""
 
 msgid "Cannot create wallet"
-msgstr "Cannot create wallet"
+msgstr ""
 
 msgid "Cannot join the same wallet more that once"
-msgstr "Cannot join the same wallet more that once"
+msgstr ""
 
 msgid "Card Archived"
-msgstr "Card Archived"
+msgstr ""
 
 msgid "Card Settings"
-msgstr "Card Settings"
+msgstr ""
 
 msgid "Certified by"
-msgstr "Certified by"
+msgstr ""
 
 msgid "Change Amount"
-msgstr "Change Amount"
+msgstr ""
 
 msgid "Change amount"
-msgstr "Change amount"
+msgstr ""
 
 msgid "Check the transaction on your wallet details"
-msgstr "Check the transaction on your wallet details"
+msgstr ""
 
 msgid "Choose a backup file from your computer"
-msgstr "Choose a backup file from your computer"
+msgstr ""
 
 msgid "Clear"
-msgstr "Clear"
+msgstr ""
 
 msgid "Clear cache"
-msgstr "Clear cache"
+msgstr ""
 
 msgid "Click to accept"
-msgstr "Click to accept"
+msgstr ""
 
 msgid "Click to confirm"
-msgstr "Click to confirm"
+msgstr ""
 
 msgid "Click to open Terms"
-msgstr "Click to open Terms"
+msgstr ""
 
 msgid "Click to pay"
-msgstr "Click to pay"
+msgstr ""
 
 msgid "Click to send"
-msgstr "Click to send"
+msgstr ""
 
 msgid "Close"
-msgstr "Close"
+msgstr ""
 
 msgid "Coin"
-msgstr "Coin"
+msgstr ""
+
+msgid "Coins staking"
+msgstr ""
+
+msgid "Cold Stake Zap"
+msgstr ""
+
+msgid "Cold Staking"
+msgstr ""
+
+msgid "Cold Staking Setup"
+msgstr ""
+
+msgid "Cold staking allows you to get interest on your PART coins."
+msgstr ""
 
 msgid "Color"
-msgstr "Color"
+msgstr ""
 
 msgid "Completed"
-msgstr "Completed"
+msgstr ""
 
 msgid "Configuration (m-n)"
-msgstr "Configuration (m-n)"
+msgstr ""
 
 msgid "Confirm"
-msgstr "Confirm"
+msgstr ""
 
 msgid "Confirm & Finish"
-msgstr "Confirm & Finish"
+msgstr ""
 
 msgid "Confirm to shift {{fromCoin}} to {{toCoin}}"
-msgstr "Confirm to shift {{fromCoin}} to {{toCoin}}"
+msgstr ""
 
 msgid "Confirm your PIN"
-msgstr "Confirm your PIN"
+msgstr ""
 
 msgid "Confirm your new encrypt password"
-msgstr "Confirm your new encrypt password"
+msgstr ""
 
 msgid "Confirmations"
-msgstr "Confirmations"
+msgstr ""
 
 msgid "Confirming"
-msgstr "Confirming"
-
-msgid ""
-"Congratulations! It looks like you've recently received money. It's highly "
-"advised that you verify your recovery phrase so that your funds can be "
-"recovered in case your phone was lost or stolen."
 msgstr ""
-"Congratulations! It looks like you've recently received money. It's highly "
-"advised that you verify your recovery phrase so that your funds can be "
-"recovered in case your phone was lost or stolen."
+
+msgid "Congratulations! It looks like you've recently received money. It's highly advised that you verify your recovery phrase so that your funds can be recovered in case your phone was lost or stolen."
+msgstr ""
 
 msgid "Connect my BitPay Card"
-msgstr "Connect my BitPay Card"
+msgstr ""
 
 msgid "Connect to ShapeShift Account"
-msgstr "Connect to ShapeShift Account"
+msgstr ""
 
 msgid "Connecting to Coinbase..."
-msgstr "Connecting to Coinbase..."
+msgstr ""
 
 msgid "Connecting to Glidera..."
-msgstr "Connecting to Glidera..."
+msgstr ""
 
 msgid "Connecting to ShapeShift..."
-msgstr "Connecting to ShapeShift..."
+msgstr ""
 
 msgid "Connection reset by peer"
-msgstr "Connection reset by peer"
+msgstr ""
 
 msgid "Contact the ShapeShift support team."
-msgstr "Contact the ShapeShift support team."
+msgstr ""
 
 msgid "Continue"
-msgstr "Continue"
+msgstr ""
 
 msgid "Contribute translations"
-msgstr "Contribute translations"
-
-msgid ""
-"Copay Session Logs. Be careful, this could contain sensitive private data"
 msgstr ""
-"Copay Session Logs. Be careful, this could contain sensitive private data"
+
+msgid "Copay Session Logs. Be careful, this could contain sensitive private data"
+msgstr ""
 
 msgid "Copay only supports Bitcoin Cash using new version numbers addresses"
-msgstr "Copay only supports Bitcoin Cash using new version numbers addresses"
+msgstr ""
 
 msgid "Copayer already in this wallet"
-msgstr "Copayer already in this wallet"
+msgstr ""
 
 msgid "Copayer already voted on this spend proposal"
-msgstr "Copayer already voted on this spend proposal"
+msgstr ""
 
 msgid "Copayer data mismatch"
-msgstr "Copayer data mismatch"
+msgstr ""
 
 msgid "Copayer joined"
-msgstr "Copayer joined"
+msgstr ""
 
 msgid "Copied"
-msgstr "Copied"
+msgstr ""
 
 msgid "Copied to Clipboard"
-msgstr "Copied to Clipboard"
+msgstr ""
 
 msgid "Copied to clipboard"
-msgstr "Copied to clipboard"
+msgstr ""
 
 msgid "Copied {coin} address"
-msgstr "Copied {coin} address"
+msgstr ""
 
 msgid "Copied: {claimCode}"
-msgstr "Copied: {claimCode}"
+msgstr ""
 
 msgid "Copy Code"
-msgstr "Copy Code"
+msgstr ""
 
 msgid "Copy this text as it is to a safe place (notepad or email)"
-msgstr "Copy this text as it is to a safe place (notepad or email)"
+msgstr ""
 
 msgid "Copy to clipboard"
-msgstr "Copy to clipboard"
+msgstr ""
 
 msgid "Could Not Fetch Payment: Check if it is still valid"
-msgstr "Could Not Fetch Payment: Check if it is still valid"
+msgstr ""
 
 msgid "Could not access the wallet at the server. Please check:"
-msgstr "Could not access the wallet at the server. Please check:"
+msgstr ""
 
 msgid "Could not access wallet"
-msgstr "Could not access wallet"
+msgstr ""
 
 msgid "Could not add message to imported wallet without shared encrypting key"
-msgstr "Could not add message to imported wallet without shared encrypting key"
+msgstr ""
 
 msgid "Could not build transaction"
-msgstr "Could not build transaction"
+msgstr ""
 
 msgid "Could not create address"
-msgstr "Could not create address"
+msgstr ""
 
 msgid "Could not create transaction"
-msgstr "Could not create transaction"
+msgstr ""
 
 msgid "Could not create using the specified extended private key"
-msgstr "Could not create using the specified extended private key"
+msgstr ""
 
 msgid "Could not create using the specified extended public key"
-msgstr "Could not create using the specified extended public key"
+msgstr ""
 
 msgid "Could not create: Invalid wallet recovery phrase"
-msgstr "Could not create: Invalid wallet recovery phrase"
+msgstr ""
 
 msgid "Could not decrypt file, check your password"
-msgstr "Could not decrypt file, check your password"
+msgstr ""
 
 msgid "Could not decrypt wallet"
-msgstr "Could not decrypt wallet"
+msgstr ""
 
 msgid "Could not delete payment proposal"
-msgstr "Could not delete payment proposal"
+msgstr ""
 
 msgid "Could not encrypt wallet"
-msgstr "Could not encrypt wallet"
+msgstr ""
 
 msgid "Could not get claim code. Please contact BitPay support."
-msgstr "Could not get claim code. Please contact BitPay support."
+msgstr ""
 
 msgid "Could not get dynamic fee"
-msgstr "Could not get dynamic fee"
+msgstr ""
 
 msgid "Could not get dynamic fee for level:"
-msgstr "Could not get dynamic fee for level:"
+msgstr ""
 
 msgid "Could not get fee levels"
-msgstr "Could not get fee levels"
+msgstr ""
 
 msgid "Could not get the Addressbook"
-msgstr "Could not get the Addressbook"
+msgstr ""
 
 msgid "Could not get transactions"
-msgstr "Could not get transactions"
+msgstr ""
 
 msgid "Could not import"
-msgstr "Could not import"
+msgstr ""
 
 msgid "Could not import. Check input file."
-msgstr "Could not import. Check input file."
+msgstr ""
 
 msgid "Could not join wallet"
-msgstr "Could not join wallet"
+msgstr ""
 
 msgid "Could not reject payment"
-msgstr "Could not reject payment"
+msgstr ""
 
 msgid "Could not save preferences on the server"
-msgstr "Could not save preferences on the server"
+msgstr ""
 
 msgid "Could not send transaction"
-msgstr "Could not send transaction"
+msgstr ""
 
 msgid "Could not update transaction history"
-msgstr "Could not update transaction history"
+msgstr ""
 
 msgid "Could not update wallet"
-msgstr "Could not update wallet"
+msgstr ""
 
 msgid "Create a new wallet"
-msgstr "Create a new wallet"
+msgstr ""
 
 msgid "Create a new wallet to start using this app."
-msgstr "Create a new wallet to start using this app."
+msgstr ""
 
 msgid "Create particl wallet"
-msgstr "Create particl wallet"
+msgstr ""
 
 msgid "Create personal wallet"
-msgstr "Create personal wallet"
+msgstr ""
 
 msgid "Create shared wallet"
-msgstr "Create shared wallet"
+msgstr ""
 
 msgid "Create wallet"
-msgstr "Create wallet"
+msgstr ""
 
 msgid "Created"
-msgstr "Created"
+msgstr ""
 
 msgid "Created by"
-msgstr "Created by"
+msgstr ""
 
 msgid "Creating Gift Card..."
-msgstr "Creating Gift Card..."
+msgstr ""
 
 msgid "Creating Wallet..."
-msgstr "Creating Wallet..."
+msgstr ""
 
 msgid "Creating transaction..."
-msgstr "Creating transaction..."
+msgstr ""
 
 msgid "Current Cards"
-msgstr "Current Cards"
+msgstr ""
 
 msgid "Current fee rate for this policy"
-msgstr "Current fee rate for this policy"
+msgstr ""
 
 msgid "Custom"
-msgstr "Custom"
+msgstr ""
 
 msgid "Date"
-msgstr "Date"
+msgstr ""
 
 msgid "Delete"
-msgstr "Delete"
+msgstr ""
 
 msgid "Delete Payment Proposal"
-msgstr "Delete Payment Proposal"
+msgstr ""
 
 msgid "Delete Wallet"
-msgstr "Delete Wallet"
+msgstr ""
 
 msgid "Delete it and create a new one"
-msgstr "Delete it and create a new one"
+msgstr ""
 
 msgid "Deleting Wallet..."
-msgstr "Deleting Wallet..."
+msgstr ""
 
 msgid "Deleting payment proposal..."
-msgstr "Deleting payment proposal..."
-
-msgid ""
-"Delta Gift Cards can be used toward airfare on any Delta marketed flight "
-"through www.delta.com, at the airport, through reservations, or by phone "
-"with Delta Vacations®. Delta Gift Cards do not have any expiration dates or "
-"fees."
 msgstr ""
-"Delta Gift Cards can be used toward airfare on any Delta marketed flight "
-"through www.delta.com, at the airport, through reservations, or by phone "
-"with Delta Vacations®. Delta Gift Cards do not have any expiration dates or "
-"fees."
+
+msgid "Delta Gift Cards can be used toward airfare on any Delta marketed flight through www.delta.com, at the airport, through reservations, or by phone with Delta Vacations®. Delta Gift Cards do not have any expiration dates or fees."
+msgstr ""
 
 msgid "Deposit"
-msgstr "Deposit"
+msgstr ""
 
 msgid "Deposit Max"
-msgstr "Deposit Max"
+msgstr ""
 
 msgid "Deposit Min"
-msgstr "Deposit Min"
+msgstr ""
 
 msgid "Derivation Strategy"
-msgstr "Derivation Strategy"
+msgstr ""
 
 msgid "Derivation path"
-msgstr "Derivation path"
+msgstr ""
 
 msgid "Details"
-msgstr "Details"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Disable Cold Staking"
+msgstr ""
+
+msgid "Disable Staking"
+msgstr ""
 
 msgid "Disable notifications"
-msgstr "Disable notifications"
+msgstr ""
 
 msgid "Disabled"
-msgstr "Disabled"
+msgstr ""
 
 msgid "Do it later"
-msgstr "Do it later"
+msgstr ""
 
 msgid "Do not include private key"
-msgstr "Do not include private key"
+msgstr ""
 
 msgid "Do you want to verify your account now?"
-msgstr "Do you want to verify your account now?"
-
-msgid ""
-"Don't see your language on Crowdin? Contact the Owner on Crowdin! We'd love "
-"to support your language."
 msgstr ""
-"Don't see your language on Crowdin? Contact the Owner on Crowdin! We'd love "
-"to support your language."
+
+msgid "Don't see your language on Crowdin? Contact the Owner on Crowdin! We'd love to support your language."
+msgstr ""
 
 msgid "Done"
-msgstr "Done"
+msgstr ""
 
 msgid "Download"
-msgstr "Download"
+msgstr ""
 
 msgid "Download logs"
-msgstr "Download logs"
+msgstr ""
 
 msgid "Duplicating wallet..."
-msgstr "Duplicating wallet..."
-
-msgid ""
-"Each bitcoin wallet can generate billions of addresses from your 12-word "
-"recovery phrase. A new address is automatically generated and shown each "
-"time you receive a payment."
 msgstr ""
-"Each bitcoin wallet can generate billions of addresses from your 12-word "
-"recovery phrase. A new address is automatically generated and shown each "
-"time you receive a payment."
+
+msgid "Each wallet can generate billions of addresses from your 12-word recovery phrase. A new address is automatically generated and shown each time you receive a payment."
+msgstr ""
 
 msgid "Economy"
-msgstr "Economy"
+msgstr ""
 
 msgid "Edit"
-msgstr "Edit"
+msgstr ""
 
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 msgid "Empty addresses limit reached. New addresses cannot be generated."
-msgstr "Empty addresses limit reached. New addresses cannot be generated."
+msgstr ""
+
+msgid "Enable Cold Staking"
+msgstr ""
 
 msgid "Enable camera access in your device settings to get started."
-msgstr "Enable camera access in your device settings to get started."
+msgstr ""
 
 msgid "Enable desktop notifications"
-msgstr "Enable desktop notifications"
+msgstr ""
 
 msgid "Enable email notifications"
-msgstr "Enable email notifications"
+msgstr ""
 
 msgid "Enable in-app notification"
-msgstr "Enable in-app notification"
+msgstr ""
 
 msgid "Enable push notifications"
-msgstr "Enable push notifications"
+msgstr ""
 
 msgid "Enable the camera to get started."
-msgstr "Enable the camera to get started."
-
-msgid ""
-"Encryption can protect your funds if this device is stolen or compromised by "
-"malicious software."
 msgstr ""
-"Encryption can protect your funds if this device is stolen or compromised by "
-"malicious software."
+
+msgid "Encryption can protect your funds if this device is stolen or compromised by malicious software."
+msgstr ""
 
 msgid "Enter Amount"
-msgstr "Enter Amount"
+msgstr ""
 
 msgid "Enter Two Factor for your BitPay account"
-msgstr "Enter Two Factor for your BitPay account"
+msgstr ""
 
 msgid "Enter a new encrypt password"
-msgstr "Enter a new encrypt password"
+msgstr ""
 
 msgid "Enter a password to encrypt your wallet"
-msgstr "Enter a password to encrypt your wallet"
+msgstr ""
 
 msgid "Enter a transaction memo"
-msgstr "Enter a transaction memo"
-
-msgid "Enter bitcoin address"
-msgstr "Enter bitcoin address"
+msgstr ""
 
 msgid "Enter custom fee in sat/byte"
-msgstr "Enter custom fee in sat/byte"
+msgstr ""
 
 msgid "Enter email address"
-msgstr "Enter email address"
+msgstr ""
 
 msgid "Enter encrypt password"
-msgstr "Enter encrypt password"
+msgstr ""
+
+msgid "Enter wallet address"
+msgstr ""
 
 msgid "Enter wallet invitation"
-msgstr "Enter wallet invitation"
+msgstr ""
 
 msgid "Enter wallet name"
-msgstr "Enter wallet name"
+msgstr ""
 
 msgid "Enter your encrypt password again to confirm"
-msgstr "Enter your encrypt password again to confirm"
+msgstr ""
 
 msgid "Enter your name"
-msgstr "Enter your name"
+msgstr ""
 
 msgid "Entry already exist"
-msgstr "Entry already exist"
+msgstr ""
 
 msgid "Entry does not exist"
-msgstr "Entry does not exist"
+msgstr ""
 
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 msgid "Error adding new entry"
-msgstr "Error adding new entry"
+msgstr ""
 
 msgid "Error connecting to ShapeShift"
-msgstr "Error connecting to ShapeShift"
+msgstr ""
 
 msgid "Error creating wallet"
-msgstr "Error creating wallet"
+msgstr ""
 
 msgid "Error deleting addressbook"
-msgstr "Error deleting addressbook"
+msgstr ""
 
 msgid "Error deleting entry"
-msgstr "Error deleting entry"
+msgstr ""
 
 msgid "Error getting SendMax information"
-msgstr "Error getting SendMax information"
+msgstr ""
 
 msgid "Error getting fee rate"
-msgstr "Error getting fee rate"
+msgstr ""
 
 msgid "Error in Payment Protocol"
-msgstr "Error in Payment Protocol"
+msgstr ""
 
 msgid "Error pairing BitPay Account"
-msgstr "Error pairing BitPay Account"
+msgstr ""
 
 msgid "Error scanning funds:"
-msgstr "Error scanning funds:"
+msgstr ""
 
 msgid "Error sweeping wallet:"
-msgstr "Error sweeping wallet:"
+msgstr ""
 
 msgid "Error updating Debit Cards"
-msgstr "Error updating Debit Cards"
+msgstr ""
 
 msgid "Exceeded daily limit of $500 per user"
-msgstr "Exceeded daily limit of $500 per user"
+msgstr ""
 
 msgid "Expired"
-msgstr "Expired"
+msgstr ""
 
 msgid "Expires"
-msgstr "Expires"
+msgstr ""
 
-msgid "Export Wallet"
-msgstr "Export Wallet"
+msgid "Export"
+msgstr ""
 
 msgid "Export to file"
-msgstr "Export to file"
+msgstr ""
 
 msgid "Export wallet"
-msgstr "Export wallet"
+msgstr ""
 
 msgid "Exporting via QR not supported for this wallet"
-msgstr "Exporting via QR not supported for this wallet"
+msgstr ""
 
 msgid "Extended Private Key"
-msgstr "Extended Private Key"
+msgstr ""
 
 msgid "Extended Public Keys"
-msgstr "Extended Public Keys"
+msgstr ""
 
 msgid "Extracting Wallet information..."
-msgstr "Extracting Wallet information..."
+msgstr ""
 
 msgid "Failed"
-msgstr "Failed"
+msgstr ""
 
 msgid "Failed to export"
-msgstr "Failed to export"
+msgstr ""
 
 msgid "Fee"
-msgstr "Fee"
+msgstr ""
 
 msgid "Fee level"
-msgstr "Fee level"
+msgstr ""
 
 msgid "Fee level is not defined"
-msgstr "Fee level is not defined"
+msgstr ""
 
 msgid "Fee rate"
-msgstr "Fee rate"
+msgstr ""
+
+msgid "Fee:"
+msgstr ""
 
 msgid "Feedback"
-msgstr "Feedback"
+msgstr ""
 
 msgid "Feedback could not be submitted. Please try again later."
-msgstr "Feedback could not be submitted. Please try again later."
+msgstr ""
 
 msgid "Feedback!"
-msgstr "Feedback!"
+msgstr ""
 
 msgid "Fetching BitPay Account..."
-msgstr "Fetching BitPay Account..."
+msgstr ""
 
 msgid "Fetching BitPay Cards..."
-msgstr "Fetching BitPay Cards..."
+msgstr ""
 
 msgid "Fetching payment information..."
-msgstr "Fetching payment information..."
+msgstr ""
 
 msgid "File/Text"
-msgstr "File/Text"
+msgstr ""
 
 msgid "Fingerprint"
-msgstr "Fingerprint"
-
-msgid ""
-"Found something broken? Please report it as a bug. If you need immediate "
-"help with a problem you are having, then get help by contacting our support "
-"team."
 msgstr ""
-"Found something broken? Please report it as a bug. If you need immediate "
-"help with a problem you are having, then get help by contacting our support "
-"team."
+
+msgid "Found something broken? Please report it as a bug. If you need immediate help with a problem you are having, then get help by contacting our support team."
+msgstr ""
 
 msgid "From"
-msgstr "From"
+msgstr ""
 
 msgid "From BitPay account"
-msgstr "From BitPay account"
-
-msgid ""
-"From the destination device, go to Add wallet > Import wallet and scan this "
-"QR code"
 msgstr ""
-"From the destination device, go to Add wallet > Import wallet and scan this "
-"QR code"
+
+msgid "From the destination device, go to Add wallet > Import wallet and scan this QR code"
+msgstr ""
 
 msgid "Funds Will Not Be Accessible"
-msgstr "Funds Will Not Be Accessible"
+msgstr ""
 
 msgid "Funds are locked by pending spend proposals"
-msgstr "Funds are locked by pending spend proposals"
+msgstr ""
 
 msgid "Funds found"
-msgstr "Funds found"
+msgstr ""
 
 msgid "Funds to be added"
-msgstr "Funds to be added"
+msgstr ""
 
 msgid "Funds were added to debit card"
-msgstr "Funds were added to debit card"
+msgstr ""
 
 msgid "Funds will be transferred to"
-msgstr "Funds will be transferred to"
+msgstr ""
 
 msgid "GOT IT"
-msgstr "GOT IT"
+msgstr ""
 
 msgid "Generating .csv file..."
-msgstr "Generating .csv file..."
+msgstr ""
 
 msgid "Generating new address..."
-msgstr "Generating new address..."
+msgstr ""
 
 msgid "Get Help"
-msgstr "Get Help"
+msgstr ""
 
 msgid "Get help"
-msgstr "Get help"
-
-msgid ""
-"Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank fees "
-"may apply."
 msgstr ""
-"Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank fees "
-"may apply."
+
+msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank fees may apply."
+msgstr ""
 
 msgid "Get news and updates from Particl"
-msgstr "Get news and updates from Particl"
+msgstr ""
 
 msgid "Get started"
-msgstr "Get started"
+msgstr ""
 
 msgid "Get started by adding your first one."
-msgstr "Get started by adding your first one."
+msgstr ""
 
 msgid "Getting fee levels..."
-msgstr "Getting fee levels..."
+msgstr ""
 
 msgid "Gift Card"
-msgstr "Gift Card"
+msgstr ""
 
 msgid "Gift card canceled"
-msgstr "Gift card canceled"
-
-msgid ""
-"Gift card purchases are temporarily unavailable. Please try again later."
 msgstr ""
-"Gift card purchases are temporarily unavailable. Please try again later."
 
-msgid ""
-"Give friends and family the gift of tapping a button and getting a ride - "
-"any time of day, any day of year."
+msgid "Gift card purchases are temporarily unavailable. Please try again later."
 msgstr ""
-"Give friends and family the gift of tapping a button and getting a ride - "
-"any time of day, any day of year."
+
+msgid "Give friends and family the gift of tapping a button and getting a ride - any time of day, any day of year."
+msgstr ""
 
 msgid "Give us feedback"
-msgstr "Give us feedback"
+msgstr ""
 
 msgid "Go Back"
-msgstr "Go Back"
+msgstr ""
 
 msgid "Go back"
-msgstr "Go back"
+msgstr ""
 
 msgid "Got it"
-msgstr "Got it"
-
-msgid ""
-"Have you redeemed all of your {brand} Gift Cards? Archived gift cards will "
-"still be accessible in settings."
 msgstr ""
-"Have you redeemed all of your {brand} Gift Cards? Archived gift cards will "
-"still be accessible in settings."
+
+msgid "Have you redeemed all of your {brand} Gift Cards? Archived gift cards will still be accessible in settings."
+msgstr ""
 
 msgid "Have you redeemed the entire balance of this gift card?"
-msgstr "Have you redeemed the entire balance of this gift card?"
+msgstr ""
 
 msgid "Having problems with a ShapeShift?"
-msgstr "Having problems with a ShapeShift?"
+msgstr ""
 
 msgid "Help & support"
-msgstr "Help & support"
+msgstr ""
 
 msgid "Help and support information is available at the website."
-msgstr "Help and support information is available at the website."
+msgstr ""
 
 msgid "Hide"
-msgstr "Hide"
+msgstr ""
 
 msgid "Hide Balance"
-msgstr "Hide Balance"
+msgstr ""
 
 msgid "Hide advanced options"
-msgstr "Hide advanced options"
+msgstr ""
 
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 msgid "How satisfied are you with {{appName}} wallet?"
-msgstr "How satisfied are you with {{appName}} wallet?"
-
-msgid ""
-"I agree to the Terms and certify that I am the beneficial owner of the input "
-"assets and the destination address."
 msgstr ""
-"I agree to the Terms and certify that I am the beneficial owner of the input "
-"assets and the destination address."
 
-msgid ""
-"I give explicit consent to BitPay to use my email address to send me email "
-"notifications about payments (and, if selected, email updates and news about "
-"the wallet)."
+msgid "I agree to the Terms and certify that I am the beneficial owner of the input assets and the destination address."
 msgstr ""
-"I give explicit consent to BitPay to use my email address to send me email "
-"notifications about payments (and, if selected, email updates and news about "
-"the wallet)."
+
+msgid "I give explicit consent to Particl to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
+msgstr ""
 
 msgid "I have read, understood, and agree to the Terms of Use"
-msgstr "I have read, understood, and agree to the Terms of Use"
+msgstr ""
 
 msgid "I have written it down"
-msgstr "I have written it down"
+msgstr ""
 
 msgid "I understand"
-msgstr "I understand"
-
-msgid ""
-"I understand that if this app is moved to another device or deleted, my "
-"bitcoin can only be recovered with the recovery phrase"
 msgstr ""
-"I understand that if this app is moved to another device or deleted, my "
-"bitcoin can only be recovered with the recovery phrase"
 
-msgid ""
-"I understand that my funds are held securely on this device, not by a company"
+msgid "I understand that if this app is moved to another device or deleted, my funds can only be recovered with the recovery phrase"
 msgstr ""
-"I understand that my funds are held securely on this device, not by a company"
+
+msgid "I understand that my funds are held securely on this device, not by a company"
+msgstr ""
 
 msgid "I'm disappointed"
-msgstr "I'm disappointed"
+msgstr ""
 
 msgid "I'm satisfied"
-msgstr "I'm satisfied"
+msgstr ""
 
 msgid "I'm sure"
-msgstr "I'm sure"
+msgstr ""
 
 msgid "I'm very happy"
-msgstr "I'm very happy"
+msgstr ""
 
 msgid "I've used this card"
-msgstr "I've used this card"
-
-msgid ""
-"If enabled, Bitcoin Cash addresses will be shown using Copay style address, "
-"and not the new cashaddr format."
 msgstr ""
-"If enabled, Bitcoin Cash addresses will be shown using Copay style address, "
-"and not the new cashaddr format."
 
-msgid ""
-"If enabled, the Recent Transactions card - a list of transactions occuring "
-"across all wallets - will appear in the Home tab."
+msgid "If enabled, Bitcoin Cash addresses will be shown using Copay style address, and not the new cashaddr format."
 msgstr ""
-"If enabled, the Recent Transactions card - a list of transactions occuring "
-"across all wallets - will appear in the Home tab."
+
+msgid "If enabled, the Recent Transactions card - a list of transactions occuring across all wallets - will appear in the Home tab."
+msgstr ""
 
 msgid "If enabled, wallets will also try to spend unconfirmed funds."
-msgstr "If enabled, wallets will also try to spend unconfirmed funds."
-
-msgid ""
-"If this device is replaced or this app is deleted, neither you nor BitPay "
-"can recover your funds without a backup."
 msgstr ""
-"If this device is replaced or this app is deleted, neither you nor BitPay "
-"can recover your funds without a backup."
 
-msgid ""
-"If you have funds stored on a website then you should move them into a "
-"secure wallet... like this one!"
+msgid "If this device is replaced or this app is deleted, neither you nor Particl can recover your funds without a backup."
 msgstr ""
-"If you have funds stored on a website then you should move them into a "
-"secure wallet... like this one!"
 
-msgid ""
-"If you need immediate help with a problem you are having, then get help by "
-"contacting our support team."
+msgid "If you have funds stored on a website then you should move them into a secure wallet... like this one!"
 msgstr ""
-"If you need immediate help with a problem you are having, then get help by "
-"contacting our support team."
 
-msgid ""
-"If you need to send to \"old\" addresses (like the one you just pasted), and "
-"you are SURE those are BCH addresses, you can \"translate\" them using the "
-"BCH Translator tool and paste the corresponding address in CashAddr format "
-"for that \"old\" address."
+msgid "If you need immediate help with a problem you are having, then get help by contacting our support team."
 msgstr ""
-"If you need to send to \"old\" addresses (like the one you just pasted), and "
-"you are SURE those are BCH addresses, you can \"translate\" them using the "
-"BCH Translator tool and paste the corresponding address in CashAddr format "
-"for that \"old\" address."
 
-msgid ""
-"If you take a screenshot, your recovery phrase may be viewed by other apps. "
-"You can make a safe backup with physical paper and a pen."
+msgid "If you need to send to \"old\" addresses (like the one you just pasted), and you are SURE those are BCH addresses, you can \"translate\" them using the BCH Translator tool and paste the corresponding address in CashAddr format for that \"old\" address."
 msgstr ""
-"If you take a screenshot, your recovery phrase may be viewed by other apps. "
-"You can make a safe backup with physical paper and a pen."
 
-msgid ""
-"If you were using the old desktop version you will need to import your "
-"wallets manually."
+msgid "If you take a screenshot, your recovery phrase may be viewed by other apps. You can make a safe backup with physical paper and a pen."
 msgstr ""
-"If you were using the old desktop version you will need to import your "
-"wallets manually."
+
+msgid "If you were using the old desktop version you will need to import your wallets manually."
+msgstr ""
 
 msgid "Import Words"
-msgstr "Import Words"
+msgstr ""
 
 msgid "Import wallet"
-msgstr "Import wallet"
+msgstr ""
 
 msgid "Importing Wallet..."
-msgstr "Importing Wallet..."
-
-msgid ""
-"In order to verify your wallet recovery phrase, please type your password."
 msgstr ""
-"In order to verify your wallet recovery phrase, please type your password."
+
+msgid "In order to verify your wallet recovery phrase, please type your password."
+msgstr ""
 
 msgid "Incomplete"
-msgstr "Incomplete"
+msgstr ""
 
 msgid "Incorrect PIN, try again."
-msgstr "Incorrect PIN, try again."
+msgstr ""
 
 msgid "Incorrect network address"
-msgstr "Incorrect network address"
+msgstr ""
+
+msgid "Information"
+msgstr ""
 
 msgid "Insufficient funds"
-msgstr "Insufficient funds"
+msgstr ""
 
 msgid "Insufficient funds for fee"
-msgstr "Insufficient funds for fee"
+msgstr ""
 
 msgid "Integrations"
-msgstr "Integrations"
+msgstr ""
 
 msgid "Invalid"
-msgstr "Invalid"
+msgstr ""
 
 msgid "Invalid Email"
-msgstr "Invalid Email"
+msgstr ""
 
 msgid "Invalid URL"
-msgstr "Invalid URL"
+msgstr ""
 
 msgid "Invalid address"
-msgstr "Invalid address"
+msgstr ""
 
 msgid "Invalid data"
-msgstr "Invalid data"
+msgstr ""
 
 msgid "Invalid derivation path"
-msgstr "Invalid derivation path"
+msgstr ""
 
 msgid "Invitation Code"
-msgstr "Invitation Code"
+msgstr ""
 
 msgid "Is this correct?"
-msgstr "Is this correct?"
+msgstr ""
 
 msgid "Is this email address correct?"
-msgstr "Is this email address correct?"
+msgstr ""
 
 msgid "It appears that you do not have any money to send."
-msgstr "It appears that you do not have any money to send."
+msgstr ""
 
 msgid "It's a ghost town in here"
-msgstr "It's a ghost town in here"
-
-msgid ""
-"It's a good idea to avoid reusing addresses - this both protects your "
-"privacy and keeps your bitcoins secure against hypothetical attacks by "
-"quantum computers."
 msgstr ""
-"It's a good idea to avoid reusing addresses - this both protects your "
-"privacy and keeps your bitcoins secure against hypothetical attacks by "
-"quantum computers."
 
-msgid ""
-"It's important that you write your recovery phrase down correctly. If "
-"something happens to your wallet, you'll need it to recover your money. "
-"Please review and try again."
+msgid "It's a good idea to avoid reusing addresses - this both protects your privacy and keeps your funds secure against hypothetical attacks by quantum computers."
 msgstr ""
-"It's important that you write your recovery phrase down correctly. If "
-"something happens to your wallet, you'll need it to recover your money. "
-"Please review and try again."
+
+msgid "It's important that you write your recovery phrase down correctly. If something happens to your wallet, you'll need it to recover your money. Please review and try again."
+msgstr ""
 
 msgid "Join shared wallet"
-msgstr "Join shared wallet"
+msgstr ""
 
 msgid "Join wallet"
-msgstr "Join wallet"
+msgstr ""
 
 msgid "Joining Wallet..."
-msgstr "Joining Wallet..."
+msgstr ""
 
 msgid "Just scan the code to pay."
-msgstr "Just scan the code to pay."
+msgstr ""
 
 msgid "Key already associated with an existing wallet"
-msgstr "Key already associated with an existing wallet"
+msgstr ""
+
+msgid "Label"
+msgstr ""
 
 msgid "Language"
-msgstr "Language"
+msgstr ""
 
 msgid "Last Month"
-msgstr "Last Month"
+msgstr ""
 
 msgid "Learn More"
-msgstr "Learn More"
+msgstr ""
 
 msgid "Learn more"
-msgstr "Learn more"
+msgstr ""
+
+msgid "Learn more about Cold Staking"
+msgstr ""
+
+msgid "Learn more about cold staking on the Particl wiki."
+msgstr ""
 
 msgid "Learn more about testnet blockchain"
-msgstr "Learn more about testnet blockchain"
+msgstr ""
 
 msgid "Let's verify your recovery phrase."
-msgstr "Let's verify your recovery phrase."
+msgstr ""
 
 msgid "Linked"
-msgstr "Linked"
+msgstr ""
 
 msgid "Loading addresses..."
-msgstr "Loading addresses..."
+msgstr ""
 
 msgid "Loading transaction info..."
-msgstr "Loading transaction info..."
+msgstr ""
 
 msgid "Lock"
-msgstr "Lock"
+msgstr ""
 
 msgid "Locked"
-msgstr "Locked"
+msgstr ""
 
 msgid "Locktime in effect. Please wait to create a new spend proposal"
-msgstr "Locktime in effect. Please wait to create a new spend proposal"
+msgstr ""
 
 msgid "Locktime in effect. Please wait to remove this spend proposal"
-msgstr "Locktime in effect. Please wait to remove this spend proposal"
+msgstr ""
 
 msgid "Low Fee"
-msgstr "Low Fee"
+msgstr ""
 
 msgid "Low amount inputs"
-msgstr "Low amount inputs"
+msgstr ""
 
 msgid "Makes sense"
-msgstr "Makes sense"
+msgstr ""
 
 msgid "Maximum amount allowed is {{max}}"
-msgstr "Maximum amount allowed is {{max}}"
+msgstr ""
 
 msgid "Me"
-msgstr "Me"
+msgstr ""
 
 msgid "Memo"
-msgstr "Memo"
+msgstr ""
 
 msgid "Merchant Message"
-msgstr "Merchant Message"
+msgstr ""
 
 msgid "Merchant fee too high. Payment rejected"
-msgstr "Merchant fee too high. Payment rejected"
+msgstr ""
 
 msgid "Miner Fee"
-msgstr "Miner Fee"
+msgstr ""
 
 msgid "Miner Fee Notice"
-msgstr "Miner Fee Notice"
+msgstr ""
 
 msgid "Miner fee"
-msgstr "Miner fee"
+msgstr ""
 
 msgid "Minimum amount required is {{min}}"
-msgstr "Minimum amount required is {{min}}"
+msgstr ""
 
 msgid "Missing parameter"
-msgstr "Missing parameter"
+msgstr ""
 
 msgid "Missing private keys to sign"
-msgstr "Missing private keys to sign"
+msgstr ""
 
 msgid "Mmm..."
-msgstr "Mmm..."
+msgstr ""
 
 msgid "More"
-msgstr "More"
+msgstr ""
 
 msgid "Moved"
-msgstr "Moved"
+msgstr ""
 
 msgid "Moved Funds"
-msgstr "Moved Funds"
+msgstr ""
 
 msgid "Moving"
-msgstr "Moving"
+msgstr ""
 
 msgid "Multiple Recipients"
-msgstr "Multiple Recipients"
+msgstr ""
 
 msgid "Multiple recipients:"
-msgstr "Multiple recipients:"
-
-msgid ""
-"NOTE: To import a wallet from a 3rd party software, please go to Add Wallet, "
-"Create Wallet, and specify the Recovery Phrase there."
 msgstr ""
-"NOTE: To import a wallet from a 3rd party software, please go to Add Wallet, "
-"Create Wallet, and specify the Recovery Phrase there."
+
+msgid "NOTE: To import a wallet from a 3rd party software, please go to Add Wallet, Create Wallet, and specify the Recovery Phrase there."
+msgstr ""
 
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 msgid "Name (at creation)"
-msgstr "Name (at creation)"
+msgstr ""
 
 msgid "Needs Backup"
-msgstr "Needs Backup"
+msgstr ""
 
 msgid "Needs backup"
-msgstr "Needs backup"
+msgstr ""
 
 msgid "Network"
-msgstr "Network"
+msgstr ""
 
 msgid "Network Cost"
-msgstr "Network Cost"
+msgstr ""
 
 msgid "Network cost"
-msgstr "Network cost"
+msgstr ""
 
 msgid "Network error"
-msgstr "Network error"
+msgstr ""
 
 msgid "New Proposal"
-msgstr "New Proposal"
+msgstr ""
 
 msgid "New wallet"
-msgstr "New wallet"
+msgstr ""
 
 msgid "New {appName} desktop platform"
-msgstr "New {appName} desktop platform"
+msgstr ""
 
 msgid "No"
-msgstr "No"
+msgstr ""
 
 msgid "No Private Key"
-msgstr "No Private Key"
+msgstr ""
 
-msgid "No backup, no bitcoin."
-msgstr "No backup, no bitcoin."
+msgid "No backup, no funds."
+msgstr ""
 
 msgid "No contacts yet"
-msgstr "No contacts yet"
+msgstr ""
 
 msgid "No entries for this log level"
-msgstr "No entries for this log level"
+msgstr ""
 
 msgid "No funds found"
-msgstr "No funds found"
+msgstr ""
 
 msgid "No password"
-msgstr "No password"
+msgstr ""
 
 msgid "No pending proposals"
-msgstr "No pending proposals"
+msgstr ""
 
 msgid "No private key"
-msgstr "No private key"
+msgstr ""
 
 msgid "No signing proposal: No private key"
-msgstr "No signing proposal: No private key"
+msgstr ""
+
+msgid "No transactions"
+msgstr ""
 
 msgid "No wallet found"
-msgstr "No wallet found"
+msgstr ""
 
 msgid "No wallets available"
-msgstr "No wallets available"
+msgstr ""
 
 msgid "No wallets available to receive funds"
-msgstr "No wallets available to receive funds"
+msgstr ""
 
 msgid "No wallets available to use ShapeShift"
-msgstr "No wallets available to use ShapeShift"
+msgstr ""
 
 msgid "No wallets with funds"
-msgstr "No wallets with funds"
+msgstr ""
 
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 msgid "Not authorized"
-msgstr "Not authorized"
+msgstr ""
 
 msgid "Not enough funds"
-msgstr "Not enough funds"
+msgstr ""
 
 msgid "Not enough funds for fee"
-msgstr "Not enough funds for fee"
+msgstr ""
 
 msgid "Not even Particl can access it."
-msgstr "Not even Particl can access it."
-
-msgid ""
-"Not including the private key allows to check the wallet balance, "
-"transaction history, and create spend proposals from the export. However, "
-"does not allow to approve (sign) proposals, so funds will not be accessible "
-"from the export."
 msgstr ""
-"Not including the private key allows to check the wallet balance, "
-"transaction history, and create spend proposals from the export. However, "
-"does not allow to approve (sign) proposals, so funds will not be accessible "
-"from the export."
+
+msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
+msgstr ""
 
 msgid "Not right now"
-msgstr "Not right now"
+msgstr ""
 
 msgid "Not set"
-msgstr "Not set"
+msgstr ""
 
 msgid "Not valid address"
-msgstr "Not valid address"
+msgstr ""
 
 msgid "Note"
-msgstr "Note"
-
-msgid ""
-"Note: if this BCH wallet was duplicated from a BTC wallet, they share the "
-"same recovery phrase."
 msgstr ""
-"Note: if this BCH wallet was duplicated from a BTC wallet, they share the "
-"same recovery phrase."
+
+msgid "Note: if this BCH wallet was duplicated from a BTC wallet, they share the same recovery phrase."
+msgstr ""
 
 msgid "Notifications"
-msgstr "Notifications"
+msgstr ""
 
 msgid "Notifications by email"
-msgstr "Notifications by email"
+msgstr ""
 
 msgid "Notify me if confirmed"
-msgstr "Notify me if confirmed"
+msgstr ""
 
 msgid "Notify me when transactions are confirmed"
-msgstr "Notify me when transactions are confirmed"
-
-msgid ""
-"Now is a perfect time to assess your surroundings. Nearby windows? Hidden "
-"cameras? Shoulder-spies?"
 msgstr ""
-"Now is a perfect time to assess your surroundings. Nearby windows? Hidden "
-"cameras? Shoulder-spies?"
+
+msgid "Now is a perfect time to assess your surroundings. Nearby windows? Hidden cameras? Shoulder-spies?"
+msgstr ""
 
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgid "Off"
-msgstr "Off"
+msgstr ""
 
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 msgid "On"
-msgstr "On"
+msgstr ""
 
 msgid "On this screen you can see all your wallets, accounts, and assets."
-msgstr "On this screen you can see all your wallets, accounts, and assets."
+msgstr ""
 
 msgid "Only redeemable on Mercado Livre (Brazil)"
-msgstr "Only redeemable on Mercado Livre (Brazil)"
+msgstr ""
 
 msgid "Only redeemable on www.amazon.co.jp (Japan website)"
-msgstr "Only redeemable on www.amazon.co.jp (Japan website)"
+msgstr ""
 
 msgid "Only redeemable on www.amazon.com (USA website)"
-msgstr "Only redeemable on www.amazon.com (USA website)"
+msgstr ""
 
 msgid "Open"
-msgstr "Open"
+msgstr ""
 
 msgid "Open Crowdin"
-msgstr "Open Crowdin"
+msgstr ""
 
 msgid "Open GitHub"
-msgstr "Open GitHub"
+msgstr ""
 
 msgid "Open GitHub Project"
-msgstr "Open GitHub Project"
+msgstr ""
 
 msgid "Open Insight"
-msgstr "Open Insight"
+msgstr ""
+
+msgid "Open Particl Wiki"
+msgstr ""
 
 msgid "Open Translation Community"
-msgstr "Open Translation Community"
+msgstr ""
 
 msgid "Open settings"
-msgstr "Open settings"
+msgstr ""
 
 msgid "Open website"
-msgstr "Open website"
+msgstr ""
+
+msgid "Optional label (e.g. Staking pool, my Raspberry Pi etc.)"
+msgstr ""
 
 msgid "Order the BitPay Card"
-msgstr "Order the BitPay Card"
+msgstr ""
 
 msgid "Ouch!"
-msgstr "Ouch!"
+msgstr ""
 
 msgid "PIN"
-msgstr "PIN"
+msgstr ""
+
+msgid "Particl Address"
+msgstr ""
+
+msgid "Particl URI"
+msgstr ""
+
+msgid "Particl Wallets"
+msgstr ""
+
+msgid "Particl is a currency."
+msgstr ""
+
+msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgstr ""
+
+msgid "Particl is secure, digital money."
+msgstr ""
+
+msgid "Particl network fee policy"
+msgstr ""
+
+msgid "Particl transactions include a fee collected by miners on the network."
+msgstr ""
 
 msgid "Password"
-msgstr "Password"
+msgstr ""
 
 msgid "Password Not Recoverable"
-msgstr "Password Not Recoverable"
+msgstr ""
 
 msgid "Password mismatch"
-msgstr "Password mismatch"
+msgstr ""
 
 msgid "Password required. Make sure to enter your password in advanced options"
 msgstr ""
-"Password required. Make sure to enter your password in advanced options"
 
 msgid "Passwords do not match"
-msgstr "Passwords do not match"
+msgstr ""
 
 msgid "Paste the backup plain text code"
-msgstr "Paste the backup plain text code"
-
-msgid ""
-"Paste this code on {cardConfig.website}. This gift card cannot be recovered "
-"if your claim code is lost."
 msgstr ""
-"Paste this code on {cardConfig.website}. This gift card cannot be recovered "
-"if your claim code is lost."
+
+msgid "Paste this code on {cardConfig.website}. This gift card cannot be recovered if your claim code is lost."
+msgstr ""
 
 msgid "Pay 0% fees to turn bitcoin into dollars."
-msgstr "Pay 0% fees to turn bitcoin into dollars."
+msgstr ""
 
 msgid "Pay To"
-msgstr "Pay To"
+msgstr ""
 
 msgid "Payment Accepted"
-msgstr "Payment Accepted"
+msgstr ""
 
 msgid "Payment Expires:"
-msgstr "Payment Expires:"
+msgstr ""
 
 msgid "Payment Proposal"
-msgstr "Payment Proposal"
+msgstr ""
 
 msgid "Payment Proposals"
-msgstr "Payment Proposals"
+msgstr ""
 
 msgid "Payment Protocol Invalid"
-msgstr "Payment Protocol Invalid"
+msgstr ""
 
 msgid "Payment Published"
-msgstr "Payment Published"
+msgstr ""
 
 msgid "Payment Received"
-msgstr "Payment Received"
+msgstr ""
 
 msgid "Payment Rejected"
-msgstr "Payment Rejected"
+msgstr ""
 
 msgid "Payment Request"
-msgstr "Payment Request"
+msgstr ""
 
 msgid "Payment Request info"
-msgstr "Payment Request info"
+msgstr ""
 
 msgid "Payment Sent"
-msgstr "Payment Sent"
+msgstr ""
 
 msgid "Payment URL"
-msgstr "Payment URL"
+msgstr ""
 
 msgid "Payment accepted, but not yet broadcasted"
-msgstr "Payment accepted, but not yet broadcasted"
-
-msgid ""
-"Payment accepted. It will be broadcasted by Glidera. In case there is a "
-"problem, it can be deleted 6 hours after it was created."
 msgstr ""
-"Payment accepted. It will be broadcasted by Glidera. In case there is a "
-"problem, it can be deleted 6 hours after it was created."
+
+msgid "Payment accepted. It will be broadcasted by Glidera. In case there is a problem, it can be deleted 6 hours after it was created."
+msgstr ""
 
 msgid "Payment request"
-msgstr "Payment request"
+msgstr ""
 
 msgid "Pending"
-msgstr "Pending"
+msgstr ""
 
 msgid "Pending Proposals"
-msgstr "Pending Proposals"
+msgstr ""
 
 msgid "Permanently delete this wallet."
-msgstr "Permanently delete this wallet."
+msgstr ""
 
 msgid "Personal Wallet"
-msgstr "Personal Wallet"
+msgstr ""
 
 msgid "Plain URL"
-msgstr "Plain URL"
+msgstr ""
 
 msgid "Please carefully write down this phrase."
-msgstr "Please carefully write down this phrase."
+msgstr ""
 
 msgid "Please complete your account verification on ShapeShift website."
-msgstr "Please complete your account verification on ShapeShift website."
+msgstr ""
 
 msgid "Please connect a camera to get started."
-msgstr "Please connect a camera to get started."
+msgstr ""
 
 msgid "Please enter the recovery phrase"
-msgstr "Please enter the recovery phrase"
+msgstr ""
 
 msgid "Please enter the wallet recovery phrase"
-msgstr "Please enter the wallet recovery phrase"
+msgstr ""
 
 msgid "Please enter your PIN"
-msgstr "Please enter your PIN"
+msgstr ""
 
 msgid "Please tap each word in the correct order."
-msgstr "Please tap each word in the correct order."
+msgstr ""
 
 msgid "Please upgrade Copay to perform this action"
-msgstr "Please upgrade Copay to perform this action"
+msgstr ""
 
 msgid "Please wait..."
-msgstr "Please wait..."
+msgstr ""
 
 msgid "Please, enter the amount"
-msgstr "Please, enter the amount"
+msgstr ""
 
 msgid "Please, select your backup file"
-msgstr "Please, select your backup file"
+msgstr ""
 
 msgid "Pre-Auth Holds"
-msgstr "Pre-Auth Holds"
+msgstr ""
 
 msgid "Preferences"
-msgstr "Preferences"
+msgstr ""
 
 msgid "Preparing addresses..."
-msgstr "Preparing addresses..."
+msgstr ""
 
 msgid "Preparing backup..."
-msgstr "Preparing backup..."
-
-msgid "Print"
-msgstr "Print"
+msgstr ""
 
 msgid "Priority"
-msgstr "Priority"
+msgstr ""
 
 msgid "Privacy Policy"
-msgstr "Privacy Policy"
+msgstr ""
 
 msgid "Privacy Policy update"
-msgstr "Privacy Policy update"
+msgstr ""
 
 msgid "Private Key"
-msgstr "Private Key"
+msgstr ""
 
 msgid "Private key encrypted. Enter password"
-msgstr "Private key encrypted. Enter password"
+msgstr ""
 
 msgid "Private key is encrypted, cannot sign"
-msgstr "Private key is encrypted, cannot sign"
+msgstr ""
 
 msgid "Proposal Accepted"
-msgstr "Proposal Accepted"
+msgstr ""
 
 msgid "Proposal Created"
-msgstr "Proposal Created"
+msgstr ""
 
 msgid "Proposal Deleted"
-msgstr "Proposal Deleted"
+msgstr ""
 
 msgid "Proposal Rejected"
-msgstr "Proposal Rejected"
+msgstr ""
 
 msgid "Proposal created"
-msgstr "Proposal created"
+msgstr ""
 
 msgid "Proposals"
-msgstr "Proposals"
+msgstr ""
 
 msgid "Purchase Limit Reached"
-msgstr "Purchase Limit Reached"
+msgstr ""
 
 msgid "Purchased Brands"
-msgstr "Purchased Brands"
-
-msgid ""
-"Push notifications for {{appName}} are currently disabled. Enable them in "
-"the Settings app."
 msgstr ""
-"Push notifications for {{appName}} are currently disabled. Enable them in "
-"the Settings app."
+
+msgid "Push notifications for {{appName}} are currently disabled. Enable them in the Settings app."
+msgstr ""
 
 msgid "QR Code"
-msgstr "QR Code"
-
-msgid "QR code to recover wallet {{walletName}}"
-msgstr "QR code to recover wallet {{walletName}}"
+msgstr ""
 
 msgid "Quick review!"
-msgstr "Quick review!"
+msgstr ""
 
 msgid "Random"
-msgstr "Random"
+msgstr ""
 
 msgid "Rate"
-msgstr "Rate"
+msgstr ""
 
 msgid "Rate on the {storeName}"
-msgstr "Rate on the {storeName}"
+msgstr ""
 
 msgid "Read more in our Wiki"
-msgstr "Read more in our Wiki"
+msgstr ""
 
 msgid "Read more in our support page"
-msgstr "Read more in our support page"
+msgstr ""
 
 msgid "Receipt Email"
-msgstr "Receipt Email"
+msgstr ""
 
 msgid "Receive"
-msgstr "Receive"
+msgstr ""
 
 msgid "Received"
-msgstr "Received"
+msgstr ""
 
 msgid "Received Funds"
-msgstr "Received Funds"
+msgstr ""
 
 msgid "Receiving"
-msgstr "Receiving"
+msgstr ""
 
 msgid "Receiving {coinName} address"
-msgstr "Receiving {coinName} address"
+msgstr ""
 
 msgid "Recent"
-msgstr "Recent"
+msgstr ""
 
 msgid "Recent Transaction Card"
-msgstr "Recent Transaction Card"
+msgstr ""
 
 msgid "Recent Transactions"
-msgstr "Recent Transactions"
+msgstr ""
 
 msgid "Recipient"
-msgstr "Recipient"
+msgstr ""
 
 msgid "Recovery Phrase"
-msgstr "Recovery Phrase"
+msgstr ""
 
 msgid "Recreating Wallet..."
-msgstr "Recreating Wallet..."
+msgstr ""
 
 msgid "Redeem Now"
-msgstr "Redeem Now"
+msgstr ""
 
 msgid "Redeem by going to the payment section in the Uber app."
-msgstr "Redeem by going to the payment section in the Uber app."
+msgstr ""
 
 msgid "Reject Payment Proposal"
-msgstr "Reject Payment Proposal"
+msgstr ""
 
 msgid "Rejected"
-msgstr "Rejected"
+msgstr ""
 
 msgid "Rejecting payment proposal..."
-msgstr "Rejecting payment proposal..."
+msgstr ""
 
 msgid "Release information"
-msgstr "Release information"
+msgstr ""
 
 msgid "Remove"
-msgstr "Remove"
+msgstr ""
 
 msgid "Repeat the password"
-msgstr "Repeat the password"
+msgstr ""
 
 msgid "Report an Issue"
-msgstr "Report an Issue"
+msgstr ""
 
 msgid "Report an issue"
-msgstr "Report an issue"
+msgstr ""
 
 msgid "Report issue"
-msgstr "Report issue"
+msgstr ""
 
 msgid "Request Encrypt Password"
-msgstr "Request Encrypt Password"
+msgstr ""
 
 msgid "Request Fingerprint"
-msgstr "Request Fingerprint"
+msgstr ""
 
 msgid "Request Specific Amount"
-msgstr "Request Specific Amount"
+msgstr ""
 
 msgid "Request a Feature"
-msgstr "Request a Feature"
+msgstr ""
 
 msgid "Request a new feature"
-msgstr "Request a new feature"
+msgstr ""
 
 msgid "Request feature"
-msgstr "Request feature"
+msgstr ""
 
 msgid "Required number of signatures"
-msgstr "Required number of signatures"
+msgstr ""
 
 msgid "Restore from backup"
-msgstr "Restore from backup"
+msgstr ""
 
 msgid "Retrieving inputs information..."
-msgstr "Retrieving inputs information..."
+msgstr ""
 
 msgid "Retry"
-msgstr "Retry"
+msgstr ""
 
 msgid "Retry camera"
-msgstr "Retry camera"
+msgstr ""
 
 msgid "Save"
-msgstr "Save"
+msgstr ""
 
 msgid "Scan"
-msgstr "Scan"
+msgstr ""
 
 msgid "Scan QR Codes"
-msgstr "Scan QR Codes"
+msgstr ""
 
 msgid "Scan addresses for funds"
-msgstr "Scan addresses for funds"
+msgstr ""
 
 msgid "Scan again"
-msgstr "Scan again"
+msgstr ""
 
 msgid "Scanning Wallet funds..."
-msgstr "Scanning Wallet funds..."
+msgstr ""
 
 msgid "Scanning funds"
-msgstr "Scanning funds"
+msgstr ""
 
 msgid "Screenshots are not secure"
-msgstr "Screenshots are not secure"
+msgstr ""
 
 msgid "Search Transactions"
-msgstr "Search Transactions"
+msgstr ""
 
 msgid "Search Wallets or Contacts"
-msgstr "Search Wallets or Contacts"
+msgstr ""
 
 msgid "Search a contact"
-msgstr "Search a contact"
+msgstr ""
 
 msgid "Search or enter wallet address"
-msgstr "Search or enter wallet address"
+msgstr ""
 
 msgid "Search your currency"
-msgstr "Search your currency"
+msgstr ""
 
 msgid "Security"
-msgstr "Security"
+msgstr ""
 
 msgid "See transaction"
-msgstr "See transaction"
+msgstr ""
 
 msgid "Select a coin"
-msgstr "Select a coin"
+msgstr ""
 
 msgid "Select a wallet"
-msgstr "Select a wallet"
+msgstr ""
 
 msgid "Self-signed Certificate"
-msgstr "Self-signed Certificate"
+msgstr ""
 
 msgid "Selling Bitcoin..."
-msgstr "Selling Bitcoin..."
+msgstr ""
 
 msgid "Send"
-msgstr "Send"
+msgstr ""
 
 msgid "Send Max"
-msgstr "Send Max"
+msgstr ""
 
 msgid "Send Money"
-msgstr "Send Money"
+msgstr ""
 
 msgid "Send addresses by email"
-msgstr "Send addresses by email"
+msgstr ""
 
 msgid "Send by email"
-msgstr "Send by email"
+msgstr ""
 
 msgid "Send feedback"
-msgstr "Send feedback"
+msgstr ""
 
 msgid "Send from"
-msgstr "Send from"
+msgstr ""
 
 msgid "Send logs by email"
-msgstr "Send logs by email"
+msgstr ""
 
 msgid "Send payment to this address"
-msgstr "Send payment to this address"
+msgstr ""
 
 msgid "Sending"
-msgstr "Sending"
+msgstr ""
 
 msgid "Sending 2FA code..."
-msgstr "Sending 2FA code..."
+msgstr ""
 
 msgid "Sending From"
-msgstr "Sending From"
+msgstr ""
 
 msgid "Sending feedback..."
-msgstr "Sending feedback..."
+msgstr ""
 
 msgid "Sending maximum amount"
-msgstr "Sending maximum amount"
+msgstr ""
 
 msgid "Sending transaction..."
-msgstr "Sending transaction..."
+msgstr ""
 
 msgid "Sending {{amount}} {{unit}} from your {{name}} wallet"
-msgstr "Sending {{amount}} {{unit}} from your {{name}} wallet"
+msgstr ""
 
 msgid "Sensitive Data"
-msgstr "Sensitive Data"
+msgstr ""
 
 msgid "Sent"
-msgstr "Sent"
+msgstr ""
 
 msgid "Sent Funds"
-msgstr "Sent Funds"
+msgstr ""
+
+msgid "Sent to {walletName}"
+msgstr ""
 
 msgid "Server response could not be verified"
-msgstr "Server response could not be verified"
+msgstr ""
 
 msgid "Services"
-msgstr "Services"
+msgstr ""
 
 msgid "Session Log"
-msgstr "Session Log"
+msgstr ""
 
 msgid "Session log"
-msgstr "Session log"
+msgstr ""
 
 msgid "Set up a password"
-msgstr "Set up a password"
+msgstr ""
 
 msgid "Settings"
-msgstr "Settings"
+msgstr ""
+
+msgid "Setup Cold Staking"
+msgstr ""
 
 msgid "ShapeShift is not available at this moment. Please, try again later."
-msgstr "ShapeShift is not available at this moment. Please, try again later."
+msgstr ""
 
 msgid "ShapeShift max limit reached"
-msgstr "ShapeShift max limit reached"
+msgstr ""
 
 msgid "ShapeShift requires a minimum value of {{min}}"
-msgstr "ShapeShift requires a minimum value of {{min}}"
+msgstr ""
 
 msgid "Share"
-msgstr "Share"
+msgstr ""
 
 msgid "Share Address"
-msgstr "Share Address"
+msgstr ""
 
 msgid "Share the love by inviting your friends."
-msgstr "Share the love by inviting your friends."
+msgstr ""
 
 msgid "Share this QR code to receive {amount} in your wallet {name}."
-msgstr "Share this QR code to receive {amount} in your wallet {name}."
+msgstr ""
 
 msgid "Share this invitation with your copayers"
-msgstr "Share this invitation with your copayers"
+msgstr ""
 
 msgid "Share {{appName}}"
-msgstr "Share {{appName}}"
+msgstr ""
 
 msgid "Shop Now"
-msgstr "Shop Now"
+msgstr ""
 
 msgid "Show advanced options"
-msgstr "Show advanced options"
+msgstr ""
 
 msgid "Show all"
-msgstr "Show all"
+msgstr ""
 
 msgid "Show in Home"
-msgstr "Show in Home"
+msgstr ""
 
 msgid "Sign Up for ShapeShift"
-msgstr "Sign Up for ShapeShift"
+msgstr ""
 
 msgid "Signatures rejected by server"
-msgstr "Signatures rejected by server"
+msgstr ""
 
 msgid "Signing transaction..."
-msgstr "Signing transaction..."
-
-msgid ""
-"Since only you control your money, you’ll need to save your recovery phrase "
-"in case this app is deleted."
 msgstr ""
-"Since only you control your money, you’ll need to save your recovery phrase "
-"in case this app is deleted."
+
+msgid "Since only you control your money, you’ll need to save your recovery phrase in case this app is deleted."
+msgstr ""
 
 msgid "Single address"
-msgstr "Single address"
+msgstr ""
 
 msgid "Skip"
-msgstr "Skip"
+msgstr ""
 
 msgid "Slide to accept"
-msgstr "Slide to accept"
+msgstr ""
 
 msgid "Slide to confirm"
-msgstr "Slide to confirm"
+msgstr ""
 
 msgid "Slide to pay"
-msgstr "Slide to pay"
+msgstr ""
 
 msgid "Slide to send"
-msgstr "Slide to send"
+msgstr ""
 
 msgid "Specify Recovery Phrase"
-msgstr "Specify Recovery Phrase"
+msgstr ""
 
 msgid "Spend proposal is not accepted"
-msgstr "Spend proposal is not accepted"
+msgstr ""
 
 msgid "Spend proposal not found"
-msgstr "Spend proposal not found"
+msgstr ""
 
 msgid "Spendable balance"
-msgstr "Spendable balance"
+msgstr ""
 
 msgid "Spending this balance will need significant network fees"
-msgstr "Spending this balance will need significant network fees"
+msgstr ""
+
+msgid "Staking"
+msgstr ""
+
+msgid "Staking key"
+msgstr ""
+
+msgid "Staking key (Pool address or Node public key)"
+msgstr ""
 
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 msgid "Suggested by Merchant"
-msgstr "Suggested by Merchant"
+msgstr ""
 
 msgid "Super Economy"
-msgstr "Super Economy"
+msgstr ""
 
 msgid "Sweep"
-msgstr "Sweep"
+msgstr ""
 
 msgid "Sweep Completed"
-msgstr "Sweep Completed"
+msgstr ""
 
 msgid "Sweep paper wallet"
-msgstr "Sweep paper wallet"
+msgstr ""
 
 msgid "Sweeping Wallet..."
-msgstr "Sweeping Wallet..."
+msgstr ""
 
 msgid "THIS ACTION CANNOT BE REVERSED"
-msgstr "THIS ACTION CANNOT BE REVERSED"
+msgstr ""
 
 msgid "Take control of your money, get started with particl."
-msgstr "Take control of your money, get started with particl."
+msgstr ""
 
 msgid "Tap and hold to show"
-msgstr "Tap and hold to show"
+msgstr ""
 
 msgid "Tap to recreate"
-msgstr "Tap to recreate"
+msgstr ""
 
 msgid "Tap to retry"
-msgstr "Tap to retry"
+msgstr ""
 
 msgid "Temporarily Unavailable"
-msgstr "Temporarily Unavailable"
+msgstr ""
 
 msgid "Terms of Use"
-msgstr "Terms of Use"
+msgstr ""
 
 msgid "Testnet Wallet"
-msgstr "Testnet Wallet"
+msgstr ""
 
 msgid "Text"
-msgstr "Text"
+msgstr ""
 
 msgid "Thanks!"
-msgstr "Thanks!"
-
-msgid ""
-"The Gift of Go.™ With over 300 destinations and limitless adventures to "
-"choose from, the Delta Gift Card opens up a world of possibilities."
 msgstr ""
-"The Gift of Go.™ With over 300 destinations and limitless adventures to "
-"choose from, the Delta Gift Card opens up a world of possibilities."
+
+msgid "The Gift of Go.™ With over 300 destinations and limitless adventures to choose from, the Delta Gift Card opens up a world of possibilities."
+msgstr ""
 
 msgid "The Safest, Fastest Asset Exchange on Earth"
-msgstr "The Safest, Fastest Asset Exchange on Earth"
+msgstr ""
 
 msgid "The Wallet Service URL"
-msgstr "The Wallet Service URL"
+msgstr ""
 
 msgid "The amount of funds immediately spendable from this wallet."
-msgstr "The amount of funds immediately spendable from this wallet."
-
-msgid ""
-"The amount of bitcoin stored in this wallet that is allocated as inputs to "
-"your pending transaction proposals. The amount is determined using unspent "
-"transaction outputs associated with this wallet and may be more than the "
-"actual amounts associated with your pending transaction proposals."
 msgstr ""
-"The amount of bitcoin stored in this wallet that is allocated as inputs to "
-"your pending transaction proposals. The amount is determined using unspent "
-"transaction outputs associated with this wallet and may be more than the "
-"actual amounts associated with your pending transaction proposals."
 
-msgid ""
-"The amount of bitcoin stored in this wallet with less than 1 blockchain "
-"confirmation."
+msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
 msgstr ""
-"The amount of bitcoin stored in this wallet with less than 1 blockchain "
-"confirmation."
+
+msgid "The amount of funds stored in this wallet with less than 1 blockchain confirmation."
+msgstr ""
 
 msgid "The derivation path"
-msgstr "The derivation path"
-
-msgid ""
-"The destination wallet is not backed up. Please, complete the backup process "
-"before continue."
 msgstr ""
-"The destination wallet is not backed up. Please, complete the backup process "
-"before continue."
+
+msgid "The destination wallet is not backed up. Please, complete the backup process before continue."
+msgstr ""
 
 msgid "The exchange rate changes with the market."
-msgstr "The exchange rate changes with the market."
-
-msgid ""
-"The higher the fee, the greater the incentive a miner has to include that "
-"transaction in a block. Current fees are determined based on network load "
-"and the selected policy."
 msgstr ""
-"The higher the fee, the greater the incentive a miner has to include that "
-"transaction in a block. Current fees are determined based on network load "
-"and the selected policy."
 
-msgid ""
-"The information you are about to share/export may contain sensitive data "
-"such us wallet IDs, addresses, balances, etc. Please be sure you trust the "
-"person or entity with whom you are sharing this information."
+msgid "The higher the fee, the greater the incentive a miner has to include that transaction in a block. Current fees are determined based on network load and the selected policy."
 msgstr ""
-"The information you are about to share/export may contain sensitive data "
-"such us wallet IDs, addresses, balances, etc. Please be sure you trust the "
-"person or entity with whom you are sharing this information."
+
+msgid "The information you are about to share/export may contain sensitive data such us wallet IDs, addresses, balances, etc. Please be sure you trust the person or entity with whom you are sharing this information."
+msgstr ""
 
 msgid "The password of the recovery phrase (if set)"
-msgstr "The password of the recovery phrase (if set)"
-
-msgid ""
-"The payment was created but could not be completed. Please try again from "
-"home screen"
 msgstr ""
-"The payment was created but could not be completed. Please try again from "
-"home screen"
+
+msgid "The payment was created but could not be completed. Please try again from home screen"
+msgstr ""
 
 msgid "The payment was removed by creator"
-msgstr "The payment was removed by creator"
-
-msgid ""
-"The private key of this wallet is not available. The export allows to check "
-"the wallet balance, transaction history, and create spend proposals from the "
-"export. However, does not allow to approve (sign) proposals, so funds will "
-"not be accessible from the export."
 msgstr ""
-"The private key of this wallet is not available. The export allows to check "
-"the wallet balance, transaction history, and create spend proposals from the "
-"export. However, does not allow to approve (sign) proposals, so funds will "
-"not be accessible from the export."
 
-msgid ""
-"The purchase amount is limited to {maxAmount} {currency} per day. Please "
-"modify your amount."
+msgid "The private key of this wallet is not available. The export allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
 msgstr ""
-"The purchase amount is limited to {maxAmount} {currency} per day. Please "
-"modify your amount."
 
-msgid ""
-"The purchase amount must be at least {minAmount} {currency}. Please modify "
-"your amount."
+msgid "The purchase amount is limited to {maxAmount} {currency} per day. Please modify your amount."
 msgstr ""
-"The purchase amount must be at least {minAmount} {currency}. Please modify "
-"your amount."
+
+msgid "The purchase amount must be at least {minAmount} {currency}. Please modify your amount."
+msgstr ""
 
 msgid "The request could not be understood by the server"
-msgstr "The request could not be understood by the server"
-
-msgid ""
-"The single address feature will force the wallet to only use one address "
-"rather than generating new addresses."
 msgstr ""
-"The single address feature will force the wallet to only use one address "
-"rather than generating new addresses."
+
+msgid "The single address feature will force the wallet to only use one address rather than generating new addresses."
+msgstr ""
 
 msgid "The spend proposal is not pending"
-msgstr "The spend proposal is not pending"
-
-msgid ""
-"The testnet is an alternative Bitcoin block chain, to be used for testing. "
-"Testnet coins are separate and distinct from actual bitcoins, and do not "
-"have any value. This allows application developers or bitcoin testers to "
-"experiment, without having to use real bitcoins."
 msgstr ""
-"The testnet is an alternative Bitcoin block chain, to be used for testing. "
-"Testnet coins are separate and distinct from actual bitcoins, and do not "
-"have any value. This allows application developers or bitcoin testers to "
-"experiment, without having to use real bitcoins."
+
+msgid "The testnet is an alternative block chain, to be used for testing. Testnet coins are separate and distinct from actual bitcoins, and do not have any value. This allows application developers or testers to experiment, without having to use real coins."
+msgstr ""
 
 msgid "The total amount of funds stored in this wallet."
-msgstr "The total amount of funds stored in this wallet."
-
-msgid ""
-"The transaction history and every new incoming transaction are cached in the "
-"app. This feature clean this up and synchronizes again from the server"
 msgstr ""
-"The transaction history and every new incoming transaction are cached in the "
-"app. This feature clean this up and synchronizes again from the server"
 
-msgid ""
-"The wallet you are using does not match the network and/or the currency of "
-"the address provided"
+msgid "The transaction history and every new incoming transaction are cached in the app. This feature clean this up and synchronizes again from the server"
 msgstr ""
-"The wallet you are using does not match the network and/or the currency of "
-"the address provided"
+
+msgid "The wallet you are using does not match the network and/or the currency of the address provided"
+msgstr ""
 
 msgid "There is an error in the form"
-msgstr "There is an error in the form"
-
-msgid ""
-"There's obviously something we're doing wrong. How could we improve your "
-"experience?"
 msgstr ""
-"There's obviously something we're doing wrong. How could we improve your "
-"experience?"
+
+msgid "There's obviously something we're doing wrong. How could we improve your experience?"
+msgstr ""
 
 msgid "This app is not available for your device."
-msgstr "This app is not available for your device."
+msgstr ""
 
 msgid "This app stores your particl with cutting-edge security."
-msgstr "This app stores your particl with cutting-edge security."
-
-msgid "This payment request has expired."
-msgstr "This payment request has expired."
-
-msgid ""
-"This field is only for users who, in previous versions (it's not supported "
-"anymore), set a password to protect their recovery phrase. This field is not "
-"for your encrypt password."
 msgstr ""
-"This field is only for users who, in previous versions (it's not supported "
-"anymore), set a password to protect their recovery phrase. This field is not "
-"for your encrypt password."
+
+msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
+msgstr ""
 
 msgid "This information is available at the website."
-msgstr "This information is available at the website."
-
-msgid ""
-"This password cannot be recovered. If this password is lost, funds can only "
-"be recovered by reimporting your 12-word recovery phrase."
 msgstr ""
-"This password cannot be recovered. If this password is lost, funds can only "
-"be recovered by reimporting your 12-word recovery phrase."
 
-msgid ""
-"This password is only for this device, and it cannot be recovered. To avoid "
-"losing funds, write your password down."
+msgid "This means you will stop receiving interest on your PART coins."
 msgstr ""
-"This password is only for this device, and it cannot be recovered. To avoid "
-"losing funds, write your password down."
 
-msgid ""
-"This recovery phrase was created with a password. To recover this wallet "
-"both the recovery phrase and password are needed."
+msgid "This password cannot be recovered. If this password is lost, funds can only be recovered by reimporting your 12-word recovery phrase."
 msgstr ""
-"This recovery phrase was created with a password. To recover this wallet "
-"both the recovery phrase and password are needed."
 
-msgid ""
-"This transaction amount is too small compared to current Bitcoin network "
-"fees. Spending these funds will need a Bitcoin network fee cost comparable "
-"to the funds itself."
+msgid "This password is only for this device, and it cannot be recovered. To avoid losing funds, write your password down."
 msgstr ""
-"This transaction amount is too small compared to current Bitcoin network "
-"fees. Spending these funds will need a Bitcoin network fee cost comparable "
-"to the funds itself."
 
-msgid ""
-"This transaction could take a long time to confirm or could be dropped due "
-"to the low fees set by the sender."
+msgid "This payment request has expired."
 msgstr ""
-"This transaction could take a long time to confirm or could be dropped due "
-"to the low fees set by the sender."
 
-msgid ""
-"This wallet is not registered at the given Bitcore Wallet Service (BWS). You "
-"can recreate it from the local information."
+msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr ""
-"This wallet is not registered at the given Bitcore Wallet Service (BWS). You "
-"can recreate it from the local information."
+
+msgid "This transaction amount is too small compared to current network fees. Spending these funds will need a network fee cost comparable to the funds itself."
+msgstr ""
+
+msgid "This transaction could take a long time to confirm or could be dropped due to the low fees set by the sender."
+msgstr ""
+
+msgid "This wallet is not registered at the given Bitcore Wallet Service (BWS). You can recreate it from the local information."
+msgstr ""
 
 msgid "Timeline"
-msgstr "Timeline"
+msgstr ""
 
 msgid "To"
-msgstr "To"
-
-msgid ""
-"To get started, you'll need to create a particl wallet and get some particl."
 msgstr ""
-"To get started, you'll need to create a particl wallet and get some particl."
 
-msgid ""
-"To get started, you'll need to enter a valid address, contact or wallet."
+msgid "To get started, you'll need to create a particl wallet and get some particl."
 msgstr ""
-"To get started, you'll need to enter a valid address, contact or wallet."
+
+msgid "To get started, you'll need to enter a valid address, contact or wallet."
+msgstr ""
 
 msgid "To {{reason}} you must first add your BitPay account - {{email}}"
-msgstr "To {{reason}} you must first add your BitPay account - {{email}}"
+msgstr ""
 
 msgid "Top up in progress..."
-msgstr "Top up in progress..."
+msgstr ""
 
 msgid "Top-up with this cryptocurrency is not enabled"
-msgstr "Top-up with this cryptocurrency is not enabled"
+msgstr ""
 
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 msgid "Total Locked Balance"
-msgstr "Total Locked Balance"
+msgstr ""
 
 msgid "Total number of copayers"
-msgstr "Total number of copayers"
+msgstr ""
 
 msgid "Total wallet inputs"
-msgstr "Total wallet inputs"
+msgstr ""
 
 msgid "Trade any leading blockchain asset for any other. Protection by Design."
 msgstr ""
-"Trade any leading blockchain asset for any other. Protection by Design."
 
 msgid "Transaction"
-msgstr "Transaction"
+msgstr ""
 
 msgid "Transaction History"
-msgstr "Transaction History"
+msgstr ""
 
 msgid "Transaction ID"
-msgstr "Transaction ID"
+msgstr ""
 
 msgid "Transaction already broadcasted"
-msgstr "Transaction already broadcasted"
+msgstr ""
 
 msgid "Transaction has not been created"
-msgstr "Transaction has not been created"
+msgstr ""
 
 msgid "Transaction initiated"
-msgstr "Transaction initiated"
+msgstr ""
 
 msgid "Transaction not available at this time"
-msgstr "Transaction not available at this time"
+msgstr ""
 
 msgid "Transaction not found"
-msgstr "Transaction not found"
+msgstr ""
 
 msgid "Transactions"
-msgstr "Transactions"
+msgstr ""
 
 msgid "Transactions without fee are not supported."
-msgstr "Transactions without fee are not supported."
+msgstr ""
 
 msgid "Transfer to"
-msgstr "Transfer to"
+msgstr ""
 
 msgid "Transfer to Bitcoin Cash Wallet"
-msgstr "Transfer to Bitcoin Cash Wallet"
+msgstr ""
 
 msgid "Transfer to Bitcoin Wallet"
-msgstr "Transfer to Bitcoin Wallet"
+msgstr ""
 
 msgid "Transfer to Contact"
-msgstr "Transfer to Contact"
+msgstr ""
 
 msgid "Transfer to Multiple Recipients"
-msgstr "Transfer to Multiple Recipients"
+msgstr ""
+
+msgid "Transfer to Particl Wallet"
+msgstr ""
 
 msgid "Translate address"
-msgstr "Translate address"
+msgstr ""
 
 msgid "Try again"
-msgstr "Try again"
+msgstr ""
 
 msgid "Try again in {{expires}}"
-msgstr "Try again in {{expires}}"
+msgstr ""
 
 msgid "Turn bitcoin into dollars, swipe anywhere Visa® is accepted."
-msgstr "Turn bitcoin into dollars, swipe anywhere Visa® is accepted."
+msgstr ""
 
 msgid "Type the recovery phrase (usually 12 words)"
-msgstr "Type the recovery phrase (usually 12 words)"
-
-msgid ""
-"Uber gift cards also apply to UberEATS orders. Enjoy food from hundreds of "
-"restaurants, delivered at Uber speed."
 msgstr ""
-"Uber gift cards also apply to UberEATS orders. Enjoy food from hundreds of "
-"restaurants, delivered at Uber speed."
+
+msgid "Uber gift cards also apply to UberEATS orders. Enjoy food from hundreds of restaurants, delivered at Uber speed."
+msgstr ""
 
 msgid "Uh oh..."
-msgstr "Uh oh..."
+msgstr ""
 
 msgid "Unarchive Card"
-msgstr "Unarchive Card"
+msgstr ""
 
 msgid "Unconfirmed"
-msgstr "Unconfirmed"
+msgstr ""
 
 msgid "Unlink account"
-msgstr "Unlink account"
+msgstr ""
 
 msgid "Unlink card"
-msgstr "Unlink card"
-
-msgid ""
-"Unlink the account will remove it and all associated cards from this device."
 msgstr ""
-"Unlink the account will remove it and all associated cards from this device."
+
+msgid "Unlink the account will remove it and all associated cards from this device."
+msgstr ""
 
 msgid "Unlink the card will remove it from this device."
-msgstr "Unlink the card will remove it from this device."
+msgstr ""
 
 msgid "Unlock App"
-msgstr "Unlock App"
+msgstr ""
 
 msgid "Unsent transactions"
-msgstr "Unsent transactions"
+msgstr ""
 
 msgid "Unused addresses"
-msgstr "Unused addresses"
+msgstr ""
 
 msgid "Unverified Account"
-msgstr "Unverified Account"
+msgstr ""
 
 msgid "Updating Gift Card..."
-msgstr "Updating Gift Card..."
+msgstr ""
 
 msgid "Updating Gift Cards..."
-msgstr "Updating Gift Cards..."
+msgstr ""
 
 msgid "Updating pending proposals... Please stand by"
-msgstr "Updating pending proposals... Please stand by"
+msgstr ""
 
 msgid "Updating transaction history. Please stand by."
-msgstr "Updating transaction history. Please stand by."
+msgstr ""
 
 msgid "Updating... Please stand by"
-msgstr "Updating... Please stand by"
+msgstr ""
 
 msgid "Urgent"
-msgstr "Urgent"
+msgstr ""
 
 msgid "Use Bitcoin Cash Copay Style Addresses"
-msgstr "Use Bitcoin Cash Copay Style Addresses"
+msgstr ""
 
 msgid "Use Unconfirmed Funds"
-msgstr "Use Unconfirmed Funds"
+msgstr ""
 
 msgid "Use default url"
-msgstr "Use default url"
+msgstr ""
 
 msgid "Validating recovery phrase..."
-msgstr "Validating recovery phrase..."
+msgstr ""
 
 msgid "Verify Account"
-msgstr "Verify Account"
+msgstr ""
 
 msgid "Version"
-msgstr "Version"
+msgstr ""
 
 msgid "View"
-msgstr "View"
+msgstr ""
 
 msgid "View Confirmation Status"
-msgstr "View Confirmation Status"
+msgstr ""
 
 msgid "View Invoice"
-msgstr "View Invoice"
+msgstr ""
 
 msgid "View Privacy Policy"
-msgstr "View Privacy Policy"
+msgstr ""
 
 msgid "View Redemption Code"
-msgstr "View Redemption Code"
+msgstr ""
 
 msgid "View Transaction on Insight"
-msgstr "View Transaction on Insight"
+msgstr ""
 
 msgid "View Wallet Terms of Use"
-msgstr "View Wallet Terms of Use"
+msgstr ""
 
 msgid "View all addresses"
-msgstr "View all addresses"
+msgstr ""
 
 msgid "View on blockchain"
-msgstr "View on blockchain"
+msgstr ""
 
 msgid "Visit ShapeShift.io"
-msgstr "Visit ShapeShift.io"
-
-msgid ""
-"WARNING: Key derivation is not working on this device/wallet. Actions cannot "
-"be performed on this wallet."
 msgstr ""
-"WARNING: Key derivation is not working on this device/wallet. Actions cannot "
-"be performed on this wallet."
+
+msgid "WARNING: Key derivation is not working on this device/wallet. Actions cannot be performed on this wallet."
+msgstr ""
 
 msgid "WARNING: UNTRUSTED CERTIFICATE"
-msgstr "WARNING: UNTRUSTED CERTIFICATE"
+msgstr ""
 
 msgid "Waiting for copayers"
-msgstr "Waiting for copayers"
+msgstr ""
+
+msgid "Waiting on unconfirmed transactions..."
+msgstr ""
 
 msgid "Waiting..."
-msgstr "Waiting..."
+msgstr ""
 
 msgid "Wallet Addresses"
-msgstr "Wallet Addresses"
+msgstr ""
 
 msgid "Wallet Color"
-msgstr "Wallet Color"
+msgstr ""
 
 msgid "Wallet Information"
-msgstr "Wallet Information"
+msgstr ""
 
 msgid "Wallet Inputs"
-msgstr "Wallet Inputs"
+msgstr ""
 
 msgid "Wallet Name"
-msgstr "Wallet Name"
+msgstr ""
+
+msgid "Wallet Preferences"
+msgstr ""
 
 msgid "Wallet Recovery Phrase is invalid"
-msgstr "Wallet Recovery Phrase is invalid"
-
-msgid "Wallet Service URL"
-msgstr "Wallet Service URL"
+msgstr ""
 
 msgid "Wallet already exists"
-msgstr "Wallet already exists"
+msgstr ""
 
 msgid "Wallet already in {{nameCase}}"
-msgstr "Wallet already in {{nameCase}}"
+msgstr ""
 
 msgid "Wallet created"
-msgstr "Wallet created"
+msgstr ""
 
 msgid "Wallet incomplete and broken"
-msgstr "Wallet incomplete and broken"
+msgstr ""
 
 msgid "Wallet invitation"
-msgstr "Wallet invitation"
+msgstr ""
 
 msgid "Wallet is full"
-msgstr "Wallet is full"
+msgstr ""
 
 msgid "Wallet is locked"
-msgstr "Wallet is locked"
+msgstr ""
 
 msgid "Wallet is not complete"
-msgstr "Wallet is not complete"
+msgstr ""
+
+msgid "Wallet is staking"
+msgstr ""
 
 msgid "Wallet key"
-msgstr "Wallet key"
+msgstr ""
 
 msgid "Wallet name"
-msgstr "Wallet name"
+msgstr ""
 
 msgid "Wallet needs backup"
-msgstr "Wallet needs backup"
+msgstr ""
 
 msgid "Wallet not found"
-msgstr "Wallet not found"
-
-msgid ""
-"Wallet not registered at the wallet service. Recreate it from \"Create Wallet"
-"\" using \"Advanced Options\" to set your recovery phrase"
 msgstr ""
-"Wallet not registered at the wallet service. Recreate it from \"Create Wallet"
-"\" using \"Advanced Options\" to set your recovery phrase"
+
+msgid "Wallet not registered at the wallet service. Recreate it from \"Create Wallet\" using \"Advanced Options\" to set your recovery phrase"
+msgstr ""
+
+msgid "Wallet not staking yet"
+msgstr ""
 
 msgid "Wallet recovery phrase"
-msgstr "Wallet recovery phrase"
+msgstr ""
 
 msgid "Wallet recovery phrase not available"
-msgstr "Wallet recovery phrase not available"
+msgstr ""
 
 msgid "Wallet service not found"
-msgstr "Wallet service not found"
+msgstr ""
 
 msgid "Warning!"
-msgstr "Warning!"
+msgstr ""
 
 msgid "Warning: this transaction has unconfirmed inputs"
-msgstr "Warning: this transaction has unconfirmed inputs"
+msgstr ""
 
 msgid "Watch Out!"
-msgstr "Watch Out!"
+msgstr ""
 
 msgid "We appreciate your review"
-msgstr "We appreciate your review"
-
-msgid ""
-"We are always looking for translation contributions! You can make "
-"corrections or help to make this app available in your native language by "
-"joining our community on Crowdin."
 msgstr ""
-"We are always looking for translation contributions! You can make "
-"corrections or help to make this app available in your native language by "
-"joining our community on Crowdin."
+
+msgid "We are always looking for translation contributions! You can make corrections or help to make this app available in your native language by joining our community on Crowdin."
+msgstr ""
 
 msgid "We will confirm on the next screen."
-msgstr "We will confirm on the next screen."
-
-msgid ""
-"We're always listening for ways we can improve your experience. Feel free to "
-"leave us a review in the app store or request a new feature."
 msgstr ""
-"We're always listening for ways we can improve your experience. Feel free to "
-"leave us a review in the app store or request a new feature."
 
-msgid ""
-"We're always listening for ways we can improve your experience. Feel free to "
-"leave us a review in the app store or request a new feature. Also, let us "
-"know if you experience any technical issues."
+msgid "We're always listening for ways we can improve your experience. Feel free to leave us a review in the app store or request a new feature."
 msgstr ""
-"We're always listening for ways we can improve your experience. Feel free to "
-"leave us a review in the app store or request a new feature. Also, let us "
-"know if you experience any technical issues."
 
-msgid ""
-"We're always listening for ways we can improve your experience. Is there "
-"anything we could do to improve your experience?"
+msgid "We're always listening for ways we can improve your experience. Feel free to leave us a review in the app store or request a new feature. Also, let us know if you experience any technical issues."
 msgstr ""
-"We're always listening for ways we can improve your experience. Is there "
-"anything we could do to improve your experience?"
+
+msgid "We're always listening for ways we can improve your experience. Is there anything we could do to improve your experience?"
+msgstr ""
 
 msgid "Website"
-msgstr "Website"
+msgstr ""
 
 msgid "What do you call this wallet?"
-msgstr "What do you call this wallet?"
-
-msgid ""
-"When this wallet was created, it was called \"{{walletName}}\". You can "
-"change the name displayed on this device below."
 msgstr ""
-"When this wallet was created, it was called \"{{walletName}}\". You can "
-"change the name displayed on this device below."
+
+msgid "When this wallet was created, it was called \"{{walletName}}\". You can change the name displayed on this device below."
+msgstr ""
 
 msgid "Where would you like to receive email notifications about payments?"
-msgstr "Where would you like to receive email notifications about payments?"
-
-msgid ""
-"Where would you like to receive your Amazon gift card purchase receipts?"
 msgstr ""
-"Where would you like to receive your Amazon gift card purchase receipts?"
+
+msgid "Where would you like to receive your Amazon gift card purchase receipts?"
+msgstr ""
 
 msgid "Why does this require authentication?"
-msgstr "Why does this require authentication?"
+msgstr ""
 
 msgid "Why?"
-msgstr "Why?"
+msgstr ""
 
 msgid "Withdraw"
-msgstr "Withdraw"
-
-msgid ""
-"Without encryption, a thief or another application on this device may be "
-"able to access your funds."
 msgstr ""
-"Without encryption, a thief or another application on this device may be "
-"able to access your funds."
+
+msgid "Without encryption, a thief or another application on this device may be able to access your funds."
+msgstr ""
 
 msgid "Would you like to protect this wallet with a password?"
-msgstr "Would you like to protect this wallet with a password?"
+msgstr ""
 
 msgid "Write Down Recovery Phrase"
-msgstr "Write Down Recovery Phrase"
+msgstr ""
 
 msgid "Write a Review"
-msgstr "Write a Review"
+msgstr ""
 
 msgid "Wrong number of recovery words:"
-msgstr "Wrong number of recovery words:"
+msgstr ""
 
 msgid "Wrong password"
-msgstr "Wrong password"
+msgstr ""
 
 msgid "YES"
-msgstr "YES"
+msgstr ""
 
 msgid "Yes"
-msgstr "Yes"
+msgstr ""
 
 msgid "Yes, skip"
-msgstr "Yes, skip"
-
-msgid ""
-"You are trying to send ({amount} {coin}) more than what your wallet "
-"contains. Please enter a lower amount or send max."
 msgstr ""
-"You are trying to send ({amount} {coin}) more than what your wallet "
-"contains. Please enter a lower amount or send max."
+
+msgid "You are trying to send ({amount} {coin}) more than what your wallet contains. Please enter a lower amount or send max."
+msgstr ""
 
 msgid "You can back up your wallet later from your wallet settings."
-msgstr "You can back up your wallet later from your wallet settings."
-
-msgid ""
-"You can continue to view your archived cards here if you need to access them."
 msgstr ""
-"You can continue to view your archived cards here if you need to access them."
 
-msgid ""
-"You can make contributions by signing up on our Crowdin community "
-"translation website. We’re looking forward to hearing from you!"
+msgid "You can continue to view your archived cards here if you need to access them."
 msgstr ""
-"You can make contributions by signing up on our Crowdin community "
-"translation website. We’re looking forward to hearing from you!"
 
-msgid ""
-"You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
+msgid "You can make contributions by signing up on our Crowdin community translation website. We’re looking forward to hearing from you!"
 msgstr ""
-"You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
 
-msgid ""
-"You can see the latest developments and contribute to this open source app "
-"by visiting our project on GitHub."
+msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
 msgstr ""
-"You can see the latest developments and contribute to this open source app "
-"by visiting our project on GitHub."
+
+msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
+msgstr ""
 
 msgid "You can spend particl at millions of websites and stores worldwide."
-msgstr "You can spend particl at millions of websites and stores worldwide."
+msgstr ""
 
 msgid "You can still export it from \"Export Wallet\" option."
-msgstr "You can still export it from \"Export Wallet\" option."
-
-msgid ""
-"You can trade it for other currencies like US Dollars, Euros, or Pounds."
 msgstr ""
-"You can trade it for other currencies like US Dollars, Euros, or Pounds."
 
-msgid ""
-"You can use your Mercado Livre gift cards on your Mercado Pago account for "
-"everyday expenses like utilities and metro rides."
+msgid "You can trade it for other currencies like US Dollars, Euros, or Pounds."
 msgstr ""
-"You can use your Mercado Livre gift cards on your Mercado Pago account for "
-"everyday expenses like utilities and metro rides."
+
+msgid "You can use your Mercado Livre gift cards on your Mercado Pago account for everyday expenses like utilities and metro rides."
+msgstr ""
 
 msgid "You control your particl."
-msgstr "You control your particl."
+msgstr ""
 
 msgid "You could sign the transaction later in your wallet details"
-msgstr "You could sign the transaction later in your wallet details"
-
-msgid ""
-"You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr ""
-"You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 
-msgid ""
-"Your BitPay Card is ready. Add funds to your card to start using it at "
-"stores and ATMs worldwide."
+msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr ""
-"Your BitPay Card is ready. Add funds to your card to start using it at "
-"stores and ATMs worldwide."
 
-msgid "Your particl wallet is ready!"
-msgstr "Your particl wallet is ready!"
-
-msgid ""
-"Your extended private keys are all that is needed to access your bitcoin "
-"funds. Be sure to protect your private keys and store them only on secure "
-"devices. BitPay does not have access to your private keys, so you alone are "
-"responsible for your keys. If you share key access with external services, "
-"you take responsibility for the risk of theft or breach. Only advanced users "
-"should handle extended private keys directly."
+msgid "You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!"
 msgstr ""
-"Your extended private keys are all that is needed to access your bitcoin "
-"funds. Be sure to protect your private keys and store them only on secure "
-"devices. BitPay does not have access to your private keys, so you alone are "
-"responsible for your keys. If you share key access with external services, "
-"you take responsibility for the risk of theft or breach. Only advanced users "
-"should handle extended private keys directly."
+
+msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
+msgstr ""
+
+msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
+msgstr ""
 
 msgid "Your fee is lower than recommended."
-msgstr "Your fee is lower than recommended."
+msgstr ""
 
 msgid "Your name"
-msgstr "Your name"
-
-msgid ""
-"Your wallet address is similar to a bank account number. You can add funds "
-"to your wallet by withdrawing funds you may have stored on an exchange to "
-"your wallet address. Or other {coinName} users can send you money by "
-"scanning your QR code."
 msgstr ""
-"Your wallet address is similar to a bank account number. You can add funds "
-"to your wallet by withdrawing funds you may have stored on an exchange to "
-"your wallet address. Or other {coinName} users can send you money by "
-"scanning your QR code."
+
+msgid "Your particl wallet is ready!"
+msgstr ""
+
+msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
+msgstr ""
 
 msgid "Your wallet is never saved to cloud storage or standard device backups."
 msgstr ""
-"Your wallet is never saved to cloud storage or standard device backups."
 
-msgid ""
-"Your wallet key will be encrypted. The encrypt password cannot be recovered. "
-"Be sure to write it down."
+msgid "Your wallet key will be encrypted. The encrypt password cannot be recovered. Be sure to write it down."
 msgstr ""
-"Your wallet key will be encrypted. The encrypt password cannot be recovered. "
-"Be sure to write it down."
 
 msgid "Your {walletType} wallet is backed up!"
-msgstr "Your {walletType} wallet is backed up!"
+msgstr ""
+
+msgid "Zap"
+msgstr ""
+
+msgid "Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed."
+msgstr ""
 
 msgid "[Balance Hidden]"
-msgstr "[Balance Hidden]"
+msgstr ""
 
 msgid "[Scanning Funds]"
-msgstr "[Scanning Funds]"
+msgstr ""
 
 msgid "add your BitPay Visa card(s)"
-msgstr "add your BitPay Visa card(s)"
+msgstr ""
 
 msgid "me"
-msgstr "me"
+msgstr ""
 
 msgid "of total amount"
-msgstr "of total amount"
+msgstr ""
 
 msgid "preparing..."
-msgstr "preparing..."
+msgstr ""
 
 msgid "{appName} BCH wallets use the CashAddr format by default"
-msgstr "{appName} BCH wallets use the CashAddr format by default"
-
-msgid ""
-"{coinName} miner fees are high due to record demand for limited space on the "
-"{coinName} network. Particl does not receive and does not control {coinName} "
-"miner fees."
 msgstr ""
-"{coinName} miner fees are high due to record demand for limited space on the "
-"{coinName} network. Particl does not receive and does not control {coinName} "
-"miner fees."
+
+msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Particl does not receive and does not control {coinName} miner fees."
+msgstr ""
 
 msgid "{coinName} miner fees unusually high"
-msgstr "{coinName} miner fees unusually high"
-
-msgid ""
-"{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain "
-"information, networking and Copayer synchronization. The default "
-"configuration points to https://bws.particl.io (Particl's public BWS "
-"instance)."
 msgstr ""
-"{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain "
-"information, networking and Copayer synchronization. The default "
-"configuration points to https://bws.particl.io (Particl's public BWS "
-"instance)."
+
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
+msgstr ""
 
 msgid "{{fee}} {{coin}} will be deducted for bitcoin networking fees."
-msgstr "{{fee}} {{coin}} will be deducted for bitcoin networking fees."
+msgstr ""
 
 msgid "{{updatingTxHistoryProgress}} transactions downloaded"
-msgstr "{{updatingTxHistoryProgress}} transactions downloaded"
+msgstr ""
 
 msgid "{{wallet.credentials.m}}-of-{{wallet.credentials.n}}"
-msgstr "{{wallet.credentials.m}}-of-{{wallet.credentials.n}}"
+msgstr ""
 
 msgid "{{wallet.m}}-of-{{wallet.n}}"
-msgstr "{{wallet.m}}-of-{{wallet.n}}"
+msgstr ""
+
