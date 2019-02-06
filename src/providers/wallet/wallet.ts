@@ -52,6 +52,7 @@ export interface TransactionProposal {
     toAddress: any;
     amount: any;
     message: string;
+    script?: string;
   }>;
   inputs: any;
   fee: any;
