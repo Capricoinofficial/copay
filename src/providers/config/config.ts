@@ -195,7 +195,7 @@ export class ConfigProvider {
           wp: ''
         },
         particl: {
-          ios: '',
+          ios: 'https://itunes.apple.com/us/app/particl-copay/id1449589645',
           android:
             'https://play.google.com/store/apps/details?id=io.particl.copay',
           wp: ''
