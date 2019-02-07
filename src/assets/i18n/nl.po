@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
-"PO-Revision-Date: 2019-02-06 13:36\n"
+"PO-Revision-Date: 2019-02-07 07:15\n"
 
 msgid "(Trusted)"
 msgstr "(Vertrouwd)"
@@ -567,7 +567,7 @@ msgid "Create a new wallet to start using this app."
 msgstr ""
 
 msgid "Create particl wallet"
-msgstr "Bitcoin portemonnee aanmaken"
+msgstr "Particl portemonnee aanmaken"
 
 msgid "Create personal wallet"
 msgstr ""
@@ -930,7 +930,7 @@ msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank 
 msgstr ""
 
 msgid "Get news and updates from Particl"
-msgstr "Ontvang nieuws en updates van BitPay"
+msgstr "Ontvang nieuws en updates van Particl"
 
 msgid "Get started"
 msgstr "Aan de slag"
@@ -1299,7 +1299,7 @@ msgid "No Private Key"
 msgstr ""
 
 msgid "No backup, no funds."
-msgstr "Geen backup, geen bitcoin."
+msgstr "Geen backup, geen fondsen."
 
 msgid "No contacts yet"
 msgstr "Nog geen contactpersonen"
@@ -1353,7 +1353,7 @@ msgid "Not enough funds for fee"
 msgstr "Onvoldoende saldo voor transactiekosten"
 
 msgid "Not even Particl can access it."
-msgstr "Zelfs BitPay heeft geen toegang."
+msgstr "Zelfs Particl heeft geen toegang."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
 msgstr ""
@@ -1461,7 +1461,7 @@ msgid "Particl Wallets"
 msgstr ""
 
 msgid "Particl is a currency."
-msgstr "Bitcoin is een valuta."
+msgstr "Particl is een valuta."
 
 msgid "Particl is different - it cannot be safely held with a bank or web service."
 msgstr ""
@@ -1470,10 +1470,10 @@ msgid "Particl is secure, digital money."
 msgstr ""
 
 msgid "Particl network fee policy"
-msgstr "Transactiekostenbeleid Bitcoin-netwerk"
+msgstr "Transactiekostenbeleid Particl-netwerk"
 
 msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "Bitcoin transacties bevatten transactiekosten betaald aan de miners in het netwerk."
+msgstr "Particl transacties bevatten transactiekosten betaald aan de miners in het netwerk."
 
 msgid "Password"
 msgstr "Wachtwoord"
@@ -1809,7 +1809,7 @@ msgid "Search a contact"
 msgstr ""
 
 msgid "Search or enter wallet address"
-msgstr "Zoeken of bitcoin adres invullen"
+msgstr "Zoeken of adres invullen"
 
 msgid "Search your currency"
 msgstr "Zoek uw valuta"
@@ -2067,7 +2067,7 @@ msgid "The Wallet Service URL"
 msgstr ""
 
 msgid "The amount of funds immediately spendable from this wallet."
-msgstr "De hoeveelheid bitcoin die direct te besteden is vanuit deze portemonnee."
+msgstr "De hoeveelheid fondsen die direct te besteden is vanuit deze portemonnee."
 
 msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
 msgstr ""
@@ -2121,7 +2121,7 @@ msgid "The testnet is an alternative block chain, to be used for testing. Testne
 msgstr ""
 
 msgid "The total amount of funds stored in this wallet."
-msgstr "De totale hoeveelheid bitcoin opgeslagen in deze portemonnee."
+msgstr "De totale hoeveelheid fondsen opgeslagen in deze portemonnee."
 
 msgid "The transaction history and every new incoming transaction are cached in the app. This feature clean this up and synchronizes again from the server"
 msgstr ""
@@ -2139,7 +2139,7 @@ msgid "This app is not available for your device."
 msgstr ""
 
 msgid "This app stores your particl with cutting-edge security."
-msgstr "Deze app bewaart uw bitcoin met de nieuwste beveiliging."
+msgstr "Deze app bewaart uw particl met de nieuwste beveiliging."
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr ""
@@ -2157,7 +2157,7 @@ msgid "This password is only for this device, and it cannot be recovered. To avo
 msgstr ""
 
 msgid "This payment request has expired."
-msgstr "Dit bitcoin betalingsverzoek is verlopen."
+msgstr "Dit betalingsverzoek is verlopen."
 
 msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr "Deze herstel zin is aangemaakt met een wachtwoord. Om deze portemonnee te herstellen heeft u de herstel zin en het wachtwoord nodig."
@@ -2178,7 +2178,7 @@ msgid "To"
 msgstr "Naar"
 
 msgid "To get started, you'll need to create a particl wallet and get some particl."
-msgstr "Om aan de slag te gaan zult u een bitcoin portemonnee moeten aanmaken en wat bitcoin moeten verkrijgen."
+msgstr "Om aan de slag te gaan zult u een particl portemonnee moeten aanmaken en wat particl moeten verkrijgen."
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
 msgstr ""
@@ -2553,13 +2553,13 @@ msgid "You can make contributions by signing up on our Crowdin community transla
 msgstr "U kunt een bijdrage leveren door u aan te melden bij onze Crowdin gemeenschap vertalings website. Wij kijken er naar uit om van u te horen!"
 
 msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
-msgstr "U kunt bitcoin adressen scannen, betalingsverzoeken, papieren portemonnees, en meer."
+msgstr "U kunt particl adressen scannen, bitcoin adressen scannen, betalingsverzoeken, papieren portemonnees, en meer."
 
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr "U kunt de laatste ontwikkelingen volgen en bijdragen aan deze open source app door onze project pagina te bezoeken op GitHub."
 
 msgid "You can spend particl at millions of websites and stores worldwide."
-msgstr "U kunt met bitcoin betalen bij miljoenen websites en winkels over de hele wereld."
+msgstr "U kunt met particl betalen bij miljoenen websites en winkels over de hele wereld."
 
 msgid "You can still export it from \"Export Wallet\" option."
 msgstr ""
@@ -2571,7 +2571,7 @@ msgid "You can use your Mercado Livre gift cards on your Mercado Pago account fo
 msgstr ""
 
 msgid "You control your particl."
-msgstr "U heeft de controle over uw bitcoin."
+msgstr "U heeft de controle over uw particl."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr ""
@@ -2595,7 +2595,7 @@ msgid "Your name"
 msgstr "Uw naam"
 
 msgid "Your particl wallet is ready!"
-msgstr "Uw bitcoin portemonnee is gereed!"
+msgstr "Uw particl portemonnee is gereed!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
 msgstr ""

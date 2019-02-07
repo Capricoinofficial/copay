@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: French\n"
 "Language: fr\n"
-"PO-Revision-Date: 2019-02-06 13:36\n"
+"PO-Revision-Date: 2019-02-07 07:15\n"
 
 msgid "(Trusted)"
 msgstr "(Fiable)"
@@ -930,7 +930,7 @@ msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank 
 msgstr "Retirez de l'argent partout où vous allez, depuis n'importe quel distributeur compatible Visa®. Des frais bancaires de distributeurs peuvent s'appliquer."
 
 msgid "Get news and updates from Particl"
-msgstr "Obtenir les actualités et mises à jour de BitPay"
+msgstr "Obtenir les actualités et mises à jour de Particl"
 
 msgid "Get started"
 msgstr "Commencer"
@@ -1353,7 +1353,7 @@ msgid "Not enough funds for fee"
 msgstr "Pas assez de fonds pour les frais"
 
 msgid "Not even Particl can access it."
-msgstr "Même BitPay ne peut y accéder."
+msgstr "Même Particl ne peut y accéder."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
 msgstr "Ne pas inclure la clé privée permet de vérifier le solde du portefeuille, l'historique des transactions, et de créer des demandes de dépenses depuis le fichier exporté. Cependant, cela ne permet pas d'approuver (de signer) les propositions et les fonds ne seront pas accessibles depuis le fichier exporté."

@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt\n"
-"PO-Revision-Date: 2019-02-06 13:36\n"
+"PO-Revision-Date: 2019-02-07 07:16\n"
 
 msgid "(Trusted)"
 msgstr "(Confiável)"
@@ -99,7 +99,7 @@ msgid "Add this BitPay account ({{email}})?"
 msgstr "Adicionar esta conta BitPay ({{email}})?"
 
 msgid "Address"
-msgstr "Endereço Bitcoin"
+msgstr "Endereço"
 
 msgid "Address Book"
 msgstr "Livros de endereços"
@@ -567,7 +567,7 @@ msgid "Create a new wallet to start using this app."
 msgstr ""
 
 msgid "Create particl wallet"
-msgstr "Criar carteira bitcoin"
+msgstr "Criar carteira particl"
 
 msgid "Create personal wallet"
 msgstr "Criar carteira pessoal"
@@ -855,7 +855,7 @@ msgid "Fee rate"
 msgstr ""
 
 msgid "Fee:"
-msgstr "Taxa de mineração de Bitcoin:"
+msgstr "Taxa de mineração:"
 
 msgid "Feedback"
 msgstr ""
@@ -930,7 +930,7 @@ msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank 
 msgstr ""
 
 msgid "Get news and updates from Particl"
-msgstr "Receba notícias e atualizações da BitPay"
+msgstr "Receba notícias e atualizações da Particl"
 
 msgid "Get started"
 msgstr "Começar"
@@ -1299,7 +1299,7 @@ msgid "No Private Key"
 msgstr ""
 
 msgid "No backup, no funds."
-msgstr "Sem backup, sem bitcoin."
+msgstr "Sem backup, sem fundos."
 
 msgid "No contacts yet"
 msgstr "Ainda não existem contactos"
@@ -1353,7 +1353,7 @@ msgid "Not enough funds for fee"
 msgstr "Não há fundos para taxa"
 
 msgid "Not even Particl can access it."
-msgstr "Nem mesmo Bitpay pode acessar isso."
+msgstr "Nem mesmo Particl pode acessar isso."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
 msgstr ""
@@ -1365,7 +1365,7 @@ msgid "Not set"
 msgstr ""
 
 msgid "Not valid address"
-msgstr "O endereço Bitcoin não é válido"
+msgstr "O endereço não é válido"
 
 msgid "Note"
 msgstr "Nota"
@@ -1461,19 +1461,19 @@ msgid "Particl Wallets"
 msgstr ""
 
 msgid "Particl is a currency."
-msgstr "Bitcoin é uma moeda."
+msgstr "Particl é uma moeda."
 
 msgid "Particl is different - it cannot be safely held with a bank or web service."
-msgstr "Bitcoin é diferente &ndash; ela não pode ser retida com segurança por um serviço web ou banco."
+msgstr "Particl é diferente &ndash; ela não pode ser retida com segurança por um serviço web ou banco."
 
 msgid "Particl is secure, digital money."
-msgstr "Bitcoin é seguro, dinheiro digital."
+msgstr "Particl é seguro, dinheiro digital."
 
 msgid "Particl network fee policy"
-msgstr "Política de taxa de rede Bitcoin"
+msgstr "Política de taxa de rede Particl"
 
 msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "As transações Bitcoin incluem uma taxa cobrada pelos mineiros na rede."
+msgstr "As transações Particl incluem uma taxa cobrada pelos mineiros na rede."
 
 msgid "Password"
 msgstr "Senha"
@@ -1809,7 +1809,7 @@ msgid "Search a contact"
 msgstr "Buscar contato"
 
 msgid "Search or enter wallet address"
-msgstr "Procure ou digite o endereço bitcoin"
+msgstr "Procure ou digite o endereço"
 
 msgid "Search your currency"
 msgstr "Procure a sua moeda"
@@ -1995,7 +1995,7 @@ msgid "Spendable balance"
 msgstr "Saldo disponível"
 
 msgid "Spending this balance will need significant network fees"
-msgstr "Gastar este balanço necessitará uma taxa de rede Bitcoin significativa"
+msgstr "Gastar este balanço necessitará uma taxa de rede significativa"
 
 msgid "Staking"
 msgstr ""
@@ -2031,7 +2031,7 @@ msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr "ESTA AÇÃO NÃO PODE SER REVERTIDA"
 
 msgid "Take control of your money, get started with particl."
-msgstr "Assuma o controle de seu dinheiro, comece com bitcoin."
+msgstr "Assuma o controle de seu dinheiro, comece com particl."
 
 msgid "Tap and hold to show"
 msgstr "Toque e mantenha para mostrar"
@@ -2067,7 +2067,7 @@ msgid "The Wallet Service URL"
 msgstr "A URL de Serviço da Carteira"
 
 msgid "The amount of funds immediately spendable from this wallet."
-msgstr "A quantidade de bitcoin imediatamente spendable desta carteira."
+msgstr "A quantidade de fundos imediatamente spendable desta carteira."
 
 msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
 msgstr ""
@@ -2121,7 +2121,7 @@ msgid "The testnet is an alternative block chain, to be used for testing. Testne
 msgstr ""
 
 msgid "The total amount of funds stored in this wallet."
-msgstr "A quantidade total de bitcoin armazenado nesta carteira."
+msgstr "A quantidade total de fundos armazenado nesta carteira."
 
 msgid "The transaction history and every new incoming transaction are cached in the app. This feature clean this up and synchronizes again from the server"
 msgstr ""
@@ -2139,7 +2139,7 @@ msgid "This app is not available for your device."
 msgstr ""
 
 msgid "This app stores your particl with cutting-edge security."
-msgstr "Este aplicativo armazena seu bitcoin com segurança de ponta."
+msgstr "Este aplicativo armazena seu particl com segurança de ponta."
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr ""
@@ -2157,7 +2157,7 @@ msgid "This password is only for this device, and it cannot be recovered. To avo
 msgstr "Esta senha é apenas para este dispositivo e não pode ser recuperada. Para evitar a perda de fundos, anote sua senha."
 
 msgid "This payment request has expired."
-msgstr "Este bitcoin pagamento pedido expirou."
+msgstr "Este pagamento pedido expirou."
 
 msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr "Esta frase de recuperação foi criada com uma senha. Para recuperar esta carteira, tanto a frase de recuperação como a senha são necessárias."
@@ -2178,7 +2178,7 @@ msgid "To"
 msgstr "Para"
 
 msgid "To get started, you'll need to create a particl wallet and get some particl."
-msgstr "Para começar, você precisa criar uma carteira de bitcoins e obter alguns bitcoins."
+msgstr "Para começar, você precisa criar uma carteira de particl e obter alguns particl."
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
 msgstr ""
@@ -2553,13 +2553,13 @@ msgid "You can make contributions by signing up on our Crowdin community transla
 msgstr "Você pode fazer contribuições inscrevendo-se no nosso site da comunidade de tradução Crowdin. Estamos ansiosos para ouvir de você!"
 
 msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
-msgstr "Você pode escanear endereços bitcoins, pedidos de pagamento carteiras de papel e muito mais."
+msgstr "Você pode escanear endereços particl, endereços bitcoins, pedidos de pagamento carteiras de papel e muito mais."
 
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr "Você pode ver os mais recentes desenvolvimentos e contribuir para este aplicativo de código aberto, visitando nosso projeto no GitHub."
 
 msgid "You can spend particl at millions of websites and stores worldwide."
-msgstr "Você pode gastar bitcoins em milhões de sites e lojas em todo o mundo."
+msgstr "Você pode gastar particl em milhões de sites e lojas em todo o mundo."
 
 msgid "You can still export it from \"Export Wallet\" option."
 msgstr ""
@@ -2571,7 +2571,7 @@ msgid "You can use your Mercado Livre gift cards on your Mercado Pago account fo
 msgstr ""
 
 msgid "You control your particl."
-msgstr "Você controla o seu bitcoin."
+msgstr "Você controla o seu particl."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr "Você poderia assinar a transação mais tarde nos detalhes de sua carteira"
@@ -2595,7 +2595,7 @@ msgid "Your name"
 msgstr "Seu nome"
 
 msgid "Your particl wallet is ready!"
-msgstr "Sua carteira de bitcoins está pronta!"
+msgstr "Sua carteira de particl está pronta!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
 msgstr ""

@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
-"PO-Revision-Date: 2019-02-06 13:36\n"
+"PO-Revision-Date: 2019-02-07 07:16\n"
 
 msgid "(Trusted)"
 msgstr "(Доверенный)"
@@ -1467,7 +1467,7 @@ msgid "Particl is different - it cannot be safely held with a bank or web servic
 msgstr ""
 
 msgid "Particl is secure, digital money."
-msgstr "Bitcoin это безопасные, цифровые деньги."
+msgstr "Particl это безопасные, цифровые деньги."
 
 msgid "Particl network fee policy"
 msgstr "Политика комиссии сети Биткойн"
@@ -2571,7 +2571,7 @@ msgid "You can use your Mercado Livre gift cards on your Mercado Pago account fo
 msgstr ""
 
 msgid "You control your particl."
-msgstr "Вы контролируете Ваши bitcoin-ы."
+msgstr "Вы контролируете Ваши particl-ы."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr ""
