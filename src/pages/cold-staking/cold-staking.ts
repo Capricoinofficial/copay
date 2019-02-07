@@ -9,9 +9,11 @@ import { BwcErrorProvider } from '../../providers/bwc-error/bwc-error';
 import { BwcProvider } from '../../providers/bwc/bwc';
 import { ConfigProvider } from '../../providers/config/config';
 import { ExternalLinkProvider } from '../../providers/external-link/external-link';
+import { FeeProvider } from '../../providers/fee/fee';
 import { OnGoingProcessProvider } from '../../providers/on-going-process/on-going-process';
 import { PopupProvider } from '../../providers/popup/popup';
 import { ProfileProvider } from '../../providers/profile/profile';
+import { ReplaceParametersProvider } from '../../providers/replace-parameters/replace-parameters';
 import {
   TransactionProposal,
   WalletProvider
@@ -51,6 +53,8 @@ export class ColdStakingPage extends WalletTabsChild {
     private onGoingProcessProvider: OnGoingProcessProvider,
     private actionSheetProvider: ActionSheetProvider,
     private bwcErrorProvider: BwcErrorProvider,
+    private feeProvider: FeeProvider,
+    private replaceParametersProvider: ReplaceParametersProvider,
     private events: Events,
     private platform: Platform
   ) {
@@ -208,87 +212,113 @@ export class ColdStakingPage extends WalletTabsChild {
 
   private balanceTransfer(isZap): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.wallet.createAddress(
-        { isChange: true, sha256: !!isZap },
-        (err, addr) => {
-          if (err) {
+      this.onGoingProcessProvider.set('calculatingFee');
+      this.wallet.getUtxos({}, (err, utxos) => {
+        if (err) {
+          this.logger.error(err);
+          reject(err);
+        }
+        let inputs = [],
+          total = 0;
+        utxos.forEach(utxo => {
+          if (utxo.confirmations > 0) {
+            const utxoStaking =
+              utxo.scriptPubKey &&
+              utxo.scriptPubKey.startsWith(this.OP_ISCOINSTAKE);
+
+            if (isZap && !utxoStaking) {
+              inputs.push(utxo);
+            }
+
+            if (!isZap && utxoStaking) {
+              inputs.push(utxo);
+            }
+
+            total += utxo.satoshis;
+          }
+        });
+
+        const txp: Partial<TransactionProposal> = {};
+        txp.inputs = inputs;
+
+        // Placeholder for fee calculation
+        txp.outputs = [
+          {
+            toAddress: '',
+            amount: total,
+            message: ''
+          }
+        ];
+
+        txp.message = 'Balance Transfer';
+        txp.excludeUnconfirmedUtxos = true;
+
+        this.feeProvider
+          .getEstimatedFee(this.wallet, txp)
+          .then(fee => {
+            this.onGoingProcessProvider.clear();
+            this.popupProvider
+              .ionicConfirm(
+                this.translate.instant('Balance Transfer'),
+                this.replaceParametersProvider.replace(
+                  this.translate.instant(
+                    'This balance transfer will incur a fee of {{fee}} {{unit}}.'
+                  ),
+                  { fee: fee / 1e8, unit: this.wallet.coin.toUpperCase() }
+                ),
+                this.translate.instant('Proceed'),
+                this.translate.instant('Cancel')
+              )
+              .then((res: boolean) => {
+                if (res) {
+                  txp.fee = fee;
+                  txp.outputs[0].amount = txp.outputs[0].amount - fee;
+
+                  this.wallet.createAddress(
+                    { isChange: true, sha256: !!isZap },
+                    (err, addr) => {
+                      if (err) {
+                        this.logger.error(err);
+                        reject(err);
+                      }
+                      txp.outputs[0].toAddress = addr.address;
+                      if (isZap) {
+                        txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
+                          addr.address,
+                          this.getStakingConfig.staking_key
+                        ).toString();
+                      }
+                      this.walletProvider
+                        .createTx(this.wallet, txp)
+                        .then(ctxp => {
+                          this.walletProvider
+                            .publishAndSign(this.wallet, ctxp)
+                            .then(() => {
+                              this.onGoingProcessProvider.clear();
+                              resolve();
+                            })
+                            .catch(err => {
+                              this.onGoingProcessProvider.clear();
+                              this.logger.error(err);
+                              reject(err);
+                            });
+                        })
+                        .catch(err => {
+                          this.onGoingProcessProvider.clear();
+                          this.logger.error(err);
+                          reject(err);
+                        });
+                    }
+                  );
+                }
+              });
+          })
+          .catch(err => {
+            this.onGoingProcessProvider.clear();
             this.logger.error(err);
             reject(err);
-          }
-
-          this.wallet.getUtxos({}, (err, utxos) => {
-            if (err) {
-              this.logger.error(err);
-              reject(err);
-            }
-            let inputs = [],
-              total = 0;
-            utxos.forEach(utxo => {
-              if (utxo.confirmations > 0) {
-                const utxoStaking =
-                  utxo.scriptPubKey &&
-                  utxo.scriptPubKey.startsWith(this.OP_ISCOINSTAKE);
-
-                if (isZap && !utxoStaking) {
-                  inputs.push(utxo);
-                }
-
-                if (!isZap && utxoStaking) {
-                  inputs.push(utxo);
-                }
-
-                total += utxo.satoshis;
-              }
-            });
-
-            if (inputs.length > 0) {
-              const txp: Partial<TransactionProposal> = {};
-
-              txp.inputs = inputs;
-              txp.fee = 30000;
-
-              txp.outputs = [
-                {
-                  toAddress: addr.address,
-                  amount: total - 30000,
-                  message: ''
-                }
-              ];
-
-              if (isZap) {
-                txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
-                  addr.address,
-                  this.getStakingConfig.staking_key
-                ).toString();
-              }
-
-              txp.message = 'Balance Transfer';
-              txp.excludeUnconfirmedUtxos = true;
-
-              this.walletProvider
-                .createTx(this.wallet, txp)
-                .then(ctxp => {
-                  this.walletProvider
-                    .publishAndSign(this.wallet, ctxp)
-                    .then(() => {
-                      this.onGoingProcessProvider.clear();
-                      resolve();
-                    })
-                    .catch(err => {
-                      this.logger.error(err);
-                      reject(err);
-                    });
-                })
-                .catch(err => {
-                  this.logger.error(err);
-                  reject(err);
-                });
-            } else {
-              resolve();
-            }
           });
-        }
-      );
+      });
     });
   }
 
