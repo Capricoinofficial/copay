@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Events, NavController, Platform } from 'ionic-angular';
+import { Content, Events, NavController, Platform } from 'ionic-angular';
 import { Logger } from '../../providers/logger/logger';
 
 // providers
@@ -34,10 +34,13 @@ export class ColdStakingPage extends WalletTabsChild {
   public activationPercent;
   public getStakingConfig;
   public isStaking;
+  public hasUnconfirmed;
   public canZap;
   private OP_ISCOINSTAKE = 'b8';
   private particlBitcore;
   private onResumeSubscription: Subscription;
+
+  @ViewChild(Content) content: Content;
 
   constructor(
     navCtrl: NavController,
@@ -92,7 +95,7 @@ export class ColdStakingPage extends WalletTabsChild {
   }
 
   public learnMore(): void {
-    let url = 'https://particl.wiki/tutorials#staking';
+    let url = 'https://particl.wiki/staking';
     let optIn = true;
     let title = null;
     let message = this.translate.instant(
@@ -181,8 +184,8 @@ export class ColdStakingPage extends WalletTabsChild {
       }
 
       let total = 0,
-        staked = 0,
-        hasUnconfirmed = false;
+        staked = 0;
+      this.hasUnconfirmed = false;
       utxos.forEach(utxo => {
         if (utxo.confirmations > 0) {
           total += utxo.satoshis;
@@ -193,11 +196,11 @@ export class ColdStakingPage extends WalletTabsChild {
             staked += utxo.satoshis;
           }
         } else {
-          hasUnconfirmed = true;
+          this.hasUnconfirmed = true;
         }
       });
 
-      if (hasUnconfirmed) {
+      if (this.hasUnconfirmed) {
         this.activationPercent = this.translate.instant(
           'Waiting on unconfirmed transactions...'
         );
@@ -205,14 +208,18 @@ export class ColdStakingPage extends WalletTabsChild {
       } else {
         const percentDone = total ? (staked / total) * 100 : 0;
         this.activationPercent = percentDone.toFixed(2) + '%';
-        this.canZap = !hasUnconfirmed && total > 0 && percentDone < 100;
+        this.canZap = total > 0 && percentDone < 100;
       }
+
+      // Force a redraw if the zap button was made visible or hidden
+      setTimeout(() => {
+        this.content.resize();
+      }, 10);
     });
   }
 
   private balanceTransfer(isZap): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.onGoingProcessProvider.set('calculatingFee');
       this.wallet.getUtxos({}, (err, utxos) => {
         if (err) {
           this.logger.error(err);
@@ -237,6 +244,12 @@ export class ColdStakingPage extends WalletTabsChild {
             }
           }
         });
+
+        if (inputs.length === 0) {
+          return resolve();
+        }
+
+        this.onGoingProcessProvider.set('calculatingFee');
 
         const txp: Partial<TransactionProposal> = {};
         txp.inputs = inputs;
