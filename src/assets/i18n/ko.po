@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
-"PO-Revision-Date: 2019-02-07 07:15\n"
+"PO-Revision-Date: 2019-02-07 15:13\n"
 
 msgid "(Trusted)"
 msgstr "(신뢰할 수 있음)"
@@ -231,6 +231,9 @@ msgid "Bad wallet invitation"
 msgstr "나쁜 지갑 초청"
 
 msgid "Balance Hidden"
+msgstr ""
+
+msgid "Balance Transfer"
 msgstr ""
 
 msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
@@ -1625,6 +1628,9 @@ msgstr "개인 키가 암호화되었습니다. 비밀번호를 입력해주세�
 msgid "Private key is encrypted, cannot sign"
 msgstr "개인 키가 암호화되어, 서명할 수 없습니다"
 
+msgid "Proceed"
+msgstr ""
+
 msgid "Proposal Accepted"
 msgstr "제안 허용됨"
 
@@ -2140,6 +2146,9 @@ msgstr ""
 
 msgid "This app stores your particl with cutting-edge security."
 msgstr "이 앱은 최첨단 보안 기능으로 귀하의 비트코인을 저장합니다."
+
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
+msgstr ""
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr ""

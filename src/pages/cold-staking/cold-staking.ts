@@ -228,13 +228,13 @@ export class ColdStakingPage extends WalletTabsChild {
 
             if (isZap && !utxoStaking) {
               inputs.push(utxo);
+              total += utxo.satoshis;
             }
 
             if (!isZap && utxoStaking) {
               inputs.push(utxo);
+              total += utxo.satoshis;
             }
-
-            total += utxo.satoshis;
           }
         });
 

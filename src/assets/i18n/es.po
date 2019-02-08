@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
-"PO-Revision-Date: 2019-02-07 07:15\n"
+"PO-Revision-Date: 2019-02-07 15:12\n"
 
 msgid "(Trusted)"
 msgstr "(De confianza)"
@@ -232,6 +232,9 @@ msgstr "Invitación incorrecta a la billetera"
 
 msgid "Balance Hidden"
 msgstr "Balance Oculto"
+
+msgid "Balance Transfer"
+msgstr ""
 
 msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
 msgstr "Asegúrate de guardar la frase de recuperación en un lugar seguro. Si se elimina esta aplicación, no se podrá recuperar el dinero."
@@ -1625,6 +1628,9 @@ msgstr "La clave privada está encriptada. Escriba la contraseña"
 msgid "Private key is encrypted, cannot sign"
 msgstr "La clave privada está encriptada, no puedes firmar"
 
+msgid "Proceed"
+msgstr ""
+
 msgid "Proposal Accepted"
 msgstr "Propuesta Aceptada"
 
@@ -2140,6 +2146,9 @@ msgstr "Esta aplicación no está disponible para su dispositivo."
 
 msgid "This app stores your particl with cutting-edge security."
 msgstr "Esta aplicación almacena tus particl con seguridad avanzada."
+
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
+msgstr ""
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr "Este campo es solo para usuarios que en versiones anteriores (actualmente sin soporte), establecieron una contraseña para proteger su frase de recuperación. Este campo no es para su contraseña de cifrado."

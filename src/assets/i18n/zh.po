@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh\n"
-"PO-Revision-Date: 2019-02-07 07:16\n"
+"PO-Revision-Date: 2019-02-07 15:13\n"
 
 msgid "(Trusted)"
 msgstr "（可信的）"
@@ -232,6 +232,9 @@ msgstr "坏钱包邀请"
 
 msgid "Balance Hidden"
 msgstr "隐藏余额"
+
+msgid "Balance Transfer"
+msgstr ""
 
 msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
 msgstr "Asegúrate de guardar la frase de recuperación en un lugar seguro. Si se elimina esta aplicación, no se podrá recuperar el dinero."
@@ -1625,6 +1628,9 @@ msgstr "私钥加密。输入密码"
 msgid "Private key is encrypted, cannot sign"
 msgstr "私钥已加密，无法签名"
 
+msgid "Proceed"
+msgstr ""
+
 msgid "Proposal Accepted"
 msgstr "提案被接受"
 
@@ -2140,6 +2146,9 @@ msgstr "此app不适用于您的设备。"
 
 msgid "This app stores your particl with cutting-edge security."
 msgstr "此应用程序商店你比特币与尖端的安全。"
+
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
+msgstr ""
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr "*此字段仅适用于先前版本（不再支持）的用户，设置密码以保护其恢复短语。此字段不用于加密密码。"

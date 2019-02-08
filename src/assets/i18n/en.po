@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: particl\n"
 "Language-Team: English\n"
 "Language: en\n"
-"PO-Revision-Date: 2019-02-07 07:16\n"
+"PO-Revision-Date: 2019-02-07 15:13\n"
 
 msgid "(Trusted)"
 msgstr ""
@@ -231,6 +231,9 @@ msgid "Bad wallet invitation"
 msgstr ""
 
 msgid "Balance Hidden"
+msgstr ""
+
+msgid "Balance Transfer"
 msgstr ""
 
 msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
@@ -1625,6 +1628,9 @@ msgstr ""
 msgid "Private key is encrypted, cannot sign"
 msgstr ""
 
+msgid "Proceed"
+msgstr ""
+
 msgid "Proposal Accepted"
 msgstr ""
 
@@ -2139,6 +2145,9 @@ msgid "This app is not available for your device."
 msgstr ""
 
 msgid "This app stores your particl with cutting-edge security."
+msgstr ""
+
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
 msgstr ""
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
