@@ -136,6 +136,9 @@ page-wallet-details {
       .received {
         color: color($colors, success);
       }
+      .staked {
+        color: #199ee3;
+      }
     }
     .date {
       font-size: 14px;

@@ -190,6 +190,7 @@
                   <span>
                     <img src="assets/img/tx-action/icon-received.svg" *ngIf="tx.action == 'received'" width="40">
                     <img src="assets/img/tx-action/icon-moved.svg" *ngIf="tx.action == 'moved'" width="40">
+                    <img src="assets/img/tx-action/icon-staked.svg" *ngIf="tx.action == 'staked'" width="40">
                   </span>
                 </div>
               </ion-icon>
@@ -202,6 +203,7 @@
                 <span *ngIf="(tx.action == 'sent' || tx.action == 'moved') && (addressbook && tx.outputs[0] && addressbook[tx.outputs[0].address])">{{addressbook[tx.outputs[0].address].name
                   || addressbook[tx.outputs[0].address]}}</span>
                 <span *ngIf="tx.action == 'received'">{{'Receiving' | translate}}</span>
+                <span *ngIf="tx.action == 'staked'">{{'Staking' | translate}}</span>
               </div>
 
               <div class="action" *ngIf="tx.confirmations > 0 && tx.action == 'received'">
@@ -234,13 +236,17 @@
                 <span *ngIf="tx.note && tx.note.body != ''">{{tx.note.body}}</span>
               </div>
 
+              <div class="action" *ngIf="tx.confirmations > 0 && tx.action == 'staked'">
+                <span translate>Staked</span>
+              </div>
+
               <div class="action" *ngIf="tx.confirmations > 0 && tx.action == 'invalid'">
                 <span class="assertive" *ngIf="!tx.message && !tx.note" translate>Invalid</span>
               </div>
 
               <ion-note item-end text-end>
                 <div class="amount">
-                  <span [ngClass]="{'received': tx.action == 'received'}" *ngIf="tx.action != 'invalid'">{{tx.amount |
+                  <span [ngClass]="{'received': tx.action == 'received', 'staked': tx.action == 'staked'}" *ngIf="tx.action != 'invalid'">{{tx.amount |
                     satToUnit: wallet.coin}}</span>
                   <span class="double-spend" *ngIf="tx.action == 'invalid'" translate>(possible double spend)</span>
                 </div>

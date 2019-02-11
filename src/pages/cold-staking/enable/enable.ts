@@ -61,7 +61,8 @@ export class ColdStakingEnablePage {
     };
     opts.coldStakingKeyFor[this.navParams.data.walletId] = {
       label: this.coldStakingEnable.controls['label'].value,
-      staking_key: this.coldStakingEnable.controls['staking_key'].value
+      staking_key: this.coldStakingEnable.controls['staking_key'].value,
+      xpubIndex: 0
     };
     this.configProvider.set(opts);
 

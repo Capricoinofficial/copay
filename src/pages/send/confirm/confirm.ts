@@ -749,13 +749,11 @@ export class ConfirmPage extends WalletTabsChild {
         };
       }
 
-      if (
-        this.config.coldStakingKeyFor &&
-        this.config.coldStakingKeyFor[this.wallet.credentials.walletId]
-      ) {
-        txp.coldStakingAddress = this.config.coldStakingKeyFor[
-          this.wallet.credentials.walletId
-        ].staking_key;
+      const coldStakingAddress = this.walletProvider.deriveColdStakingAddress(
+        this.wallet
+      );
+      if (coldStakingAddress) {
+        txp.coldStakingAddress = coldStakingAddress;
       }
 
       this.walletProvider

@@ -1705,4 +1705,37 @@ export class WalletProvider {
   public isStaking(wallet): boolean {
     return this.getStakingConfig(wallet) !== null;
   }
+
+  public deriveColdStakingAddress(wallet): string {
+    const config = this.configProvider.get();
+    const csConfig =
+      config.coldStakingKeyFor && config.coldStakingKeyFor[wallet.id]
+        ? config.coldStakingKeyFor[wallet.id]
+        : null;
+
+    if (!csConfig || !csConfig.staking_key) return null;
+
+    if (
+      csConfig.staking_key.startsWith('pcs') ||
+      csConfig.staking_key.startsWith('tpcs')
+    )
+      return csConfig.staking_key;
+
+    const xPub = this.bwcProvider
+      .getBitcoreParticl()
+      .HDPublicKey(csConfig.staking_key);
+
+    const addr = xPub
+      .derive(csConfig.xpubIndex)
+      .publicKey.toAddress()
+      .toString();
+    csConfig.xpubIndex++;
+    let opts = {
+      coldStakingKeyFor: {}
+    };
+    opts.coldStakingKeyFor[wallet.id] = csConfig;
+    this.configProvider.set(opts);
+
+    return addr;
+  }
 }

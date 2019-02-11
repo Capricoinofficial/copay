@@ -175,6 +175,11 @@ export class ColdStakingPage extends WalletTabsChild {
   private isColdStakingActive(): void {
     this.getStakingConfig = this.walletProvider.getStakingConfig(this.wallet);
     this.isStaking = this.getStakingConfig !== null;
+
+    // Force a redraw if the zap button was made visible or hidden
+    setTimeout(() => {
+      this.content.resize();
+    }, 10);
   }
 
   private coldStakingStats() {
@@ -298,7 +303,9 @@ export class ColdStakingPage extends WalletTabsChild {
                       if (isZap) {
                         txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
                           addr.address,
-                          this.getStakingConfig.staking_key
+                          this.walletProvider.deriveColdStakingAddress(
+                            this.wallet
+                          )
                         ).toString();
                       }
                       this.walletProvider
