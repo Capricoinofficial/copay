@@ -26,6 +26,8 @@ import { ColdStakingEnablePage } from './enable/enable';
 
 import { Subscription } from 'rxjs';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'page-cold-staking',
   templateUrl: 'cold-staking.html'
@@ -223,15 +225,89 @@ export class ColdStakingPage extends WalletTabsChild {
     });
   }
 
-  private balanceTransfer(isZap): Promise<any> {
+  private async balanceTransfer(isZap): Promise<any> {
+    try {
+      this.onGoingProcessProvider.set('calculatingFee');
+
+      let inputs = await this.getTxInputs(isZap);
+
+      if (inputs.length === 0) {
+        return;
+      }
+
+      let total = _.sumBy(inputs, 'satoshis');
+
+      const txp: Partial<TransactionProposal> = {};
+      txp.inputs = inputs;
+
+      // Placeholder for fee calculation
+      txp.outputs = [
+        {
+          toAddress: '',
+          amount: total,
+          message: ''
+        }
+      ];
+
+      txp.message = 'Balance Transfer';
+      txp.excludeUnconfirmedUtxos = true;
+
+      let fee = await this.feeProvider.getEstimatedFee(this.wallet, txp);
+
+      this.onGoingProcessProvider.clear();
+
+      let proceed = await this.popupProvider.ionicConfirm(
+        this.translate.instant('Balance Transfer'),
+        this.replaceParametersProvider.replace(
+          this.translate.instant(
+            'This balance transfer will incur a fee of {{fee}} {{unit}}.'
+          ),
+          { fee: fee / 1e8, unit: this.wallet.coin.toUpperCase() }
+        ),
+        this.translate.instant('Proceed'),
+        this.translate.instant('Cancel')
+      );
+
+      if (!proceed) return;
+
+      // Update txp with fee
+      txp.fee = fee;
+      txp.outputs[0].amount = txp.outputs[0].amount - fee;
+
+      let spend_address = await this.walletProvider.getColdStakeSpendAddress(
+        this.wallet,
+        !!isZap
+      );
+      let stake_address = this.walletProvider.deriveColdStakingAddress(
+        this.wallet
+      );
+
+      txp.outputs[0].toAddress = spend_address;
+      if (isZap) {
+        txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
+          spend_address,
+          stake_address
+        ).toString();
+      }
+
+      let ctxp = await this.walletProvider.createTx(this.wallet, txp);
+
+      await this.walletProvider.publishAndSign(this.wallet, ctxp);
+
+      this.onGoingProcessProvider.clear();
+    } catch (e) {
+      this.onGoingProcessProvider.clear();
+      throw e;
+    }
+  }
+
+  private getTxInputs(isZap): Promise<any> {
     return new Promise((resolve, reject) => {
       this.wallet.getUtxos({}, (err, utxos) => {
         if (err) {
-          this.logger.error(err);
           reject(err);
         }
-        let inputs = [],
-          total = 0;
+        let inputs = [];
         utxos.forEach(utxo => {
           if (utxo.confirmations > 0) {
             const utxoStaking =
@@ -240,104 +316,14 @@ export class ColdStakingPage extends WalletTabsChild {
 
             if (isZap && !utxoStaking) {
               inputs.push(utxo);
-              total += utxo.satoshis;
             }
 
             if (!isZap && utxoStaking) {
               inputs.push(utxo);
-              total += utxo.satoshis;
             }
           }
         });
-
-        if (inputs.length === 0) {
-          return resolve();
-        }
-
-        this.onGoingProcessProvider.set('calculatingFee');
-
-        const txp: Partial<TransactionProposal> = {};
-        txp.inputs = inputs;
-
-        // Placeholder for fee calculation
-        txp.outputs = [
-          {
-            toAddress: '',
-            amount: total,
-            message: ''
-          }
-        ];
-
-        txp.message = 'Balance Transfer';
-        txp.excludeUnconfirmedUtxos = true;
-
-        this.feeProvider
-          .getEstimatedFee(this.wallet, txp)
-          .then(fee => {
-            this.onGoingProcessProvider.clear();
-            this.popupProvider
-              .ionicConfirm(
-                this.translate.instant('Balance Transfer'),
-                this.replaceParametersProvider.replace(
-                  this.translate.instant(
-                    'This balance transfer will incur a fee of {{fee}} {{unit}}.'
-                  ),
-                  { fee: fee / 1e8, unit: this.wallet.coin.toUpperCase() }
-                ),
-                this.translate.instant('Proceed'),
-                this.translate.instant('Cancel')
-              )
-              .then((res: boolean) => {
-                if (res) {
-                  txp.fee = fee;
-                  txp.outputs[0].amount = txp.outputs[0].amount - fee;
-
-                  this.wallet.createAddress(
-                    { isChange: true, sha256: !!isZap },
-                    (err, addr) => {
-                      if (err) {
-                        this.logger.error(err);
-                        reject(err);
-                      }
-                      txp.outputs[0].toAddress = addr.address;
-                      if (isZap) {
-                        txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
-                          addr.address,
-                          this.walletProvider.deriveColdStakingAddress(
-                            this.wallet
-                          )
-                        ).toString();
-                      }
-                      this.walletProvider
-                        .createTx(this.wallet, txp)
-                        .then(ctxp => {
-                          this.walletProvider
-                            .publishAndSign(this.wallet, ctxp)
-                            .then(() => {
-                              this.onGoingProcessProvider.clear();
-                              resolve();
-                            })
-                            .catch(err => {
-                              this.onGoingProcessProvider.clear();
-                              this.logger.error(err);
-                              reject(err);
-                            });
-                        })
-                        .catch(err => {
-                          this.onGoingProcessProvider.clear();
-                          this.logger.error(err);
-                          reject(err);
-                        });
-                    }
-                  );
-                }
-              });
-          })
-          .catch(err => {
-            this.onGoingProcessProvider.clear();
-            this.logger.error(err);
-            reject(err);
-          });
+        resolve(inputs);
       });
     });
   }

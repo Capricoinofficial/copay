@@ -677,19 +677,16 @@ export class ConfirmPage extends WalletTabsChild {
     return warningMsg.join('\n');
   }
 
-  private getTxp(tx, wallet, dryRun: boolean): Promise<any> {
-    return new Promise((resolve, reject) => {
+  private async getTxp(tx, wallet, dryRun: boolean): Promise<any> {
       // ToDo: use a credential's (or fc's) function for this
       if (tx.description && !wallet.credentials.sharedEncryptingKey) {
-        const msg = this.translate.instant(
+        throw this.translate.instant(
           'Could not add message to imported wallet without shared encrypting key'
         );
-        return reject(msg);
       }
 
       if (tx.amount > Number.MAX_SAFE_INTEGER) {
-        const msg = this.translate.instant('Amount too big');
-        return reject(msg);
+        throw this.translate.instant('Amount too big');
       }
 
       const txp: Partial<TransactionProposal> = {};
@@ -753,18 +750,17 @@ export class ConfirmPage extends WalletTabsChild {
         this.wallet
       );
       if (coldStakingAddress) {
+        if (
+          coldStakingAddress.startsWith('pcs') ||
+          coldStakingAddress.startsWith('tpcs')
+        ) {
+          txp.changeAddress = await this.walletProvider.getColdStakeSpendAddress(this.wallet, true);
+        }
         txp.coldStakingAddress = coldStakingAddress;
       }
 
-      this.walletProvider
-        .createTx(wallet, txp)
-        .then(ctxp => {
-          return resolve(ctxp);
-        })
-        .catch(err => {
-          return reject(err);
-        });
-    });
+      return this.walletProvider
+        .createTx(wallet, txp);
   }
 
   private showInsufficientFundsInfoSheet(): void {

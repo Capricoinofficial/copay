@@ -4,9 +4,9 @@ import { Events, NavController, NavParams } from 'ionic-angular';
 
 // providers
 import { BwcProvider } from '../../../providers/bwc/bwc';
-import { ConfigProvider } from '../../../providers/config/config';
 import { Logger } from '../../../providers/logger/logger';
 import { ProfileProvider } from '../../../providers/profile/profile';
+import { WalletProvider } from '../../../providers/wallet/wallet';
 
 // validators
 import { ColdStakingValidator } from '../../../validators/coldstaking';
@@ -26,7 +26,7 @@ export class ColdStakingEnablePage {
     private navParams: NavParams,
     private profileProvider: ProfileProvider,
     private bwcProvider: BwcProvider,
-    private configProvider: ConfigProvider,
+    private walletProvider: WalletProvider,
     private logger: Logger
   ) {
     this.coldStakingEnable = this.formBuilder.group({
@@ -56,15 +56,12 @@ export class ColdStakingEnablePage {
   }
 
   public save(): void {
-    let opts = {
-      coldStakingKeyFor: {}
-    };
-    opts.coldStakingKeyFor[this.navParams.data.walletId] = {
+    let config = {
       label: this.coldStakingEnable.controls['label'].value,
-      staking_key: this.coldStakingEnable.controls['staking_key'].value,
-      xpubIndex: 0
+      staking_key: this.coldStakingEnable.controls['staking_key'].value
     };
-    this.configProvider.set(opts);
+
+    this.walletProvider.setStakingConfig(this.wallet, config);
 
     this.events.publish('wallet:updated', this.navParams.data.walletId);
     this.navCtrl.pop();
