@@ -1766,6 +1766,7 @@ export class WalletProvider {
           sha256: true
         });
         this.setStakingConfig(wallet, csConfig);
+        return csConfig.spend_address;
       } else {
         return csConfig.spend_address;
       }

@@ -227,13 +227,13 @@ export class ColdStakingPage extends WalletTabsChild {
 
   private async balanceTransfer(isZap): Promise<any> {
     try {
-      this.onGoingProcessProvider.set('calculatingFee');
-
       let inputs = await this.getTxInputs(isZap);
 
       if (inputs.length === 0) {
         return;
       }
+
+      this.onGoingProcessProvider.set('calculatingFee');
 
       let total = _.sumBy(inputs, 'satoshis');
 
