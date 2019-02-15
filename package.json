@@ -191,7 +191,7 @@
     "base64-js": "^1.3.0",
     "bech32-buffer": "^0.1.2",
     "bitauth": "git+https://github.com/bitpay/bitauth.git#copay",
-    "bitcore-wallet-client": "git+https://github.com/spazzymoto/bitcore-wallet-client.git#cold_staking",
+    "bitcore-wallet-client": "git://github.com/particl/bitcore-wallet-client.git",
     "buffer-compare": "1.1.1",
     "cordova": "8.1.2",
     "cordova-android": "7.1.2",
