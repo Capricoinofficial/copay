@@ -235,8 +235,7 @@ export class WalletDetailsPage extends WalletTabsChild {
       opts = opts || {};
       this.updateStatus(opts.force);
       this.updateTxHistory(opts.retry);
-      this.isStaking =
-        this.walletProvider.getStakingConfig(this.wallet) !== null;
+      this.isStaking = this.walletProvider.isStaking(this.wallet);
     },
     2000,
     {

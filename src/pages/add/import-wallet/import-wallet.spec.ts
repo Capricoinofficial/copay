@@ -91,7 +91,7 @@ describe('ImportWalletPage', () => {
       testBed.createComponent(ImportWalletPage);
       let info = {
         derivationPath: "m/44'/0'/0'",
-        bwsURL: 'http://localhost:3232/bws/api',
+        bwsURL: 'https://bws.particl.io/bws/api',
         coin: 'btc',
         words: 'mom mom mom mom mom mom mom mom mom mom mom mom',
         backupText: 'test'
@@ -116,7 +116,7 @@ describe('ImportWalletPage', () => {
 
       let info = {
         derivationPath: "m/44'/0'/0'",
-        bwsURL: 'http://localhost:3232/bws/api',
+        bwsURL: 'https://bws.particl.io/bws/api',
         coin: 'btc',
         words: 'mom1 mom2 mom3 mom4 mom5 mom6 mom7 mom8 mom9 mom10 mom11 mom12',
         backupText: 'test'

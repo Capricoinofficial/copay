@@ -39,7 +39,7 @@ describe('CreateWalletPage', () => {
         n: 3,
         myName: 'test',
         networkName: 'livenet',
-        bwsurl: 'http://localhost:3232/bws/api',
+        bwsurl: 'https://bws.particl.io/bws/api',
         singleAddress: false,
         coin: 'btc',
         mnemonic: 'mom mom mom mom mom mom mom mom mom mom mom mom',
@@ -53,7 +53,7 @@ describe('CreateWalletPage', () => {
       instance.createForm.value.totalCopayers = 3;
       instance.createForm.value.testnetEnabled = false;
       instance.createForm.value.derivationPath = "m/44'/0'/0'";
-      instance.createForm.value.bwsURL = 'http://localhost:3232/bws/api';
+      instance.createForm.value.bwsURL = 'https://bws.particl.io/bws/api';
       instance.createForm.value.singleAddress = false;
       instance.createForm.value.coin = 'btc';
       instance.createForm.value.selectedSeed = 'set';

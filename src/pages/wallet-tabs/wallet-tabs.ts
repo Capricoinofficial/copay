@@ -113,7 +113,6 @@ export class WalletTabsPage {
     this.events.unsubscribe('bwsEvent');
     this.events.unsubscribe('Wallet/setAddress');
     this.events.unsubscribe('Wallet/disableHardwareKeyboard');
-    this.events.unsubscribe('status:updated');
   }
 
   private updateDesktopOnFocus() {
