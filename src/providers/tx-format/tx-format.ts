@@ -114,7 +114,7 @@ export class TxFormatProvider {
     if (tx.outputs && tx.outputs.length) {
       var outputsNr = tx.outputs.length;
 
-      if (tx.action != 'received') {
+      if (tx.action !== 'received' && tx.action !== 'staked') {
         if (outputsNr > 1) {
           tx.recipientCount = outputsNr;
           tx.hasMultiplesOutputs = true;

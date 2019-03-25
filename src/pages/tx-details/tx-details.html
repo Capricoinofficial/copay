@@ -12,11 +12,13 @@
           <span *ngIf="btx.action === 'sent'" translate>Sent</span>
           <span *ngIf="btx.action === 'received'" translate>Received</span>
           <span *ngIf="btx.action === 'moved'" translate>Moved</span>
+          <span *ngIf="btx.action === 'staked'" translate>Staked</span>
         </div>
         <div class="sending-label" *ngIf="btx.confirmations === 0">
           <span *ngIf="btx.action == 'sent'" translate>Sending</span>
           <span *ngIf="btx.action == 'moved'" translate>Moving</span>
           <span *ngIf="btx.action == 'received'" translate>Receiving</span>
+          <span *ngIf="btx.action == 'staked'" translate>Staking</span>
         </div>
         <div class="amount-label">
           <div class="amount">
@@ -28,6 +30,7 @@
               <img class="sending-img" src="assets/img/tx-action/icon-sent.svg" width="40" *ngIf="btx.action === 'sent'">
               <img class="sending-img" src="assets/img/tx-action/icon-received.svg" width="40" *ngIf="btx.action === 'received'">
               <img class="sending-img" src="assets/img/tx-action/icon-moved.svg" width="40" *ngIf="btx.action === 'moved'">
+              <img class="sending-img" src="assets/img/tx-action/icon-staked.svg" width="40" *ngIf="btx.action === 'staked'">
             </span>
             <span *ngIf="btx.confirmations === 0">
               <img class="sending-img" src="assets/img/tx-action/icon-confirming.svg">
@@ -47,7 +50,7 @@
       </div>
     </label-tip>
 
-    <ion-item class="with-label" *ngIf="btx && btx.feeStr && btx.action != 'received'">
+    <ion-item class="with-label" *ngIf="btx && btx.feeStr && btx.action != 'received' && btx.action !== 'staked'">
       <div class="fee-title">
         {{'Fee' | translate}}
       </div>

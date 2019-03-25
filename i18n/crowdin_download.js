@@ -12,23 +12,7 @@ var path = require('path');
 var https = require('https');
 var AdmZip = require('adm-zip');
 
-var crowdin_identifier = 'copay';
-
-var local_file_name2 = path.join(__dirname, 'docs/appstore_en.txt');
-var local_file_name3 = path.join(__dirname, 'docs/updateinfo_en.txt');
-
-try {
-  fs.statSync(local_file_name2);
-  fs.statSync(local_file_name3);
-} catch (e) {
-  console.log(
-    '\n### ABORTING ### One of the following files does not exist:\n' +
-      local_file_name2 +
-      '\n' +
-      local_file_name3
-  );
-  process.exit(1);
-}
+var crowdin_identifier = 'particl-copay';
 
 try {
   // obtain the crowdin api key
@@ -67,45 +51,6 @@ https.get(
         var zip = new AdmZip(buf);
         zip.extractAllTo('/tmp/copay', true);
         console.log('Done extracting ZIP file.');
-
-        var files = fs.readdirSync('/tmp/copay/docs');
-
-        for (var i in files) {
-          if (
-            files[i].slice(0, 9) == 'appstore_' &&
-            files[i].slice(-4) == '.txt' &&
-            files[i] != 'appstore_en.txt'
-          ) {
-            var english_file = fs.readFileSync(local_file_name2, 'utf8');
-            var compare_file = fs.readFileSync(
-              path.join(__dirname, 'docs/' + files[i]),
-              'utf8'
-            );
-            english_file = english_file.replace(/\r\n/g, '\n');
-            compare_file = compare_file.replace(/\r\n/g, '\n');
-            if (compare_file == english_file) {
-              fs.unlinkSync(path.join(__dirname, 'docs/' + files[i]));
-            }
-          }
-          if (
-            files[i].slice(0, 11) == 'updateinfo_' &&
-            files[i].slice(-4) == '.txt' &&
-            files[i] != 'updateinfo_en.txt'
-          ) {
-            var english_file = fs.readFileSync(local_file_name3, 'utf8');
-            var compare_file = fs.readFileSync(
-              path.join(__dirname, 'docs/' + files[i]),
-              'utf8'
-            );
-            english_file = english_file.replace(/\r\n/g, '\n');
-            compare_file = compare_file.replace(/\r\n/g, '\n');
-            if (compare_file == english_file) {
-              fs.unlinkSync(path.join(__dirname, 'docs/' + files[i]));
-            }
-          }
-        }
-
-        console.log('Cleaned out completely untranslated appstore docs.');
 
         var files = fs.readdirSync('/tmp/copay/po');
 

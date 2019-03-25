@@ -29,6 +29,8 @@ export interface Config {
     };
   };
 
+  coldStakingKeyFor?: {};
+
   bws: {
     url: string;
   };
@@ -193,8 +195,9 @@ export class ConfigProvider {
           wp: ''
         },
         particl: {
-          ios: '',
-          android: 'https://play.google.com/store/apps/details?id=io.particl.copay',
+          ios: 'https://itunes.apple.com/us/app/particl-copay/id1449589645',
+          android:
+            'https://play.google.com/store/apps/details?id=io.particl.copay',
           wp: ''
         }
       },
@@ -238,7 +241,7 @@ export class ConfigProvider {
       log: {
         weight: 3
       },
-  
+
       blockExplorerUrl: {
         btc: {
           live: 'insight.bitpay.com',

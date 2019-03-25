@@ -5,14 +5,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: copay\n"
+"X-Crowdin-Project: particl-copay\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: template.pot\n"
-"Project-Id-Version: copay\n"
-"Last-Translator: cmgustavo83\n"
+"Project-Id-Version: particl-copay\n"
+"Last-Translator: particl\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
-"PO-Revision-Date: 2019-01-09 14:55\n"
+"PO-Revision-Date: 2019-02-07 15:13\n"
 
 msgid "(Trusted)"
 msgstr "(Доверенный)"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "2. Enter Gift Code"
 msgstr ""
 
-msgid "5-star ratings help us get BitPay Wallet into more hands, and more users means more resources can be committed to the app!"
+msgid "5-star ratings help us get the Particl Wallet into more hands, and more users means more resources can be committed to the app!"
 msgstr ""
 
 msgid "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
@@ -99,7 +99,7 @@ msgid "Add this BitPay account ({{email}})?"
 msgstr "Добавить эту учетную запись BitPay ({{email}})?"
 
 msgid "Address"
-msgstr "Адрес"
+msgstr "Биткойн-адрес"
 
 msgid "Address Book"
 msgstr "Aдресная книга"
@@ -129,7 +129,7 @@ msgid "All addresses"
 msgstr "Все адреса"
 
 msgid "All of your wallet balance may not be available for immediate spending."
-msgstr "В данный момент весь баланс вашего кошелька может быть недоступен для совершения платежей."
+msgstr ""
 
 msgid "Allow camera access"
 msgstr "Разрешить доступ камеры"
@@ -168,7 +168,7 @@ msgid "Apply changes"
 msgstr "Применить изменения"
 
 msgid "Approximate network fee to transfer wallet's balance (with normal priority)"
-msgstr "Приблизительная комиссия на перевод сети Bitcoin для передачи баланса кошелька (с нормальным приоритетом)"
+msgstr ""
 
 msgid "Archive All {brand} Gift Cards?"
 msgstr ""
@@ -233,6 +233,9 @@ msgstr "Недействительное приглашение"
 msgid "Balance Hidden"
 msgstr "Баланс Скрыт"
 
+msgid "Balance Transfer"
+msgstr ""
+
 msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
 msgstr ""
 
@@ -248,15 +251,6 @@ msgstr ""
 msgid "BitPay Card URI"
 msgstr ""
 
-msgid "Particl Address"
-msgstr ""
-
-msgid "Particl URI"
-msgstr ""
-
-msgid "Address"
-msgstr "Биткойн-адрес"
-
 msgid "Bitcoin Cash Address"
 msgstr ""
 
@@ -266,32 +260,11 @@ msgstr ""
 msgid "Bitcoin Cash Wallets"
 msgstr "Кошельки Bitcoin Cash"
 
-msgid "Particl network fee policy"
-msgstr "Политика комиссии сети Биткойн"
-
 msgid "Bitcoin URI"
 msgstr ""
 
 msgid "Bitcoin Wallets"
 msgstr "Bitcoin Кошельки"
-
-msgid "Particl is a currency."
-msgstr "Биткойн - это валюта."
-
-msgid "Particl is different - it cannot be safely held with a bank or web service."
-msgstr ""
-
-msgid "Particl is secure, digital money."
-msgstr "Bitcoin это безопасные, цифровые деньги."
-
-msgid "Fee:"
-msgstr "Tранзакционные сборы:"
-
-msgid "Particl network fee policy"
-msgstr "Политика комиссии сети Биткойн"
-
-msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "Particl transactions include a fee collected by miners on the network."
 
 msgid "Brands"
 msgstr ""
@@ -388,6 +361,21 @@ msgstr "Закрыть"
 
 msgid "Coin"
 msgstr "Монета"
+
+msgid "Coins staking"
+msgstr ""
+
+msgid "Cold Stake Zap"
+msgstr ""
+
+msgid "Cold Staking"
+msgstr ""
+
+msgid "Cold Staking Setup"
+msgstr ""
+
+msgid "Cold staking allows you to get interest on your PART coins."
+msgstr ""
 
 msgid "Color"
 msgstr "Цвет"
@@ -659,6 +647,15 @@ msgstr "Путь деривации"
 msgid "Details"
 msgstr "Подробности"
 
+msgid "Disable"
+msgstr ""
+
+msgid "Disable Cold Staking"
+msgstr ""
+
+msgid "Disable Staking"
+msgstr ""
+
 msgid "Disable notifications"
 msgstr "Отключить уведомления"
 
@@ -699,10 +696,13 @@ msgid "Edit"
 msgstr "Редактировать"
 
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 msgid "Empty addresses limit reached. New addresses cannot be generated."
 msgstr "Достигнут предел пустых адресов. Новые адреса больше не могут быть сгенерированы."
+
+msgid "Enable Cold Staking"
+msgstr ""
 
 msgid "Enable camera access in your device settings to get started."
 msgstr "Чтобы начать, разрешите доступ к камере в настройках вашего устройства."
@@ -740,9 +740,6 @@ msgstr "Введите пароль, чтобы зашифровать ваш к
 msgid "Enter a transaction memo"
 msgstr ""
 
-msgid "Enter wallet address"
-msgstr ""
-
 msgid "Enter custom fee in sat/byte"
 msgstr "Введите персонализированную комиссию в sat/byte"
 
@@ -751,6 +748,9 @@ msgstr ""
 
 msgid "Enter encrypt password"
 msgstr "Введите зашифрованный пароль"
+
+msgid "Enter wallet address"
+msgstr ""
 
 msgid "Enter wallet invitation"
 msgstr "Введите приглашение кошелька"
@@ -856,6 +856,9 @@ msgstr "Уровень комиссии не определен"
 
 msgid "Fee rate"
 msgstr ""
+
+msgid "Fee:"
+msgstr "Tранзакционные сборы:"
 
 msgid "Feedback"
 msgstr ""
@@ -1145,6 +1148,9 @@ msgstr "Для совершения оплаты достаточно отска
 msgid "Key already associated with an existing wallet"
 msgstr "Ключ уже связан с существующим кошельком"
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr "Язык"
 
@@ -1156,6 +1162,12 @@ msgstr ""
 
 msgid "Learn more"
 msgstr "Узнайте больше"
+
+msgid "Learn more about Cold Staking"
+msgstr ""
+
+msgid "Learn more about cold staking on the Particl wiki."
+msgstr ""
 
 msgid "Learn more about testnet blockchain"
 msgstr "Узнайте больше о тестнет блокчайн"
@@ -1418,6 +1430,9 @@ msgstr "Откройте проект GitHub"
 msgid "Open Insight"
 msgstr "Открыть Insight"
 
+msgid "Open Particl Wiki"
+msgstr ""
+
 msgid "Open Translation Community"
 msgstr "Редактировать перевод"
 
@@ -1427,6 +1442,9 @@ msgstr "Открыть настройки"
 msgid "Open website"
 msgstr "Открыть сайт"
 
+msgid "Optional label (e.g. Staking pool, my Raspberry Pi etc.)"
+msgstr ""
+
 msgid "Order the BitPay Card"
 msgstr "Заказать BitPay карту"
 
@@ -1435,6 +1453,30 @@ msgstr "Ой!"
 
 msgid "PIN"
 msgstr "PIN-код"
+
+msgid "Particl Address"
+msgstr ""
+
+msgid "Particl URI"
+msgstr ""
+
+msgid "Particl Wallets"
+msgstr ""
+
+msgid "Particl is a currency."
+msgstr "Биткойн - это валюта."
+
+msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgstr ""
+
+msgid "Particl is secure, digital money."
+msgstr "Particl это безопасные, цифровые деньги."
+
+msgid "Particl network fee policy"
+msgstr "Политика комиссии сети Биткойн"
+
+msgid "Particl transactions include a fee collected by miners on the network."
+msgstr ""
 
 msgid "Password"
 msgstr "Пароль"
@@ -1586,6 +1628,9 @@ msgstr "Приватный ключ зашифрован. Введите пар�
 msgid "Private key is encrypted, cannot sign"
 msgstr "Закрытый ключ зашифрован, не удалось подписать"
 
+msgid "Proceed"
+msgstr ""
+
 msgid "Proposal Accepted"
 msgstr "Платёж принят"
 
@@ -1734,7 +1779,7 @@ msgid "Retry"
 msgstr "Повторить попытку"
 
 msgid "Retry camera"
-msgstr "Retry camera"
+msgstr ""
 
 msgid "Save"
 msgstr "Сохранить"
@@ -1871,6 +1916,9 @@ msgstr "Задайте пароль"
 msgid "Settings"
 msgstr ""
 
+msgid "Setup Cold Staking"
+msgstr ""
+
 msgid "ShapeShift is not available at this moment. Please, try again later."
 msgstr "ShapeShift в настоящий момент недоступен. Пожалуйста, повторите попытку позже."
 
@@ -1955,6 +2003,15 @@ msgstr "Pасходный баланс"
 msgid "Spending this balance will need significant network fees"
 msgstr "Чтобы потратить этот баланс потребуется значительные сборы сети Биткойна"
 
+msgid "Staking"
+msgstr ""
+
+msgid "Staking key"
+msgstr ""
+
+msgid "Staking key (Pool address or Node public key)"
+msgstr ""
+
 msgid "Status"
 msgstr ""
 
@@ -2019,10 +2076,10 @@ msgid "The amount of funds immediately spendable from this wallet."
 msgstr "Сумма биткойнов доступных для совершения платежей."
 
 msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
-msgstr "Сумма биткойнов, выделенных в качестве входов для ожидающих рассмотрения платежей. Сумма определяется непотраченными выходами, ассоциированными с этим кошельком, и может превышать сумму, ассоциированную с предложенными платежами."
+msgstr ""
 
 msgid "The amount of funds stored in this wallet with less than 1 blockchain confirmation."
-msgstr "Сумма биткойнов с менее, чем одним подтверждением."
+msgstr ""
 
 msgid "The derivation path"
 msgstr "Путь деривации"
@@ -2090,8 +2147,8 @@ msgstr ""
 msgid "This app stores your particl with cutting-edge security."
 msgstr ""
 
-msgid "This payment request has expired."
-msgstr "Этот запрос платежа истёк."
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
+msgstr ""
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr ""
@@ -2099,11 +2156,17 @@ msgstr ""
 msgid "This information is available at the website."
 msgstr ""
 
+msgid "This means you will stop receiving interest on your PART coins."
+msgstr ""
+
 msgid "This password cannot be recovered. If this password is lost, funds can only be recovered by reimporting your 12-word recovery phrase."
 msgstr ""
 
 msgid "This password is only for this device, and it cannot be recovered. To avoid losing funds, write your password down."
 msgstr "Этот пароль предназначен только для этого устройства, и его невозможно восстановить. Чтобы не потерять средства, запишите свой пароль."
+
+msgid "This payment request has expired."
+msgstr "Этот запрос платежа истёк."
 
 msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr "Это ключевое словосочетание было создано с паролем. Для восстановления кошелька необходимо ключевое словосочетание и его пароль."
@@ -2196,6 +2259,9 @@ msgid "Transfer to Contact"
 msgstr "Перевести знакомым"
 
 msgid "Transfer to Multiple Recipients"
+msgstr ""
+
+msgid "Transfer to Particl Wallet"
 msgstr ""
 
 msgid "Translate address"
@@ -2324,6 +2390,9 @@ msgstr "ВНИМАНИЕ: НЕНАДЕЖНЫЙ СЕРТИФИКАТ"
 msgid "Waiting for copayers"
 msgstr "Ожидание совладельцев кошелька"
 
+msgid "Waiting on unconfirmed transactions..."
+msgstr ""
+
 msgid "Waiting..."
 msgstr "Ожидание..."
 
@@ -2372,6 +2441,9 @@ msgstr "Кошелёк заблокирован"
 msgid "Wallet is not complete"
 msgstr "Не все совладельцы присоединились"
 
+msgid "Wallet is staking"
+msgstr ""
+
 msgid "Wallet key"
 msgstr "Ключ кошелька"
 
@@ -2386,6 +2458,9 @@ msgstr "Кошелёк не найден"
 
 msgid "Wallet not registered at the wallet service. Recreate it from \"Create Wallet\" using \"Advanced Options\" to set your recovery phrase"
 msgstr "Кошелёк не зарегистрирован на сервере Bitcore. Пересоздайте кошелёк воспользовавшись дополнительными параметрами, чтобы указать ключевое словосочетание"
+
+msgid "Wallet not staking yet"
+msgstr ""
 
 msgid "Wallet recovery phrase"
 msgstr "Фраза восстановления кошелька"
@@ -2505,7 +2580,7 @@ msgid "You can use your Mercado Livre gift cards on your Mercado Pago account fo
 msgstr ""
 
 msgid "You control your particl."
-msgstr "Вы контролируете Ваши bitcoin-ы."
+msgstr "Вы контролируете Ваши particl-ы."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr ""
@@ -2513,11 +2588,11 @@ msgstr ""
 msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr ""
 
-msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
+msgid "You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!"
 msgstr ""
 
-msgid "Your particl wallet is ready!"
-msgstr "Ваш кошелёк готов!"
+msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
+msgstr ""
 
 msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
 msgstr ""
@@ -2527,6 +2602,9 @@ msgstr ""
 
 msgid "Your name"
 msgstr "Ваше имя"
+
+msgid "Your particl wallet is ready!"
+msgstr "Ваш кошелёк готов!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
 msgstr ""
@@ -2538,6 +2616,12 @@ msgid "Your wallet key will be encrypted. The encrypt password cannot be recover
 msgstr ""
 
 msgid "Your {walletType} wallet is backed up!"
+msgstr ""
+
+msgid "Zap"
+msgstr ""
+
+msgid "Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed."
 msgstr ""
 
 msgid "[Balance Hidden]"
@@ -2561,13 +2645,13 @@ msgstr "Подготавливается..."
 msgid "{appName} BCH wallets use the CashAddr format by default"
 msgstr ""
 
-msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. BitPay does not receive and does not control {coinName} miner fees."
+msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Particl does not receive and does not control {coinName} miner fees."
 msgstr ""
 
 msgid "{coinName} miner fees unusually high"
 msgstr ""
 
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
 msgstr ""
 
 msgid "{{fee}} {{coin}} will be deducted for bitcoin networking fees."

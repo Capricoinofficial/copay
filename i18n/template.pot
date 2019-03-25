@@ -23,8 +23,8 @@ msgid "2. Enter Gift Code"
 msgstr ""
 
 msgid ""
-"5-star ratings help us get BitPay Wallet into more hands, and more users "
-"means more resources can be committed to the app!"
+"5-star ratings help us get the Particl Wallet into more hands, and more "
+"users means more resources can be committed to the app!"
 msgstr ""
 
 msgid ""
@@ -136,9 +136,7 @@ msgstr ""
 msgid "All addresses"
 msgstr ""
 
-msgid ""
-"All of your bitcoin wallet balance may not be available for immediate "
-"spending."
+msgid "All of your wallet balance may not be available for immediate spending."
 msgstr ""
 
 msgid "Allow camera access"
@@ -175,15 +173,13 @@ msgstr ""
 msgid "Amount:"
 msgstr ""
 
-msgid "Anyone with your recovery phrase can access or spend your bitcoin."
+msgid "Anyone with your recovery phrase can access or spend your funds."
 msgstr ""
 
 msgid "Apply changes"
 msgstr ""
 
-msgid ""
-"Approximate Bitcoin network fee to transfer wallet's balance (with normal "
-"priority)"
+msgid "Approximate network fee to transfer wallet's balance (with normal priority)"
 msgstr ""
 
 msgid "Archive All {brand} Gift Cards?"
@@ -249,6 +245,9 @@ msgstr ""
 msgid "Balance Hidden"
 msgstr ""
 
+msgid "Balance Transfer"
+msgstr ""
+
 msgid ""
 "Be sure to store your recovery phrase in a secure place. If this app is "
 "deleted, your money cannot be recovered without it."
@@ -271,15 +270,6 @@ msgstr ""
 msgid "BitPay Card URI"
 msgstr ""
 
-msgid "Particl Address"
-msgstr ""
-
-msgid "Particl URI"
-msgstr ""
-
-msgid "Address"
-msgstr ""
-
 msgid "Bitcoin Cash Address"
 msgstr ""
 
@@ -289,31 +279,10 @@ msgstr ""
 msgid "Bitcoin Cash Wallets"
 msgstr ""
 
-msgid "Particl network fee policy"
-msgstr ""
-
 msgid "Bitcoin URI"
 msgstr ""
 
 msgid "Bitcoin Wallets"
-msgstr ""
-
-msgid "Particl is a currency."
-msgstr ""
-
-msgid "Particl is different - it cannot be safely held with a bank or web service."
-msgstr ""
-
-msgid "Particl is secure, digital money."
-msgstr ""
-
-msgid "Fee:"
-msgstr ""
-
-msgid "Particl network fee policy"
-msgstr ""
-
-msgid "Particl transactions include a fee collected by miners on the network."
 msgstr ""
 
 msgid "Brands"
@@ -341,8 +310,8 @@ msgid "Buying Gift Card..."
 msgstr ""
 
 msgid ""
-"By providing your email address, you give explicit consent to BitPay to use "
-"your email address to send you email notifications about payments."
+"By providing your email address, you give explicit consent to Particl to "
+"use your email address to send you email notifications about payments."
 msgstr ""
 
 msgid "Calculating fee..."
@@ -412,6 +381,21 @@ msgid "Close"
 msgstr ""
 
 msgid "Coin"
+msgstr ""
+
+msgid "Coins staking"
+msgstr ""
+
+msgid "Cold Stake Zap"
+msgstr ""
+
+msgid "Cold Staking"
+msgstr ""
+
+msgid "Cold Staking Setup"
+msgstr ""
+
+msgid "Cold staking allows you to get interest on your PART coins."
 msgstr ""
 
 msgid "Color"
@@ -691,6 +675,15 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
+msgid "Disable"
+msgstr ""
+
+msgid "Disable Cold Staking"
+msgstr ""
+
+msgid "Disable Staking"
+msgstr ""
+
 msgid "Disable notifications"
 msgstr ""
 
@@ -724,9 +717,9 @@ msgid "Duplicating wallet..."
 msgstr ""
 
 msgid ""
-"Each bitcoin wallet can generate billions of addresses from your 12-word "
-"recovery phrase. A new address is automatically generated and shown each "
-"time you receive a payment."
+"Each wallet can generate billions of addresses from your 12-word recovery "
+"phrase. A new address is automatically generated and shown each time you "
+"receive a payment."
 msgstr ""
 
 msgid "Economy"
@@ -739,6 +732,9 @@ msgid "Email"
 msgstr ""
 
 msgid "Empty addresses limit reached. New addresses cannot be generated."
+msgstr ""
+
+msgid "Enable Cold Staking"
 msgstr ""
 
 msgid "Enable camera access in your device settings to get started."
@@ -779,9 +775,6 @@ msgstr ""
 msgid "Enter a transaction memo"
 msgstr ""
 
-msgid "Enter wallet address"
-msgstr ""
-
 msgid "Enter custom fee in sat/byte"
 msgstr ""
 
@@ -789,6 +782,9 @@ msgid "Enter email address"
 msgstr ""
 
 msgid "Enter encrypt password"
+msgstr ""
+
+msgid "Enter wallet address"
 msgstr ""
 
 msgid "Enter wallet invitation"
@@ -894,6 +890,9 @@ msgid "Fee level is not defined"
 msgstr ""
 
 msgid "Fee rate"
+msgstr ""
+
+msgid "Fee:"
 msgstr ""
 
 msgid "Feedback"
@@ -1051,7 +1050,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"I give explicit consent to BitPay to use my email address to send me email "
+"I give explicit consent to Particl to use my email address to send me email "
 "notifications about payments (and, if selected, email updates and news "
 "about the wallet)."
 msgstr ""
@@ -1067,7 +1066,7 @@ msgstr ""
 
 msgid ""
 "I understand that if this app is moved to another device or deleted, my "
-"bitcoin can only be recovered with the recovery phrase"
+"funds can only be recovered with the recovery phrase"
 msgstr ""
 
 msgid ""
@@ -1104,7 +1103,7 @@ msgid "If enabled, wallets will also try to spend unconfirmed funds."
 msgstr ""
 
 msgid ""
-"If this device is replaced or this app is deleted, neither you nor BitPay "
+"If this device is replaced or this app is deleted, neither you nor Particl "
 "can recover your funds without a backup."
 msgstr ""
 
@@ -1203,8 +1202,8 @@ msgstr ""
 
 msgid ""
 "It's a good idea to avoid reusing addresses - this both protects your "
-"privacy and keeps your bitcoins secure against hypothetical attacks by "
-"quantum computers."
+"privacy and keeps your funds secure against hypothetical attacks by quantum "
+"computers."
 msgstr ""
 
 msgid ""
@@ -1228,6 +1227,9 @@ msgstr ""
 msgid "Key already associated with an existing wallet"
 msgstr ""
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr ""
 
@@ -1238,6 +1240,12 @@ msgid "Learn More"
 msgstr ""
 
 msgid "Learn more"
+msgstr ""
+
+msgid "Learn more about Cold Staking"
+msgstr ""
+
+msgid "Learn more about cold staking on the Particl wiki."
 msgstr ""
 
 msgid "Learn more about testnet blockchain"
@@ -1511,6 +1519,9 @@ msgstr ""
 msgid "Open Insight"
 msgstr ""
 
+msgid "Open Particl Wiki"
+msgstr ""
+
 msgid "Open Translation Community"
 msgstr ""
 
@@ -1520,6 +1531,9 @@ msgstr ""
 msgid "Open website"
 msgstr ""
 
+msgid "Optional label (e.g. Staking pool, my Raspberry Pi etc.)"
+msgstr ""
+
 msgid "Order the BitPay Card"
 msgstr ""
 
@@ -1527,6 +1541,30 @@ msgid "Ouch!"
 msgstr ""
 
 msgid "PIN"
+msgstr ""
+
+msgid "Particl Address"
+msgstr ""
+
+msgid "Particl URI"
+msgstr ""
+
+msgid "Particl Wallets"
+msgstr ""
+
+msgid "Particl is a currency."
+msgstr ""
+
+msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgstr ""
+
+msgid "Particl is secure, digital money."
+msgstr ""
+
+msgid "Particl network fee policy"
+msgstr ""
+
+msgid "Particl transactions include a fee collected by miners on the network."
 msgstr ""
 
 msgid "Password"
@@ -1681,6 +1719,9 @@ msgid "Private key encrypted. Enter password"
 msgstr ""
 
 msgid "Private key is encrypted, cannot sign"
+msgstr ""
+
+msgid "Proceed"
 msgstr ""
 
 msgid "Proposal Accepted"
@@ -1970,6 +2011,9 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+msgid "Setup Cold Staking"
+msgstr ""
+
 msgid "ShapeShift is not available at this moment. Please, try again later."
 msgstr ""
 
@@ -2056,6 +2100,15 @@ msgstr ""
 msgid "Spending this balance will need significant network fees"
 msgstr ""
 
+msgid "Staking"
+msgstr ""
+
+msgid "Staking key"
+msgstr ""
+
+msgid "Staking key (Pool address or Node public key)"
+msgstr ""
+
 msgid "Status"
 msgstr ""
 
@@ -2122,14 +2175,14 @@ msgid "The amount of funds immediately spendable from this wallet."
 msgstr ""
 
 msgid ""
-"The amount of bitcoin stored in this wallet that is allocated as inputs to "
+"The amount of funds stored in this wallet that is allocated as inputs to "
 "your pending transaction proposals. The amount is determined using unspent "
 "transaction outputs associated with this wallet and may be more than the "
 "actual amounts associated with your pending transaction proposals."
 msgstr ""
 
 msgid ""
-"The amount of bitcoin stored in this wallet with less than 1 blockchain "
+"The amount of funds stored in this wallet with less than 1 blockchain "
 "confirmation."
 msgstr ""
 
@@ -2196,10 +2249,10 @@ msgid "The spend proposal is not pending"
 msgstr ""
 
 msgid ""
-"The testnet is an alternative Bitcoin block chain, to be used for testing. "
-"Testnet coins are separate and distinct from actual bitcoins, and do not "
-"have any value. This allows application developers or bitcoin testers to "
-"experiment, without having to use real bitcoins."
+"The testnet is an alternative block chain, to be used for testing. Testnet "
+"coins are separate and distinct from actual bitcoins, and do not have any "
+"value. This allows application developers or testers to experiment, without "
+"having to use real coins."
 msgstr ""
 
 msgid "The total amount of funds stored in this wallet."
@@ -2229,7 +2282,7 @@ msgstr ""
 msgid "This app stores your particl with cutting-edge security."
 msgstr ""
 
-msgid "This payment request has expired."
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
 msgstr ""
 
 msgid ""
@@ -2239,6 +2292,9 @@ msgid ""
 msgstr ""
 
 msgid "This information is available at the website."
+msgstr ""
+
+msgid "This means you will stop receiving interest on your PART coins."
 msgstr ""
 
 msgid ""
@@ -2251,15 +2307,18 @@ msgid ""
 "losing funds, write your password down."
 msgstr ""
 
+msgid "This payment request has expired."
+msgstr ""
+
 msgid ""
 "This recovery phrase was created with a password. To recover this wallet "
 "both the recovery phrase and password are needed."
 msgstr ""
 
 msgid ""
-"This transaction amount is too small compared to current Bitcoin network "
-"fees. Spending these funds will need a Bitcoin network fee cost comparable "
-"to the funds itself."
+"This transaction amount is too small compared to current network fees. "
+"Spending these funds will need a network fee cost comparable to the funds "
+"itself."
 msgstr ""
 
 msgid ""
@@ -2351,6 +2410,9 @@ msgid "Transfer to Contact"
 msgstr ""
 
 msgid "Transfer to Multiple Recipients"
+msgstr ""
+
+msgid "Transfer to Particl Wallet"
 msgstr ""
 
 msgid "Translate address"
@@ -2483,6 +2545,9 @@ msgstr ""
 msgid "Waiting for copayers"
 msgstr ""
 
+msgid "Waiting on unconfirmed transactions..."
+msgstr ""
+
 msgid "Waiting..."
 msgstr ""
 
@@ -2531,6 +2596,9 @@ msgstr ""
 msgid "Wallet is not complete"
 msgstr ""
 
+msgid "Wallet is staking"
+msgstr ""
+
 msgid "Wallet key"
 msgstr ""
 
@@ -2546,6 +2614,9 @@ msgstr ""
 msgid ""
 "Wallet not registered at the wallet service. Recreate it from \"Create "
 "Wallet\" using \"Advanced Options\" to set your recovery phrase"
+msgstr ""
+
+msgid "Wallet not staking yet"
 msgstr ""
 
 msgid "Wallet recovery phrase"
@@ -2667,7 +2738,9 @@ msgid ""
 "translation website. We’re looking forward to hearing from you!"
 msgstr ""
 
-msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
+msgid ""
+"You can scan particl addresses, bitcoin addresses, payment requests, paper "
+"wallets, and more."
 msgstr ""
 
 msgid ""
@@ -2699,17 +2772,19 @@ msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte.
 msgstr ""
 
 msgid ""
+"You wallet is generating interest on your PART coins and you are helping to "
+"secure the Particl network at the same time!"
+msgstr ""
+
+msgid ""
 "Your BitPay Card is ready. Add funds to your card to start using it at "
 "stores and ATMs worldwide."
 msgstr ""
 
-msgid "Your particl wallet is ready!"
-msgstr ""
-
 msgid ""
-"Your extended private keys are all that is needed to access your bitcoin "
-"funds. Be sure to protect your private keys and store them only on secure "
-"devices. BitPay does not have access to your private keys, so you alone are "
+"Your extended private keys are all that is needed to access your funds. Be "
+"sure to protect your private keys and store them only on secure devices. "
+"Particl does not have access to your private keys, so you alone are "
 "responsible for your keys. If you share key access with external services, "
 "you take responsibility for the risk of theft or breach. Only advanced "
 "users should handle extended private keys directly."
@@ -2719,6 +2794,9 @@ msgid "Your fee is lower than recommended."
 msgstr ""
 
 msgid "Your name"
+msgstr ""
+
+msgid "Your particl wallet is ready!"
 msgstr ""
 
 msgid ""
@@ -2737,6 +2815,17 @@ msgid ""
 msgstr ""
 
 msgid "Your {walletType} wallet is backed up!"
+msgstr ""
+
+msgid "Zap"
+msgstr ""
+
+msgid ""
+"Zapping will fast-forward the cold staking progress instantly to "
+"100%.<br><br>Be warned, that this decreases your financial privacy, as it "
+"bundles all your remaining coins into one big transaction. It is advised to "
+"zap only the small remaining part of your coins (last ~10 %) &ndash; those "
+"that take ages to get processed."
 msgstr ""
 
 msgid "[Balance Hidden]"
@@ -2762,7 +2851,7 @@ msgstr ""
 
 msgid ""
 "{coinName} miner fees are high due to record demand for limited space on "
-"the {coinName} network. BitPay does not receive and does not control "
+"the {coinName} network. Particl does not receive and does not control "
 "{coinName} miner fees."
 msgstr ""
 
@@ -2772,7 +2861,7 @@ msgstr ""
 msgid ""
 "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain "
 "information, networking and Copayer synchronization. The default "
-"configuration points to https://bws.bitpay.com (BitPay's public BWS "
+"configuration points to https://bws.particl.io (Particl's public BWS "
 "instance)."
 msgstr ""
 

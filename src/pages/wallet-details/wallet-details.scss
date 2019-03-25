@@ -136,6 +136,9 @@ page-wallet-details {
       .received {
         color: color($colors, success);
       }
+      .staked {
+        color: #199ee3;
+      }
     }
     .date {
       font-size: 14px;
@@ -192,6 +195,17 @@ page-wallet-details {
       height: 1.6rem;
       width: 1.6rem;
       margin-top: 5px;
+    }
+    .staking {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-top: 7px;
+      margin-left: 0.75rem;
+    }
+    .staking-text {
+      color: color($colors, light);
+      height: 3rem;
+      width: 4rem;
     }
     .wallet-type {
       display: block;
