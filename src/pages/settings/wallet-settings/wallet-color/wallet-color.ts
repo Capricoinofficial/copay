@@ -32,7 +32,7 @@ export class WalletColorPage {
   }
 
   ionViewWillEnter() {
-    const COLOR_COUNT = 16;
+    const COLOR_COUNT = 18;
     this.wallet = this.profileProvider.getWallet(this.navParams.data.walletId);
     this.colorCount = Array(COLOR_COUNT)
       .fill(0)

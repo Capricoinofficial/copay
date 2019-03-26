@@ -60,6 +60,7 @@ export class WalletDetailsPage extends WalletTabsChild {
   public addressbook = {};
   public txps = [];
   public lowUtxosWarning: boolean;
+  public isStaking: boolean;
 
   constructor(
     navCtrl: NavController,
@@ -234,6 +235,7 @@ export class WalletDetailsPage extends WalletTabsChild {
       opts = opts || {};
       this.updateStatus(opts.force);
       this.updateTxHistory(opts.retry);
+      this.isStaking = this.walletProvider.isStaking(this.wallet);
     },
     2000,
     {

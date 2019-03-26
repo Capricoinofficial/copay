@@ -5,14 +5,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: copay\n"
+"X-Crowdin-Project: particl-copay\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: template.pot\n"
-"Project-Id-Version: copay\n"
-"Last-Translator: cmgustavo83\n"
+"Project-Id-Version: particl-copay\n"
+"Last-Translator: particl\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
-"PO-Revision-Date: 2019-01-09 14:56\n"
+"PO-Revision-Date: 2019-02-07 15:12\n"
 
 msgid "(Trusted)"
 msgstr "(De confianza)"
@@ -29,8 +29,8 @@ msgstr "1. Toque en \"Agregar un método de pago\" y seleccione \"Tarjeta de reg
 msgid "2. Enter Gift Code"
 msgstr "2. Introduzca el código de regalo"
 
-msgid "5-star ratings help us get BitPay Wallet into more hands, and more users means more resources can be committed to the app!"
-msgstr "Una calificación de 5 estrellas nos ayuda a que BitPay Wallet sea más utilizado, mientras más usuarios más son las razones para seguir comprometidos con esta aplicación!"
+msgid "5-star ratings help us get the Particl Wallet into more hands, and more users means more resources can be committed to the app!"
+msgstr ""
 
 msgid "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
 msgstr "Se excluyeron un total de {{amountAboveMaxSizeStr}} {{coin}}. Se superó el tamaño máximo permitido para una transacción."
@@ -129,7 +129,7 @@ msgid "All addresses"
 msgstr "Todas las direcciones"
 
 msgid "All of your wallet balance may not be available for immediate spending."
-msgstr "Todo el balance de tu billetera puede que no esté disponible para su uso inmediato."
+msgstr ""
 
 msgid "Allow camera access"
 msgstr "Permitir el acceso a la cámara"
@@ -162,13 +162,13 @@ msgid "Amount:"
 msgstr "Importe:"
 
 msgid "Anyone with your recovery phrase can access or spend your funds."
-msgstr "Cualquier persona con su frase de recuperación puede tener acceso y gastar sus bitcoins."
+msgstr ""
 
 msgid "Apply changes"
 msgstr "Aplicar los cambios"
 
 msgid "Approximate network fee to transfer wallet's balance (with normal priority)"
-msgstr "Comisión aproximada de la red Bitcoin para transferir el saldo de esta billetera (con prioridad normal)"
+msgstr ""
 
 msgid "Archive All {brand} Gift Cards?"
 msgstr "¿Archivar todas las tarjetas de regalo de {brand}?"
@@ -233,6 +233,9 @@ msgstr "Invitación incorrecta a la billetera"
 msgid "Balance Hidden"
 msgstr "Balance Oculto"
 
+msgid "Balance Transfer"
+msgstr ""
+
 msgid "Be sure to store your recovery phrase in a secure place. If this app is deleted, your money cannot be recovered without it."
 msgstr "Asegúrate de guardar la frase de recuperación en un lugar seguro. Si se elimina esta aplicación, no se podrá recuperar el dinero."
 
@@ -248,15 +251,6 @@ msgstr "Monto inferior al mínimo"
 msgid "BitPay Card URI"
 msgstr "URI de la Tarjeta de BitPay"
 
-msgid "Particl Address"
-msgstr "Dirección Address"
-
-msgid "Particl URI"
-msgstr "URI de Particl"
-
-msgid "Address"
-msgstr "Dirección Bitcoin"
-
 msgid "Bitcoin Cash Address"
 msgstr "Dirección Bitcoin Cash"
 
@@ -266,32 +260,11 @@ msgstr "URI de Bitcoin Cash"
 msgid "Bitcoin Cash Wallets"
 msgstr "Billeteras Bitcoin Cash"
 
-msgid "Particl network fee policy"
-msgstr "Política de Comisión de la Red Bitcoin"
-
 msgid "Bitcoin URI"
 msgstr "URI de Bitcoin"
 
 msgid "Bitcoin Wallets"
 msgstr "Billeteras Bitcoin"
-
-msgid "Particl is a currency."
-msgstr "Bitcoin es una moneda."
-
-msgid "Particl is different - it cannot be safely held with a bank or web service."
-msgstr "Bitcoin es diferente - no se puede resguardar con ningún servicio web o banco."
-
-msgid "Particl is secure, digital money."
-msgstr "Bitcoin es seguro, es dinero digital."
-
-msgid "Fee:"
-msgstr "Comisión de minero bitcoin:"
-
-msgid "Particl network fee policy"
-msgstr "Política de comisión de la red bitcoin"
-
-msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "Las transacciones de bitcoins incluyen una comisión recogida por los mineros de la red."
 
 msgid "Brands"
 msgstr "Marcas"
@@ -318,7 +291,7 @@ msgid "Buying Gift Card..."
 msgstr "Comprando Tarjeta de Regalo..."
 
 msgid "By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments."
-msgstr "Al proporcionar su dirección de correo electrónico, usted da consentimiento explícito a BitPay de usar su dirección de correo electrónico para enviarle notificaciones sobre pagos."
+msgstr ""
 
 msgid "Calculating fee..."
 msgstr "Calculando comisión..."
@@ -389,8 +362,23 @@ msgstr "Cerrar"
 msgid "Coin"
 msgstr "Moneda"
 
+msgid "Coins staking"
+msgstr ""
+
+msgid "Cold Stake Zap"
+msgstr ""
+
+msgid "Cold Staking"
+msgstr ""
+
+msgid "Cold Staking Setup"
+msgstr ""
+
+msgid "Cold staking allows you to get interest on your PART coins."
+msgstr ""
+
 msgid "Color"
-msgstr "Color"
+msgstr ""
 
 msgid "Completed"
 msgstr "Terminadas"
@@ -659,6 +647,15 @@ msgstr "Camino de derivación"
 msgid "Details"
 msgstr "Detalles"
 
+msgid "Disable"
+msgstr ""
+
+msgid "Disable Cold Staking"
+msgstr ""
+
+msgid "Disable Staking"
+msgstr ""
+
 msgid "Disable notifications"
 msgstr "Desactivar notificaciones"
 
@@ -690,7 +687,7 @@ msgid "Duplicating wallet..."
 msgstr "Duplicando billetera..."
 
 msgid "Each wallet can generate billions of addresses from your 12-word recovery phrase. A new address is automatically generated and shown each time you receive a payment."
-msgstr "Cada billetera puede generar billones de direcciones desde su frase de recuperación de 12 palabras. Se genera una nueva dirección automáticamente cada vez que se recibe un pago."
+msgstr ""
 
 msgid "Economy"
 msgstr "Económico"
@@ -703,6 +700,9 @@ msgstr "Correo electrónico"
 
 msgid "Empty addresses limit reached. New addresses cannot be generated."
 msgstr "Se ha alcanzado el límite de direcciones vacías. No se pueden generar nuevas direcciones."
+
+msgid "Enable Cold Staking"
+msgstr ""
 
 msgid "Enable camera access in your device settings to get started."
 msgstr "Habilitar el acceso de la cámara en su configuración de dispositivo para empezar."
@@ -740,9 +740,6 @@ msgstr "Ingresar contraseña para cifrar la billetera"
 msgid "Enter a transaction memo"
 msgstr "Ingrese una nota de transacción"
 
-msgid "Enter wallet address"
-msgstr "Ingrese una dirección bitcoin"
-
 msgid "Enter custom fee in sat/byte"
 msgstr "Ingresar comisión en sat/byte"
 
@@ -751,6 +748,9 @@ msgstr "Ingrese la dirección de correo electrónico"
 
 msgid "Enter encrypt password"
 msgstr "Ingrese contraseña de cifrado"
+
+msgid "Enter wallet address"
+msgstr "Ingrese una dirección"
 
 msgid "Enter wallet invitation"
 msgstr "Ingresar invitación a la billetera"
@@ -771,7 +771,7 @@ msgid "Entry does not exist"
 msgstr "Elemento inexistente"
 
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 msgid "Error adding new entry"
 msgstr "Error al agregar nuevo elemento"
@@ -857,6 +857,9 @@ msgstr "El nivel de comisión no esta definido"
 msgid "Fee rate"
 msgstr "Comisión"
 
+msgid "Fee:"
+msgstr "Comisión:"
+
 msgid "Feedback"
 msgstr "Comentarios"
 
@@ -930,7 +933,7 @@ msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank 
 msgstr "Consiga efectivo local dondequiera que vaya, desde cualquier cajero automático compatible con Visa®. Es posible que el banco aplique una comisión."
 
 msgid "Get news and updates from Particl"
-msgstr "Recibir noticias y actualizaciones de BitPay"
+msgstr "Recibir noticias y actualizaciones de Particl"
 
 msgid "Get started"
 msgstr "Empezar"
@@ -999,7 +1002,7 @@ msgid "I agree to the Terms and certify that I am the beneficial owner of the in
 msgstr "Acepto los Términos y certifico que soy el propio beneficiario de los fondos y la dirección de destino."
 
 msgid "I give explicit consent to Particl to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
-msgstr "Doy consentimiento explícito a BitPay para usar mi dirección de correo electrónico para enviarme notificaciones de pagos (y, si está seleccionado, noticias acerca de la billetera)."
+msgstr ""
 
 msgid "I have read, understood, and agree to the Terms of Use"
 msgstr "He leído, entiendo y acepto los Términos de Uso"
@@ -1011,7 +1014,7 @@ msgid "I understand"
 msgstr "Entiendo"
 
 msgid "I understand that if this app is moved to another device or deleted, my funds can only be recovered with the recovery phrase"
-msgstr "Entiendo que si esta aplicación es eliminada, mis fondos pueden recuperarse únicamente con la frase de recuperación"
+msgstr ""
 
 msgid "I understand that my funds are held securely on this device, not by a company"
 msgstr "Entiendo que mis fondos están protegidos por el dispositivo y no por una empresa"
@@ -1041,7 +1044,7 @@ msgid "If enabled, wallets will also try to spend unconfirmed funds."
 msgstr "Si se habilita, los monederos intentarán gastar fondos sin confirmar."
 
 msgid "If this device is replaced or this app is deleted, neither you nor Particl can recover your funds without a backup."
-msgstr "Si pierdes este dispositivo o esta aplicación es eliminada, ni tú ni BitPay podrán recuperar el dinero."
+msgstr ""
 
 msgid "If you have funds stored on a website then you should move them into a secure wallet... like this one!"
 msgstr "Si usted tiene fondos almacenados en un sitio web debería moverlos a una billetera segura... ¡como esta!"
@@ -1125,7 +1128,7 @@ msgid "It's a ghost town in here"
 msgstr "Esto es un pueblo fantasma"
 
 msgid "It's a good idea to avoid reusing addresses - this both protects your privacy and keeps your funds secure against hypothetical attacks by quantum computers."
-msgstr "Es una buena idea evitar el reuso de las direcciones. Esto protege tu privacidad y mantiene tus fondos seguros contra hipotéticos ataques de ordenadores cuánticos."
+msgstr ""
 
 msgid "It's important that you write your recovery phrase down correctly. If something happens to your wallet, you'll need it to recover your money. Please review and try again."
 msgstr "Es importante que escribas correctamente la frase de recuperación. Si algo le pasa a tu billetera, necesitarás de ésta para recuperar el dinero. Revísala y vuelve a intentarlo."
@@ -1145,6 +1148,9 @@ msgstr "Solo escanea y paga."
 msgid "Key already associated with an existing wallet"
 msgstr "La clave ya esta asociada a un monedero existente"
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr "Idioma"
 
@@ -1156,6 +1162,12 @@ msgstr "Leer más"
 
 msgid "Learn more"
 msgstr "Más información"
+
+msgid "Learn more about Cold Staking"
+msgstr ""
+
+msgid "Learn more about cold staking on the Particl wiki."
+msgstr ""
 
 msgid "Learn more about testnet blockchain"
 msgstr "Aprenda más acerca de la blockchain de testnet"
@@ -1227,7 +1239,7 @@ msgid "Missing private keys to sign"
 msgstr "Faltan las claves privadas para firmar"
 
 msgid "Mmm..."
-msgstr "Mmm..."
+msgstr ""
 
 msgid "More"
 msgstr "Más"
@@ -1284,13 +1296,13 @@ msgid "New {appName} desktop platform"
 msgstr "Nueva plataforma de escritorio {appName}"
 
 msgid "No"
-msgstr "No"
+msgstr ""
 
 msgid "No Private Key"
 msgstr "Sin clave privada"
 
 msgid "No backup, no funds."
-msgstr "Sin frase de recuperación no hay bitcoins."
+msgstr "Sin frase de recuperación no hay fondos."
 
 msgid "No contacts yet"
 msgstr "Aun no hay contactos"
@@ -1332,7 +1344,7 @@ msgid "No wallets with funds"
 msgstr "Sin billeteras con fondos"
 
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 msgid "Not authorized"
 msgstr "No autorizado"
@@ -1344,7 +1356,7 @@ msgid "Not enough funds for fee"
 msgstr "No hay suficientes fondos para la comisión"
 
 msgid "Not even Particl can access it."
-msgstr "Ni siquiera BitPay puede acceder a ellos."
+msgstr "Ni siquiera Particl puede acceder a ellos."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
 msgstr "No incluir la clave privada permite verificar el saldo de la billetera, historial de transacciones y crear propuestas de pago. Sin embargo, no permite aprobar (firmar) propuestas, por lo tanto, los fondos no serán accesibles al exportar."
@@ -1356,7 +1368,7 @@ msgid "Not set"
 msgstr "No configurado"
 
 msgid "Not valid address"
-msgstr "Dirección bitcoin inválida"
+msgstr "Dirección inválida"
 
 msgid "Note"
 msgstr "Nota"
@@ -1380,7 +1392,7 @@ msgid "Now is a perfect time to assess your surroundings. Nearby windows? Hidden
 msgstr "Es el momento perfecto para mirar a tu alrededor. ¿Ventanas? ¿Cámaras? ¿Gente curiosa?"
 
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 msgid "Off"
 msgstr "Desactivado"
@@ -1418,6 +1430,9 @@ msgstr "Abrir Proyecto en GitHub"
 msgid "Open Insight"
 msgstr "Abrir Insight"
 
+msgid "Open Particl Wiki"
+msgstr ""
+
 msgid "Open Translation Community"
 msgstr "Abrir Comunidad de Traducciones"
 
@@ -1427,6 +1442,9 @@ msgstr "Abrir configuración"
 msgid "Open website"
 msgstr "Abrir página web"
 
+msgid "Optional label (e.g. Staking pool, my Raspberry Pi etc.)"
+msgstr ""
+
 msgid "Order the BitPay Card"
 msgstr "Solicitar la tarjeta BitPay"
 
@@ -1434,7 +1452,31 @@ msgid "Ouch!"
 msgstr "¡Ups!"
 
 msgid "PIN"
-msgstr "PIN"
+msgstr ""
+
+msgid "Particl Address"
+msgstr "Dirección Particl"
+
+msgid "Particl URI"
+msgstr "URI de Particl"
+
+msgid "Particl Wallets"
+msgstr ""
+
+msgid "Particl is a currency."
+msgstr "Particl es una moneda."
+
+msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgstr "Particl es diferente - no se puede resguardar con ningún servicio web o banco."
+
+msgid "Particl is secure, digital money."
+msgstr "Particl es seguro, es dinero digital."
+
+msgid "Particl network fee policy"
+msgstr "Política de comisión de la red particl"
+
+msgid "Particl transactions include a fee collected by miners on the network."
+msgstr "Las transacciones de particl incluyen una comisión recogida por los mineros de la red."
 
 msgid "Password"
 msgstr "Contraseña"
@@ -1557,7 +1599,7 @@ msgid "Please, select your backup file"
 msgstr "Por favor, selecciona el archivo de copia de seguridad"
 
 msgid "Pre-Auth Holds"
-msgstr "Pre-Auth Holds"
+msgstr ""
 
 msgid "Preferences"
 msgstr "Preferencias"
@@ -1585,6 +1627,9 @@ msgstr "La clave privada está encriptada. Escriba la contraseña"
 
 msgid "Private key is encrypted, cannot sign"
 msgstr "La clave privada está encriptada, no puedes firmar"
+
+msgid "Proceed"
+msgstr ""
 
 msgid "Proposal Accepted"
 msgstr "Propuesta Aceptada"
@@ -1770,7 +1815,7 @@ msgid "Search a contact"
 msgstr "Buscar un contacto"
 
 msgid "Search or enter wallet address"
-msgstr "Buscar o introducir dirección bitcoin"
+msgstr "Buscar o introducir dirección"
 
 msgid "Search your currency"
 msgstr "Busca tu moneda"
@@ -1871,6 +1916,9 @@ msgstr "Configurar una contraseña"
 msgid "Settings"
 msgstr "Ajustes"
 
+msgid "Setup Cold Staking"
+msgstr ""
+
 msgid "ShapeShift is not available at this moment. Please, try again later."
 msgstr "ShapeShift no esta disponible en este momento. Por favor, inténtelo más tarde."
 
@@ -1955,6 +2003,15 @@ msgstr "Balance disponible"
 msgid "Spending this balance will need significant network fees"
 msgstr "Gastar este balance requiere de significativas comisiones"
 
+msgid "Staking"
+msgstr ""
+
+msgid "Staking key"
+msgstr ""
+
+msgid "Staking key (Pool address or Node public key)"
+msgstr ""
+
 msgid "Status"
 msgstr "Estado"
 
@@ -1980,7 +2037,7 @@ msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr "ESTA ACCIÓN NO SE PUEDE REVERTIR"
 
 msgid "Take control of your money, get started with particl."
-msgstr "Toma control de tu dinero, comienza a utilizar bitcoin."
+msgstr "Toma control de tu dinero, comienza a utilizar particl."
 
 msgid "Tap and hold to show"
 msgstr "Tocar y mantener para mostrar"
@@ -2016,13 +2073,13 @@ msgid "The Wallet Service URL"
 msgstr "Dirección URL de Wallet Service"
 
 msgid "The amount of funds immediately spendable from this wallet."
-msgstr "Total de bitcoins disponibles en esta billetera para su uso inmediato."
+msgstr "Total de fondos disponibles en esta billetera para su uso inmediato."
 
 msgid "The amount of funds stored in this wallet that is allocated as inputs to your pending transaction proposals. The amount is determined using unspent transaction outputs associated with this wallet and may be more than the actual amounts associated with your pending transaction proposals."
-msgstr "La cantidad de bitcoins almacenados en esta billetera que se utilizan como \"inputs\" en la transacción pendiente. Esa cantidad se determina en base a los \"unspent transaction outputs\" asociados con la billetera, estos pueden que sean mayor al monto enviado en la transacción en cuestión."
+msgstr ""
 
 msgid "The amount of funds stored in this wallet with less than 1 blockchain confirmation."
-msgstr "La cantidad de bitcoins almacenados en esta billetera que poseen menos de 1 confirmación en \"Blockchain\"."
+msgstr ""
 
 msgid "The derivation path"
 msgstr "La ruta de derivación"
@@ -2067,10 +2124,10 @@ msgid "The spend proposal is not pending"
 msgstr "La propuesta de gasto no esta pendiente"
 
 msgid "The testnet is an alternative block chain, to be used for testing. Testnet coins are separate and distinct from actual bitcoins, and do not have any value. This allows application developers or testers to experiment, without having to use real coins."
-msgstr "Testnet es una cadena de bloques alternativa de Bitcoin utilizada para pruebas. Las monedas testnet trabajan en una red separada y distinta de los bitcoins reales y no tienen ningún valor. Esto permite a los desarrolladores o usuarios en general experimentar sin tener que usar bitcoins reales."
+msgstr ""
 
 msgid "The total amount of funds stored in this wallet."
-msgstr "El total de bitcoins almacenados en esta billetera."
+msgstr "El total de fondos almacenados en esta billetera."
 
 msgid "The transaction history and every new incoming transaction are cached in the app. This feature clean this up and synchronizes again from the server"
 msgstr "El historial de transacciones y toda nueva transacción son cacheadas en la aplicación. Esta característica limpia y sincroniza nuevamente desde el servidor"
@@ -2088,10 +2145,10 @@ msgid "This app is not available for your device."
 msgstr "Esta aplicación no está disponible para su dispositivo."
 
 msgid "This app stores your particl with cutting-edge security."
-msgstr "Esta aplicación almacena tus bitcoins con seguridad avanzada."
+msgstr "Esta aplicación almacena tus particl con seguridad avanzada."
 
-msgid "This payment request has expired."
-msgstr "Esta solicitud de pago ha caducado."
+msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
+msgstr ""
 
 msgid "This field is only for users who, in previous versions (it's not supported anymore), set a password to protect their recovery phrase. This field is not for your encrypt password."
 msgstr "Este campo es solo para usuarios que en versiones anteriores (actualmente sin soporte), establecieron una contraseña para proteger su frase de recuperación. Este campo no es para su contraseña de cifrado."
@@ -2099,18 +2156,23 @@ msgstr "Este campo es solo para usuarios que en versiones anteriores (actualment
 msgid "This information is available at the website."
 msgstr "Esta información está disponible en el sitio web."
 
+msgid "This means you will stop receiving interest on your PART coins."
+msgstr ""
+
 msgid "This password cannot be recovered. If this password is lost, funds can only be recovered by reimporting your 12-word recovery phrase."
 msgstr "Esta contraseña no puede ser recuperada. Si se extravía, los fondos solo pueden ser recuperados utilizando la frase de recuperación de 12 palabras."
 
 msgid "This password is only for this device, and it cannot be recovered. To avoid losing funds, write your password down."
 msgstr "Esta contraseña es solo para este dispositivo, y no puede ser recuperada. Para evitar la pérdida de fondos, respalde su contraseña en un papel."
 
+msgid "This payment request has expired."
+msgstr "Esta solicitud de pago ha caducado."
+
 msgid "This recovery phrase was created with a password. To recover this wallet both the recovery phrase and password are needed."
 msgstr "Esta frase de recuperación fue creada con una contraseña. Para recuperar esta billetera, la frase de recuperación y la contraseña son necesarios."
 
 msgid "This transaction amount is too small compared to current network fees. Spending these funds will need a network fee cost comparable to the funds itself."
-msgstr "Esta transacción es muy pequeña comparada a la comisión actual de la red.\n"
-"Para gastar esta cantidad necesitarás un costo de comisión comparable a los fondos en sí mismos."
+msgstr ""
 
 msgid "This transaction could take a long time to confirm or could be dropped due to the low fees set by the sender."
 msgstr "Esta transacción podría tomar mucho tiempo en confirmarse o podría ser denegada por la baja comisión establecida por el remitente."
@@ -2125,7 +2187,7 @@ msgid "To"
 msgstr "Para"
 
 msgid "To get started, you'll need to create a particl wallet and get some particl."
-msgstr "Para empezar, necesitarás crear una billetera y obtener bitcoins."
+msgstr "Para empezar, necesitarás crear una billetera y obtener particl."
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
 msgstr "Para empezar, necesita ingresar una dirección válida, un contacto o una billetera."
@@ -2140,7 +2202,7 @@ msgid "Top-up with this cryptocurrency is not enabled"
 msgstr "La recarga con esta crypto moneda no está habilitada"
 
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 msgid "Total Locked Balance"
 msgstr "Balance Total Bloqueado"
@@ -2198,6 +2260,9 @@ msgstr "Transferir a Contacto"
 
 msgid "Transfer to Multiple Recipients"
 msgstr "Trasferir a Múltiples Destinatarios"
+
+msgid "Transfer to Particl Wallet"
+msgstr ""
 
 msgid "Translate address"
 msgstr "Traducir dirección"
@@ -2325,6 +2390,9 @@ msgstr "ADVERTENCIA: EL CERTIFICADO NO ES DE CONFIANZA"
 msgid "Waiting for copayers"
 msgstr "Esperando a los demás copayers"
 
+msgid "Waiting on unconfirmed transactions..."
+msgstr ""
+
 msgid "Waiting..."
 msgstr "Esperando..."
 
@@ -2373,6 +2441,9 @@ msgstr "Billetera bloqueada"
 msgid "Wallet is not complete"
 msgstr "La billetera no esta completa"
 
+msgid "Wallet is staking"
+msgstr ""
+
 msgid "Wallet key"
 msgstr "Llave de la Billetera"
 
@@ -2387,6 +2458,9 @@ msgstr "Billetera no encontrada"
 
 msgid "Wallet not registered at the wallet service. Recreate it from \"Create Wallet\" using \"Advanced Options\" to set your recovery phrase"
 msgstr "La billetera no esta registrado en Wallet Service. Para volver a crear, utilice \"Crear billetera\", \"Opciones avanzadas\" e ingrese la frase de recuperación"
+
+msgid "Wallet not staking yet"
+msgstr ""
 
 msgid "Wallet recovery phrase"
 msgstr "Frase de recuperación de la Billetera"
@@ -2488,13 +2562,13 @@ msgid "You can make contributions by signing up on our Crowdin community transla
 msgstr "Se pueden hacer contribuciones al registrarse en nuestro proyecto de traducciones en Crowdin. ¡Esperamos tener noticias suyas!"
 
 msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
-msgstr "Puedes escanear direcciones bitcoin, solicitudes de pago, billeteras de papel y más."
+msgstr "Puedes escanear direcciones particl, direcciones bitcoin, solicitudes de pago, billeteras de papel y más."
 
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr "Puede ver las últimas novedades y contribuir a nuestra aplicación de código abierto visitando nuestro proyecto en GitHub."
 
 msgid "You can spend particl at millions of websites and stores worldwide."
-msgstr "Puedes utilizar bitcoin en millones de páginas web y tiendas de todo el mundo."
+msgstr "Puedes utilizar particl en millones de páginas web y tiendas de todo el mundo."
 
 msgid "You can still export it from \"Export Wallet\" option."
 msgstr "Todavía puede exportar desde \"Exportar Billetera\"."
@@ -2506,7 +2580,7 @@ msgid "You can use your Mercado Livre gift cards on your Mercado Pago account fo
 msgstr "Puede utilizar sus tarjetas de regalo de Mercado Livre en su cuenta de Mercado Pago para gastos diarios como servicios públicos y los boletos de metro."
 
 msgid "You control your particl."
-msgstr "Controlas tus bitcoins."
+msgstr "Controlas tus particl."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr "Podría firmar la transacción más tarde en los detalles de la Billetera"
@@ -2514,20 +2588,23 @@ msgstr "Podría firmar la transacción más tarde en los detalles de la Billeter
 msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr "No debería elegir una comisión superior a {{maxFeeRecommended}} satoshis/byte."
 
+msgid "You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!"
+msgstr ""
+
 msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
 msgstr "Tu Tarjeta BitPay ya esta lista. Agrega fondos para comenzar a utilizarla en negocios y cajeros automáticos de todo el mundo."
 
-msgid "Your particl wallet is ready!"
-msgstr "¡Su billetera bitcoin está lista!"
-
 msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
-msgstr "Sus claves privadas extendidas es todo lo que necesita para acceder a sus bitcoins. Asegúrese de proteger sus claves privadas y almacenarlas en dispositivos seguros. BitPay no tiene acceso a sus claves privadas, por lo que usted es responsable de sus claves. Si comparte el acceso a claves con servicios externos, usted asume la responsabilidad por el riesgo de robo o violación. Solo los usuarios avanzados deberían manipular directamente las claves privadas extendidas."
+msgstr ""
 
 msgid "Your fee is lower than recommended."
 msgstr "Tu comisión es inferior a la recomendada."
 
 msgid "Your name"
 msgstr "Nombre"
+
+msgid "Your particl wallet is ready!"
+msgstr "¡Su billetera particl está lista!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
 msgstr "Tu dirección de billetera es similar a una cuenta bancaria. Puedes agregar fondos a tu billetera retirando los fondos que puedas tener almacenados en un exchange y enviándolos a tu dirección de billetera. O bien, a otros usuarios {coinName} puede enviarle dinero escaneando el código QR."
@@ -2540,6 +2617,12 @@ msgstr "La clave de la billetera será cifrada. La contraseña de cifrado no se 
 
 msgid "Your {walletType} wallet is backed up!"
 msgstr "¡Su billetera {walletType} ha sido respaldada!"
+
+msgid "Zap"
+msgstr ""
+
+msgid "Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed."
+msgstr ""
 
 msgid "[Balance Hidden]"
 msgstr "[Balance Oculto]"
@@ -2562,14 +2645,14 @@ msgstr "preparando..."
 msgid "{appName} BCH wallets use the CashAddr format by default"
 msgstr "Las billeteras {appName} utilizan el formato CashAddr por defecto"
 
-msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. BitPay does not receive and does not control {coinName} miner fees."
-msgstr "Las comisiones {coinName} de los mineros son altas debido a la demanda por el espacio limitado en la red {coinName}. BitPay no recibe ni controla las comisiones de los mineros en la red {coinName}."
+msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Particl does not receive and does not control {coinName} miner fees."
+msgstr "Las comisiones {coinName} de los mineros son altas debido a la demanda por el espacio limitado en la red {coinName}. Particl no recibe ni controla las comisiones de los mineros en la red {coinName}."
 
 msgid "{coinName} miner fees unusually high"
 msgstr "Comisiones de minero {coinName} inusualmente alta"
 
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
-msgstr "{{appName}} depende de Bitcore Wallet Service (BWS) para obtener información sobre blockchain y sincronización del Copayer. La configuración por defecto apunta a https://bws.bitpay.com (instancia BWS pública de BitPay)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
+msgstr "{{appName}} depende de Bitcore Wallet Service (BWS) para obtener información sobre blockchain y sincronización del Copayer. La configuración por defecto apunta a https://bws.particl.io (instancia BWS pública de Particl)."
 
 msgid "{{fee}} {{coin}} will be deducted for bitcoin networking fees."
 msgstr "Se descontará {{fee}} {{coin}} por comisión de la red bitcoin."

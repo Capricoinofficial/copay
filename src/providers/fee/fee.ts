@@ -147,4 +147,42 @@ export class FeeProvider {
       );
     });
   }
+
+  public getEstimatedFee(wallet, txp): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.getCurrentFeeRate(wallet.coin, wallet.network)
+        .then(feePerKB => {
+          let txSize = this.getEstimatedSize(wallet, txp);
+          let fee = (feePerKB * txSize) / 1000;
+          resolve(parseInt(fee.toFixed(0), 10));
+        })
+        .catch(reject);
+    });
+  }
+
+  private getEstimatedSize(wallet, txp) {
+    // Note: found empirically based on all multisig P2SH inputs and within m & n allowed limits.
+    var safetyMargin = 0.02;
+
+    var overhead = 4 + 4 + 9 + 9;
+    var inputSize = this.getEstimatedSizeForSingleInput(wallet);
+    var outputSize = 34;
+    var nbInputs = txp.inputs.length;
+    var nbOutputs =
+      (_.isArray(txp.outputs) ? Math.max(1, txp.outputs.length) : 1) + 1;
+
+    var size = overhead + inputSize * nbInputs + outputSize * nbOutputs;
+
+    return parseInt((size * (1 + safetyMargin)).toFixed(0), 10);
+  }
+
+  private getEstimatedSizeForSingleInput(wallet) {
+    switch (wallet.addressType) {
+      case 'P2PKH':
+        return 147;
+      default:
+      case 'P2SH':
+        return wallet.m * 72 + wallet.n * 36 + 44;
+    }
+  }
 }

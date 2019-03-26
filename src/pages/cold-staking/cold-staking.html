@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar [navbar-bg]="wallet?.color">
+    <ion-buttons *ngIf="wallet" left>
+      <button class="modal-close-button" (click)="close()" ion-button>
+        <ion-icon ios="md-close" md="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ 'Cold Staking' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content #content>
+  <div *ngIf="!isStaking" class="zero-state">
+    <ion-icon class="zero-state-icon">
+      <img class="svg" src="assets/img/staking-disabled.svg" />
+    </ion-icon>
+    <div class="zero-state-heading" translate>Wallet not staking yet</div>
+    <div class="zero-state-description" translate>Cold staking allows you to get interest on your PART coins.</div>
+  </div>
+  
+  <div *ngIf="isStaking" class="zero-state">
+    <ion-icon class="zero-state-icon">
+      <img class="svg" src="assets/img/staking-enabled.svg" />
+    </ion-icon>
+    <div class="zero-state-heading" translate>Wallet is staking</div>
+    <div class="zero-state-description" translate>You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!</div>
+  </div>
+</ion-content>
+
+<ion-footer no-shadow>
+  <div class="actions" *ngIf="!isStaking">
+    <button ion-button class="button-standard" (click)="enableColdStaking()">
+      {{'Setup Cold Staking' | translate}}
+    </button>
+    <button ion-button clear (click)="learnMore()">
+      {{'Learn more about Cold Staking' | translate}}
+    </button>
+  </div>
+
+  <div [ngClass]="{'actions': canZap}" *ngIf="isStaking">
+    <ion-item *ngIf="getStakingConfig.label">
+      <ion-label stacked>{{ 'Label' | translate }}</ion-label>
+      <ion-input [disabled]="true" type="text" [ngModel]="getStakingConfig.label"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'Staking key' | translate }}</ion-label>
+      <ion-input [disabled]="true" type="text" [ngModel]="getStakingConfig.staking_key"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'Coins staking' | translate }}</ion-label>
+      <ion-input [disabled]="true" type="text" [ngModel]="activationPercent"></ion-input>
+    </ion-item>
+    <button *ngIf="canZap" ion-button class="button-standard" (click)="zap()">
+      {{'Zap' | translate}}
+    </button>
+    <button ion-button clear [disabled]="hasUnconfirmed" (click)="disableColdStaking()">
+      {{'Disable Cold Staking' | translate}}
+    </button>
+  </div>
+</ion-footer>

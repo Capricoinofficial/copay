@@ -52,6 +52,7 @@ export interface TransactionProposal {
     toAddress: any;
     amount: any;
     message: string;
+    script?: string;
   }>;
   inputs: any;
   fee: any;
@@ -68,6 +69,8 @@ export interface TransactionProposal {
   feePerKb: number;
   feeLevel: string;
   dryRun: boolean;
+  changeAddress?: string;
+  coldStakingAddress?: string;
 }
 
 @Injectable()
@@ -487,11 +490,12 @@ export class WalletProvider {
     });
   }
 
-  private createAddress(wallet): Promise<string> {
+  private createAddress(wallet, opts?): Promise<string> {
     return new Promise((resolve, reject) => {
       this.logger.info('Creating address for wallet:', wallet.id);
+      opts = opts || {};
 
-      wallet.createAddress({}, (err, addr) => {
+      wallet.createAddress(opts, (err, addr) => {
         if (err) {
           let prefix = this.translate.instant('Could not create address');
           if (
@@ -1222,7 +1226,15 @@ export class WalletProvider {
       wallet.recreateWallet(err => {
         wallet.notAuthorized = false;
         if (err) return reject(err);
-        return resolve();
+
+        this.persistenceProvider
+          .clearLastAddress(wallet.id)
+          .then(() => {
+            return resolve();
+          })
+          .catch(err => {
+            return reject(err);
+          });
       });
     });
   }
@@ -1683,5 +1695,83 @@ export class WalletProvider {
         );
       });
     });
+  }
+
+  public getStakingConfig(wallet): any {
+    const config = this.configProvider.get();
+    return config.coldStakingKeyFor && config.coldStakingKeyFor[wallet.id]
+      ? config.coldStakingKeyFor[wallet.id]
+      : null;
+  }
+
+  public setStakingConfig(wallet, config): any {
+    let opts = {
+      coldStakingKeyFor: {}
+    };
+    opts.coldStakingKeyFor[wallet.id] = config;
+    this.configProvider.set(opts);
+  }
+
+  public isStaking(wallet): boolean {
+    return this.getStakingConfig(wallet) !== null;
+  }
+
+  public deriveColdStakingAddress(wallet): string {
+    const csConfig = this.getStakingConfig(wallet);
+
+    if (!csConfig || !csConfig.staking_key) return null;
+
+    if (
+      csConfig.staking_key.startsWith('pcs') ||
+      csConfig.staking_key.startsWith('tpcs')
+    )
+      return csConfig.staking_key;
+
+    const xPub = this.bwcProvider
+      .getBitcoreParticl()
+      .HDPublicKey(csConfig.staking_key);
+
+    let index = csConfig.xpubIndex || 0;
+
+    const addr = xPub
+      .derive(index)
+      .publicKey.toAddress()
+      .toString();
+
+    index++;
+    csConfig.xpubIndex = index;
+
+    this.setStakingConfig(wallet, csConfig);
+
+    return addr;
+  }
+
+  public async getColdStakeSpendAddress(wallet, isStake): Promise<any> {
+    const csConfig = this.getStakingConfig(wallet);
+
+    if (!csConfig || !csConfig.staking_key) return;
+
+    // If its not for a staking tx return a new change address
+    if (!isStake) {
+      return this.createAddress(wallet, { isChange: true });
+    }
+
+    if (
+      csConfig.staking_key.startsWith('pcs') ||
+      csConfig.staking_key.startsWith('tpcs')
+    ) {
+      if (!csConfig.spend_address) {
+        csConfig.spend_address = await this.createAddress(wallet, {
+          isChange: true,
+          sha256: true
+        });
+        this.setStakingConfig(wallet, csConfig);
+        return csConfig.spend_address;
+      } else {
+        return csConfig.spend_address;
+      }
+    } else {
+      return this.createAddress(wallet, { isChange: true, sha256: true });
+    }
   }
 }

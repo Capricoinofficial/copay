@@ -39,12 +39,15 @@ export class AddressbookAddPage {
   ) {
     this.addressBookAdd = this.formBuilder.group({
       name: [
-        '',
+        this.navParams.data.contact ? this.navParams.data.contact.name : '',
         Validators.compose([Validators.minLength(1), Validators.required])
       ],
-      email: ['', this.emailOrEmpty],
+      email: [
+        this.navParams.data.contact ? this.navParams.data.contact.email : '',
+        this.emailOrEmpty
+      ],
       address: [
-        '',
+        this.navParams.data.contact ? this.navParams.data.contact.address : '',
         Validators.compose([
           Validators.required,
           new AddressValidator(this.addressProvider).isValid
@@ -76,13 +79,33 @@ export class AddressbookAddPage {
   }
 
   public save(): void {
+    if (this.navParams.data.contact) {
+      this.ab
+        .remove(this.navParams.data.contact.address)
+        .then(() => {
+          this.addAddress();
+        })
+        .catch(err => {
+          this.popupProvider.ionicAlert('Error', err);
+        });
+    } else {
+      this.addAddress();
+    }
+  }
+
+  private addAddress(): void {
     this.addressBookAdd.controls['address'].setValue(
       this.parseAddress(this.addressBookAdd.value.address)
     );
     this.ab
       .add(this.addressBookAdd.value)
       .then(() => {
-        this.navCtrl.pop();
+        if (this.navParams.data.contact) {
+          const contact = this.addressBookAdd.value;
+          this.navCtrl.pop().then(() => this.navParams.get('resolve')(contact));
+        } else {
+          this.navCtrl.pop();
+        }
       })
       .catch(err => {
         this.popupProvider.ionicAlert('Error', err);

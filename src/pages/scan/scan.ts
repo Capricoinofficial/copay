@@ -58,6 +58,7 @@ export class ScanPage {
   public fromImport: boolean;
   public fromJoin: boolean;
   public fromSend: boolean;
+  public fromColdStaking: boolean;
   private onResumeSubscription: Subscription;
 
   constructor(
@@ -123,6 +124,9 @@ export class ScanPage {
     this.fromSend =
       this.walletTabsProvider.getFromPage() &&
       this.walletTabsProvider.getFromPage().fromSend;
+    this.fromColdStaking =
+      this.walletTabsProvider.getFromPage() &&
+      this.walletTabsProvider.getFromPage().fromColdStaking;
 
     if (!env.activateScanner) {
       // test scanner visibility in E2E mode
@@ -319,6 +323,9 @@ export class ScanPage {
       this.navCtrl.pop();
     } else if (this.fromSend) {
       this.events.publish('update:address', { value: contents });
+      this.close();
+    } else if (this.fromColdStaking) {
+      this.events.publish('update:coldStakingKey', { value: contents });
       this.close();
     } else {
       const redirParms = { activePage: 'ScanPage' };

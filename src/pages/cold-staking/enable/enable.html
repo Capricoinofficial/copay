@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>{{ 'Cold Staking Setup' | translate }}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <form [formGroup]="coldStakingEnable">
+      <ion-item>
+        <ion-label stacked>{{ 'Optional label (e.g. Staking pool, my Raspberry Pi etc.)' | translate }}</ion-label>
+        <ion-input formControlName="label" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{ 'Staking key (Pool address or Node public key)' | translate }}</ion-label>
+        <ion-input formControlName="staking_key" type="text" [value]="coldStakingEnable.value.staking_key"></ion-input>
+  
+        <ion-icon *ngIf="coldStakingEnable.value.staking_key && coldStakingEnable.controls.staking_key.status == 'VALID'" name="ios-checkmark-circle" class="check success" item-right></ion-icon>
+        <ion-icon *ngIf="coldStakingEnable.value.staking_key && coldStakingEnable.controls.staking_key.status == 'INVALID'" class="check fail" name="ios-close-circle" item-right></ion-icon>
+  
+        <ion-icon class="scanner-icon" name="qr-scanner" item-right (click)="scanQR()"></ion-icon>
+      </ion-item>
+    </form>
+    <ion-item-divider>
+      <span class="error-text" *ngIf="coldStakingEnable.value.staking_key && coldStakingEnable.controls.staking_key.status == 'INVALID'">{{coldStakingEnable.controls.staking_key.errors.error}}</span>
+    </ion-item-divider>
+    <button ion-button class="button-standard" (click)="save()" [disabled]="coldStakingEnable.invalid">
+      {{'Enable Cold Staking' | translate}}
+    </button>
+  
+  </ion-content>
+  
