@@ -124,7 +124,7 @@ export class WalletProvider {
     if (wallet.cachedTxps) wallet.cachedTxps.isValid = false;
   }
 
-  public getStatus(wallet, opts): Promise<any> {
+  public async getStatus(wallet, opts): Promise<any> {
     return new Promise((resolve, reject) => {
       opts = opts || {};
       const walletId = wallet.id;
@@ -1697,81 +1697,48 @@ export class WalletProvider {
     });
   }
 
-  public getStakingConfig(wallet): any {
-    const config = this.configProvider.get();
-    return config.coldStakingKeyFor && config.coldStakingKeyFor[wallet.id]
-      ? config.coldStakingKeyFor[wallet.id]
-      : null;
+  public setStakingConfig(wallet, config): Promise<any> {
+    return new Promise((resolve, reject) => {
+      if (_.isEmpty(wallet)) return reject('MISSING_PARAMETER');
+      wallet.updateColdStakingSetup(config, err => {
+        if (err) return reject(err);
+
+        return resolve();
+      });
+    });
   }
 
-  public setStakingConfig(wallet, config): any {
-    let opts = {
-      coldStakingKeyFor: {}
-    };
-    opts.coldStakingKeyFor[wallet.id] = config;
-    this.configProvider.set(opts);
+  public getStakingConfig(wallet): Promise<any> {
+    return new Promise((resolve, reject) => {
+      if (_.isEmpty(wallet)) return reject('MISSING_PARAMETER');
+      wallet.getColdStakingSetup((err, config) => {
+        if (err) return reject(err);
+
+        return resolve(config);
+      });
+    });
   }
 
-  public isStaking(wallet): boolean {
-    return this.getStakingConfig(wallet) !== null;
+  public async isStaking(wallet) {
+    const config = await this.getStakingConfig(wallet);
+    return !_.isEmpty(config);
   }
 
-  public deriveColdStakingAddress(wallet): string {
-    const csConfig = this.getStakingConfig(wallet);
+  public async getColdStakingAddresses(wallet): Promise<any> {
+    return new Promise((resolve, reject) => {
+      if (_.isEmpty(wallet)) return reject('MISSING_PARAMETER');
+      wallet.getColdStakingAddresses((err, addresses) => {
+        if (err) return reject(err);
 
-    if (!csConfig || !csConfig.staking_key) return null;
+        return resolve(addresses);
+      });
+    });
+  }
 
-    if (
-      csConfig.staking_key.startsWith('pcs') ||
-      csConfig.staking_key.startsWith('tpcs')
-    )
-      return csConfig.staking_key;
-
-    const xPub = this.bwcProvider
-      .getBitcoreParticl()
-      .HDPublicKey(csConfig.staking_key);
-
-    let index = csConfig.xpubIndex || 0;
-
-    const addr = xPub
-      .derive(index)
-      .publicKey.toAddress()
-      .toString();
-
-    index++;
-    csConfig.xpubIndex = index;
-
-    this.setStakingConfig(wallet, csConfig);
-
+  public async getChangeAddress(wallet) {
+    const addr = await this.createAddress(wallet, {
+      isChange: true
+    });
     return addr;
-  }
-
-  public async getColdStakeSpendAddress(wallet, isStake): Promise<any> {
-    const csConfig = this.getStakingConfig(wallet);
-
-    if (!csConfig || !csConfig.staking_key) return;
-
-    // If its not for a staking tx return a new change address
-    if (!isStake) {
-      return this.createAddress(wallet, { isChange: true });
-    }
-
-    if (
-      csConfig.staking_key.startsWith('pcs') ||
-      csConfig.staking_key.startsWith('tpcs')
-    ) {
-      if (!csConfig.spend_address) {
-        csConfig.spend_address = await this.createAddress(wallet, {
-          isChange: true,
-          sha256: true
-        });
-        this.setStakingConfig(wallet, csConfig);
-        return csConfig.spend_address;
-      } else {
-        return csConfig.spend_address;
-      }
-    } else {
-      return this.createAddress(wallet, { isChange: true, sha256: true });
-    }
   }
 }
