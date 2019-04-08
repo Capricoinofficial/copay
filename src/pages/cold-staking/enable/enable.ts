@@ -84,7 +84,7 @@ export class ColdStakingEnablePage {
   }
 
   public showErrorInfoSheet(error: Error | string, title?: string): void {
-    if (!error) return;
+    if (!error) { return; }
     const infoSheetTitle = title ? title : this.translate.instant('Error');
 
     const errorInfoSheet = this.actionSheetProvider.createInfoSheet(
