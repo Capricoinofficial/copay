@@ -750,8 +750,15 @@ export class ConfirmPage extends WalletTabsChild {
       wallet
     );
     if (!_.isEmpty(coldStakingAddresses)) {
-      txp.changeAddress = coldStakingAddresses.spend_address;
       txp.coldStakingAddress = coldStakingAddresses.staking_address;
+      // BWS will take care of setting the change address for single address wallets
+      if (
+        wallet.status &&
+        wallet.status.wallet &&
+        !wallet.status.wallet.singleAddress
+      ) {
+        txp.changeAddress = coldStakingAddresses.spend_address;
+      }
     }
 
     return this.walletProvider.createTx(wallet, txp);
