@@ -1699,9 +1699,13 @@ export class WalletProvider {
 
   public setStakingConfig(wallet, config): Promise<any> {
     return new Promise((resolve, reject) => {
-      if (_.isEmpty(wallet)) { return reject('MISSING_PARAMETER'); }
+      if (_.isEmpty(wallet)) {
+        return reject('MISSING_PARAMETER');
+      }
       wallet.updateColdStakingSetup(config, err => {
-        if (err) { return reject(err); }
+        if (err) {
+          return reject(err);
+        }
 
         return resolve();
       });
@@ -1710,9 +1714,13 @@ export class WalletProvider {
 
   public getStakingConfig(wallet): Promise<any> {
     return new Promise((resolve, reject) => {
-      if (_.isEmpty(wallet)) { return reject('MISSING_PARAMETER'); }
+      if (_.isEmpty(wallet)) {
+        return reject('MISSING_PARAMETER');
+      }
       wallet.getColdStakingSetup((err, config) => {
-        if (err) { return reject(err); }
+        if (err) {
+          return reject(err);
+        }
 
         return resolve(config);
       });
@@ -1726,9 +1734,13 @@ export class WalletProvider {
 
   public async getColdStakingAddresses(wallet): Promise<any> {
     return new Promise((resolve, reject) => {
-      if (_.isEmpty(wallet)) { return reject('MISSING_PARAMETER'); }
+      if (_.isEmpty(wallet)) {
+        return reject('MISSING_PARAMETER');
+      }
       wallet.getColdStakingAddresses((err, addresses) => {
-        if (err) { return reject(err); }
+        if (err) {
+          return reject(err);
+        }
 
         return resolve(addresses);
       });
