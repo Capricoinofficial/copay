@@ -7,7 +7,6 @@ import { Logger } from '../../providers/logger/logger';
 import { ActionSheetProvider } from '../../providers/action-sheet/action-sheet';
 import { BwcErrorProvider } from '../../providers/bwc-error/bwc-error';
 import { BwcProvider } from '../../providers/bwc/bwc';
-import { ConfigProvider } from '../../providers/config/config';
 import { ExternalLinkProvider } from '../../providers/external-link/external-link';
 import { FeeProvider } from '../../providers/fee/fee';
 import { OnGoingProcessProvider } from '../../providers/on-going-process/on-going-process';
@@ -53,7 +52,6 @@ export class ColdStakingPage extends WalletTabsChild {
     walletTabsProvider: WalletTabsProvider,
     private popupProvider: PopupProvider,
     private walletProvider: WalletProvider,
-    private configProvider: ConfigProvider,
     private bwcProvider: BwcProvider,
     private onGoingProcessProvider: OnGoingProcessProvider,
     private actionSheetProvider: ActionSheetProvider,
@@ -135,14 +133,17 @@ export class ColdStakingPage extends WalletTabsChild {
         if (res) {
           this.balanceTransfer(false)
             .then(() => {
-              let opts = {
-                coldStakingKeyFor: {}
-              };
-              opts.coldStakingKeyFor[this.wallet.id] = null;
-              this.configProvider.set(opts);
-
-              this.events.publish('wallet:updated', this.wallet.id);
-              this.isColdStakingActive();
+              this.walletProvider
+                .setStakingConfig(this.wallet, {})
+                .then(() => {
+                  this.events.publish('wallet:updated', this.wallet.id);
+                  this.isColdStakingActive();
+                })
+                .catch(err => {
+                  this.events.publish('wallet:updated', this.wallet.id);
+                  this.isColdStakingActive();
+                  this.showErrorInfoSheet(err);
+                });
             })
             .catch(err => {
               this.showErrorInfoSheet(err);
@@ -175,16 +176,36 @@ export class ColdStakingPage extends WalletTabsChild {
   }
 
   private isColdStakingActive(): void {
-    this.getStakingConfig = this.walletProvider.getStakingConfig(this.wallet);
-    this.isStaking = this.getStakingConfig !== null;
+    this.walletProvider
+      .getStakingConfig(this.wallet)
+      .then(config => {
+        this.getStakingConfig = config;
+        this.isStaking = !_.isEmpty(this.getStakingConfig);
 
-    // Force a redraw if the zap button was made visible or hidden
-    setTimeout(() => {
-      this.content.resize();
-    }, 10);
+        // Force a redraw if the zap button was made visible or hidden
+        setTimeout(() => {
+          this.content.resize();
+        }, 10);
+      })
+      .catch(err => {
+        this.showErrorInfoSheet(err);
+      });
   }
 
-  private coldStakingStats() {
+  private async coldStakingStats() {
+    const status = await this.walletProvider.getStatus(this.wallet, {
+      force: true
+    });
+
+    if (status.pendingTxps && status.pendingTxps.length > 0) {
+      this.activationPercent = this.translate.instant(
+        'Waiting on transaction proposal...'
+      );
+      this.canZap = false;
+      this.hasUnconfirmed = true;
+      return;
+    }
+
     this.wallet.getUtxos({}, (err, utxos) => {
       if (err) {
         this.logger.error(err);
@@ -249,7 +270,7 @@ export class ColdStakingPage extends WalletTabsChild {
         }
       ];
 
-      txp.message = 'Balance Transfer';
+      txp.message = isZap ? 'Zap Coins' : 'Disable Staking';
       txp.excludeUnconfirmedUtxos = true;
 
       let fee = await this.feeProvider.getEstimatedFee(this.wallet, txp);
@@ -274,13 +295,16 @@ export class ColdStakingPage extends WalletTabsChild {
       txp.fee = fee;
       txp.outputs[0].amount = txp.outputs[0].amount - fee;
 
-      let spend_address = await this.walletProvider.getColdStakeSpendAddress(
-        this.wallet,
-        !!isZap
-      );
-      let stake_address = this.walletProvider.deriveColdStakingAddress(
-        this.wallet
-      );
+      let spend_address, stake_address;
+      if (isZap) {
+        const addresses = await this.walletProvider.getColdStakingAddresses(
+          this.wallet
+        );
+        spend_address = addresses.spend_address;
+        stake_address = addresses.staking_address;
+      } else {
+        spend_address = await this.walletProvider.getChangeAddress(this.wallet);
+      }
 
       txp.outputs[0].toAddress = spend_address;
       if (isZap) {

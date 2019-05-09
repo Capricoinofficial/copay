@@ -678,89 +678,90 @@ export class ConfirmPage extends WalletTabsChild {
   }
 
   private async getTxp(tx, wallet, dryRun: boolean): Promise<any> {
-      // ToDo: use a credential's (or fc's) function for this
-      if (tx.description && !wallet.credentials.sharedEncryptingKey) {
-        throw this.translate.instant(
-          'Could not add message to imported wallet without shared encrypting key'
-        );
-      }
-
-      if (tx.amount > Number.MAX_SAFE_INTEGER) {
-        throw this.translate.instant('Amount too big');
-      }
-
-      const txp: Partial<TransactionProposal> = {};
-
-      if (this.fromMultiSend) {
-        txp.outputs = [];
-        this.navParams.data.recipients.forEach(recipient => {
-          if (tx.coin && tx.coin == 'bch') {
-            // Use legacy address
-            recipient.toAddress = this.bitcoreCash
-              .Address(recipient.toAddress)
-              .toString();
-
-            recipient.addressToShow = this.walletProvider.getAddressView(
-              tx.coin,
-              tx.network,
-              recipient.toAddress
-            );
-          }
-
-          txp.outputs.push({
-            toAddress: recipient.toAddress,
-            amount: recipient.amount,
-            message: tx.description
-          });
-        });
-      } else {
-        txp.outputs = [
-          {
-            toAddress: tx.toAddress,
-            amount: tx.amount,
-            message: tx.description
-          }
-        ];
-      }
-
-      if (tx.sendMaxInfo) {
-        txp.inputs = tx.sendMaxInfo.inputs;
-        txp.fee = tx.sendMaxInfo.fee;
-      } else {
-        if (this.usingCustomFee || this.usingMerchantFee) {
-          txp.feePerKb = tx.feeRate;
-        } else txp.feeLevel = tx.feeLevel;
-      }
-
-      txp.message = tx.description;
-
-      if (tx.paypro) {
-        txp.payProUrl = tx.paypro.url;
-      }
-      txp.excludeUnconfirmedUtxos = !tx.spendUnconfirmed;
-      txp.dryRun = dryRun;
-
-      if (tx.recipientType == 'wallet') {
-        txp.customData = {
-          toWalletName: tx.name ? tx.name : null
-        };
-      }
-
-      const coldStakingAddress = this.walletProvider.deriveColdStakingAddress(
-        this.wallet
+    // ToDo: use a credential's (or fc's) function for this
+    if (tx.description && !wallet.credentials.sharedEncryptingKey) {
+      throw this.translate.instant(
+        'Could not add message to imported wallet without shared encrypting key'
       );
-      if (coldStakingAddress) {
-        if (
-          coldStakingAddress.startsWith('pcs') ||
-          coldStakingAddress.startsWith('tpcs')
-        ) {
-          txp.changeAddress = await this.walletProvider.getColdStakeSpendAddress(this.wallet, true);
-        }
-        txp.coldStakingAddress = coldStakingAddress;
-      }
+    }
 
-      return this.walletProvider
-        .createTx(wallet, txp);
+    if (tx.amount > Number.MAX_SAFE_INTEGER) {
+      throw this.translate.instant('Amount too big');
+    }
+
+    const txp: Partial<TransactionProposal> = {};
+
+    if (this.fromMultiSend) {
+      txp.outputs = [];
+      this.navParams.data.recipients.forEach(recipient => {
+        if (tx.coin && tx.coin == 'bch') {
+          // Use legacy address
+          recipient.toAddress = this.bitcoreCash
+            .Address(recipient.toAddress)
+            .toString();
+
+          recipient.addressToShow = this.walletProvider.getAddressView(
+            tx.coin,
+            tx.network,
+            recipient.toAddress
+          );
+        }
+
+        txp.outputs.push({
+          toAddress: recipient.toAddress,
+          amount: recipient.amount,
+          message: tx.description
+        });
+      });
+    } else {
+      txp.outputs = [
+        {
+          toAddress: tx.toAddress,
+          amount: tx.amount,
+          message: tx.description
+        }
+      ];
+    }
+
+    if (tx.sendMaxInfo) {
+      txp.inputs = tx.sendMaxInfo.inputs;
+      txp.fee = tx.sendMaxInfo.fee;
+    } else {
+      if (this.usingCustomFee || this.usingMerchantFee) {
+        txp.feePerKb = tx.feeRate;
+      } else txp.feeLevel = tx.feeLevel;
+    }
+
+    txp.message = tx.description;
+
+    if (tx.paypro) {
+      txp.payProUrl = tx.paypro.url;
+    }
+    txp.excludeUnconfirmedUtxos = !tx.spendUnconfirmed;
+    txp.dryRun = dryRun;
+
+    if (tx.recipientType == 'wallet') {
+      txp.customData = {
+        toWalletName: tx.name ? tx.name : null
+      };
+    }
+
+    const coldStakingAddresses = await this.walletProvider.getColdStakingAddresses(
+      wallet
+    );
+    if (!_.isEmpty(coldStakingAddresses)) {
+      txp.coldStakingAddress = coldStakingAddresses.staking_address;
+      // BWS will take care of setting the change address for single address wallets
+      if (
+        wallet.status &&
+        wallet.status.wallet &&
+        !wallet.status.wallet.singleAddress
+      ) {
+        txp.changeAddress = coldStakingAddresses.spend_address;
+      }
+    }
+
+    return this.walletProvider.createTx(wallet, txp);
   }
 
   private showInsufficientFundsInfoSheet(): void {
