@@ -455,7 +455,11 @@ export class WalletProvider {
     return protoAddr;
   }
 
-  public getAddress(wallet, forceNew: boolean): Promise<string> {
+  public getAddress(
+    wallet,
+    forceNew: boolean,
+    ignoreBackup?: boolean
+  ): Promise<string> {
     return new Promise((resolve, reject) => {
       this.persistenceProvider
         .getLastAddress(wallet.id)
@@ -465,7 +469,7 @@ export class WalletProvider {
           if (!wallet.isComplete())
             return reject(this.bwcErrorProvider.msg('WALLET_NOT_COMPLETE'));
 
-          if (wallet.needsBackup) {
+          if (wallet.needsBackup && !ignoreBackup) {
             return reject(this.bwcErrorProvider.msg('WALLET_NEEDS_BACKUP'));
           }
 

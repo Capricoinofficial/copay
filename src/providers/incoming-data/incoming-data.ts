@@ -40,20 +40,17 @@ export class IncomingDataProvider {
   public finishIncomingData(data: any): void {
     let redirTo = null;
     let value = null;
+    let coin = null;
     if (data) {
       redirTo = data.redirTo;
       value = data.value;
+      coin = data.coin ? data.coin : 'btc';
     }
-    if (redirTo === 'AmountPage') {
-      let coin = data.coin ? data.coin : 'btc';
-      this.events.publish('finishIncomingDataMenuEvent', {
-        redirTo,
-        value,
-        coin
-      });
-    } else {
-      this.events.publish('finishIncomingDataMenuEvent', { redirTo, value });
-    }
+    this.events.publish('finishIncomingDataMenuEvent', {
+      redirTo,
+      value,
+      coin
+    });
   }
 
   private isValidPayProNonBackwardsCompatible(data: string): boolean {
@@ -158,6 +155,10 @@ export class IncomingDataProvider {
     );
   }
 
+  private isValidParticlPrivateKey(data: string): boolean {
+    return !!(data && this.checkParticlPrivateKey(data));
+  }
+
   private isValidImportPrivateKey(data: string): boolean {
     return !!(
       data &&
@@ -167,10 +168,15 @@ export class IncomingDataProvider {
     );
   }
 
-  private handlePrivateKey(data: string, redirParams?: RedirParams): void {
+  private handlePrivateKey(
+    data: string,
+    redirParams?: RedirParams,
+    coin?: string
+  ): void {
     this.logger.debug('Incoming-data: private key');
     this.showMenu({
       data,
+      coin,
       type: 'privateKey',
       fromHomeCard: redirParams ? redirParams.fromHomeCard : false
     });
@@ -494,7 +500,12 @@ export class IncomingDataProvider {
 
       // Check Private Key
     } else if (this.isValidPrivateKey(data)) {
-      this.handlePrivateKey(data, redirParams);
+      this.handlePrivateKey(data, redirParams, 'btc');
+      return true;
+
+      // Check Particl Private Key
+    } else if (this.isValidParticlPrivateKey(data)) {
+      this.handlePrivateKey(data, redirParams, 'part');
       return true;
 
       // Import Private Key
@@ -683,8 +694,20 @@ export class IncomingDataProvider {
     return true;
   }
 
+  private checkParticlPrivateKey(privateKey: string): boolean {
+    // Check if it is a Transaction id to prevent errors
+    let isPK: boolean = this.checkRegex(privateKey);
+    if (!isPK) return false;
+    try {
+      this.bwcProvider.getBitcoreParticl().PrivateKey(privateKey, 'livenet');
+    } catch (err) {
+      return false;
+    }
+    return true;
+  }
+
   private checkRegex(data: string): boolean {
-    let PKregex = new RegExp(/^[5KL][1-9A-HJ-NP-Za-km-z]{50,51}$/);
+    let PKregex = new RegExp(/^[45KL][1-9A-HJ-NP-Za-km-z]{50,51}$/);
     return !!PKregex.exec(data);
   }
 

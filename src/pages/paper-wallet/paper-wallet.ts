@@ -27,6 +27,7 @@ export class PaperWalletPage {
   @ViewChild('slideButton')
   slideButton;
 
+  public coin;
   public wallet;
   public walletName: string;
   public M: number;
@@ -66,10 +67,14 @@ export class PaperWalletPage {
     private platformProvider: PlatformProvider,
     private bwcErrorProvider: BwcErrorProvider
   ) {
-    this.bitcore = this.bwcProvider.getBitcore();
+    this.bitcore = {
+      btc: this.bwcProvider.getBitcore(),
+      part: this.bwcProvider.getBitcoreParticl()
+    };
     this.isCordova = this.platformProvider.isCordova;
     this.isOpenSelector = false;
     this.scannedKey = this.navParams.data.privateKey;
+    this.coin = this.navParams.data.coin;
     this.isPkEncrypted = this.scannedKey
       ? this.scannedKey.substring(0, 2) == '6P'
       : null;
@@ -80,7 +85,7 @@ export class PaperWalletPage {
     });
 
     this.wallets = _.filter(_.clone(this.wallets), wallet => {
-      return !wallet.needsBackup;
+      return wallet.coin === this.coin;
     });
 
     this.coins = _.uniq(
@@ -144,7 +149,7 @@ export class PaperWalletPage {
 
   private checkPrivateKey(privateKey: string): boolean {
     try {
-      new this.bitcore.PrivateKey(privateKey, 'livenet');
+      new this.bitcore[this.coin].PrivateKey(privateKey, 'livenet');
     } catch (err) {
       return false;
     }
@@ -224,7 +229,7 @@ export class PaperWalletPage {
       })[0];
 
       this.walletProvider
-        .getAddress(this.wallet, true)
+        .getAddress(this.wallet, true, true)
         .then((destinationAddress: string) => {
           let opts: {
             coin?: any;

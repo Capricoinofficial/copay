@@ -154,7 +154,7 @@ export class ScanPage {
           this.goToUrl(data.value);
           break;
         case 'PaperWalletPage':
-          this.scanPaperWallet(data.value);
+          this.scanPaperWallet(data.value, data.coin);
           break;
         default:
           if (this.isCordova) {
@@ -250,8 +250,8 @@ export class ScanPage {
     this.navCtrl.push(AddressbookAddPage, { addressbookEntry: bitcoinAddress });
   }
 
-  private scanPaperWallet(privateKey: string) {
-    this.navCtrl.push(PaperWalletPage, { privateKey });
+  private scanPaperWallet(privateKey: string, coin: string) {
+    this.navCtrl.push(PaperWalletPage, { privateKey, coin });
   }
 
   private updateCapabilities(): void {

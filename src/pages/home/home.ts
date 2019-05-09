@@ -278,7 +278,7 @@ export class HomePage {
           this.goToUrl(data.value);
           break;
         case 'PaperWalletPage':
-          this.scanPaperWallet(data.value);
+          this.scanPaperWallet(data.value, data.coin);
           break;
       }
     });
@@ -296,8 +296,9 @@ export class HomePage {
     this.navCtrl.push(AddressbookAddPage, { addressbookEntry: bitcoinAddress });
   }
 
-  private scanPaperWallet(privateKey: string) {
+  private scanPaperWallet(privateKey: string, coin: string) {
     this.navCtrl.push(PaperWalletPage, { privateKey });
+    this.navCtrl.push(PaperWalletPage, { privateKey, coin });
   }
 
   private updateDesktopOnFocus() {
