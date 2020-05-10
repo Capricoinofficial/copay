@@ -4,7 +4,7 @@ import {
   LoadingController,
   Navbar,
   NavController,
-  Slides
+  Slides,
 } from 'ionic-angular';
 import { Logger } from '../../../providers/logger/logger';
 
@@ -22,7 +22,7 @@ import { TxFormatProvider } from '../../../providers/tx-format/tx-format';
 
 @Component({
   selector: 'page-tour',
-  templateUrl: 'tour.html'
+  templateUrl: 'tour.html',
 })
 export class TourPage {
   @ViewChild(Slides)
@@ -31,7 +31,7 @@ export class TourPage {
   navBar: Navbar;
 
   public localCurrencySymbol: string;
-  public localCurrencyPerPart: string;
+  public localCurrencyPerCPS: string;
   public currentIndex: number;
 
   private retryCount: number = 0;
@@ -50,11 +50,11 @@ export class TourPage {
   ) {
     this.currentIndex = 0;
     this.rateProvider.whenRatesAvailable('btc').then(() => {
-      let partAmount = 1;
+      let cpsAmount = 1;
       this.localCurrencySymbol = '$';
-      this.localCurrencyPerPart = this.txFormatProvider.formatAlternativeStr(
-        'part',
-        partAmount * 1e8
+      this.localCurrencyPerCPS = this.txFormatProvider.formatAlternativeStr(
+        'cps',
+        cpsAmount * 1e8
       );
     });
   }
@@ -88,13 +88,13 @@ export class TourPage {
     this.onGoingProcessProvider.set('creatingWallet');
     this.profileProvider
       .createDefaultWallet()
-      .then(wallet => {
+      .then((wallet) => {
         this.onGoingProcessProvider.clear();
         this.persistenceProvider.setOnboardingCompleted();
         // this.navCtrl.push(CollectEmailPage, { walletId: wallet.id });
         this.navCtrl.push(BackupRequestPage, { walletId: wallet.id });
       })
-      .catch(err => {
+      .catch((err) => {
         setTimeout(() => {
           this.logger.warn(
             'Retrying to create default wallet.....:' + ++this.retryCount

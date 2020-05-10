@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var https = require('https');
 
-var crowdin_identifier = 'particl-copay';
+var crowdin_identifier = 'capricoinplus-copay';
 
 var local_file_name1 = path.join(__dirname, 'template.pot');
 

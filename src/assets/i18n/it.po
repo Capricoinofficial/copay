@@ -5,11 +5,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: particl-copay\n"
+"X-Crowdin-Project: capricoinplus-copay\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: template.pot\n"
-"Project-Id-Version: particl-copay\n"
-"Last-Translator: particl\n"
+"Project-Id-Version: capricoinplus-copay\n"
+"Last-Translator: Capricoin+\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "PO-Revision-Date: 2019-02-07 15:12\n"
@@ -29,7 +29,7 @@ msgstr "1. Toccare \"Aggiungi metodo di pagamento\" e selezionare \"Buono regalo
 msgid "2. Enter Gift Code"
 msgstr "2. Inserisci il codice regalo"
 
-msgid "5-star ratings help us get the Particl Wallet into more hands, and more users means more resources can be committed to the app!"
+msgid "5-star ratings help us get the Capricoin+ Wallet into more hands, and more users means more resources can be committed to the app!"
 msgstr ""
 
 msgid "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
@@ -290,7 +290,7 @@ msgstr "Comprare Bitcoin..."
 msgid "Buying Gift Card..."
 msgstr "Acquisizione carta regalo..."
 
-msgid "By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments."
+msgid "By providing your email address, you give explicit consent to Capricoin+ to use your email address to send you email notifications about payments."
 msgstr ""
 
 msgid "Calculating fee..."
@@ -374,7 +374,7 @@ msgstr ""
 msgid "Cold Staking Setup"
 msgstr ""
 
-msgid "Cold staking allows you to get interest on your PART coins."
+msgid "Cold staking allows you to get interest on your CPS coins."
 msgstr ""
 
 msgid "Color"
@@ -569,8 +569,8 @@ msgstr "Crea un nuovo portafoglio"
 msgid "Create a new wallet to start using this app."
 msgstr "Creare un nuovo portafoglio per iniziare a utilizzare questa app."
 
-msgid "Create particl wallet"
-msgstr "Creare portafoglio particl"
+msgid "Create Capricoin+ wallet"
+msgstr "Creare portafoglio Capricoin+"
 
 msgid "Create personal wallet"
 msgstr "Creare il portafoglio personale"
@@ -932,8 +932,8 @@ msgstr "Ottieni aiuto"
 msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank fees may apply."
 msgstr "Ottieni contante locale ovunque tu vada, da qualsiasi ATM bancomat compatibile con Visa®. Possibili commissioni bancarie da parte dell'ATM."
 
-msgid "Get news and updates from Particl"
-msgstr "Ricevi notizie e aggiornamenti da Particl"
+msgid "Get news and updates from Capricoin+"
+msgstr "Ricevi notizie e aggiornamenti da Capricoin+"
 
 msgid "Get started"
 msgstr "Inizia"
@@ -1001,7 +1001,7 @@ msgstr "Quanto sei soddisfatto del portafoglio {{appName}}?"
 msgid "I agree to the Terms and certify that I am the beneficial owner of the input assets and the destination address."
 msgstr "Accetto i Termini e certifico che io sono il proprietario dei fondi in entrata e dagli indirizzi di destinazione."
 
-msgid "I give explicit consent to Particl to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
+msgid "I give explicit consent to Capricoin+ to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr ""
 
 msgid "I have read, understood, and agree to the Terms of Use"
@@ -1043,7 +1043,7 @@ msgstr "Se abilitata, la scheda delle Transazioni Recenti - una lista di transaz
 msgid "If enabled, wallets will also try to spend unconfirmed funds."
 msgstr "Se abilitata, i portafogli cercheranno di spendere fondi anche se non confermati."
 
-msgid "If this device is replaced or this app is deleted, neither you nor Particl can recover your funds without a backup."
+msgid "If this device is replaced or this app is deleted, neither you nor Capricoin+ can recover your funds without a backup."
 msgstr ""
 
 msgid "If you have funds stored on a website then you should move them into a secure wallet... like this one!"
@@ -1166,7 +1166,7 @@ msgstr "Ulteriori informazioni"
 msgid "Learn more about Cold Staking"
 msgstr ""
 
-msgid "Learn more about cold staking on the Particl wiki."
+msgid "Learn more about cold staking on the Capricoin+ wiki."
 msgstr ""
 
 msgid "Learn more about testnet blockchain"
@@ -1355,8 +1355,8 @@ msgstr "Fondi insufficenti"
 msgid "Not enough funds for fee"
 msgstr "Non ci sono abbastanza fondi per la commissione"
 
-msgid "Not even Particl can access it."
-msgstr "Nemmeno Particl può accedervi."
+msgid "Not even Capricoin+ can access it."
+msgstr "Nemmeno Capricoin+ può accedervi."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
 msgstr "L'esclusione della chiave privata permette di controllare il bilancio del portafoglio, la cronologia delle transazioni e creare proposte di spesa dall'esportazione. Tuttavia, non consente di approvare le proposte (firma), così fondi non saranno accessibili dall'esportazione."
@@ -1430,7 +1430,7 @@ msgstr "Aprire il progetto GitHub"
 msgid "Open Insight"
 msgstr "Aprire Insight"
 
-msgid "Open Particl Wiki"
+msgid "Open Capricoin+ Wiki"
 msgstr ""
 
 msgid "Open Translation Community"
@@ -1454,29 +1454,29 @@ msgstr "Ahi!"
 msgid "PIN"
 msgstr ""
 
-msgid "Particl Address"
-msgstr "Indirizzo Particl"
+msgid "Capricoin+ Address"
+msgstr "Indirizzo Capricoin+"
 
-msgid "Particl URI"
+msgid "Capricoin+ URI"
 msgstr ""
 
-msgid "Particl Wallets"
+msgid "Capricoin+ Wallets"
 msgstr ""
 
-msgid "Particl is a currency."
-msgstr "Particl è una moneta."
+msgid "Capricoin+ is a currency."
+msgstr "Capricoin+ è una moneta."
 
-msgid "Particl is different - it cannot be safely held with a bank or web service."
-msgstr "Particl è differente - Non può essere custodito al sicuro in una banca o su un servizio web."
+msgid "Capricoin+ is different - it cannot be safely held with a bank or web service."
+msgstr "Capricoin+ è differente - Non può essere custodito al sicuro in una banca o su un servizio web."
 
-msgid "Particl is secure, digital money."
-msgstr "Particl è denaro sicuro, digitale."
+msgid "Capricoin+ is secure, digital money."
+msgstr "Capricoin+ è denaro sicuro, digitale."
 
-msgid "Particl network fee policy"
-msgstr "Criterio commissioni del network particl"
+msgid "Capricoin+ network fee policy"
+msgstr "Criterio commissioni del network Capricoin+"
 
-msgid "Particl transactions include a fee collected by miners on the network."
-msgstr "Le transazioni Particl comprendono un supplemento che viene raccolto dai mines nella rete."
+msgid "Capricoin+ transactions include a fee collected by miners on the network."
+msgstr "Le transazioni Capricoin+ comprendono un supplemento che viene raccolto dai mines nella rete."
 
 msgid "Password"
 msgstr ""
@@ -2036,8 +2036,8 @@ msgstr "Spazzolamento Portafoglio..."
 msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr "QUESTA AZIONE NON PUÒ ESSERE INVERTITA"
 
-msgid "Take control of your money, get started with particl."
-msgstr "Prendi il controllo del tuo denaro, inizia con particl."
+msgid "Take control of your money, get started with Capricoin+."
+msgstr "Prendi il controllo del tuo denaro, inizia con Capricoin+."
 
 msgid "Tap and hold to show"
 msgstr "Toccare e tenere premuto per mostrare"
@@ -2144,8 +2144,8 @@ msgstr "C'è evidentemente qualcosa che stiamo sbagliando. Come potremmo miglior
 msgid "This app is not available for your device."
 msgstr "Questa applicazione non è disponibile per il tuo dispositivo."
 
-msgid "This app stores your particl with cutting-edge security."
-msgstr "Questa app memorizza i tuoi particl con sicurezza all'avanguardia."
+msgid "This app stores your Capricoin+ with cutting-edge security."
+msgstr "Questa app memorizza i tuoi Capricoin+ con sicurezza all'avanguardia."
 
 msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
 msgstr ""
@@ -2156,7 +2156,7 @@ msgstr "Questo campo è solo per gli utenti che, nelle versioni precedenti (non 
 msgid "This information is available at the website."
 msgstr "Queste informazioni sono disponibili sul sito web."
 
-msgid "This means you will stop receiving interest on your PART coins."
+msgid "This means you will stop receiving interest on your CPS coins."
 msgstr ""
 
 msgid "This password cannot be recovered. If this password is lost, funds can only be recovered by reimporting your 12-word recovery phrase."
@@ -2186,8 +2186,8 @@ msgstr "Cronologia"
 msgid "To"
 msgstr "A"
 
-msgid "To get started, you'll need to create a particl wallet and get some particl."
-msgstr "Per iniziare, è necessario che tu crei un portafoglio particl e ottenerne qualcuno."
+msgid "To get started, you'll need to create a Capricoin+ wallet and get some Capricoin+."
+msgstr "Per iniziare, è necessario che tu crei un portafoglio Capricoin+ e ottenerne qualcuno."
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
 msgstr "Per iniziare, devi inserire un indirizzo valido, un contatto o un portafoglio."
@@ -2261,7 +2261,7 @@ msgstr "Trasferisci a Contatto"
 msgid "Transfer to Multiple Recipients"
 msgstr "Trasferimento a più destinatari"
 
-msgid "Transfer to Particl Wallet"
+msgid "Transfer to Capricoin+ Wallet"
 msgstr ""
 
 msgid "Translate address"
@@ -2561,14 +2561,14 @@ msgstr "Puoi continuare a visualizzare le tue carte archiviate qui se hai bisogn
 msgid "You can make contributions by signing up on our Crowdin community translation website. We’re looking forward to hearing from you!"
 msgstr "È possibile contribuire registrandovi sulla comunità di traduzione Crowdin. Non vediamo l'ora di sentirvi!"
 
-msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
-msgstr "È possibile scansionare indirizzi particl, indirizzi bitcoin, richieste di pagamento, portafogli di carta e altro ancora."
+msgid "You can scan Capricoin+ addresses, bitcoin addresses, payment requests, paper wallets, and more."
+msgstr "È possibile scansionare indirizzi Capricoin+, indirizzi bitcoin, richieste di pagamento, portafogli di carta e altro ancora."
 
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr "Potete vedere gli ultimi sviluppi e contribuire a questa applicazione open source andando al nostro progetto su GitHub."
 
-msgid "You can spend particl at millions of websites and stores worldwide."
-msgstr "Si può spendere particl in milioni di siti web e negozi in tutto il mondo."
+msgid "You can spend Capricoin+ at millions of websites and stores worldwide."
+msgstr "Si può spendere Capricoin+ in milioni di siti web e negozi in tutto il mondo."
 
 msgid "You can still export it from \"Export Wallet\" option."
 msgstr "Puoi ancora esportarlo dall'opzione \"Esporta portafoglio\"."
@@ -2579,8 +2579,8 @@ msgstr "È possibile scambiarlo con altre valute come i dollari USA, Euro o Ster
 msgid "You can use your Mercado Livre gift cards on your Mercado Pago account for everyday expenses like utilities and metro rides."
 msgstr "Puoi utilizzare le tue carte regalo Mercado Livre sul tuo account Mercado Pago per le spese quotidiane come le utilities e le corse in metro."
 
-msgid "You control your particl."
-msgstr "Controlli i tuoi particl."
+msgid "You control your Capricoin+."
+msgstr "Controlli i tuoi Capricoin+."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr "Puoi firmare la transazione più tardi nei dettagli del tuo portafoglio"
@@ -2588,13 +2588,13 @@ msgstr "Puoi firmare la transazione più tardi nei dettagli del tuo portafoglio"
 msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr "Non è necessario impostare una commissione maggiore di {{maxFeeRecommended}} satoshis/byte."
 
-msgid "You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!"
+msgid "You wallet is generating interest on your CPS coins and you are helping to secure the Capricoin+ network at the same time!"
 msgstr ""
 
 msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
 msgstr "La carta BitPay è pronta. Aggiungi fondi alla tua carta per iniziare ad usarla presso i negozi e gli sportelli automatici in tutto il mondo."
 
-msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
+msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Capricoin+ does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
 msgstr ""
 
 msgid "Your fee is lower than recommended."
@@ -2603,8 +2603,8 @@ msgstr "La tua commissione è inferiore a quella consigliata."
 msgid "Your name"
 msgstr "Il tuo nome"
 
-msgid "Your particl wallet is ready!"
-msgstr "Il tuo portafoglio particl è pronto!"
+msgid "Your Capricoin+ wallet is ready!"
+msgstr "Il tuo portafoglio Capricoin+ è pronto!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
 msgstr "L'indirizzo del tuo portafoglio è simile a un numero di conto bancario. Puoi aggiungere fondi al tuo portafoglio prelevando fondi che potresti aver memorizzato su uno scambio al tuo indirizzo del portafoglio. Oppure altri utenti di {coinName} possono inviarti denaro eseguendo la scansione del tuo codice QR."
@@ -2645,14 +2645,14 @@ msgstr "preparazione..."
 msgid "{appName} BCH wallets use the CashAddr format by default"
 msgstr "I wallet BCH di {appName} utilizzano il formato CashAddr per impostazione predefinita"
 
-msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Particl does not receive and does not control {coinName} miner fees."
-msgstr "Le commissioni sui minatori di {coinName} sono elevate a causa della richiesta di spazio limitato sulla rete {coinName}. Particl non riceve e non controlla le commissioni sui minatori {coinName}."
+msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Capricoin+ does not receive and does not control {coinName} miner fees."
+msgstr "Le commissioni sui minatori di {coinName} sono elevate a causa della richiesta di spazio limitato sulla rete {coinName}. Capricoin+ non riceve e non controlla le commissioni sui minatori {coinName}."
 
 msgid "{coinName} miner fees unusually high"
 msgstr "{coinName} tasse dei minatori insolitamente alti"
 
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
-msgstr "{{appName}} dipende dal servizio portafoglio di Bitcore (BWS) per informazioni blockchain, networking e sincronizzazione di Copayer. La configurazione predefinita fa riferimento a https://bws.particl.io (istanza di Particl BWS pubblica)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.capricoin.org (Capricoin+'s public BWS instance)."
+msgstr "{{appName}} dipende dal servizio portafoglio di Bitcore (BWS) per informazioni blockchain, networking e sincronizzazione di Copayer. La configurazione predefinita fa riferimento a https://bws.capricoin.org (istanza di Capricoin+ BWS pubblica)."
 
 msgid "{{fee}} {{coin}} will be deducted for bitcoin networking fees."
 msgstr "{{fee}} {{coin}} verrà detratto per le spese di rete bitcoin."

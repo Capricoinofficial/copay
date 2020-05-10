@@ -6,25 +6,25 @@ import { BwcProvider } from '../providers/bwc/bwc';
 import * as bech32 from 'bech32-buffer';
 
 export class ColdStakingValidator {
-  static particlBitcore;
+  static capricoinplusBitcore;
   static network: string;
 
   constructor(private bwcProvider: BwcProvider, private network: string) {
-    ColdStakingValidator.particlBitcore = this.bwcProvider.getBitcoreParticl();
+    ColdStakingValidator.capricoinplusBitcore = this.bwcProvider.getBitcoreCapricoinPlus();
     ColdStakingValidator.network = this.network;
   }
 
   isKeyValid(control: FormControl) {
     if (
-      !ColdStakingValidator.particlBitcore.HDPublicKey.isValidSerialized(
+      !ColdStakingValidator.capricoinplusBitcore.HDPublicKey.isValidSerialized(
         control.value
       )
     ) {
       try {
         let address = bech32.decode(control.value);
         const prefixes = {
-          livenet: 'pcs',
-          testnet: 'tpcs'
+          livenet: 'ccs',
+          testnet: 'tccs'
         };
 
         if (
@@ -40,8 +40,8 @@ export class ColdStakingValidator {
       }
     } else {
       const prefixes = {
-        livenet: 'PPAR',
-        testnet: 'ppar'
+        livenet: 'mcpb',
+        testnet: 'tcpb'
       };
       if (
         !control.value.startsWith(prefixes.livenet) &&

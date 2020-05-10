@@ -1,20 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-264 387.9 66 66"
-	 enable-background="new -264 387.9 66 66" xml:space="preserve">
-<title>Oval 356 + ios7-redo Copy</title>
-<desc>Created with Sketch.</desc>
-<g id="Page-1" sketch:type="MSPage">
-	<g id="Copay-v1-Buy-_x2013_-Main" transform="translate(-18.000000, -847.000000)" sketch:type="MSArtboardGroup">
-		<g id="Oval-356-_x2B_-ios7-redo-Copy" transform="translate(19.000000, 848.000000)" sketch:type="MSLayerGroup">
-			<path fill="#F6A623" d="M-232,452.9c-18.2,0-33-14.8-33-33c0-18.2,14.8-33,33-33s33,14.8,33,33C-199,438.1-213.8,452.9-232,452.9
-				z M-232,388.9c-17.1,0-31,13.9-31,31s13.9,31,31,31c17.1,0,31-13.9,31-31S-214.9,388.9-232,388.9z"/>
-			<g id="minus-round-copy" transform="translate(15.000000, 31.000000)" sketch:type="MSShapeGroup">
-				<path id="Shape" fill="#F6A623" d="M-232.7,387.9h-28.6c-1.5,0-2.7,1.1-2.7,2.4c0,1.3,1.2,2.4,2.7,2.4h28.6
-					c1.5,0,2.7-1.1,2.7-2.4C-230,389-231.2,387.9-232.7,387.9L-232.7,387.9z"/>
-			</g>
-		</g>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="67px" viewBox="0 0 66 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>sold-pending</title>
+    <desc>Created with Sketch.</desc>
+    <g id="copay-assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="src/assets/img" transform="translate(-547.000000, -477.000000)" fill="#F6A623" fill-rule="nonzero">
+            <g id="sold-pending" transform="translate(547.000000, 477.000000)">
+                <path d="M33,66.9 C14.8,66.9 0,52.1 0,33.9 C0,15.7 14.8,0.9 33,0.9 C51.2,0.9 66,15.7 66,33.9 C66,52.1 51.2,66.9 33,66.9 Z M33,2.9 C15.9,2.9 2,16.8 2,33.9 C2,51 15.9,64.9 33,64.9 C50.1,64.9 64,51 64,33.9 C64,16.8 50.1,2.9 33,2.9 Z" id="Shape"></path>
+                <g id="minus-round-copy" transform="translate(16.000000, 32.000000)">
+                    <path d="M31.3,0.9 L2.7,0.9 C1.2,0.9 0,2 0,3.3 C0,4.6 1.2,5.7 2.7,5.7 L31.3,5.7 C32.8,5.7 34,4.6 34,3.3 C34,2 32.8,0.9 31.3,0.9 L31.3,0.9 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

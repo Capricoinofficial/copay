@@ -36,7 +36,7 @@ import { WalletSettingsPage } from './wallet-settings/wallet-settings';
 
 @Component({
   selector: 'page-settings',
-  templateUrl: 'settings.html'
+  templateUrl: 'settings.html',
 })
 export class SettingsPage {
   public appName: string;
@@ -82,15 +82,15 @@ export class SettingsPage {
       this.language.getCurrent()
     );
     this.walletsBtc = this.profileProvider.getWallets({
-      coin: 'btc'
+      coin: 'btc',
     });
     this.walletsBch = this.profileProvider.getWallets({
-      coin: 'bch'
+      coin: 'bch',
     });
     this.config = this.configProvider.get();
     this.selectedAlternative = {
       name: this.config.wallet.settings.alternativeName,
-      isoCode: this.config.wallet.settings.alternativeIsoCode
+      isoCode: this.config.wallet.settings.alternativeIsoCode,
     };
     this.lockMethod =
       this.config && this.config.lock && this.config.lock.method
@@ -104,7 +104,7 @@ export class SettingsPage {
 
     // Hide BitPay if linked
     setTimeout(() => {
-      this.integrationServices = _.remove(_.clone(integrations), x => {
+      this.integrationServices = _.remove(_.clone(integrations), (x) => {
         if (x.name == 'debitcard' && x.linked) return;
         else return x;
       });
@@ -195,7 +195,7 @@ export class SettingsPage {
   }
 
   public openHelpExternalLink(): void {
-    const url = 'https://github.com/particl/copay/issues';
+    const url = 'https://github.com/Capricoinofficial/copay/issues';
     const optIn = true;
     const title = null;
     const message = this.translate.instant(
@@ -220,7 +220,7 @@ export class SettingsPage {
       { cssClass: 'fullscreen-modal' }
     );
     modal.present();
-    modal.onDidDismiss(cancelClicked => {
+    modal.onDidDismiss((cancelClicked) => {
       if (!cancelClicked) this.navCtrl.push(LockPage);
     });
   }

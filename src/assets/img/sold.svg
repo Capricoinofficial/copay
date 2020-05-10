@@ -1,39 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-258 383.9 79 75"
-	 enable-background="new -258 383.9 79 75" xml:space="preserve">
-<title>Oval 356 + ios7-redo Copy + Shape Copy 5</title>
-<desc>Created with Sketch.</desc>
-<g id="Page-1" sketch:type="MSPage">
-	<g id="Copay-v1-Buy-_x2013_-Main" transform="translate(-18.000000, -867.000000)" sketch:type="MSArtboardGroup">
-		
-			<g id="Oval-356-_x2B_-ios7-redo-Copy-_x2B_-Shape-Copy-5" transform="translate(19.000000, 868.000000)" sketch:type="MSLayerGroup">
-			<g id="Oval-356-_x2B_-ios7-redo-Copy" sketch:type="MSShapeGroup">
-				<g>
-					<circle id="Oval-356_1_" fill="#FFFFFF" cx="-226" cy="415.9" r="32"/>
-					<path fill="#F6A623" d="M-226,448.9c-18.2,0-33-14.8-33-33c0-18.2,14.8-33,33-33s33,14.8,33,33
-						C-193,434.1-207.8,448.9-226,448.9z M-226,384.9c-17.1,0-31,13.9-31,31s13.9,31,31,31c17.1,0,31-13.9,31-31
-						S-208.9,384.9-226,384.9z"/>
-				</g>
-				<g id="minus-round-copy" transform="translate(15.000000, 31.000000)">
-					<path id="Shape" fill="#F6A623" d="M-226.7,383.9h-28.6c-1.5,0-2.7,1.1-2.7,2.4c0,1.3,1.2,2.4,2.7,2.4h28.6
-						c1.5,0,2.7-1.1,2.7-2.4C-224,385-225.2,383.9-226.7,383.9L-226.7,383.9z"/>
-				</g>
-			</g>
-			<g id="Shape-Copy-5-_x2B_-Path-Copy-2" transform="translate(46.000000, 42.000000)" sketch:type="MSShapeGroup">
-				<g>
-					<path id="Shape-Copy-5_1_" fill="#2C3E50" d="M-258,398.9c0,8.3,6.7,15,15,15s15-6.7,15-15c0-8.3-6.7-15-15-15
-						S-258,390.6-258,398.9z"/>
-					<path fill="#FFFFFF" d="M-243,414.9c-8.8,0-16-7.2-16-16s7.2-16,16-16s16,7.2,16,16S-234.2,414.9-243,414.9z M-243,384.9
-						c-7.7,0-14,6.3-14,14s6.3,14,14,14s14-6.3,14-14S-235.3,384.9-243,384.9z"/>
-				</g>
-				<path id="Path-Copy-2" fill="#FFFFFF" d="M-234.3,394l-9.5,11.9c-0.1,0.1-0.2,0.2-0.3,0.2c-0.2,0-0.3-0.1-0.3-0.2
-					c-0.1-0.1-5.4-5-5.4-5l-0.1-0.1c0-0.1-0.1-0.1-0.1-0.2s0-0.2,0.1-0.2c0,0,0,0,0.1-0.1c0.5-0.5,1.6-1.6,1.7-1.7
-					c0.1-0.1,0.2-0.2,0.3-0.2c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,3.1,2.9,3.1,2.9l7.6-9.5c0.1-0.1,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2,0.1
-					l2.1,1.6c0.1,0.1,0.1,0.1,0.1,0.2C-234.2,393.9-234.3,394-234.3,394L-234.3,394z"/>
-			</g>
-		</g>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="75px" viewBox="0 0 78 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>sold</title>
+    <desc>Created with Sketch.</desc>
+    <g id="copay-assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="src/assets/img" transform="translate(-322.000000, -469.000000)" fill-rule="nonzero">
+            <g id="sold" transform="translate(322.000000, 469.000000)">
+                <g id="Oval-356-_x2B_-ios7-redo-Copy">
+                    <g id="Group">
+                        <circle id="Oval-356_1_" fill="#FFFFFF" cx="33" cy="33.9" r="32"></circle>
+                        <path d="M33,66.9 C14.8,66.9 0,52.1 0,33.9 C0,15.7 14.8,0.9 33,0.9 C51.2,0.9 66,15.7 66,33.9 C66,52.1 51.2,66.9 33,66.9 Z M33,2.9 C15.9,2.9 2,16.8 2,33.9 C2,51 15.9,64.9 33,64.9 C50.1,64.9 64,51 64,33.9 C64,16.8 50.1,2.9 33,2.9 Z" id="Shape" fill="#F6A623"></path>
+                    </g>
+                    <g id="minus-round-copy" transform="translate(16.000000, 32.000000)" fill="#F6A623">
+                        <path d="M31.3,0.9 L2.7,0.9 C1.2,0.9 0,2 0,3.3 C0,4.6 1.2,5.7 2.7,5.7 L31.3,5.7 C32.8,5.7 34,4.6 34,3.3 C34,2 32.8,0.9 31.3,0.9 L31.3,0.9 Z" id="Shape"></path>
+                    </g>
+                </g>
+                <g id="Shape-Copy-5-_x2B_-Path-Copy-2" transform="translate(46.000000, 42.000000)">
+                    <g id="Group">
+                        <path d="M1,16.9 C1,25.2 7.7,31.9 16,31.9 C24.3,31.9 31,25.2 31,16.9 C31,8.6 24.3,1.9 16,1.9 C7.7,1.9 1,8.6 1,16.9 Z" id="Shape-Copy-5_1_" fill="#1E222A"></path>
+                        <path d="M16,32.9 C7.2,32.9 0,25.7 0,16.9 C0,8.1 7.2,0.9 16,0.9 C24.8,0.9 32,8.1 32,16.9 C32,25.7 24.8,32.9 16,32.9 Z M16,2.9 C8.3,2.9 2,9.2 2,16.9 C2,24.6 8.3,30.9 16,30.9 C23.7,30.9 30,24.6 30,16.9 C30,9.2 23.7,2.9 16,2.9 Z" id="Shape" fill="#FFFFFF"></path>
+                    </g>
+                    <path d="M24.7,12 L15.2,23.9 C15.1,24 15,24.1 14.9,24.1 C14.7,24.1 14.6,24 14.6,23.9 C14.5,23.8 9.2,18.9 9.2,18.9 L9.1,18.8 C9.1,18.7 9,18.7 9,18.6 C9,18.5 9,18.4 9.1,18.4 C9.1,18.4 9.1,18.4 9.2,18.3 C9.7,17.8 10.8,16.7 10.9,16.6 C11,16.5 11.1,16.4 11.2,16.4 C11.4,16.4 11.5,16.5 11.6,16.6 C11.7,16.7 14.7,19.5 14.7,19.5 L22.3,10 C22.4,9.9 22.4,9.9 22.5,9.9 C22.6,9.9 22.7,9.9 22.7,10 L24.8,11.6 C24.9,11.7 24.9,11.7 24.9,11.8 C24.8,11.9 24.7,12 24.7,12 L24.7,12 Z" id="Path-Copy-2" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

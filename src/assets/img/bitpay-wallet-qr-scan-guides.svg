@@ -1,37 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="QR-scanner-guides" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 271 236" style="enable-background:new 0 0 271 236;" xml:space="preserve">
-<style type="text/css">
-	.st0{filter:url(#filter-2);}
-	.st1{fill:none;stroke:#647CE8;stroke-width:2;}
-	.st2{fill:#FFFFFF;fill-opacity:0.3;}
-</style>
-<filter  filterUnits="objectBoundingBox" height="200%" id="filter-2" width="200%" x="-50%" y="-50%">
-	<feMorphology  in="SourceAlpha" operator="dilate" radius="1" result="shadowSpreadOuter1"></feMorphology>
-	<feOffset  dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
-	<feMorphology  in="SourceAlpha" operator="erode" radius="1" result="shadowInner"></feMorphology>
-	<feOffset  dx="0" dy="0" in="shadowInner" result="shadowInner"></feOffset>
-	<feComposite  in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
-	<feGaussianBlur  in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="6"></feGaussianBlur>
-	
-		<feColorMatrix  in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0.392156863   0 0 0 0 0.48627451   0 0 0 0 0.909803922  0 0 0 1 0">
-		</feColorMatrix>
-</filter>
-<g id="scan-line">
-	<g class="st0">
-		<line x1="11" y1="111" x2="260" y2="111"/>
-	</g>
-	<g>
-		<path id="line" class="st1" d="M11,111h249"/>
-	</g>
-</g>
-<path id="top-left" class="st2" d="M28,10h53.1c2.8,0,5-2.2,5-5s-2.2-5-5-5H23c-2.8,0-5,2.2-5,5v58c0,2.8,2.2,5,5,5s5-2.2,5-5V10z"
-	/>
-<path id="bottom-left" class="st2" d="M28,224.7v-53.1c0-2.8-2.2-5-5-5s-5,2.2-5,5v58.1c0,2.8,2.2,5,5,5h58c2.8,0,5-2.2,5-5
-	c0-2.8-2.2-5-5-5H28z"/>
-<path id="top-right" class="st2" d="M244,10v53.1c0,2.8,2.2,5,5,5s5-2.2,5-5V5c0-2.8-2.2-5-5-5h-58c-2.8,0-5,2.2-5,5s2.2,5,5,5H244z
-	"/>
-<path id="bottom-right" class="st2" d="M244.1,225.6H191c-2.8,0-5,2.2-5,5c0,2.8,2.2,5,5,5h58.1c2.8,0,5-2.2,5-5v-58
-	c0-2.8-2.2-5-5-5s-5,2.2-5,5V225.6z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="249px" height="236px" viewBox="0 0 249 236" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>bitpay-wallet-qr-scan-guides</title>
+    <desc>Created with Sketch.</desc>
+    <g id="copay-assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="src/assets/img" transform="translate(-22.000000, -42.000000)">
+            <g id="bitpay-wallet-qr-scan-guides" transform="translate(22.000000, 42.000000)">
+                <g id="scan-line" transform="translate(0.000000, 110.000000)">
+                    <path d="M0,1 L249,1" id="Path" fill="#000000" fill-rule="nonzero"></path>
+                    <path d="M0,1 L249,1" id="line" stroke="#FFB900" stroke-width="2"></path>
+                </g>
+                <path d="M17,10 L70.1,10 C72.9,10 75.1,7.8 75.1,5 C75.1,2.2 72.9,0 70.1,0 L12,0 C9.2,0 7,2.2 7,5 L7,63 C7,65.8 9.2,68 12,68 C14.8,68 17,65.8 17,63 L17,10 Z" id="top-left" fill-opacity="0.3" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M17,224.7 L17,171.6 C17,168.8 14.8,166.6 12,166.6 C9.2,166.6 7,168.8 7,171.6 L7,229.7 C7,232.5 9.2,234.7 12,234.7 L70,234.7 C72.8,234.7 75,232.5 75,229.7 C75,226.9 72.8,224.7 70,224.7 L17,224.7 Z" id="bottom-left" fill-opacity="0.3" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M233,10 L233,63.1 C233,65.9 235.2,68.1 238,68.1 C240.8,68.1 243,65.9 243,63.1 L243,5 C243,2.2 240.8,0 238,0 L180,0 C177.2,0 175,2.2 175,5 C175,7.8 177.2,10 180,10 L233,10 Z" id="top-right" fill-opacity="0.3" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M233.1,225.6 L180,225.6 C177.2,225.6 175,227.8 175,230.6 C175,233.4 177.2,235.6 180,235.6 L238.1,235.6 C240.9,235.6 243.1,233.4 243.1,230.6 L243.1,172.6 C243.1,169.8 240.9,167.6 238.1,167.6 C235.3,167.6 233.1,169.8 233.1,172.6 L233.1,225.6 Z" id="bottom-right" fill-opacity="0.3" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
 </svg>

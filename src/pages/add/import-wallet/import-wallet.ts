@@ -94,12 +94,12 @@ export class ImportWalletPage {
       file: [null],
       filePassword: [null],
       derivationPath: [
-        this.derivationPathByDefault['part'],
+        this.derivationPathByDefault['cps'],
         Validators.required
       ],
       testnetEnabled: [false],
       bwsURL: [this.defaults.bws.url],
-      coin: ['part', Validators.required]
+      coin: ['cps', Validators.required]
     });
     this.events.subscribe('update:words', data => {
       this.processWalletInfo(data.value);

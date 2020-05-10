@@ -43,7 +43,7 @@ export class ConfirmPage extends WalletTabsChild {
 
   private bitcore;
   protected bitcoreCash;
-  protected bitcoreParticl;
+  protected bitcoreCapricoinPlus;
 
   public countDown = null;
   public CONFIRM_LIMIT_USD: number;
@@ -108,7 +108,7 @@ export class ConfirmPage extends WalletTabsChild {
     super(navCtrl, profileProvider, walletTabsProvider);
     this.bitcore = this.bwcProvider.getBitcore();
     this.bitcoreCash = this.bwcProvider.getBitcoreCash();
-    this.bitcoreParticl = this.bwcProvider.getBitcoreParticl();
+    this.bitcoreCapricoinPlus = this.bwcProvider.getBitcoreCapricoinPlus();
     this.CONFIRM_LIMIT_USD = 20;
     this.FEE_TOO_HIGH_LIMIT_PER = 15;
     this.config = this.configProvider.get();
@@ -138,8 +138,8 @@ export class ConfirmPage extends WalletTabsChild {
       case 'bch':
         B = this.bitcoreCash;
         break;
-      case 'part':
-        B = this.bitcoreParticl;
+      case 'cps':
+        B = this.bitcoreCapricoinPlus;
         break;
       default:
         B = this.bitcore;
@@ -556,8 +556,8 @@ export class ConfirmPage extends WalletTabsChild {
       case 'bch':
         coinName = 'Bitcoin Cash';
         break;
-      case 'part':
-        coinName = 'Particl';
+      case 'cps':
+        coinName = 'Capricoin+';
         break;
       default:
         coinName = 'Bitcoin';
@@ -632,8 +632,8 @@ export class ConfirmPage extends WalletTabsChild {
       case 'bch':
         coinName = 'Bitcoin Cash (BCH)';
         break;
-      case 'part':
-        coinName = 'Particl (PART)';
+      case 'cps':
+        coinName = 'Capricoin+ (CPS)';
         break;
       default:
         coinName = 'Bitcoin (BTC)';

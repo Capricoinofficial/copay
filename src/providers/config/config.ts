@@ -42,7 +42,7 @@ export interface Config {
     copay: {
       url: string;
     };
-    particl: {
+    capricoinplus: {
       url: string;
     };
   };
@@ -58,7 +58,7 @@ export interface Config {
       android: string;
       wp: string;
     };
-    particl: {
+    capricoinplus: {
       ios: string;
       android: string;
       wp: string;
@@ -119,7 +119,7 @@ export interface Config {
       live: string;
       test: string;
     };
-    part: {
+    cps: {
       live: string;
       test: string;
     };
@@ -152,7 +152,7 @@ export class ConfigProvider {
         reconnectDelay: 5000,
         idleDurationMin: 4,
         settings: {
-          unitName: 'PART',
+          unitName: 'CPS',
           unitToSatoshi: 100000000,
           unitDecimals: 8,
           unitCode: 'btc',
@@ -165,7 +165,7 @@ export class ConfigProvider {
 
       // Bitcore wallet service URL
       bws: {
-        url: 'https://bws.particl.io/bws/api'
+        url: 'https://bws.capricoin.org/bws/api'
       },
 
       download: {
@@ -175,8 +175,8 @@ export class ConfigProvider {
         copay: {
           url: 'https://copay.io/#download'
         },
-        particl: {
-          url: 'https://github.com/particl/copay/releases'
+        capricoinplus: {
+          url: 'https://github.com/Capricoinofficial/copay/releases'
         }
       },
 
@@ -194,10 +194,9 @@ export class ConfigProvider {
             'https://play.google.com/store/apps/details?id=com.bitpay.copay',
           wp: ''
         },
-        particl: {
-          ios: 'https://itunes.apple.com/us/app/particl-copay/id1449589645',
-          android:
-            'https://play.google.com/store/apps/details?id=io.particl.copay',
+        capricoinplus: {
+          ios: '',
+          android: '',
           wp: ''
         }
       },
@@ -251,9 +250,9 @@ export class ConfigProvider {
           live: 'bch-insight.bitpay.com/#',
           test: 'test-bch-insight.bitpay.com/#'
         },
-        part: {
-          live: 'explorer.particl.io',
-          test: 'explorer-testnet.particl.io'
+        cps: {
+          live: 'explorer.capricoin.org',
+          test: 'testnet-explorer.capricoin.org'
         }
       }
     };

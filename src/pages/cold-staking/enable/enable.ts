@@ -21,6 +21,9 @@ import { ColdStakingValidator } from '../../../validators/coldstaking';
 export class ColdStakingEnablePage {
   private coldStakingEnable: FormGroup;
   private wallet;
+  private officialPool: boolean = false;
+  public label: string = '';
+  public staking_key: string = '';
 
   constructor(
     private events: Events,
@@ -61,6 +64,25 @@ export class ColdStakingEnablePage {
     this.events.unsubscribe('update:coldStakingKey');
   }
 
+  isMainnet(): boolean {
+    this.wallet = this.profileProvider.getWallet(this.navParams.data.walletId);
+    if (this.wallet.network == 'livenet' || this.wallet.network == 'mainnet') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  onOfficialPoolCheck() {
+    this.label = '';
+    this.staking_key = '';
+
+    if (this.officialPool) {
+      this.label = 'Official Pool';
+      this.staking_key = 'ccs1pjrksqqyutxj39rmxzc6k9qgwrhk2ttmqfxtjc';
+    }
+  }
+
   public save(): void {
     let config = null;
 
@@ -84,7 +106,9 @@ export class ColdStakingEnablePage {
   }
 
   public showErrorInfoSheet(error: Error | string, title?: string): void {
-    if (!error) { return; }
+    if (!error) {
+      return;
+    }
     const infoSheetTitle = title ? title : this.translate.instant('Error');
 
     const errorInfoSheet = this.actionSheetProvider.createInfoSheet(

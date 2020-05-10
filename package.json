@@ -1,8 +1,8 @@
 {
-  "name": "particl-copay",
-  "description": "A Secure Particl Wallet",
+  "name": "capricoinplus-copay",
+  "description": "A Secure Capricoin+ Wallet",
   "author": "BitPay",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "keywords": [
     "bitcoin",
     "wallet",
@@ -12,7 +12,7 @@
     "bitcore"
   ],
   "main": "electron/main.js",
-  "title": "Particl Copay",
+  "title": "Capricoin+ Copay",
   "user-agent": "%name %ver (%osinfo)",
   "webkit": {
     "page-cache": false,
@@ -21,22 +21,21 @@
   },
   "dom_storage_quota": 200,
   "id": "jid1-x7bV5evAaI1P9Q",
-  "homepage": "https://github.com/particl/copay",
+  "homepage": "https://github.com/Capricoinofficial/copay",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/particl/copay.git",
+    "url": "git://github.com/Capricoinofficial/copay.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/particl/copay/issues"
+    "url": "https://github.com/Capricoinofficial/copay/issues"
   },
   "scripts": {
     "postinstall": "sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && npm run e2e:update && npm run env:dev && npm run prompt",
     "prompt": "\n\n\n\n\n\n#\n#  Choose a distribution with:\n#\n#     $ npm run apply:copay\n#              or\n#     $ npm run apply:bitpay\n#\n",
     "start": "npm run ionic:serve && npm run e2e:serve",
     "clean": "rm -rf platforms && rm -rf plugins && rm -f config.xml",
-    "prepare:particl-dev": "npm run clean && npm run apply:particl-dev && ionic cordova prepare && npm run fix:fcm",
-    "prepare:particl": "npm run clean && npm run apply:particl && ionic cordova prepare && npm run fix:fcm",
+    "prepare:capricoinplus": "npm run clean && npm run apply:capricoinplus && ionic cordova prepare && npm run fix:fcm",
     "prepare:copay": "npm run clean && npm run apply:copay && ionic cordova prepare && npm run fix:fcm",
     "prepare:bitpay": "npm run clean && npm run apply:bitpay && ionic cordova prepare && npm run fix:fcm",
     "clean-all": "git clean -dfx",
@@ -83,9 +82,8 @@
     "run:android-emulator": "npm run env:dev && ionic cordova run android --emulator --debug",
     "run:android-release": "npm run env:prod && ionic cordova run android --device --release",
     "log:android": "adb logcat | grep chromium",
-    "sign:android": "rm -f platforms/android/app/build/outputs/apk/release/android-release-signed-aligned.apk; jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ../copay.keystore -signedjar platforms/android/app/build/outputs/apk/release/android-release-signed.apk platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk  particl-releases && $ANDROID_HOME/build-tools/28.0.3/zipalign -v 4 platforms/android/app/build/outputs/apk/release/android-release-signed.apk platforms/android/app/build/outputs/apk/release/android-release-signed-aligned.apk",
-    "apply:particl-dev": "cd app-template && node apply.js particl-dev",
-    "apply:particl": "cd app-template && node apply.js particl",
+    "sign:android": "rm -f platforms/android/app/build/outputs/apk/release/android-release-signed-aligned.apk; jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ../copay.keystore -signedjar platforms/android/app/build/outputs/apk/release/android-release-signed.apk platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk  capricoinplus-releases && $ANDROID_HOME/build-tools/28.0.3/zipalign -v 4 platforms/android/app/build/outputs/apk/release/android-release-signed.apk platforms/android/app/build/outputs/apk/release/android-release-signed-aligned.apk",
+    "apply:capricoinplus": "cd app-template && node apply.js capricoinplus",
     "apply:copay": "cd app-template && node apply.js copay",
     "apply:bitpay": "cd app-template && node apply.js bitpay",
     "fix:fcm": "echo platforms/ios/Copay/Resources platforms/ios/Copay/Resources/Resources platforms/ios/Bitpay/Resources platforms/ios/Bitpay/Resources/Resources | xargs -n 1 cp GoogleService-Info.plist 2>/dev/null; mkdir -p platforms/android/app/src/debug platforms/android/app/src/release; echo platforms/android/app/src/debug platforms/android/app/src/release platforms/android/app | xargs -n 1 cp google-services.json",
@@ -101,8 +99,8 @@
     "verify:bitpay-desktop": "gpg --verify dist/BitPay-linux.zip.sig dist/BitPay-linux.zip; gpg --verify dist/BitPay.exe.sig dist/BitPay.exe; gpg --verify dist/BitPay.dmg.sig dist/BitPay.dmg"
   },
   "build": {
-    "appId": "io.particl.copay.desktop2",
-    "productName": "Particl Copay",
+    "appId": "org.capricoin.copay.desktop",
+    "productName": "Capricoin+ Copay",
     "afterPack": "./electron/afterPack.js",
     "files": [
       "./electron/main.js",
@@ -115,12 +113,12 @@
         "bitcoin",
         "bitcoincash",
         "bchtest",
-        "Particl Copay"
+        "Capricoin+ Copay"
       ]
     },
     "mac": {
       "category": "public.app-category.finance",
-      "icon": "resources/Particl Copay/mac/app.icns",
+      "icon": "resources/Capricoin+ Copay/mac/app.icns",
       "artifactName": "${productName}.${ext}",
       "extendInfo": {
         "NSCameraUsageDescription": "Scan a Bitcoin Address directly to your Wallet and send funds to it"
@@ -131,22 +129,22 @@
     },
     "mas": {
       "identity": "BitPay, Inc. (884JRH5R93)",
-      "entitlements": "./particl-copay-entitlements.mas.plist",
-      "provisioningProfile": "./particl-copay-embedded.provisionprofile"
+      "entitlements": "./capricoinplus-copay-entitlements.mas.plist",
+      "provisioningProfile": "./capricoinplus-copay-embedded.provisionprofile"
     },
     "win": {
       "target": [
         "appx"
       ],
-      "icon": "resources/Particl Copay/windows/icon.ico",
+      "icon": "resources/Capricoin+ Copay/windows/icon.ico",
       "artifactName": "${productName}.${ext}"
     },
     "appx": {
-      "identityName": "Copay-SecureParticlWallet",
+      "identityName": "Copay-SecureCapricoinPlusWallet",
       "publisher": "CN=F89609D1-EB3E-45FD-A58A-C2E3895FCE7B",
       "publisherDisplayName": "BitPay Inc.",
-      "applicationId": "ParticlCopayWallet",
-      "displayName": "Copay - Secure Particl Wallet"
+      "applicationId": "CapricoinPlusCopayWallet",
+      "displayName": "Copay - Secure Capricoin+ Wallet"
     },
     "linux": {
       "target": [
@@ -191,21 +189,21 @@
     "base64-js": "^1.3.0",
     "bech32-buffer": "^0.1.2",
     "bitauth": "git+https://github.com/bitpay/bitauth.git#copay",
-    "bitcore-wallet-client": "git://github.com/particl/bitcore-wallet-client.git",
+    "bitcore-wallet-client": "git://github.com/Capricoinofficial/bitcore-wallet-client.git",
     "buffer-compare": "1.1.1",
     "cordova": "8.1.2",
-    "cordova-android": "7.1.2",
+    "cordova-android": "7.1.4",
     "cordova-clipboard": "1.2.1",
     "cordova-custom-config": "https://github.com/cmgustavo/cordova-custom-config.git#3a1902fb700dc8c1e9ac9db592aa48d7d900cde0",
-    "cordova-ios": "4.5.5",
+    "cordova-ios": "5.0.1",
     "cordova-launch-review": "3.1.1",
     "cordova-plugin-add-swift-support": "1.7.2",
     "cordova-plugin-android-fingerprint-auth": "1.4.3",
     "cordova-plugin-compat": "1.2.0",
-    "cordova-plugin-customurlscheme-ng": "5.0.0",
+    "cordova-plugin-customurlscheme-ng": "5.0.1",
     "cordova-plugin-device": "2.0.1",
     "cordova-plugin-dialogs": "2.0.1",
-    "cordova-plugin-fcm": "https://github.com/cmgustavo/cordova-plugin-fcm.git#v4.1",
+    "cordova-plugin-fcm-ng": "5.1.1",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-globalization": "1.0.9",
     "cordova-plugin-inappbrowser": "2.0.2",
@@ -319,14 +317,14 @@
       "cordova-plugin-file": {},
       "cordova-custom-config": {},
       "cordova-plugin-customurlscheme-ng": {
-        "URL_SCHEME": "particl",
-        "SECOND_URL_SCHEME": "particl-copay",
-        "THIRD_URL_SCHEME": "particl-bitpay",
+        "URL_SCHEME": "capricoinplus",
+        "SECOND_URL_SCHEME": "capricoinplus-copay",
+        "THIRD_URL_SCHEME": "capricoinplus-bitpay",
         "ANDROID_SCHEME": " ",
         "ANDROID_HOST": " ",
         "ANDROID_PATHPREFIX": "/"
       },
-      "cordova-plugin-fcm": {},
+      "cordova-plugin-fcm-ng": {},
       "cordova-plugin-globalization": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-screen-orientation": {},

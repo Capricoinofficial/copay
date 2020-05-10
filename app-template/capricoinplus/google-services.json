@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "754664347305",
+    "firebase_url": "https://capricoinplus-copay.firebaseio.com",
+    "project_id": "capricoinplus-copay",
+    "storage_bucket": "capricoinplus-copay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754664347305:android:136f073516b7fe5329fbb8",
+        "android_client_info": {
+          "package_name": "org.capricoin.copay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754664347305-rqu0e5k58682pq739a49q6jha1qd05sj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.capricoin.copay",
+            "certificate_hash": ""
+          }
+        },
+        {
+          "client_id": "232519596896-ujnevlf686hc083rshkbnu7f2f1ukojs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVhQ_iNr2kparYisT8fEcN_ivXMBM6YjA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754664347305-rqu0e5k58682pq739a49q6jha1qd05sj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "754664347305-eda1vu2ovb5hedo997tiakmh8n373rfk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.capricoin.copay"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

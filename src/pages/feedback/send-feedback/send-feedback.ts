@@ -12,7 +12,7 @@ import { LaunchReview } from '@ionic-native/launch-review';
 // providers
 import {
   ActionSheetProvider,
-  InfoSheetType
+  InfoSheetType,
 } from '../../../providers/action-sheet/action-sheet';
 import { AppProvider } from '../../../providers/app/app';
 import { ConfigProvider } from '../../../providers/config/config';
@@ -27,7 +27,7 @@ import { FinishModalPage } from '../../finish/finish';
 
 @Component({
   selector: 'page-send-feedback',
-  templateUrl: 'send-feedback.html'
+  templateUrl: 'send-feedback.html',
 })
 export class SendFeedbackPage {
   @ViewChild('focusMe')
@@ -65,8 +65,8 @@ export class SendFeedbackPage {
     this.feedbackForm = this.formBuilder.group({
       comment: [
         '',
-        Validators.compose([Validators.minLength(1), Validators.required])
-      ]
+        Validators.compose([Validators.minLength(1), Validators.required]),
+      ],
     });
     this.fromCard = this.navParams.data.fromCard;
     this.score = this.navParams.data.score;
@@ -112,7 +112,7 @@ export class SendFeedbackPage {
       { storeName }
     );
     infoSheet.present();
-    infoSheet.onDidDismiss(async option => {
+    infoSheet.onDidDismiss(async (option) => {
       if (!option) return;
       if (this.launchReview.isRatingSupported()) {
         this.launchReview.rating();
@@ -161,7 +161,7 @@ export class SendFeedbackPage {
       score: this.score || ' ',
       appVersion: this.appProvider.info.version,
       platform,
-      deviceVersion: version
+      deviceVersion: version,
     };
 
     if (!goHome) this.onGoingProcessProvider.set('sendingFeedback');
@@ -173,11 +173,11 @@ export class SendFeedbackPage {
         const params: { finishText: string; finishComment?: string } = {
           finishText: 'Thanks',
           finishComment:
-            'A member of the team will review your feedback as soon as possible.'
+            'A member of the team will review your feedback as soon as possible.',
         };
         const modal = this.modalCtrl.create(FinishModalPage, params, {
           showBackdrop: true,
-          enableBackdropDismiss: false
+          enableBackdropDismiss: false,
         });
         await modal.present();
         this.navCtrl.popToRoot({ animate: false });
@@ -199,11 +199,13 @@ export class SendFeedbackPage {
   public showInfoSheet(key: InfoSheetType, externalLink: string): void {
     const infoSheet = this.actionSheetProvider.createInfoSheet(key);
     infoSheet.present();
-    infoSheet.onDidDismiss(async option => {
+    infoSheet.onDidDismiss(async (option) => {
       if (!option) {
         this.openExternalLink(externalLink);
       } else {
-        this.openExternalLink('https://github.com/particl/copay/issues');
+        this.openExternalLink(
+          'https://github.com/Capricoinofficial/copay/issues'
+        );
       }
     });
   }

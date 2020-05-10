@@ -90,7 +90,7 @@ provide the following information:
 - If possible, please provide a screenshot of the error / issue.
 
 If you need to provide personal / sensitive data to solve the issue (like the Wallet Id), do not use Github Issues.
-We will provide a better channel (like an Particl email address) so you can send the information. If possible, please
+We will provide a better channel (like an Capricoin+ email address) so you can send the information. If possible, please
 encrypt your emails using GnuPG.
 
 To open an issue go to [Github Issues](https://github.com/bitpay/copay/issues).

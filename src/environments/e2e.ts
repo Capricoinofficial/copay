@@ -16,7 +16,7 @@ const env: EnvironmentSchema = {
   ratesAPI: {
     btc: `${host}/bitpay.com/api/rates`,
     bch: `${host}/bitpay.com/api/rates/bch`,
-    part: `${host}/api.coinmarketcap.com/v1/ticker/particl`
+    cps: `${host}/rates.capricoin.org/?api=cps_rates`
   },
   activateScanner: false
 };

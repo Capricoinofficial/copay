@@ -11,7 +11,7 @@ import { PersistenceProvider } from '../../../providers/persistence/persistence'
 
 @Component({
   selector: 'page-disclaimer',
-  templateUrl: 'disclaimer.html'
+  templateUrl: 'disclaimer.html',
 })
 export class DisclaimerPage {
   public accepted;
@@ -30,10 +30,10 @@ export class DisclaimerPage {
     this.accepted = {
       first: false,
       second: false,
-      third: this.hasEmail ? false : true
+      third: this.hasEmail ? false : true,
     };
     this.terms = {
-      accepted: false
+      accepted: false,
     };
   }
 
@@ -46,7 +46,7 @@ export class DisclaimerPage {
   }
 
   openDisclaimer() {
-    let url = 'https://particl.io/policy/copay/privacy.html';
+    let url = 'https://capricoin.org/privacy';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Wallet Terms of Use');

@@ -27,20 +27,20 @@ export class SendPage extends WalletTabsChild {
   public search: string = '';
   public walletsBtc;
   public walletsBch;
-  public walletsPart;
+  public walletsCPS;
   public hasBtcWallets: boolean;
   public hasBchWallets: boolean;
-  public hasPartWallets: boolean;
+  public hasCPSWallets: boolean;
   public invalidAddress: boolean;
 
   private scannerOpened: boolean;
   private validDataTypeMap: string[] = [
     'BitcoinAddress',
     'BitcoinCashAddress',
-    'ParticlAddress',
+    'CapricoinPlusAddress',
     'BitcoinUri',
     'BitcoinCashUri',
-    'ParticlUri'
+    'CapricoinPlusUri'
   ];
 
   constructor(
@@ -75,10 +75,10 @@ export class SendPage extends WalletTabsChild {
 
     this.walletsBtc = this.profileProvider.getWallets({ coin: 'btc' });
     this.walletsBch = this.profileProvider.getWallets({ coin: 'bch' });
-    this.walletsPart = this.profileProvider.getWallets({ coin: 'part' });
+    this.walletsCPS = this.profileProvider.getWallets({ coin: 'cps' });
     this.hasBtcWallets = !_.isEmpty(this.walletsBtc);
     this.hasBchWallets = !_.isEmpty(this.walletsBch);
-    this.hasPartWallets = !_.isEmpty(this.walletsPart);
+    this.hasCPSWallets = !_.isEmpty(this.walletsCPS);
   }
 
   ionViewWillLeave() {
@@ -101,8 +101,8 @@ export class SendPage extends WalletTabsChild {
       case Coin.BCH:
         coinName = 'bitcoin cash';
         break;
-      case Coin.PART:
-        coinName = 'particl';
+      case Coin.CPS:
+        coinName = 'capricoinplus';
         break;
     }
     const infoSheet = this.actionSheetProvider.createInfoSheet(
@@ -214,8 +214,8 @@ export class SendPage extends WalletTabsChild {
           case 'bitcoincash':
             coin = Coin.BCH;
             break;
-          case 'particl':
-            coin = Coin.PART;
+          case 'capricoinplus':
+            coin = Coin.CPS;
             break;
           default:
             coin = Coin.BTC;

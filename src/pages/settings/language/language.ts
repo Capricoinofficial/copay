@@ -29,13 +29,13 @@ export class LanguagePage {
   }
 
   public openExternalLink(): void {
-    let url = 'https://crowdin.com/project/copay';
+    let url = 'https://github.com/Capricoinofficial/copay/issues';
     let optIn = true;
-    let title = this.translate.instant('Open Translation Community');
+    let title = this.translate.instant('Open Copay on GitHub');
     let message = this.translate.instant(
-      'You can make contributions by signing up on our Crowdin community translation website. We’re looking forward to hearing from you!'
+      'You can make contributions by submitting a pull request on GitHub. We’re looking forward to hearing from you!'
     );
-    let okText = this.translate.instant('Open Crowdin');
+    let okText = this.translate.instant('Open GitHub');
     let cancelText = this.translate.instant('Go Back');
     this.externalLinkProvider.open(
       url,

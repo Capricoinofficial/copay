@@ -20,27 +20,27 @@ import * as _ from 'lodash';
     <ion-tabs selectedIndex="1" #tabs>
       <ion-tab
         [root]="receiveRoot"
-        tabTitle="{{'Receive'|translate}}"
+        tabTitle="{{ 'Receive' | translate }}"
         tabIcon="tab-receive"
       ></ion-tab>
       <ion-tab
         [root]="activityRoot"
-        tabTitle="{{'Activity'|translate}}"
+        tabTitle="{{ 'Activity' | translate }}"
         tabIcon="tab-activity"
       ></ion-tab>
       <ion-tab
         [root]="sendRoot"
-        tabTitle="{{'Send'|translate}}"
+        tabTitle="{{ 'Send' | translate }}"
         tabIcon="tab-send"
       ></ion-tab>
       <ion-tab
         *ngIf="canColdStake"
         [root]="stakingRoot"
-        tabTitle="{{'Staking'|translate}}"
+        tabTitle="{{ 'Staking' | translate }}"
         tabIcon="snow"
       ></ion-tab>
     </ion-tabs>
-  `
+  `,
 })
 export class WalletTabsPage {
   @ViewChild('tabs')
@@ -79,7 +79,7 @@ export class WalletTabsPage {
       this.subscribeEvents();
     });
 
-    this.events.subscribe('Local/TxAction', walletId => {
+    this.events.subscribe('Local/TxAction', (walletId) => {
       if (this.walletId == walletId) this.events.publish('Wallet/updateAll');
     });
 
@@ -144,10 +144,9 @@ export class WalletTabsPage {
       wallet.status.wallet &&
       wallet.status.wallet.singleAddress;
     if (isSingleAddress !== undefined) {
-      this.canColdStake = 
-        wallet.coin === 'part' && 
-        ((wallet.n === 1 && !isSingleAddress) ||
-         (wallet.n > 1));
+      this.canColdStake =
+        wallet.coin === 'cps' &&
+        ((wallet.n === 1 && !isSingleAddress) || wallet.n > 1);
     } else {
       this.canColdStake = false;
 

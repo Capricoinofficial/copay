@@ -10,7 +10,7 @@ describe('AboutPage', () => {
   let instance;
 
   beforeEach(async(() =>
-    TestUtils.configurePageTestingModule([AboutPage]).then(testEnv => {
+    TestUtils.configurePageTestingModule([AboutPage]).then((testEnv) => {
       fixture = testEnv.fixture;
       instance = testEnv.instance;
       fixture.detectChanges();
@@ -43,10 +43,9 @@ describe('AboutPage', () => {
         expect(instance.translate.instant).toHaveBeenCalledWith(
           'About {{appName}}'
         );
-        expect(instance.replaceParametersProvider.replace).toHaveBeenCalledWith(
-          'testVal',
-          { appName: 'testName' }
-        );
+        expect(
+          instance.replaceParametersProvider.replace
+        ).toHaveBeenCalledWith('testVal', { appName: 'testName' });
         expect(instance.title).toEqual('testTitle');
       });
     });
@@ -59,10 +58,10 @@ describe('AboutPage', () => {
         const params = {
           'Go Back': 'Go Back',
           Open: 'Open',
-          'View Privacy Policy': 'View Privacy Policy'
+          'View Privacy Policy': 'View Privacy Policy',
         };
 
-        spyOn(instance.translate, 'instant').and.callFake(myParam => {
+        spyOn(instance.translate, 'instant').and.callFake((myParam) => {
           return params[myParam];
         });
 
@@ -85,17 +84,17 @@ describe('AboutPage', () => {
         const params = {
           'Go Back': 'Go Back',
           Open: 'Open',
-          'View Wallet Terms of Use': 'View Wallet Terms of Use'
+          'View Wallet Terms of Use': 'View Wallet Terms of Use',
         };
 
-        spyOn(instance.translate, 'instant').and.callFake(myParam => {
+        spyOn(instance.translate, 'instant').and.callFake((myParam) => {
           return params[myParam];
         });
 
         instance.openTermsOfUse();
 
         expect(instance.externalLinkProvider.open).toHaveBeenCalledWith(
-          'https://particl.io/policy/copay/privacy.html',
+          'https://capricoin.org/privacy',
           true,
           null,
           'View Wallet Terms of Use',
@@ -116,10 +115,10 @@ describe('AboutPage', () => {
           'Open GitHub': 'Open GitHub',
           'Open GitHub Project': 'Open GitHub Project',
           'You can see the latest developments and contribute to this open source app by visiting our project on GitHub.':
-            'You can see the latest developments and contribute to this open source app by visiting our project on GitHub.'
+            'You can see the latest developments and contribute to this open source app by visiting our project on GitHub.',
         };
 
-        spyOn(instance.translate, 'instant').and.callFake(myParam => {
+        spyOn(instance.translate, 'instant').and.callFake((myParam) => {
           return params[myParam];
         });
 

@@ -23,7 +23,7 @@ import { TxFormatProvider } from '../tx-format/tx-format';
 export enum Coin {
   BTC = 'btc',
   BCH = 'bch',
-  PART = 'part'
+  CPS = 'cps'
 }
 
 export interface WalletOptions {
@@ -1663,8 +1663,8 @@ export class WalletProvider {
     switch (coin) {
       case 'bch':
         return network == 'testnet' ? 'bchtest' : 'bitcoincash';
-      case 'part':
-        return 'particl';
+      case 'cps':
+        return 'capricoinplus';
       default:
         return 'bitcoin';
     }

@@ -2,17 +2,27 @@ page-cold-staking-enable {
   .error-text {
     color: color($colors, error);
   }
+
   .scanner-icon {
     z-index: 99;
     font-size: 28px;
     color: color($colors, primary);
   }
+
+  .official-pool {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   .check {
     font-size: 22px;
     padding-top: 3px;
+
     &.success {
       color: color($colors, success);
     }
+
     &.fail {
       color: color($colors, danger);
     }

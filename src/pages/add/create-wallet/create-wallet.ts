@@ -93,10 +93,10 @@ export class CreateWalletPage implements OnInit {
       bwsURL: [this.defaults.bws.url],
       selectedSeed: ['new'],
       recoveryPhrase: [null],
-      derivationPath: [this.derivationPathByDefault['part']],
+      derivationPath: [this.derivationPathByDefault['cps']],
       testnetEnabled: [false],
       singleAddress: [false],
-      coin: ['part', Validators.required]
+      coin: ['cps', Validators.required]
     });
 
     this.setTotalCopayers(this.tc);

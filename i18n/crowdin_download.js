@@ -12,7 +12,7 @@ var path = require('path');
 var https = require('https');
 var AdmZip = require('adm-zip');
 
-var crowdin_identifier = 'particl-copay';
+var crowdin_identifier = 'capricoinplus-copay';
 
 try {
   // obtain the crowdin api key

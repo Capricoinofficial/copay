@@ -68,9 +68,9 @@ export class IncomingDataProvider {
     return !!this.bwcProvider.getBitcoreCash().URI.isValid(data);
   }
 
-  private isValidParticlUri(data: string): boolean {
+  private isValidCapricoinPlusUri(data: string): boolean {
     data = this.sanitizeUri(data);
-    return !!this.bwcProvider.getBitcoreParticl().URI.isValid(data);
+    return !!this.bwcProvider.getBitcoreCapricoinPlus().URI.isValid(data);
   }
 
   public isValidBitcoinCashUriWithLegacyAddress(data: string): boolean {
@@ -106,10 +106,10 @@ export class IncomingDataProvider {
     );
   }
 
-  private isValidParticlAddress(data: string): boolean {
+  private isValidCapricoinPlusAddress(data: string): boolean {
     return !!(
-      this.bwcProvider.getBitcoreParticl().Address.isValid(data, 'livenet') ||
-      this.bwcProvider.getBitcoreParticl().Address.isValid(data, 'testnet')
+      this.bwcProvider.getBitcoreCapricoinPlus().Address.isValid(data, 'livenet') ||
+      this.bwcProvider.getBitcoreCapricoinPlus().Address.isValid(data, 'testnet')
     );
   }
 
@@ -155,8 +155,8 @@ export class IncomingDataProvider {
     );
   }
 
-  private isValidParticlPrivateKey(data: string): boolean {
-    return !!(data && this.checkParticlPrivateKey(data));
+  private isValidCapricoinPlusPrivateKey(data: string): boolean {
+    return !!(data && this.checkCapricoinPlusPrivateKey(data));
   }
 
   private isValidImportPrivateKey(data: string): boolean {
@@ -253,12 +253,12 @@ export class IncomingDataProvider {
     else this.goSend(address, amount, message, coin);
   }
 
-  private handleParticlUri(data: string, redirParams?: RedirParams): void {
-    this.logger.debug('Incoming-data: Particl URI');
+  private handleCapricoinPlusUri(data: string, redirParams?: RedirParams): void {
+    this.logger.debug('Incoming-data: Capricoin+ URI');
     let amountFromRedirParams =
       redirParams && redirParams.amount ? redirParams.amount : '';
-    const coin = Coin.PART;
-    let parsed = this.bwcProvider.getBitcoreParticl().URI(data);
+    const coin = Coin.CPS;
+    let parsed = this.bwcProvider.getBitcoreCapricoinPlus().URI(data);
     let address = parsed.address ? parsed.address.toString() : '';
     let message = parsed.message;
     let amount = parsed.amount || amountFromRedirParams;
@@ -313,16 +313,16 @@ export class IncomingDataProvider {
     }
   }
 
-  private handlePlainParticlAddress(
+  private handlePlainCapricoinPlusAddress(
     data: string,
     redirParams?: RedirParams
   ): void {
-    this.logger.debug('Incoming-data: Particl plain address');
-    const coin = Coin.PART;
+    this.logger.debug('Incoming-data: Capricoin+ plain address');
+    const coin = Coin.CPS;
     if (redirParams && redirParams.activePage === 'ScanPage') {
       this.showMenu({
         data,
-        type: 'particlAddress',
+        type: 'CapricoinPlusAddress',
         coin
       });
     } else if (redirParams && redirParams.amount) {
@@ -448,9 +448,9 @@ export class IncomingDataProvider {
       this.handleBitcoinCashUriLegacyAddress(data);
       return true;
 
-      // Particl  URI
-    } else if (this.isValidParticlUri(data)) {
-      this.handleParticlUri(data, redirParams);
+      // Capricoin+  URI
+    } else if (this.isValidCapricoinPlusUri(data)) {
+      this.handleCapricoinPlusUri(data, redirParams);
       return true;
 
       // Plain URL
@@ -468,9 +468,9 @@ export class IncomingDataProvider {
       this.handlePlainBitcoinCashAddress(data, redirParams);
       return true;
 
-      // Plain Address (Particl)
-    } else if (this.isValidParticlAddress(data)) {
-      this.handlePlainParticlAddress(data, redirParams);
+      // Plain Address (CapricoinPlus)
+    } else if (this.isValidCapricoinPlusAddress(data)) {
+      this.handlePlainCapricoinPlusAddress(data, redirParams);
       return true;
 
       // Glidera
@@ -503,9 +503,9 @@ export class IncomingDataProvider {
       this.handlePrivateKey(data, redirParams, 'btc');
       return true;
 
-      // Check Particl Private Key
-    } else if (this.isValidParticlPrivateKey(data)) {
-      this.handlePrivateKey(data, redirParams, 'part');
+      // Check Capricoin+ Private Key
+    } else if (this.isValidCapricoinPlusPrivateKey(data)) {
+      this.handlePrivateKey(data, redirParams, 'cps');
       return true;
 
       // Import Private Key
@@ -562,12 +562,12 @@ export class IncomingDataProvider {
         title: this.translate.instant('Bitcoin Cash URI')
       };
 
-      // Particl  URI
-    } else if (this.isValidParticlUri(data)) {
+      // Capricoin+  URI
+    } else if (this.isValidCapricoinPlusUri(data)) {
       return {
         data,
-        type: 'ParticlUri',
-        title: this.translate.instant('Particl URI')
+        type: 'CapricoinPlusUri',
+        title: this.translate.instant('Capricoin+ URI')
       };
 
       // Plain URL
@@ -594,12 +594,12 @@ export class IncomingDataProvider {
         title: this.translate.instant('Bitcoin Cash Address')
       };
 
-      // Plain Address (Particl)
-    } else if (this.isValidParticlAddress(data)) {
+      // Plain Address (CapricoinPlus)
+    } else if (this.isValidCapricoinPlusAddress(data)) {
       return {
         data,
-        type: 'ParticlAddress',
-        title: this.translate.instant('Particl Address')
+        type: 'CapricoinPlusAddress',
+        title: this.translate.instant('Capricoin+ Address')
       };
 
       // Glidera
@@ -694,12 +694,12 @@ export class IncomingDataProvider {
     return true;
   }
 
-  private checkParticlPrivateKey(privateKey: string): boolean {
+  private checkCapricoinPlusPrivateKey(privateKey: string): boolean {
     // Check if it is a Transaction id to prevent errors
     let isPK: boolean = this.checkRegex(privateKey);
     if (!isPK) return false;
     try {
-      this.bwcProvider.getBitcoreParticl().PrivateKey(privateKey, 'livenet');
+      this.bwcProvider.getBitcoreCapricoinPlus().PrivateKey(privateKey, 'livenet');
     } catch (err) {
       return false;
     }

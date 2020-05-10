@@ -9,7 +9,7 @@ const env: EnvironmentSchema = {
   ratesAPI: {
     btc: 'https://bitpay.com/api/rates',
     bch: 'https://bitpay.com/api/rates/bch',
-    part: 'https://api.coinmarketcap.com/v1/ticker/particl/'
+    cps: 'https://rates.capricoin.org/'
   },
   activateScanner: true
 };

@@ -5,7 +5,7 @@ export class DerivationPathHelperProvider {
   public default: {
     btc: string;
     bch: string;
-    part: string;
+    cps: string;
   };
   public defaultTestnet: string;
 
@@ -13,7 +13,7 @@ export class DerivationPathHelperProvider {
     this.default = {
       btc: "m/44'/0'/0'",
       bch: "m/44'/0'/0'",
-      part: "m/44'/44'/0'"
+      cps: "m/44'/468'/0'"
     };
     this.defaultTestnet = "m/44'/1'/0'";
   }
@@ -42,7 +42,7 @@ export class DerivationPathHelperProvider {
 
     switch (coinType) {
       case "0'":
-      case "44'":
+      case "468'":
         networkName = 'livenet';
         break;
       case "1'":

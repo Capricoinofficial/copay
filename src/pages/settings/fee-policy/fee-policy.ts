@@ -6,12 +6,12 @@ import { Logger } from '../../../providers/logger/logger';
 import { ConfigProvider } from '../../../providers/config/config';
 import { FeeProvider } from '../../../providers/fee/fee';
 
-const COIN = 'part';
+const COIN = 'cps';
 const NETWORK = 'livenet';
 
 @Component({
   selector: 'page-fee-policy',
-  templateUrl: 'fee-policy.html'
+  templateUrl: 'fee-policy.html',
 })
 export class FeePolicyPage {
   public feeLevels: object;
@@ -37,11 +37,11 @@ export class FeePolicyPage {
     this.error = null;
     return this.feeProvider
       .getFeeLevels(COIN)
-      .then(data => {
+      .then((data) => {
         this.feeLevels = data['levels'];
         this.updateCurrentValues();
       })
-      .catch(err => {
+      .catch((err) => {
         this.logger.error(err);
         this.error = err;
       });
@@ -62,7 +62,7 @@ export class FeePolicyPage {
     if (_.isEmpty(this.feeLevels) || _.isEmpty(this.currentFeeLevel)) return;
 
     let value = _.find(this.feeLevels[NETWORK], {
-      level: this.currentFeeLevel
+      level: this.currentFeeLevel,
     });
 
     if (_.isEmpty(value)) return;
@@ -75,9 +75,9 @@ export class FeePolicyPage {
     let opts = {
       wallet: {
         settings: {
-          feeLevel: this.currentFeeLevel
-        }
-      }
+          feeLevel: this.currentFeeLevel,
+        },
+      },
     };
 
     this.configProvider.set(opts);

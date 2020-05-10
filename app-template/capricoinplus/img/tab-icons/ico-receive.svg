@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>ico-receive</title>
+    <desc>Created with Sketch.</desc>
+    <g id="copay-assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="img/tabs" transform="translate(-57.000000, -139.000000)" fill="#1E222A" fill-rule="nonzero">
+            <g id="ico-receive" transform="translate(57.000000, 139.000000)">
+                <path d="M9.7,9.7 L0,9.7 L0,0 L9.7,0 L9.7,9.7 Z M1.2,8.5 L8.5,8.5 L8.5,1.2 L1.2,1.2 L1.2,8.5 Z" id="Shape"></path>
+                <path d="M22,9.7 L12.3,9.7 L12.3,0 L22,0 L22,9.7 Z M13.5,8.5 L20.8,8.5 L20.8,1.2 L13.5,1.2 L13.5,8.5 Z" id="Shape"></path>
+                <path d="M9.7,22 L0,22 L0,12.3 L9.7,12.3 L9.7,22 Z M1.2,20.8 L8.5,20.8 L8.5,13.5 L1.2,13.5 L1.2,20.8 Z" id="Shape"></path>
+                <polygon id="Path" points="22 17.6 20.8 17.6 20.8 13.5 18.2 13.5 18.2 16.3 13.2 16.3 13.2 12.9 14.4 12.9 14.4 15.1 17 15.1 17 12.3 22 12.3"></polygon>
+                <polygon id="Path" points="21.4 22 13.2 22 13.2 19.5 14.4 19.5 14.4 20.8 21.4 20.8"></polygon>
+                <rect id="Rectangle" x="3.8" y="3.8" width="2.2" height="2.2"></rect>
+                <rect id="Rectangle" x="16" y="3.8" width="2.2" height="2.2"></rect>
+                <rect id="Rectangle" x="3.8" y="16" width="2.2" height="2.2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

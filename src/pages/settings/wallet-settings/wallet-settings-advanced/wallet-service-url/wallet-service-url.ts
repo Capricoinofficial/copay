@@ -61,7 +61,7 @@ export class WalletServiceUrlPage {
     let appName = this.app.info.nameCase;
     this.comment = this.replaceParametersProvider.replace(
       this.translate.instant(
-        "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
+        "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.capricoin.org (Capricoin+'s public BWS instance)."
       ),
       { appName }
     );
@@ -80,7 +80,7 @@ export class WalletServiceUrlPage {
     switch (this.walletServiceForm.value.bwsurl) {
       case 'prod':
       case 'production':
-        bws = 'https://bws.particl.io/bws/api';
+        bws = 'https://bws.capricoin.org/bws/api';
         break;
       case 'sta':
       case 'staging':
@@ -88,7 +88,7 @@ export class WalletServiceUrlPage {
         break;
       case 'loc':
       case 'local':
-        bws = 'https://bws.particl.io/bws/api';
+        bws = 'https://bws.capricoin.org/bws/api';
         break;
     }
     if (bws) {

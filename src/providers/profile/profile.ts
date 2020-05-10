@@ -1043,6 +1043,14 @@ export class ProfileProvider {
       } else {
         const lang = this.languageProvider.getCurrent();
         try {
+          // this.logger.info(
+          //   'network: ' +
+          //     network +
+          //     'passphrase: ' +
+          //     opts.passphrase +
+          //     'language: ' +
+          //     lang
+          // );
           walletClient.seedFromRandomWithMnemonic({
             network,
             passphrase: opts.passphrase,
@@ -1224,7 +1232,7 @@ export class ProfileProvider {
       opts.m = 1;
       opts.n = 1;
       opts.networkName = 'livenet';
-      opts.coin = Coin.PART;
+      opts.coin = Coin.CPS;
       this.createWallet(opts)
         .then(wallet => {
           return resolve(wallet);

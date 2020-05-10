@@ -5,11 +5,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Generator: crowdin.com\n"
-"X-Crowdin-Project: particl-copay\n"
+"X-Crowdin-Project: capricoinplus-copay\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: template.pot\n"
-"Project-Id-Version: particl-copay\n"
-"Last-Translator: particl\n"
+"Project-Id-Version: capricoinplus-copay\n"
+"Last-Translator: Capricoin+\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "PO-Revision-Date: 2019-02-07 15:13\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "2. Enter Gift Code"
 msgstr ""
 
-msgid "5-star ratings help us get the Particl Wallet into more hands, and more users means more resources can be committed to the app!"
+msgid "5-star ratings help us get the Capricoin+ Wallet into more hands, and more users means more resources can be committed to the app!"
 msgstr ""
 
 msgid "A total of {{amountAboveMaxSizeStr}} {{coin}} were excluded. The maximum size allowed for a transaction was exceeded."
@@ -99,7 +99,7 @@ msgid "Add this BitPay account ({{email}})?"
 msgstr "Добавить эту учетную запись BitPay ({{email}})?"
 
 msgid "Address"
-msgstr "Биткойн-адрес"
+msgstr "адрес"
 
 msgid "Address Book"
 msgstr "Aдресная книга"
@@ -290,7 +290,7 @@ msgstr "Покупка биткойн..."
 msgid "Buying Gift Card..."
 msgstr "Покупка Подарочной карты..."
 
-msgid "By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments."
+msgid "By providing your email address, you give explicit consent to Capricoin+ to use your email address to send you email notifications about payments."
 msgstr ""
 
 msgid "Calculating fee..."
@@ -374,7 +374,7 @@ msgstr ""
 msgid "Cold Staking Setup"
 msgstr ""
 
-msgid "Cold staking allows you to get interest on your PART coins."
+msgid "Cold staking allows you to get interest on your CPS coins."
 msgstr ""
 
 msgid "Color"
@@ -569,7 +569,7 @@ msgstr "Создать новый кошелек"
 msgid "Create a new wallet to start using this app."
 msgstr ""
 
-msgid "Create particl wallet"
+msgid "Create Capricoin+ wallet"
 msgstr "Создать биткойн-кошелёк"
 
 msgid "Create personal wallet"
@@ -932,7 +932,7 @@ msgstr ""
 msgid "Get local cash anywhere you go, from any Visa® compatible ATM. ATM bank fees may apply."
 msgstr ""
 
-msgid "Get news and updates from Particl"
+msgid "Get news and updates from Capricoin+"
 msgstr "Получать письма с новостями от BitPay"
 
 msgid "Get started"
@@ -1001,7 +1001,7 @@ msgstr ""
 msgid "I agree to the Terms and certify that I am the beneficial owner of the input assets and the destination address."
 msgstr "Я согласен с Условиями и подтверждаю, что являюсь бенефициарным владельцем вводимых активов и адреса назначения."
 
-msgid "I give explicit consent to Particl to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
+msgid "I give explicit consent to Capricoin+ to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr ""
 
 msgid "I have read, understood, and agree to the Terms of Use"
@@ -1043,7 +1043,7 @@ msgstr "Если этот параметр включен, на вкладке �
 msgid "If enabled, wallets will also try to spend unconfirmed funds."
 msgstr "Если включено, кошельки также попытаються потратить неподтвержденные средства."
 
-msgid "If this device is replaced or this app is deleted, neither you nor Particl can recover your funds without a backup."
+msgid "If this device is replaced or this app is deleted, neither you nor Capricoin+ can recover your funds without a backup."
 msgstr ""
 
 msgid "If you have funds stored on a website then you should move them into a secure wallet... like this one!"
@@ -1166,7 +1166,7 @@ msgstr "Узнайте больше"
 msgid "Learn more about Cold Staking"
 msgstr ""
 
-msgid "Learn more about cold staking on the Particl wiki."
+msgid "Learn more about cold staking on the Capricoin+ wiki."
 msgstr ""
 
 msgid "Learn more about testnet blockchain"
@@ -1355,7 +1355,7 @@ msgstr ""
 msgid "Not enough funds for fee"
 msgstr "Недостаточно средств для уплаты комиссии"
 
-msgid "Not even Particl can access it."
+msgid "Not even Capricoin+ can access it."
 msgstr "BitPay не сможет получить доступ самостоятельно."
 
 msgid "Not including the private key allows to check the wallet balance, transaction history, and create spend proposals from the export. However, does not allow to approve (sign) proposals, so funds will not be accessible from the export."
@@ -1430,7 +1430,7 @@ msgstr "Откройте проект GitHub"
 msgid "Open Insight"
 msgstr "Открыть Insight"
 
-msgid "Open Particl Wiki"
+msgid "Open Capricoin+ Wiki"
 msgstr ""
 
 msgid "Open Translation Community"
@@ -1454,28 +1454,28 @@ msgstr "Ой!"
 msgid "PIN"
 msgstr "PIN-код"
 
-msgid "Particl Address"
+msgid "Capricoin+ Address"
 msgstr ""
 
-msgid "Particl URI"
+msgid "Capricoin+ URI"
 msgstr ""
 
-msgid "Particl Wallets"
+msgid "Capricoin+ Wallets"
 msgstr ""
 
-msgid "Particl is a currency."
+msgid "Capricoin+ is a currency."
 msgstr "Биткойн - это валюта."
 
-msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgid "Capricoin+ is different - it cannot be safely held with a bank or web service."
 msgstr ""
 
-msgid "Particl is secure, digital money."
-msgstr "Particl это безопасные, цифровые деньги."
+msgid "Capricoin+ is secure, digital money."
+msgstr "Capricoin+ это безопасные, цифровые деньги."
 
-msgid "Particl network fee policy"
+msgid "Capricoin+ network fee policy"
 msgstr "Политика комиссии сети Биткойн"
 
-msgid "Particl transactions include a fee collected by miners on the network."
+msgid "Capricoin+ transactions include a fee collected by miners on the network."
 msgstr ""
 
 msgid "Password"
@@ -2036,7 +2036,7 @@ msgstr "Считывание кошелька..."
 msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr "ЭТО ДЕЙСТВИЕ НЕ МОЖЕТ БЫТЬ ОТМЕНЕНО"
 
-msgid "Take control of your money, get started with particl."
+msgid "Take control of your money, get started with Capricoin+."
 msgstr ""
 
 msgid "Tap and hold to show"
@@ -2144,7 +2144,7 @@ msgstr ""
 msgid "This app is not available for your device."
 msgstr ""
 
-msgid "This app stores your particl with cutting-edge security."
+msgid "This app stores your Capricoin+ with cutting-edge security."
 msgstr ""
 
 msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
@@ -2156,7 +2156,7 @@ msgstr ""
 msgid "This information is available at the website."
 msgstr ""
 
-msgid "This means you will stop receiving interest on your PART coins."
+msgid "This means you will stop receiving interest on your CPS coins."
 msgstr ""
 
 msgid "This password cannot be recovered. If this password is lost, funds can only be recovered by reimporting your 12-word recovery phrase."
@@ -2186,7 +2186,7 @@ msgstr "Хронология"
 msgid "To"
 msgstr "Кому"
 
-msgid "To get started, you'll need to create a particl wallet and get some particl."
+msgid "To get started, you'll need to create a Capricoin+ wallet and get some Capricoin+."
 msgstr "Чтобы начать работу, вам нужно создать кошелёк и получить биткойн."
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
@@ -2261,7 +2261,7 @@ msgstr "Перевести знакомым"
 msgid "Transfer to Multiple Recipients"
 msgstr ""
 
-msgid "Transfer to Particl Wallet"
+msgid "Transfer to Capricoin+ Wallet"
 msgstr ""
 
 msgid "Translate address"
@@ -2561,13 +2561,13 @@ msgstr ""
 msgid "You can make contributions by signing up on our Crowdin community translation website. We’re looking forward to hearing from you!"
 msgstr ""
 
-msgid "You can scan particl addresses, bitcoin addresses, payment requests, paper wallets, and more."
+msgid "You can scan Capricoin+ addresses, bitcoin addresses, payment requests, paper wallets, and more."
 msgstr "Вы можете сканировать биткойн-адреса, запросы платежей, бумажные кошельки, и многое другое."
 
 msgid "You can see the latest developments and contribute to this open source app by visiting our project on GitHub."
 msgstr ""
 
-msgid "You can spend particl at millions of websites and stores worldwide."
+msgid "You can spend Capricoin+ at millions of websites and stores worldwide."
 msgstr ""
 
 msgid "You can still export it from \"Export Wallet\" option."
@@ -2579,8 +2579,8 @@ msgstr ""
 msgid "You can use your Mercado Livre gift cards on your Mercado Pago account for everyday expenses like utilities and metro rides."
 msgstr ""
 
-msgid "You control your particl."
-msgstr "Вы контролируете Ваши particl-ы."
+msgid "You control your Capricoin+."
+msgstr "Вы контролируете Ваши Capricoin+-ы."
 
 msgid "You could sign the transaction later in your wallet details"
 msgstr ""
@@ -2588,13 +2588,13 @@ msgstr ""
 msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte."
 msgstr ""
 
-msgid "You wallet is generating interest on your PART coins and you are helping to secure the Particl network at the same time!"
+msgid "You wallet is generating interest on your CPS coins and you are helping to secure the Capricoin+ network at the same time!"
 msgstr ""
 
 msgid "Your BitPay Card is ready. Add funds to your card to start using it at stores and ATMs worldwide."
 msgstr ""
 
-msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Particl does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
+msgid "Your extended private keys are all that is needed to access your funds. Be sure to protect your private keys and store them only on secure devices. Capricoin+ does not have access to your private keys, so you alone are responsible for your keys. If you share key access with external services, you take responsibility for the risk of theft or breach. Only advanced users should handle extended private keys directly."
 msgstr ""
 
 msgid "Your fee is lower than recommended."
@@ -2603,7 +2603,7 @@ msgstr ""
 msgid "Your name"
 msgstr "Ваше имя"
 
-msgid "Your particl wallet is ready!"
+msgid "Your Capricoin+ wallet is ready!"
 msgstr "Ваш кошелёк готов!"
 
 msgid "Your wallet address is similar to a bank account number. You can add funds to your wallet by withdrawing funds you may have stored on an exchange to your wallet address. Or other {coinName} users can send you money by scanning your QR code."
@@ -2645,13 +2645,13 @@ msgstr "Подготавливается..."
 msgid "{appName} BCH wallets use the CashAddr format by default"
 msgstr ""
 
-msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Particl does not receive and does not control {coinName} miner fees."
+msgid "{coinName} miner fees are high due to record demand for limited space on the {coinName} network. Capricoin+ does not receive and does not control {coinName} miner fees."
 msgstr ""
 
 msgid "{coinName} miner fees unusually high"
 msgstr ""
 
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.particl.io (Particl's public BWS instance)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.capricoin.org (Capricoin+'s public BWS instance)."
 msgstr ""
 
 msgid "{{fee}} {{coin}} will be deducted for bitcoin networking fees."

@@ -109,7 +109,7 @@ export class ChooseFeeLevelPage {
       this.customFeePerKB = null;
       this.feePerSatByte = (value.feePerKb / 1000).toFixed();
       this.avgConfirmationTime =
-        value.nbBlocks * (this.coin === 'part' ? 2 : 10);
+        value.nbBlocks * (this.coin === 'cps' ? 2 : 10);
     } else {
       this.avgConfirmationTime = null;
       this.customSatPerByte = Number(this.feePerSatByte);

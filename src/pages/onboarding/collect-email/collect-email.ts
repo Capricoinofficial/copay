@@ -73,7 +73,7 @@ export class CollectEmailPage {
     // Confirm for notifications
     this.emailProvider.updateEmail(opts);
 
-    // Confirm to Get news and updates from Particl
+    // Confirm to Get news and updates from Capricoin+
     if (this.emailForm.value.accept) this.collectEmail();
 
     this.goToBackupRequestPage();

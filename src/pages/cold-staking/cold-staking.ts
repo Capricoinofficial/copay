@@ -38,7 +38,7 @@ export class ColdStakingPage extends WalletTabsChild {
   public hasUnconfirmed;
   public canZap;
   private OP_ISCOINSTAKE = 'b8';
-  private particlBitcore;
+  private CapricoinPlusBitcore;
   private onResumeSubscription: Subscription;
 
   @ViewChild(Content) content: Content;
@@ -63,7 +63,7 @@ export class ColdStakingPage extends WalletTabsChild {
   ) {
     super(navCtrl, profileProvider, walletTabsProvider);
 
-    this.particlBitcore = this.bwcProvider.getBitcoreParticl();
+    this.CapricoinPlusBitcore = this.bwcProvider.getBitcoreCapricoinPlus();
   }
 
   ionViewDidLoad() {
@@ -95,13 +95,13 @@ export class ColdStakingPage extends WalletTabsChild {
   }
 
   public learnMore(): void {
-    let url = 'https://particl.wiki/staking';
+    let url = 'https://capricoin.org/staking';
     let optIn = true;
     let title = null;
     let message = this.translate.instant(
-      'Learn more about cold staking on the Particl wiki.'
+      'Learn more about cold staking on the Capricoin+ website.'
     );
-    let okText = this.translate.instant('Open Particl Wiki');
+    let okText = this.translate.instant('Open Capricoin+ website');
     let cancelText = this.translate.instant('Go Back');
     this.externalLinkProvider.open(
       url,
@@ -124,7 +124,7 @@ export class ColdStakingPage extends WalletTabsChild {
       .ionicConfirm(
         this.translate.instant('Disable Staking'),
         this.translate.instant(
-          'This means you will stop receiving interest on your PART coins.'
+          'This means you will stop receiving interest on your CPS coins.'
         ),
         this.translate.instant('Disable'),
         this.translate.instant('Cancel')
@@ -308,7 +308,7 @@ export class ColdStakingPage extends WalletTabsChild {
 
       txp.outputs[0].toAddress = spend_address;
       if (isZap) {
-        txp.outputs[0].script = this.particlBitcore.Script.fromAddress(
+        txp.outputs[0].script = this.CapricoinPlusBitcore.Script.fromAddress(
           spend_address,
           stake_address
         ).toString();

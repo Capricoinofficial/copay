@@ -3,7 +3,7 @@
 
 #define MyAppName "*USERVISIBLENAME*"
 #define MyAppVersion "*VERSION*"
-#define MyAppPublisher "Particl"
+#define MyAppPublisher "Capricoin+"
 #define MyAppURL "*URL*"
 #define MyAppExeName "*USERVISIBLENAME*.exe"
 #define AppId "*WINDOWSAPPID*"
@@ -46,10 +46,10 @@ Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFil
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
 [Registry]
-Root: HKCR; Subkey: "particl"; ValueType: "string"; ValueData: "URL:Particl Custom Protocol"; Flags: uninsdeletekey
-Root: HKCR; Subkey: "particl"; ValueType: "string"; ValueName: "URL Protocol"; ValueData: ""
-Root: HKCR; Subkey: "particl\DefaultIcon"; ValueType: "string"; ValueData: "{app}\{#MyAppExeName},0"
-Root: HKCR; Subkey: "particl\shell\open\command"; ValueType: "string"; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
+Root: HKCR; Subkey: "capricoinplus"; ValueType: "string"; ValueData: "URL:Capricoin+ Custom Protocol"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "capricoinplus"; ValueType: "string"; ValueName: "URL Protocol"; ValueData: ""
+Root: HKCR; Subkey: "capricoinplus\DefaultIcon"; ValueType: "string"; ValueData: "{app}\{#MyAppExeName},0"
+Root: HKCR; Subkey: "capricoinplus\shell\open\command"; ValueType: "string"; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 
 Root: HKCR; Subkey: "bitcoincash"; ValueType: "string"; ValueData: "URL:Bitcoin Cash Custom Protocol"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "bitcoincash"; ValueType: "string"; ValueName: "URL Cash Protocol"; ValueData: ""

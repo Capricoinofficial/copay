@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="24px" viewBox="0 0 27 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>ico-send-selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="copay-assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="img/tabs" transform="translate(-13.000000, -13.000000)" fill-rule="nonzero" stroke="#616263" stroke-width="1.4">
+            <g id="ico-send-selected" transform="translate(14.000000, 14.000000)">
+                <polyline id="Path" fill-opacity="0.4" fill="#192C3A" points="24.5 0.5 5.3 10.7 3.9 18.3 8.8 14.3"></polyline>
+                <polygon id="Path" fill-opacity="0.71" fill="#FFB900" points="0.5 5.4 24.5 0.5 16.1 21.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,8 +1,4 @@
-<img src="https://raw.githubusercontent.com/particl/copay/master/resources/particl-copay/android/app-store/feature-graphic-1024.png" alt="Particl Copay">
-
-[![Build Status](https://secure.travis-ci.org/particl/copay.svg)](http://travis-ci.org/particl/copay)
-
-Particl Copay is a secure particl wallet platform for both desktop and mobile devices. Copay uses [Bitcore Wallet Service](https://github.com/particl/bitcore-wallet-service) (BWS) for peer synchronization and network interfacing.
+Capricoin+ Copay is a secure Capricoin+ wallet platform for both desktop and mobile devices. Copay uses [Bitcore Wallet Service](https://github.com/Capricoinofficial/bitcore-wallet-service) (BWS) for peer synchronization and network interfacing.
 
 For a list of frequently asked questions please visit the [Copay FAQ](https://github.com/bitpay/copay/wiki/COPAY---FAQ).
 
@@ -14,7 +10,7 @@ For a list of frequently asked questions please visit the [Copay FAQ](https://gi
 - Easy spending proposal flow for shared wallets and group payments
 - [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) Hierarchical deterministic (HD) address generation and wallet backups
 - Device-based security: all private keys are stored locally, not in the cloud
-- Support for Particl testnet wallets
+- Support for Capricoin+ testnet wallets
 - Synchronous access across all major mobile and desktop platforms
 - Payment protocol (BIP70-BIP73) support: easily-identifiable payment requests and verifiable, secure bitcoin payments
 - Support for over 150 currency pricing options and unit denomination in BTC or bits
@@ -27,12 +23,12 @@ For a list of frequently asked questions please visit the [Copay FAQ](https://gi
 
 ## Testing in a Browser
 
-> **Note:** This method should only be used for development purposes. When running Copay in a normal browser environment, browser extensions and other malicious code might have access to internal data and private keys. For production use, see the latest official [releases](https://github.com/particl/copay/releases/).
+> **Note:** This method should only be used for development purposes. When running Copay in a normal browser environment, browser extensions and other malicious code might have access to internal data and private keys. For production use, see the latest official [releases](https://github.com/Capricoinofficial/copay/releases/).
 
 Clone the repo and open the directory:
 
 ```sh
-git clone https://github.com/particl/copay.git
+git clone https://github.com/Capricoinofficial/copay.git
 cd copay
 ```
 
@@ -40,7 +36,7 @@ Ensure you have [Node](https://nodejs.org/) installed, then install and start Co
 
 ```sh
 npm install
-npm run apply:particl
+npm run apply:capricoinplus
 npm run start
 ```
 
@@ -65,8 +61,8 @@ Follow the [Cordova Android Platform Guide](https://cordova.apache.org/docs/en/l
 When your developement enviroment is ready, run the `start:android` package script.
 
 ```sh
-npm run apply:particl
-npm run prepare:particl
+npm run apply:capricoinplus
+npm run prepare:capricoinplus
 npm run start:android
 ```
 
@@ -77,8 +73,8 @@ Follow the [Cordova iOS Platform Guide](https://cordova.apache.org/docs/en/lates
 When your developement enviroment is ready, run the `start:ios` package script.
 
 ```sh
-npm run apply:particl
-npm run prepare:particl
+npm run apply:capricoinplus
+npm run prepare:capricoinplus
 npm run start:ios
 ```
 
@@ -89,7 +85,7 @@ The desktop version of Copay currently uses Electron. To get started, first inst
 When Electron is installed, run the `start:desktop` package script.
 
 ```sh
-npm run apply:particl
+npm run apply:capricoinplus
 npm run start:desktop
 ```
 
@@ -104,8 +100,8 @@ The `final` commands build the production version of the app, and bundle it with
 ```sh
 npm run clean-all
 npm install
-npm run apply:particl
-npm run prepare:particl
+npm run apply:capricoinplus
+npm run prepare:capricoinplus
 npm run final:android
 ```
 
@@ -114,8 +110,8 @@ npm run final:android
 ```sh
 npm run clean-all
 npm install
-npm run apply:particl
-npm run prepare:particl
+npm run apply:capricoinplus
+npm run prepare:capricoinplus
 npm run final:ios
 ```
 
@@ -132,7 +128,7 @@ A current workaround is to comment out the line to prevent the removal of the fi
 ```sh
 npm run clean-all
 npm install
-npm run apply:particl
+npm run apply:capricoinplus
 npm run final:desktop
 ```
 
@@ -164,7 +160,7 @@ BITPAY_EXTERNAL_SERVICES_CONFIG_LOCATION="~/.bitpay/externalServices.json" npm r
 
 Copay implements a multisig wallet using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses. It supports multiple wallets, each with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3. To create a multisig wallet shared between multiple participants, Copay requires the extended public keys of all the wallet participants. Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet. Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
 
-To unlock a payment and spend the wallet's funds, a quorum of participant signatures must be collected and assembled in the transaction. The funds cannot be spent without at least the minimum number of signatures required by the wallet configuration (2-of-3, 3-of-5, 6-of-6, etc.). Once a transaction proposal is created, the proposal is distributed among the wallet participants for each to sign the transaction locally. Finally, when the transaction is signed, the last signing participant will broadcast the transaction to the Particl network.
+To unlock a payment and spend the wallet's funds, a quorum of participant signatures must be collected and assembled in the transaction. The funds cannot be spent without at least the minimum number of signatures required by the wallet configuration (2-of-3, 3-of-5, 6-of-6, etc.). Once a transaction proposal is created, the proposal is distributed among the wallet participants for each to sign the transaction locally. Finally, when the transaction is signed, the last signing participant will broadcast the transaction to the Capricoin+ network.
 
 Copay also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers. The public key that each participant contributes to the wallet is a BIP32 extended public key. As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys. Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
 
@@ -174,7 +170,7 @@ For more information regarding how addresses are generated using this procedure,
 
 Since v1.2 Copay uses BIP39 mnemonics for backing up wallets. The BIP44 standard is used for wallet address derivation. Multisig wallets use P2SH addresses, while non-multisig wallets use P2PKH.
 
-Information about backup and recovery procedures is available at: https://github.com/particl/copay/blob/master/backupRecovery.md
+Information about backup and recovery procedures is available at: https://github.com/Capricoinofficial/copay/blob/master/backupRecovery.md
 
 Previous versions of Copay used files as backups. See the following section.
 
@@ -203,7 +199,7 @@ Since version 1.5, Copay uses the root `m/48'` for hardware multisignature walle
 
 ## Bitcore Wallet Service
 
-Copay depends on [Bitcore Wallet Service](https://github.com/particl/bitcore-wallet-service) (BWS) for blockchain information, networking and Copayer synchronization. A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.particl.io`. Switching between BWS instances is very simple and can be done with a click from within Copay. BWS also allows Copay to interoperate with other wallets like [Bitcore Wallet CLI](https://github.com/particl/bitcore-wallet).
+Copay depends on [Bitcore Wallet Service](https://github.com/Capricoinofficial/bitcore-wallet-service) (BWS) for blockchain information, networking and Copayer synchronization. A BWS instance can be setup and operational within minutes or you can use a public instance like `https://bws.capricoin.org`. Switching between BWS instances is very simple and can be done with a click from within Copay. BWS also allows Copay to interoperate with other wallets like [Bitcore Wallet CLI](https://github.com/Capricoinofficial/bitcore-wallet).
 
 Please note that Copay v5.3.0 and above use CSP to restrict network access. To use a custom BWS see [CSP announcement](https://github.com/bitpay/copay/blob/master/CSP.md).
 
@@ -275,4 +271,4 @@ Please see [Support requests](CONTRIBUTING.md#support)
 
 ## License
 
-Copay is released under the MIT License. Please refer to the [LICENSE](https://github.com/particl/copay/blob/master/LICENSE) file that accompanies this project for more information including complete terms and conditions.
+Copay is released under the MIT License. Please refer to the [LICENSE](https://github.com/Capricoinofficial/copay/blob/master/LICENSE) file that accompanies this project for more information including complete terms and conditions.

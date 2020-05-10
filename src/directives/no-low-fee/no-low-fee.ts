@@ -38,7 +38,7 @@ export class NoLowFee {
       this.popupProvider
         .ionicAlert(
           'Low Fee Error',
-          'Please change your Particl network fee policy setting to Normal or higher to use this service'
+          'Please change your Capricoin+ network fee policy setting to Normal or higher to use this service'
         )
         .then(() => {
           this.navCtrl.pop();

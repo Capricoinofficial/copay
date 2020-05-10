@@ -5,7 +5,7 @@ import {
   Navbar,
   NavController,
   NavParams,
-  Slides
+  Slides,
 } from 'ionic-angular';
 import * as _ from 'lodash';
 import { Logger } from '../../../providers/logger/logger';
@@ -23,7 +23,7 @@ import { WalletProvider } from '../../../providers/wallet/wallet';
 
 @Component({
   selector: 'page-backup-game',
-  templateUrl: 'backup-game.html'
+  templateUrl: 'backup-game.html',
 })
 export class BackupGamePage {
   @ViewChild(Slides)
@@ -77,7 +77,7 @@ export class BackupGamePage {
 
     this.walletProvider
       .getKeys(this.wallet)
-      .then(keys => {
+      .then((keys) => {
         if (_.isEmpty(keys)) {
           this.logger.warn('Empty keys');
         }
@@ -85,7 +85,7 @@ export class BackupGamePage {
         this.keys = keys;
         this.setFlow();
       })
-      .catch(err => {
+      .catch((err) => {
         if (
           err &&
           err.message != 'FINGERPRINT_CANCELLED' &&
@@ -126,10 +126,10 @@ export class BackupGamePage {
   private shuffledWords(words: string[]) {
     const sort = _.sortBy(words);
 
-    return _.map(sort, w => {
+    return _.map(sort, (w) => {
       return {
         word: w,
-        selected: false
+        selected: false,
       };
     });
   }
@@ -137,7 +137,7 @@ export class BackupGamePage {
   public addButton(index: number, item): void {
     const newWord = {
       word: item.word,
-      prevIndex: index
+      prevIndex: index,
     };
     this.customWords.push(newWord);
     this.shuffledMnemonicWords[index].selected = true;
@@ -195,7 +195,7 @@ export class BackupGamePage {
 
   private resetGame() {
     this.customWords = [];
-    this.shuffledMnemonicWords.forEach(word => {
+    this.shuffledMnemonicWords.forEach((word) => {
       word.selected = false;
     });
     this.selectComplete = false;
@@ -241,7 +241,7 @@ export class BackupGamePage {
             network: this.wallet.credentials.network,
             passphrase: password,
             account: this.wallet.credentials.account,
-            coin: this.wallet.coin
+            coin: this.wallet.coin,
           });
         } catch (err) {
           walletClient.credentials.xPrivKey = _.repeat('x', 64);
@@ -273,8 +273,8 @@ export class BackupGamePage {
           case 'bch':
             walletType = 'bitcoin cash';
             break;
-          case 'part':
-            walletType = 'particl';
+          case 'cps':
+            walletType = 'Capricoin+';
             break;
           default:
             walletType = 'bitcoin';
@@ -293,7 +293,7 @@ export class BackupGamePage {
           }
         });
       })
-      .catch(err => {
+      .catch((err) => {
         this.onGoingProcessProvider.clear();
         this.logger.warn('Failed to verify backup: ', err);
         this.error = true;

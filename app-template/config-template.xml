@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.particl.*BUNDLENAME*"
+<widget id="org.capricoin.*BUNDLENAME*"
   version="*VERSION*"
   android-versionCode="*ANDROIDVERSION*"
   ios-CFBundleVersion="*VERSION*"
@@ -8,8 +8,8 @@
     <description>
       *PURPOSELINE*
     </description>
-    <author email="hello@particl.io" href="*URL*">
-        Particl
+    <author email="support@capricoin.org" href="*URL*">
+        Capricoin+
     </author>
     <content src="index.html" />
     <access origin="https://bws.bitpay.com" />
@@ -20,7 +20,8 @@
     <access origin="https://api.coinbase.com" />
     <access origin="https://coinbase.com" />
     <access origin="https://api.coinmarketcap.com" />
-    <access origin="https://*.particl.io" />
+    <access origin="https://*.capricoin.org" />
+    <access origin="http://localhost:3232" />
     <allow-navigation href="gap://ready" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
     <preference name="iosPersistentFileLocation" value="Library" />
@@ -44,13 +45,15 @@
 
     <!-- Android Version: Marshmallow 6.0 (API Level 23) or higher -->
     <preference name="android-minSdkVersion" value="23" />
+    <!-- Android Version: Pie 9.0 (API Level 28) or higher -->
+    <preference name="android-targetSdkVersion" value="28" />
 
     <!-- iOS 10.3 or higher -->
     <preference name="deployment-target" value="10.3" />
 
     <!-- Supported Platforms -->
-    <engine name="android" spec="7.1.2" />
-    <engine name="ios" spec="4.5.5" />
+    <engine name="android" spec="7.1.4" />
+    <engine name="ios" spec="5.0.1" />
 
     <!-- Plugins -->
     <plugin name="cordova-launch-review" spec="3.1.1" />
@@ -81,11 +84,11 @@
     <plugin name="cordova-plugin-file" spec="6.0.1" />
     <plugin name="cordova-custom-config" spec="https://github.com/cmgustavo/cordova-custom-config.git#3a1902fb700dc8c1e9ac9db592aa48d7d900cde0" />
     <plugin name="cordova-plugin-customurlscheme-ng" spec="5.0.0">
-      <variable name="URL_SCHEME" value="particl" />
+      <variable name="URL_SCHEME" value="capricoinplus" />
       <variable name="SECOND_URL_SCHEME" value="*APPURI*" />
-      <variable name="THIRD_URL_SCHEME" value="particl-bitpay" />
+      <variable name="THIRD_URL_SCHEME" value="capricoinplus-bitpay" />
     </plugin>
-    <plugin name="cordova-plugin-fcm" spec="https://github.com/cmgustavo/cordova-plugin-fcm.git#v4.1" />
+    <plugin name="cordova-plugin-fcm-ng" spec="5.1.1" />
 
     <!-- Keyboard input focus fix -->
     <plugin name="cordova-plugin-wkwebview-inputfocusfix" spec="https://github.com/cmgustavo/cordova-plugin-wkwebview-inputfocusfix.git#3a4e7908331ae110d6fc269c6c6f11b5e756e3f7" />
@@ -130,6 +133,7 @@
     </platform>
 
     <platform name="android">
+      <hook src="copy-build-extras-gradle.js" type="before_build" />
       <preference name="android-manifest/application/@android:allowBackup" value="false" />
 
       <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">

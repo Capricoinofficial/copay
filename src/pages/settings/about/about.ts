@@ -42,7 +42,7 @@ export class AboutPage {
 
   public openExternalLink(): void {
     const url =
-      'https://github.com/particl/' +
+      'https://github.com/Capricoinofficial/' +
       this.appProvider.info.gitHubRepoName +
       '/tree/' +
       this.appProvider.info.commitHash +
@@ -65,7 +65,7 @@ export class AboutPage {
   }
 
   public openTermsOfUse() {
-    const url = 'https://particl.io/policy/copay/privacy.html';
+    const url = 'https://capricoin.org/privacy';
     const optIn = true;
     const title = null;
     const message = this.translate.instant('View Wallet Terms of Use');
@@ -82,7 +82,7 @@ export class AboutPage {
   }
 
   public openPrivacyPolicy() {
-    const url = 'https://bitpay.com/about/privacy';
+    const url = 'https://capricoin.org/privacy';
     const optIn = true;
     const title = null;
     const message = this.translate.instant('View Privacy Policy');

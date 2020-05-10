@@ -56,7 +56,7 @@ export class HomePage {
   public wallets;
   public walletsBtc;
   public walletsBch;
-  public walletsPart;
+  public walletsCPS;
   public cachedBalanceUpdateOn: string;
   public recentTransactionsEnabled: boolean;
   public txps;
@@ -79,7 +79,7 @@ export class HomePage {
   public homeTip: boolean;
   public showReorderBtc: boolean;
   public showReorderBch: boolean;
-  public showReorderPart: boolean;
+  public showReorderCPS: boolean;
   public showIntegration;
   public hideHomeIntegrations: boolean;
   public showGiftCards: boolean;
@@ -123,7 +123,7 @@ export class HomePage {
     this.isElectron = this.platformProvider.isElectron;
     this.showReorderBtc = false;
     this.showReorderBch = false;
-    this.showReorderPart = false;
+    this.showReorderCPS = false;
     this.zone = new NgZone({ enableLongStackTrace: false });
     this.events.subscribe('Home/reloadStatus', () => {
       this._willEnter();
@@ -313,7 +313,7 @@ export class HomePage {
 
   private openEmailDisclaimer() {
     let message = this.translate.instant(
-      'By providing your email address, you give explicit consent to Particl to use your email address to send you email notifications about payments.'
+      'By providing your email address, you give explicit consent to Capricoin+ to use your email address to send you email notifications about payments.'
     );
     let title = this.translate.instant('Privacy Policy update');
     let okText = this.translate.instant('Accept');
@@ -363,18 +363,18 @@ export class HomePage {
           x.credentials.coin == 'btc' &&
           x.credentials.xPubKey.toLowerCase().startsWith('par', 1)
         ) {
-          this.logger.info('Old Particl Copay wallet detected, updating...');
-          x.coin = 'part';
-          x.credentials.coin = 'part';
+          this.logger.info('Old Capricoin+ Copay wallet detected, updating...');
+          x.coin = 'cps';
+          x.credentials.coin = 'cps';
           this.walletProvider
             .recreate(x)
             .then(() => {
               this.logger.info(
-                'Old Particl Copay wallet detected, updated successfuly'
+                'Old Capricoin+ Copay wallet detected, updated successfuly'
               );
             })
             .catch(err => {
-              this.logger.error('Error updating old particl wallet', err);
+              this.logger.error('Error updating old Capricoin+ wallet', err);
             });
           return false;
         }
@@ -384,8 +384,8 @@ export class HomePage {
       this.walletsBch = _.filter(this.wallets, (x: any) => {
         return x.credentials.coin == 'bch';
       });
-      this.walletsPart = _.filter(this.wallets, (x: any) => {
-        return x.credentials.coin == 'part';
+      this.walletsCPS = _.filter(this.wallets, (x: any) => {
+        return x.credentials.coin == 'cps';
       });
       this.updateAllWallets();
     },
@@ -442,7 +442,7 @@ export class HomePage {
         const dataToIgnore = [
           'BitcoinAddress',
           'BitcoinCashAddress',
-          'ParticlAddress',
+          'CapricoinPlusAddress',
           'PlainUrl'
         ];
         if (dataToIgnore.indexOf(this.validDataFromClipboard.type) > -1) {
@@ -685,7 +685,7 @@ export class HomePage {
   }
 
   public goToWalletDetails(wallet): void {
-    if (this.showReorderBtc || this.showReorderBch || this.showReorderPart)
+    if (this.showReorderBtc || this.showReorderBch || this.showReorderCPS)
       return;
     this.events.unsubscribe('finishIncomingDataMenuEvent');
     this.events.unsubscribe('bwsEvent');
@@ -731,8 +731,8 @@ export class HomePage {
     this.showReorderBch = !this.showReorderBch;
   }
 
-  public reorderPart(): void {
-    this.showReorderPart = !this.showReorderPart;
+  public reorderCPS(): void {
+    this.showReorderCPS = !this.showReorderCPS;
   }
 
   public reorderWalletsBtc(indexes): void {
@@ -753,11 +753,11 @@ export class HomePage {
     });
   }
 
-  public reorderWalletsPart(indexes): void {
-    let element = this.walletsPart[indexes.from];
-    this.walletsPart.splice(indexes.from, 1);
-    this.walletsPart.splice(indexes.to, 0, element);
-    _.each(this.walletsPart, (wallet, index: number) => {
+  public reorderWalletsCPS(indexes): void {
+    let element = this.walletsCPS[indexes.from];
+    this.walletsCPS.splice(indexes.from, 1);
+    this.walletsCPS.splice(indexes.to, 0, element);
+    _.each(this.walletsCPS, (wallet, index: number) => {
       this.profileProvider.setWalletOrder(wallet.id, index);
     });
   }

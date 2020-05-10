@@ -23,7 +23,7 @@ msgid "2. Enter Gift Code"
 msgstr ""
 
 msgid ""
-"5-star ratings help us get the Particl Wallet into more hands, and more "
+"5-star ratings help us get the Capricoin+ Wallet into more hands, and more "
 "users means more resources can be committed to the app!"
 msgstr ""
 
@@ -310,7 +310,7 @@ msgid "Buying Gift Card..."
 msgstr ""
 
 msgid ""
-"By providing your email address, you give explicit consent to Particl to "
+"By providing your email address, you give explicit consent to Capricoin+ to "
 "use your email address to send you email notifications about payments."
 msgstr ""
 
@@ -395,7 +395,7 @@ msgstr ""
 msgid "Cold Staking Setup"
 msgstr ""
 
-msgid "Cold staking allows you to get interest on your PART coins."
+msgid "Cold staking allows you to get interest on your CPS coins."
 msgstr ""
 
 msgid "Color"
@@ -593,7 +593,7 @@ msgstr ""
 msgid "Create a new wallet to start using this app."
 msgstr ""
 
-msgid "Create particl wallet"
+msgid "Create Capricoin+ wallet"
 msgstr ""
 
 msgid "Create personal wallet"
@@ -974,7 +974,7 @@ msgid ""
 "fees may apply."
 msgstr ""
 
-msgid "Get news and updates from Particl"
+msgid "Get news and updates from Capricoin+"
 msgstr ""
 
 msgid "Get started"
@@ -1050,7 +1050,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"I give explicit consent to Particl to use my email address to send me email "
+"I give explicit consent to Capricoin+ to use my email address to send me email "
 "notifications about payments (and, if selected, email updates and news "
 "about the wallet)."
 msgstr ""
@@ -1103,7 +1103,7 @@ msgid "If enabled, wallets will also try to spend unconfirmed funds."
 msgstr ""
 
 msgid ""
-"If this device is replaced or this app is deleted, neither you nor Particl "
+"If this device is replaced or this app is deleted, neither you nor Capricoin+ "
 "can recover your funds without a backup."
 msgstr ""
 
@@ -1245,7 +1245,7 @@ msgstr ""
 msgid "Learn more about Cold Staking"
 msgstr ""
 
-msgid "Learn more about cold staking on the Particl wiki."
+msgid "Learn more about cold staking on the Capricoin+ wiki."
 msgstr ""
 
 msgid "Learn more about testnet blockchain"
@@ -1436,7 +1436,7 @@ msgstr ""
 msgid "Not enough funds for fee"
 msgstr ""
 
-msgid "Not even Particl can access it."
+msgid "Not even Capricoin+ can access it."
 msgstr ""
 
 msgid ""
@@ -1519,7 +1519,7 @@ msgstr ""
 msgid "Open Insight"
 msgstr ""
 
-msgid "Open Particl Wiki"
+msgid "Open Capricoin+ Wiki"
 msgstr ""
 
 msgid "Open Translation Community"
@@ -1543,28 +1543,28 @@ msgstr ""
 msgid "PIN"
 msgstr ""
 
-msgid "Particl Address"
+msgid "Capricoin+ Address"
 msgstr ""
 
-msgid "Particl URI"
+msgid "Capricoin+ URI"
 msgstr ""
 
-msgid "Particl Wallets"
+msgid "Capricoin+ Wallets"
 msgstr ""
 
-msgid "Particl is a currency."
+msgid "Capricoin+ is a currency."
 msgstr ""
 
-msgid "Particl is different - it cannot be safely held with a bank or web service."
+msgid "Capricoin+ is different - it cannot be safely held with a bank or web service."
 msgstr ""
 
-msgid "Particl is secure, digital money."
+msgid "Capricoin+ is secure, digital money."
 msgstr ""
 
-msgid "Particl network fee policy"
+msgid "Capricoin+ network fee policy"
 msgstr ""
 
-msgid "Particl transactions include a fee collected by miners on the network."
+msgid "Capricoin+ transactions include a fee collected by miners on the network."
 msgstr ""
 
 msgid "Password"
@@ -2133,7 +2133,7 @@ msgstr ""
 msgid "THIS ACTION CANNOT BE REVERSED"
 msgstr ""
 
-msgid "Take control of your money, get started with particl."
+msgid "Take control of your money, get started with Capricoin+."
 msgstr ""
 
 msgid "Tap and hold to show"
@@ -2279,7 +2279,7 @@ msgstr ""
 msgid "This app is not available for your device."
 msgstr ""
 
-msgid "This app stores your particl with cutting-edge security."
+msgid "This app stores your Capricoin+ with cutting-edge security."
 msgstr ""
 
 msgid "This balance transfer will incur a fee of {{fee}} {{unit}}."
@@ -2294,7 +2294,7 @@ msgstr ""
 msgid "This information is available at the website."
 msgstr ""
 
-msgid "This means you will stop receiving interest on your PART coins."
+msgid "This means you will stop receiving interest on your CPS coins."
 msgstr ""
 
 msgid ""
@@ -2337,7 +2337,7 @@ msgstr ""
 msgid "To"
 msgstr ""
 
-msgid "To get started, you'll need to create a particl wallet and get some particl."
+msgid "To get started, you'll need to create a Capricoin+ wallet and get some Capricoin+."
 msgstr ""
 
 msgid "To get started, you'll need to enter a valid address, contact or wallet."
@@ -2412,7 +2412,7 @@ msgstr ""
 msgid "Transfer to Multiple Recipients"
 msgstr ""
 
-msgid "Transfer to Particl Wallet"
+msgid "Transfer to Capricoin+ Wallet"
 msgstr ""
 
 msgid "Translate address"
@@ -2739,7 +2739,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"You can scan particl addresses, bitcoin addresses, payment requests, paper "
+"You can scan Capricoin+ addresses, bitcoin addresses, payment requests, paper "
 "wallets, and more."
 msgstr ""
 
@@ -2748,7 +2748,7 @@ msgid ""
 "by visiting our project on GitHub."
 msgstr ""
 
-msgid "You can spend particl at millions of websites and stores worldwide."
+msgid "You can spend Capricoin+ at millions of websites and stores worldwide."
 msgstr ""
 
 msgid "You can still export it from \"Export Wallet\" option."
@@ -2762,7 +2762,7 @@ msgid ""
 "everyday expenses like utilities and metro rides."
 msgstr ""
 
-msgid "You control your particl."
+msgid "You control your Capricoin+."
 msgstr ""
 
 msgid "You could sign the transaction later in your wallet details"
@@ -2772,8 +2772,8 @@ msgid "You should not set a fee higher than {{maxFeeRecommended}} satoshis/byte.
 msgstr ""
 
 msgid ""
-"You wallet is generating interest on your PART coins and you are helping to "
-"secure the Particl network at the same time!"
+"You wallet is generating interest on your CPS coins and you are helping to "
+"secure the Capricoin+ network at the same time!"
 msgstr ""
 
 msgid ""
@@ -2784,7 +2784,7 @@ msgstr ""
 msgid ""
 "Your extended private keys are all that is needed to access your funds. Be "
 "sure to protect your private keys and store them only on secure devices. "
-"Particl does not have access to your private keys, so you alone are "
+"Capricoin+ does not have access to your private keys, so you alone are "
 "responsible for your keys. If you share key access with external services, "
 "you take responsibility for the risk of theft or breach. Only advanced "
 "users should handle extended private keys directly."
@@ -2796,7 +2796,7 @@ msgstr ""
 msgid "Your name"
 msgstr ""
 
-msgid "Your particl wallet is ready!"
+msgid "Your Capricoin+ wallet is ready!"
 msgstr ""
 
 msgid ""
@@ -2851,7 +2851,7 @@ msgstr ""
 
 msgid ""
 "{coinName} miner fees are high due to record demand for limited space on "
-"the {coinName} network. Particl does not receive and does not control "
+"the {coinName} network. Capricoin+ does not receive and does not control "
 "{coinName} miner fees."
 msgstr ""
 
@@ -2861,7 +2861,7 @@ msgstr ""
 msgid ""
 "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain "
 "information, networking and Copayer synchronization. The default "
-"configuration points to https://bws.particl.io (Particl's public BWS "
+"configuration points to https://bws.capricoin.org (Capricoin+'s public BWS "
 "instance)."
 msgstr ""
 

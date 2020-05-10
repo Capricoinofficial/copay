@@ -76,8 +76,8 @@ export class JoinWalletPage {
       bwsURL: [this.defaults.bws.url],
       selectedSeed: ['new'],
       recoveryPhrase: [null],
-      derivationPath: [this.derivationPathByDefault['part']],
-      coin: ['part', Validators.required]
+      derivationPath: [this.derivationPathByDefault['cps']],
+      coin: ['cps', Validators.required]
     });
 
     this.seedOptions = [
