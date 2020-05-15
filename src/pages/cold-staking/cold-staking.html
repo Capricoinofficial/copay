@@ -24,7 +24,7 @@
     </ion-icon>
     <div class="zero-state-heading" translate>{{ 'Wallet is staking' | translate }}</div>
     <div class="zero-state-description" translate>
-      {{ 'You wallet is generating interest on your CPS coins and you are helping to secure the Capricoin+ network at the same time!' | translate }}
+      {{ 'Your wallet is generating interest on your CPS coins and you are helping to secure the Capricoin+ network at the same time!' | translate }}
     </div>
   </div>
 </ion-content>
@@ -53,7 +53,7 @@
       <ion-input [disabled]="true" type="text" [ngModel]="activationPercent"></ion-input>
     </ion-item>
     <button *ngIf="canZap" ion-button class="button-standard" (click)="zap()">
-      {{'Zap' | translate}}
+      {{'Zap to Start' | translate}}
     </button>
     <button ion-button clear [disabled]="hasUnconfirmed" (click)="disableColdStaking()">
       {{'Disable Cold Staking' | translate}}

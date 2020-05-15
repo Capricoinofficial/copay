@@ -157,7 +157,7 @@ export class ColdStakingPage extends WalletTabsChild {
       .ionicConfirm(
         this.translate.instant('Cold Stake Zap'),
         this.translate.instant(
-          'Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction. It is advised to zap only the small remaining part of your coins (last ~10 %) &ndash; those that take ages to get processed.'
+          'Zapping will fast-forward the cold staking progress instantly to 100%.<br><br>Be warned, that this decreases your financial privacy, as it bundles all your remaining coins into one big transaction.'
         ),
         this.translate.instant('Zap'),
         this.translate.instant('Cancel')
