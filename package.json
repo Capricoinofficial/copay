@@ -1,8 +1,9 @@
 {
   "name": "capricoinplus-copay",
   "description": "A Secure Capricoin+ Wallet",
-  "author": "Capricoinofficial",
-  "version": "5.5.4",
+  "author": "Capricoinofficial <support@capricoin.org>",
+  "email": "support@capricoin.org",
+  "version": "5.5.5",
   "keywords": [
     "bitcoin",
     "wallet",
@@ -113,6 +114,7 @@
         "bitcoin",
         "bitcoincash",
         "bchtest",
+        "capricoin+",
         "capricoinplus-copay"
       ]
     },
@@ -121,35 +123,55 @@
       "icon": "resources/capricoinplus-copay/mac/app.icns",
       "artifactName": "${productName}.${ext}",
       "extendInfo": {
-        "NSCameraUsageDescription": "Scan a Bitcoin Address directly to your Wallet and send funds to it"
+        "NSCameraUsageDescription": "Scan a Capricoin+ Address directly to your Wallet and send funds to it"
       },
       "target": [
-        "mas"
+        "dmg"
       ]
     },
-    "mas": {
-      "identity": "BitPay, Inc. (884JRH5R93)",
-      "entitlements": "./capricoinplus-copay-entitlements.mas.plist",
-      "provisioningProfile": "./capricoinplus-copay-embedded.provisionprofile"
+    "dmg": {
+      "icon": "resources/capricoinplus-copay/mac/app.icns",
+      "background": "resources/capricoinplus-copay/mac/dmg-background.tiff",
+      "title": "${productName}.${ext}",
+      "contents": [
+        {
+          "x": 448,
+          "y": 344,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 192,
+          "y": 344,
+          "type": "file",
+          "path": "dist/${productName}.${ext}.app"
+        }
+      ]
     },
     "win": {
       "target": [
-        "appx"
+        "nsis"
       ],
-      "icon": "resources/capricoinplus-copay/windows/icon.ico",
-      "artifactName": "${productName}.${ext}"
+      "icon": "resources/capricoinplus-copay/windows/icon.ico"
     },
-    "appx": {
-      "identityName": "Copay-SecureCapricoinPlusWallet",
-      "publisher": "CN=F89609D1-EB3E-45FD-A58A-C2E3895FCE7B",
-      "publisherDisplayName": "BitPay Inc.",
-      "applicationId": "CapricoinPlusCopayWallet",
-      "displayName": "Copay - Secure Capricoin+ Wallet"
+    "nsis": {
+      "installerIcon": "resources/capricoinplus-copay/windows/icon.ico",
+      "installerHeader": "resources/capricoinplus-copay/windows/nsis-header.bmp",
+      "installerSidebar": "resources/capricoinplus-copay/windows/nsis-wizard.bmp",
+      "artifactName": "${productName}.${ext}",
+      "perMachine": true,
+      "allowElevation": true,
+      "oneClick": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "allowToChangeInstallationDirectory": true
     },
     "linux": {
       "target": [
-        "snap"
+        "deb",
+        "AppImage"
       ],
+      "icon": "resources/capricoinplus-copay/linux/icon.png",
       "artifactName": "${productName}-linux.${ext}"
     }
   },

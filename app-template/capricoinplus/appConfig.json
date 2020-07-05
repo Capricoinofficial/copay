@@ -24,8 +24,8 @@
   "WindowsApplicationId": "CapricoinPlusCopayWallet",
   "pushSenderId": "754664347305",
   "description": "A Secure Capricoin+ Wallet",
-  "version": "5.5.4",
-  "androidVersion": "55400000",
+  "version": "5.5.5",
+  "androidVersion": "55500000",
   "_extraCSS": null,
   "_enabledExtensions": {
     "coinbase": false,

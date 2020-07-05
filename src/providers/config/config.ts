@@ -195,8 +195,9 @@ export class ConfigProvider {
           wp: ''
         },
         capricoinplus: {
-          ios: '',
-          android: '',
+          ios: 'https://apps.apple.com/us/app/capricoin-copay/id1512269727',
+          android:
+            'https://play.google.com/store/apps/details?id=org.capricoin.copay',
           wp: ''
         }
       },
