@@ -284,7 +284,7 @@
     "ajv": "6.2.0",
     "archiver": "2.1.1",
     "cached-path-relative": "1.0.2",
-    "codecov": "3.1.0",
+    "codecov": "3.6.5",
     "connect": "3.6.5",
     "cz-conventional-changelog": "2.1.0",
     "electron": "3.0.8",
